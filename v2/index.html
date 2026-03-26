@@ -69,10 +69,47 @@
       padding-left: 0;
     }
 
+    .answer-step--link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 24px;
+      margin: -24px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: border-color 0.25s ease, background 0.25s ease;
+      position: relative;
+    }
+
+    .answer-step--link:hover {
+      border-color: var(--white-15);
+      background: var(--white-08);
+    }
+
+    .answer-step--link:hover .step-label {
+      color: var(--orange);
+    }
+
+    .answer-step--link:hover .step-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .step-arrow {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 20px;
+      color: var(--orange);
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
     .answer-step:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 0;
+      left: 24px;
       bottom: -20px;
       width: 32px;
       height: 1px;
@@ -195,18 +232,26 @@
         </div>
         <div class="answer-steps">
           <h2 id="answer-heading" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">How CommCare Connect Works: Learn, Deliver, Verify and Pay</h2>
-          <div class="answer-step sr">
+          <a href="learn.html" class="answer-step answer-step--link sr">
             <div class="step-label">Learn</div>
             <p class="step-text">Workers select training through a digital platform integrated with CommCare. They build skills at their own pace, preparing for frontline service delivery.</p>
-          </div>
-          <div class="answer-step sr">
+            <span class="step-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="deliver.html" class="answer-step answer-step--link sr">
             <div class="step-label">Deliver</div>
             <p class="step-text">Frontline workers deliver health services using CommCare for data collection and workflow management. Every interaction is captured.</p>
-          </div>
-          <div class="answer-step sr">
-            <div class="step-label">Verify &amp; Pay</div>
-            <p class="step-text">Biometric verification, GPS tracking, and algorithmic validation confirm delivery. Workers receive fair, transparent compensation managed end-to-end on the platform.</p>
-          </div>
+            <span class="step-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="verify.html" class="answer-step answer-step--link sr">
+            <div class="step-label">Verify</div>
+            <p class="step-text">Biometric verification, GPS tracking, and algorithmic validation confirm that services were actually delivered. Not self-reported. Not estimated. Verified.</p>
+            <span class="step-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="pay.html" class="answer-step answer-step--link sr">
+            <div class="step-label">Pay</div>
+            <p class="step-text">Workers receive fair, transparent compensation managed end-to-end on the platform. No hidden deductions. No unexplained delays. Full visibility.</p>
+            <span class="step-arrow" aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </div>
     </section>
