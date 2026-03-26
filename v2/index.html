@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommCare Connect — Every Dollar. Verified.</title>
+  <meta name="description" content="CommCare Connect links every dollar of global health funding directly to verified frontline service delivery. Funders see impact. Workers get paid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Homepage-only: answer grid, chapter-specific spacing */
+    .chapter-problem {
+      padding: clamp(80px, 12vh, 160px) clamp(24px, 5vw, 64px);
+      position: relative;
+    }
+
+    .editorial-block::before {
+      content: '';
+      position: absolute;
+      left: clamp(12px, 10vw, 160px);
+      top: 20%;
+      bottom: 20%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--white-08), transparent);
+    }
+
+    @media (max-width: 768px) {
+      .editorial-block::before { display: none; }
+    }
+
+    .chapter-answer {
+      padding: clamp(80px, 12vh, 160px) clamp(24px, 5vw, 64px);
+      position: relative;
+    }
+
+    .answer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(48px, 8vw, 120px);
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .answer-heading {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(48px, 7vw, 88px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      position: sticky;
+      top: calc(var(--nav-h) + 40px);
+    }
+
+    .answer-heading .word { display: block; }
+    .answer-heading .word--accent { color: var(--orange); }
+
+    .answer-steps {
+      padding-top: clamp(24px, 6vh, 80px);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(40px, 6vh, 72px);
+    }
+
+    .answer-step {
+      position: relative;
+      padding-left: 0;
+    }
+
+    .answer-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      width: 32px;
+      height: 1px;
+      background: var(--white-15);
+    }
+
+    @media (max-width: 768px) {
+      .answer-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .answer-heading {
+        position: static;
+        font-size: 48px;
+      }
+    }
+
+    .chapter-features {
+      background: var(--dark-mid);
+      padding: clamp(80px, 12vh, 160px) 0;
+      position: relative;
+    }
+
+    .chapter-features::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--white-08), transparent);
+    }
+
+    .chapter-impact {
+      background: var(--blue);
+      padding: clamp(80px, 14vh, 180px) clamp(24px, 8vw, 120px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chapter-impact::after {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(247, 148, 29, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV — hidden until scroll on homepage -->
+  <header class="site-nav site-nav--homepage" role="banner" aria-label="Site navigation">
+    <a href="index.html" class="nav-logo" aria-label="CommCare Connect home">CommCare Connect</a>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-trigger">How It Works</span>
+          <div class="nav-dropdown-menu">
+            <a href="learn.html" class="nav-dropdown-item">Learn</a>
+            <a href="deliver.html" class="nav-dropdown-item">Deliver</a>
+            <a href="verify.html" class="nav-dropdown-item">Verify</a>
+            <a href="pay.html" class="nav-dropdown-item">Pay</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Who It's For</span>
+          <div class="nav-dropdown-menu">
+            <a href="for-funders.html" class="nav-dropdown-item">Funders</a>
+            <a href="for-enterprises.html" class="nav-dropdown-item">Enterprises</a>
+            <a href="for-local-organizations.html" class="nav-dropdown-item">Local Organizations</a>
+            <a href="for-workers.html" class="nav-dropdown-item">Workers</a>
+          </div>
+        </li>
+        <li><a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a></li>
+      </ul>
+    </nav>
+    <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-links--open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- CHAPTER 1: HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <h1>
+          <span class="hero-title" id="hero-heading">Every dollar.</span>
+          <span class="hero-title--accent">Verified.</span>
+        </h1>
+        <p class="hero-sub">CommCare Connect links funding directly to verified service delivery at the frontline.</p>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint-text">Scroll</span>
+        <span class="scroll-hint-line"></span>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2: THE PROBLEM -->
+    <section class="chapter-problem" aria-labelledby="problem-heading">
+      <div class="editorial-block">
+        <div class="overline sr">The Gap</div>
+        <h2 id="problem-heading" class="chapter-heading sr">Billions flow into global health each year. But how much reaches the frontline?</h2>
+        <p class="chapter-body sr">Funders commit resources to improve health outcomes in communities that need it most. But without verified data, there is no way to confirm services were actually delivered. Workers go uncompensated. Data stays fragmented. The gap between funding and frontline impact remains invisible.</p>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3: THE ANSWER -->
+    <section class="chapter-answer" aria-labelledby="answer-heading">
+      <div class="answer-grid">
+        <div class="answer-heading sr" aria-hidden="true">
+          <span class="word">Learn.</span>
+          <span class="word">Deliver.</span>
+          <span class="word word--accent">Verify.</span>
+          <span class="word word--accent">Pay.</span>
+        </div>
+        <div class="answer-steps">
+          <h2 id="answer-heading" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">How CommCare Connect Works: Learn, Deliver, Verify and Pay</h2>
+          <div class="answer-step sr">
+            <div class="step-label">Learn</div>
+            <p class="step-text">Workers select training through a digital platform integrated with CommCare. They build skills at their own pace, preparing for frontline service delivery.</p>
+          </div>
+          <div class="answer-step sr">
+            <div class="step-label">Deliver</div>
+            <p class="step-text">Frontline workers deliver health services using CommCare for data collection and workflow management. Every interaction is captured.</p>
+          </div>
+          <div class="answer-step sr">
+            <div class="step-label">Verify &amp; Pay</div>
+            <p class="step-text">Biometric verification, GPS tracking, and algorithmic validation confirm delivery. Workers receive fair, transparent compensation managed end-to-end on the platform.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 4: FEATURES -->
+    <section class="chapter-features" aria-labelledby="features-heading">
+      <h2 id="features-heading" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Platform Features</h2>
+
+      <div class="feature-block feature-block--left sr">
+        <div class="feature-accent"></div>
+        <h3 class="feature-heading">Verified Delivery</h3>
+        <p class="feature-text">Biometric verification, GPS tracking, and algorithmic validation ensure services were actually delivered. Not self-reported. Not estimated. Verified.</p>
+        <svg class="feature-bg-icon" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+          <path d="M100 20L30 60v48c0 44.4 30.8 86 70 96 39.2-10 70-51.6 70-96V60L100 20z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M72 100l20 20 36-44" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="feature-block feature-block--right sr">
+        <div class="feature-accent"></div>
+        <h3 class="feature-heading">Transparent Payments</h3>
+        <p class="feature-text">Full payment cycle visibility from earnings calculation to delivery, accessible to every worker. No hidden deductions. No delays without explanation.</p>
+        <svg class="feature-bg-icon" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+          <rect x="30" y="60" width="140" height="90" rx="8" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M30 85h140" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="60" cy="120" r="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <circle cx="80" cy="120" r="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+
+      <div class="feature-block feature-block--left sr">
+        <div class="feature-accent"></div>
+        <h3 class="feature-heading">Worker Choice</h3>
+        <p class="feature-text">Community health workers choose which tasks to take on, complete training at their own pace, and see exactly what they have earned. Flexibility without exploitation.</p>
+        <svg class="feature-bg-icon" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+          <circle cx="100" cy="70" r="30" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M50 160c0-28 22-50 50-50s50 22 50 50" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M130 50l10 10-10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="feature-block feature-block--right sr">
+        <div class="feature-accent"></div>
+        <h3 class="feature-heading">Funding Accountability</h3>
+        <p class="feature-text">Donors and funders see exactly where money goes and what outcomes it produces. Every dollar traced from commitment to verified delivery.</p>
+        <svg class="feature-bg-icon" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+          <rect x="30" y="30" width="140" height="140" rx="8" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <path d="M30 60h140" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M60 110l24-24 24 16 32-32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5: IMPACT -->
+    <section class="chapter-impact" aria-labelledby="impact-heading">
+      <h2 id="impact-heading" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Proven Impact</h2>
+      <div class="impact-list">
+        <div class="impact-item sr">
+          <div class="impact-number impact-number--white">101,000+</div>
+          <p class="impact-desc">health services delivered and verified through biometrics and GPS</p>
+        </div>
+        <div class="impact-item sr">
+          <div class="impact-number impact-number--orange">$10:1</div>
+          <p class="impact-desc">return on investment, demonstrated by the Financing Alliance for Health</p>
+        </div>
+        <div class="impact-item sr">
+          <div class="impact-number impact-number--white">80+</div>
+          <p class="impact-desc">countries. 350,000+ frontline workers. 15 years of proven infrastructure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 6: CTA -->
+    <section class="chapter-cta" aria-labelledby="cta-heading">
+      <h2 id="cta-heading" class="cta-heading sr">See verified impact in action.</h2>
+      <a href="mailto:connect@dimagi.com" class="cta-btn sr">Request a Demo</a>
+      <p class="cta-email sr"><a href="mailto:connect@dimagi.com">connect@dimagi.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-brand">CommCare Connect by Dimagi</div>
+    <div class="footer-copy">&copy; 2026 Dimagi, Inc. All rights reserved.</div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Floating nav: show after scrolling past hero
+      var nav = document.querySelector('.site-nav--homepage');
+      var hero = document.querySelector('.hero');
+      if (nav && hero) {
+        var heroBottom = 0;
+        function updateHeroBottom() { heroBottom = hero.offsetTop + hero.offsetHeight; }
+        updateHeroBottom();
+        window.addEventListener('resize', updateHeroBottom, { passive: true });
+        function checkNav() {
+          if (window.scrollY > heroBottom - 100) {
+            nav.classList.add('nav-visible');
+          } else {
+            nav.classList.remove('nav-visible');
+          }
+        }
+        window.addEventListener('scroll', checkNav, { passive: true });
+        checkNav();
+      }
+
+      // Scroll reveal
+      if (!prefersReducedMotion) {
+        var srElements = document.querySelectorAll('.sr');
+        srElements.forEach(function(el) {
+          if (el.closest('.feature-block--left') || el.closest('.editorial-block')) {
+            el.classList.add('sr-hidden--left');
+          } else if (el.closest('.feature-block--right')) {
+            el.classList.add('sr-hidden--right');
+          } else {
+            el.classList.add('sr-hidden');
+          }
+        });
+
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                var container = entry.target.parentElement;
+                var siblings = container.querySelectorAll('.sr-hidden:not(.sr-visible), .sr-hidden--left:not(.sr-visible), .sr-hidden--right:not(.sr-visible)');
+                var idx = Array.prototype.indexOf.call(siblings, entry.target);
+                var delay = Math.max(0, idx) * 120;
+                setTimeout(function() { entry.target.classList.add('sr-visible'); }, delay);
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+          srElements.forEach(function(el) { observer.observe(el); });
+        } else {
+          srElements.forEach(function(el) {
+            el.classList.remove('sr-hidden', 'sr-hidden--left', 'sr-hidden--right');
+          });
+        }
+      }
+
+      // Fade scroll hint
+      var scrollHint = document.querySelector('.scroll-hint');
+      if (scrollHint) {
+        window.addEventListener('scroll', function() {
+          scrollHint.style.opacity = 1 - Math.min(window.scrollY / 300, 1);
+        }, { passive: true });
+      }
+    })();
+  </script>
+</body>
+</html>

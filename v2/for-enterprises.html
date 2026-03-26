@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Enterprises — CommCare Connect</title>
+  <meta name="description" content="Scale frontline operations with verified delivery, integrated training, and transparent workforce management. CommCare Connect for enterprises and large organizations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV — always visible on sub-pages -->
+  <header class="site-nav" role="banner">
+    <a href="index.html" class="nav-logo">CommCare Connect</a>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-trigger">How It Works</span>
+          <div class="nav-dropdown-menu">
+            <a href="learn.html" class="nav-dropdown-item">Learn</a>
+            <a href="deliver.html" class="nav-dropdown-item">Deliver</a>
+            <a href="verify.html" class="nav-dropdown-item">Verify</a>
+            <a href="pay.html" class="nav-dropdown-item">Pay</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Who It's For</span>
+          <div class="nav-dropdown-menu">
+            <a href="for-funders.html" class="nav-dropdown-item">Funders</a>
+            <a href="for-enterprises.html" class="nav-dropdown-item">Enterprises</a>
+            <a href="for-local-organizations.html" class="nav-dropdown-item">Local Organizations</a>
+            <a href="for-workers.html" class="nav-dropdown-item">Workers</a>
+          </div>
+        </li>
+        <li><a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a></li>
+      </ul>
+    </nav>
+    <button class="nav-hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-links--open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero hero--sub" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <h1>
+          <span class="hero-title" id="hero-heading">For Enterprises.</span>
+        </h1>
+        <p class="hero-sub">Scale frontline operations with verified delivery, integrated training, and transparent workforce management.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Operate at Scale, Verify at the Individual Level -->
+    <section class="section section--alt" aria-labelledby="scale-heading">
+      <div class="section-inner">
+        <div class="editorial-block">
+          <div class="overline sr">Operations</div>
+          <h2 id="scale-heading" class="chapter-heading sr">Operate at Scale, Verify at the Individual Level</h2>
+          <p class="chapter-body sr">Managing large frontline programs means balancing scale with quality. CommCare Connect gives you both: a platform that handles training, deployment, verification, and payment across your entire workforce — while verifying every individual service delivery.</p>
+          <p class="chapter-body sr" style="margin-top: 24px;">Whether you operate in one country or twenty, the system adapts to your operational complexity without sacrificing the granularity you need to maintain standards and demonstrate impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Built for Complex Operations -->
+    <section class="section" aria-labelledby="operations-heading">
+      <div class="section-inner">
+        <div class="overline sr">Platform</div>
+        <h2 id="operations-heading" class="chapter-heading sr">Built for Complex Operations</h2>
+        <div class="card-grid">
+          <div class="card sr">
+            <h3 class="card-title">Integrated Training Pipeline</h3>
+            <p class="card-text">Onboard and upskill workers through digital training that feeds directly into active service delivery. Workers train on the same platform they use to deliver, creating a seamless pipeline from qualification to deployment.</p>
+          </div>
+          <div class="card sr">
+            <h3 class="card-title">Workforce Management</h3>
+            <p class="card-text">Manage assignments, track performance, and ensure quality across distributed teams. Real-time visibility into worker activity and delivery status gives program directors the operational control they need at any scale.</p>
+          </div>
+          <div class="card sr">
+            <h3 class="card-title">End-to-End Payment</h3>
+            <p class="card-text">Transparent compensation from verified delivery through payment — no manual reconciliation, no intermediary delays. Workers are paid based on confirmed, verified work, and every transaction is auditable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Proven Infrastructure -->
+    <section class="section section--alt" aria-labelledby="infrastructure-heading">
+      <div class="section-inner">
+        <div class="editorial-block">
+          <div class="overline sr">Infrastructure</div>
+          <h2 id="infrastructure-heading" class="chapter-heading sr">Proven Infrastructure</h2>
+          <p class="chapter-body sr">Built on CommCare, the platform used by 350,000+ frontline workers in 80+ countries for over 15 years. This is not a prototype. It is production infrastructure for the hardest operating environments on earth.</p>
+          <p class="chapter-body sr" style="margin-top: 24px;">CommCare Connect inherits that reliability and extends it with workforce coordination, verified delivery, and integrated payment — purpose-built for organizations that cannot afford system failures in the field.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="chapter-cta" aria-labelledby="cta-heading">
+      <h2 id="cta-heading" class="cta-heading sr">See how enterprises scale verified delivery.</h2>
+      <a href="mailto:connect@dimagi.com" class="cta-btn sr">Request a Demo</a>
+      <p class="cta-email sr"><a href="mailto:connect@dimagi.com">connect@dimagi.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-brand">CommCare Connect by Dimagi</div>
+    <div class="footer-copy">&copy; 2026 Dimagi, Inc. All rights reserved.</div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Scroll reveal
+      if (!prefersReducedMotion) {
+        var srElements = document.querySelectorAll('.sr');
+        srElements.forEach(function(el) {
+          el.classList.add('sr-hidden');
+        });
+
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                var container = entry.target.parentElement;
+                var siblings = container.querySelectorAll('.sr-hidden:not(.sr-visible)');
+                var idx = Array.prototype.indexOf.call(siblings, entry.target);
+                var delay = Math.max(0, idx) * 120;
+                setTimeout(function() { entry.target.classList.add('sr-visible'); }, delay);
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+          srElements.forEach(function(el) { observer.observe(el); });
+        } else {
+          srElements.forEach(function(el) {
+            el.classList.remove('sr-hidden');
+          });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

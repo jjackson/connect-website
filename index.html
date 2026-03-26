@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CommCare Connect — Verified Service Delivery at the Frontline</title>
+  <meta name="description" content="CommCare Connect links funding directly to verified frontline service delivery. Funders see impact. Workers get paid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       CSS CUSTOM PROPERTIES
+       ======================================== */
+    :root {
+      --blue: #1D5F8A;
+      --blue-dark: #164D70;
+      --blue-deeper: #0F3B57;
+      --orange: #F7941D;
+      --orange-hover: #E8850F;
+      --white: #FFFFFF;
+      --light-gray: #F5F5F5;
+      --medium-gray: #E0E0E0;
+      --dark-text: #333333;
+      --muted-text: #666666;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --max-width: 1200px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --nav-height: 72px;
+    }
+
+    /* ========================================
+       RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--dark-text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ========================================
+       UTILITY
+       ======================================== */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .overline {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    /* ========================================
+       SCROLL REVEAL — defaults to VISIBLE
+       JS adds .reveal-hidden, intersection removes it
+       ======================================== */
+    .reveal {
+      /* Default: fully visible. JS will add .reveal-hidden */
+    }
+
+    .reveal-hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .reveal-hidden.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-hidden {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* ========================================
+       NAVIGATION
+       ======================================== */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--white);
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .site-nav.scrolled {
+      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--muted-text);
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--dark-text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: var(--radius-md);
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn:hover {
+      transform: scale(1.02);
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: var(--white);
+      padding: 12px 28px;
+    }
+
+    .btn-orange:hover {
+      background: var(--orange-hover);
+      box-shadow: 0 4px 16px rgba(247, 148, 29, 0.3);
+    }
+
+    .btn-orange-lg {
+      background: var(--orange);
+      color: var(--white);
+      padding: 16px 48px;
+      font-size: 17px;
+    }
+
+    .btn-orange-lg:hover {
+      background: var(--orange-hover);
+      box-shadow: 0 6px 24px rgba(247, 148, 29, 0.35);
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      font-size: 14px;
+    }
+
+    /* Mobile nav toggle */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--dark-text);
+      margin: 6px 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 32px 24px;
+        gap: 24px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+    .hero {
+      background: linear-gradient(165deg, var(--blue) 0%, var(--blue-dark) 60%, var(--blue-deeper) 100%);
+      padding: 128px 24px 96px;
+      margin-top: var(--nav-height);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle geometric decoration — not ornamentation, just depth */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(247, 148, 29, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 1.12;
+      color: var(--white);
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero p {
+      font-family: var(--font-body);
+      font-size: 20px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 96px 24px 64px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        line-height: 1.15;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+
+    /* ========================================
+       SECTIONS — shared
+       ======================================== */
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-gray {
+      background: var(--light-gray);
+    }
+
+    .section-dark {
+      background: linear-gradient(165deg, var(--blue) 0%, var(--blue-dark) 100%);
+      color: var(--white);
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--dark-text);
+      text-align: center;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .section-dark .section-heading {
+      color: var(--white);
+    }
+
+    .section-subheading {
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: var(--muted-text);
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 56px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 64px 0;
+      }
+
+      .section-heading {
+        font-size: 28px;
+      }
+
+      .section-subheading {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+    }
+
+    /* ========================================
+       FEATURES
+       ======================================== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      border-left: 4px solid var(--orange);
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      color: var(--blue);
+    }
+
+    .feature-card h3 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--dark-text);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .feature-card p {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--muted-text);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========================================
+       HOW IT WORKS
+       ======================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      position: relative;
+    }
+
+    /* Horizontal connector line on desktop */
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: calc(16.67% + 24px);
+      right: calc(16.67% + 24px);
+      height: 2px;
+      background: var(--medium-gray);
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 2;
+      background: var(--white);
+      display: inline-block;
+      padding: 0 8px;
+    }
+
+    .step h3 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--dark-text);
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--muted-text);
+      line-height: 1.65;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        max-width: 400px;
+        margin: 0 auto;
+        padding-left: 40px;
+      }
+
+      /* Vertical connector on mobile */
+      .steps-grid::before {
+        top: 0;
+        bottom: 0;
+        left: 12px;
+        right: auto;
+        width: 2px;
+        height: auto;
+      }
+
+      .step {
+        text-align: left;
+        padding-bottom: 48px;
+        position: relative;
+      }
+
+      .step:last-child {
+        padding-bottom: 0;
+      }
+
+      /* Dot on the vertical line */
+      .step::before {
+        content: '';
+        position: absolute;
+        left: -34px;
+        top: 12px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--orange);
+        border: 2px solid var(--white);
+        z-index: 3;
+      }
+
+      .step-number {
+        font-size: 36px;
+        padding: 0;
+        background: transparent;
+      }
+    }
+
+    /* ========================================
+       IMPACT / STATS
+       ======================================== */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      text-align: center;
+    }
+
+    .stat-item {
+      position: relative;
+    }
+
+    /* Subtle vertical dividers between stats */
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -24px;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-label {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 1.4;
+    }
+
+    .stat-context {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.45);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .stat-item:not(:last-child)::after {
+        display: none;
+      }
+
+      .stat-item:not(:last-child) {
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .stat-number {
+        font-size: 48px;
+      }
+    }
+
+    /* ========================================
+       CTA SECTION
+       ======================================== */
+    .cta-section {
+      text-align: center;
+      padding: 96px 0;
+    }
+
+    .cta-section .section-heading {
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+
+    .cta-section p {
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: var(--muted-text);
+      margin-bottom: 40px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      .cta-section {
+        padding: 64px 0;
+      }
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .site-footer {
+      background: var(--light-gray);
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+    }
+
+    .footer-copy {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--muted-text);
+    }
+
+    /* ========================================
+       REDUCED MOTION
+       ======================================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================
+       NAVIGATION
+       ======================================== -->
+  <header class="site-nav" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="CommCare Connect home">CommCare Connect</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#contact" class="btn btn-orange nav-cta">Request a Demo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========================================
+         HERO
+         ======================================== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <h1 id="hero-heading">Funding meets the frontline.</h1>
+        <p>CommCare Connect links every dollar to verified service delivery — so funders see impact, and workers get paid.</p>
+        <a href="#how-it-works" class="btn btn-orange-lg">See How Connect Works</a>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FEATURES
+         ======================================== -->
+    <section id="features" class="section section-gray" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading" class="section-heading reveal">What Makes Connect Different</h2>
+        <p class="section-subheading reveal">The only platform that integrates training, delivery, verification, and payment in a single tool for frontline workers.</p>
+        <div class="features-grid">
+
+          <div class="feature-card reveal">
+            <svg class="feature-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <path d="M24 4L6 14v12c0 11.1 7.7 21.5 18 24 10.3-2.5 18-12.9 18-24V14L24 4z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+              <path d="M16 24l6 6 10-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Verified Delivery</h3>
+            <p>Biometric verification, GPS tracking, and algorithmic validation ensure services were actually delivered.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <svg class="feature-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <rect x="8" y="18" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <path d="M8 26h32" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="16" cy="34" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="34" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M16 18V10a8 8 0 0116 0v8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            </svg>
+            <h3>Transparent Payments</h3>
+            <p>Full payment cycle visibility — from earnings calculation to delivery — accessible to every worker.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <svg class="feature-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <path d="M10 40c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M32 10l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35 13h-4a5 5 0 00-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            </svg>
+            <h3>Worker Empowerment</h3>
+            <p>Community health workers choose their tasks, complete training at their own pace, and see exactly what they have earned.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <svg class="feature-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="36" height="36" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <path d="M6 16h36" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M14 28l6-6 6 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="34" cy="18" r="0" fill="currentColor">
+                <!-- Dot intentionally omitted for cleanliness -->
+              </circle>
+            </svg>
+            <h3>Funding Accountability</h3>
+            <p>Donors and funders see exactly where money goes and what outcomes it produces.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         HOW IT WORKS
+         ======================================== -->
+    <section id="how-it-works" class="section" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading" class="section-heading reveal">Three Steps to Verified Impact</h2>
+        <p class="section-subheading reveal">Simple enough for a funder to understand in five seconds. Powerful enough to transform frontline health delivery.</p>
+        <div class="steps-grid">
+
+          <div class="step reveal">
+            <div class="step-number">1</div>
+            <h3>Learn</h3>
+            <p>Workers select and receive training through a digital training platform integrated with CommCare.</p>
+          </div>
+
+          <div class="step reveal">
+            <div class="step-number">2</div>
+            <h3>Deliver</h3>
+            <p>Workers deliver services using CommCare for data collection and workflow management.</p>
+          </div>
+
+          <div class="step reveal">
+            <div class="step-number">3</div>
+            <h3>Verify & Pay</h3>
+            <p>Service delivery is verified using biometrics, GPS, and data algorithms. Workers receive fair, transparent compensation.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         IMPACT
+         ======================================== -->
+    <section id="impact" class="section section-dark" aria-labelledby="impact-heading">
+      <div class="container">
+        <p class="overline reveal" style="text-align:center; color:rgba(255,255,255,0.5); margin-bottom:16px;">Proven Impact</p>
+        <h2 id="impact-heading" class="section-heading reveal" style="margin-bottom:56px;">Numbers that speak for themselves</h2>
+        <div class="stats-grid">
+
+          <div class="stat-item reveal">
+            <div class="stat-number">101,000+</div>
+            <div class="stat-label">Health Services Delivered</div>
+            <div class="stat-context">Verified through biometrics and GPS</div>
+          </div>
+
+          <div class="stat-item reveal">
+            <div class="stat-number">$10:1</div>
+            <div class="stat-label">Return on Investment</div>
+            <div class="stat-context">Demonstrated by the Financing Alliance for Health</div>
+          </div>
+
+          <div class="stat-item reveal">
+            <div class="stat-number">80+</div>
+            <div class="stat-label">Countries on CommCare</div>
+            <div class="stat-context">350,000+ frontline workers over 15 years</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CTA
+         ======================================== -->
+    <section id="contact" class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading" class="section-heading reveal">Ready to see verified impact in action?</h2>
+        <p class="reveal">Learn how CommCare Connect creates transparent accountability between funders and frontline health workers.</p>
+        <a href="mailto:connect@dimagi.com" class="btn btn-orange-lg reveal">Request a Demo</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-brand">CommCare Connect by Dimagi</div>
+      <div class="footer-copy">&copy; 2026 Dimagi, Inc. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       JAVASCRIPT
+       ======================================== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // — Nav scroll shadow —
+      var nav = document.querySelector('.site-nav');
+      var scrollThreshold = 10;
+
+      function onScroll() {
+        if (window.scrollY > scrollThreshold) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // — Mobile nav toggle —
+      var toggle = document.querySelector('.nav-toggle');
+      var links = document.querySelector('.nav-links');
+
+      toggle.addEventListener('click', function() {
+        var isOpen = links.classList.toggle('open');
+        toggle.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+
+      // Close mobile nav when a link is clicked
+      links.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          links.classList.remove('open');
+          toggle.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // — Scroll reveal —
+      // Default: all .reveal elements are visible (no CSS hiding)
+      // JS adds .reveal-hidden, then IntersectionObserver reveals them
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!prefersReducedMotion) {
+        var reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(function(el) {
+          el.classList.add('reveal-hidden');
+        });
+
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                // Stagger animations within the same section
+                var siblings = entry.target.parentElement.querySelectorAll('.reveal-hidden:not(.revealed)');
+                var index = Array.prototype.indexOf.call(siblings, entry.target);
+                var delay = Math.max(0, index) * 80;
+
+                setTimeout(function() {
+                  entry.target.classList.add('revealed');
+                }, delay);
+
+                observer.unobserve(entry.target);
+              }
+            });
+          }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+          });
+
+          reveals.forEach(function(el) {
+            observer.observe(el);
+          });
+        } else {
+          // Fallback: show everything
+          reveals.forEach(function(el) {
+            el.classList.remove('reveal-hidden');
+          });
+        }
+      }
+
+      // — Smooth scroll for anchor links —
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            var offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
