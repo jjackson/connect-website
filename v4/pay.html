@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pay — Connect by Dimagi</title>
+<meta name="description" content="Every Frontline Worker is paid for their impactful work. Fair, transparent compensation tied directly to verified results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Pay page-specific styles */
+.subpage-hero {
+  position: relative;
+  padding: calc(72px + var(--space-3xl)) 0 var(--space-2xl);
+  background: var(--off-white);
+  overflow: hidden;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.subpage-hero .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+}
+
+.subpage-hero h1 {
+  font-family: var(--font);
+  font-weight: var(--fw-semibold);
+  font-size: clamp(42px, 6vw, 64px);
+  color: var(--deep-purple);
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+.subpage-hero h1 .accent {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subpage-hero .hero-sub {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--fern-blue);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.subpage-hero-topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.06;
+}
+
+/* Content sections */
+.content-section {
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.content-section.alt-bg {
+  background: var(--sky-tint);
+}
+
+.content-section .section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+/* Narrative block */
+.narrative-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.narrative-text h3 {
+  font-weight: var(--fw-semibold);
+  font-size: clamp(22px, 3vw, 28px);
+  color: var(--deep-purple);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.narrative-text p {
+  font-size: 16px;
+  color: var(--fern-blue);
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+}
+
+.narrative-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.narrative-visual svg {
+  width: 100%;
+  max-width: 360px;
+}
+
+/* ROI highlight */
+.roi-section {
+  padding: var(--space-3xl) 0;
+  background: var(--deep-purple);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.roi-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.roi-topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.06;
+}
+
+.roi-stat {
+  font-family: var(--font);
+  font-weight: var(--fw-extralight);
+  font-size: clamp(56px, 10vw, 120px);
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.roi-label {
+  font-weight: var(--fw-semibold);
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: var(--sky);
+  margin-bottom: var(--space-sm);
+}
+
+.roi-desc {
+  font-size: clamp(16px, 2vw, 18px);
+  color: rgba(255,255,255,0.65);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.info-card {
+  background: var(--white);
+  border: 1px solid rgba(142, 161, 255, 0.15);
+  border-top: 3px solid var(--indigo);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: all 0.3s ease;
+}
+
+.info-card:nth-child(2) {
+  border-top-color: var(--mango);
+}
+
+.info-card:nth-child(3) {
+  border-top-color: var(--sky);
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(22, 0, 109, 0.1);
+}
+
+.info-card .card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--sky-tint);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+}
+
+.info-card .card-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--indigo);
+}
+
+.info-card h3 {
+  font-weight: var(--fw-semibold);
+  font-size: 20px;
+  color: var(--deep-purple);
+  margin-bottom: var(--space-xs);
+}
+
+.info-card p {
+  font-size: 15px;
+  color: var(--fern-blue);
+  line-height: 1.6;
+}
+
+.info-card .step-number-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--indigo);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: var(--fw-semibold);
+  border-radius: 50%;
+  margin-bottom: var(--space-sm);
+}
+
+/* CTA section */
+.page-cta {
+  padding: var(--space-3xl) 0;
+  background: var(--off-white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-cta .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-cta h2 {
+  font-weight: var(--fw-semibold);
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--deep-purple);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.page-cta p {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--fern-blue);
+  margin-bottom: var(--space-lg);
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .narrative-block {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .narrative-visual {
+    order: -1;
+  }
+  .narrative-visual svg {
+    max-width: 240px;
+  }
+}
+</style>
+
+<body>
+
+<!-- ============================================
+     HEADER / NAVIGATION
+     ============================================ -->
+<header class="site-header" role="banner">
+  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+    <!-- Logo -->
+    <a href="index.html" class="logo" aria-label="Connect by Dimagi — Home">
+      <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" style="height: 36px; width: auto;">
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links">
+      <!-- How It Works Dropdown -->
+      <li class="nav-item" role="none">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          How It Works
+          <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="learn.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><path d="M3 13V5a2 2 0 012-2h8a2 2 0 012 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M1 13h16M9 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Learn
+          </a>
+          <a href="deliver.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><rect x="4" y="2" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Deliver
+          </a>
+          <a href="verify.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><path d="M9 2L3 5v4c0 4 3 6.5 6 7.5 3-1 6-3.5 6-7.5V5L9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.5 9.5L8 11l3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verify
+          </a>
+          <a href="pay.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v8M7 7h3.5a1.5 1.5 0 010 3H7m0 0h4a1.5 1.5 0 010 3H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Pay
+          </a>
+        </div>
+      </li>
+
+      <!-- Who It's For Dropdown -->
+      <li class="nav-item" role="none">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Who It's For
+          <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="for-funders.html" role="menuitem">Funders</a>
+          <a href="for-enterprises.html" role="menuitem">Enterprises</a>
+          <a href="for-llos.html" role="menuitem">LLOs</a>
+          <a href="for-workers.html" role="menuitem">Workers</a>
+        </div>
+      </li>
+
+      <li class="nav-item" role="none">
+        <a class="nav-link" href="index.html#impact">Impact</a>
+      </li>
+      <li class="nav-item" role="none">
+        <a class="nav-link" href="index.html#about">About</a>
+      </li>
+    </ul>
+
+    <!-- Nav CTA -->
+    <div class="nav-cta-wrapper">
+      <a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <div class="mobile-nav-group">
+    <div class="mobile-nav-group-title">How It Works</div>
+    <a href="learn.html">Learn</a>
+    <a href="deliver.html">Deliver</a>
+    <a href="verify.html">Verify</a>
+    <a href="pay.html">Pay</a>
+  </div>
+  <div class="mobile-nav-group">
+    <div class="mobile-nav-group-title">Who It's For</div>
+    <a href="for-funders.html">Funders</a>
+    <a href="for-enterprises.html">Enterprises</a>
+    <a href="for-llos.html">LLOs</a>
+    <a href="for-workers.html">Workers</a>
+  </div>
+  <div class="mobile-nav-group">
+    <a href="index.html#impact">Impact</a>
+    <a href="index.html#about">About</a>
+  </div>
+  <a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a>
+</nav>
+
+<main>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="subpage-hero">
+  <svg class="subpage-hero-topo" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="720" cy="300" rx="500" ry="250" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <ellipse cx="720" cy="300" rx="400" ry="200" stroke="#8EA1FF" stroke-width="0.8" fill="none"/>
+    <ellipse cx="720" cy="300" rx="300" ry="150" stroke="#8EA1FF" stroke-width="0.6" fill="none"/>
+    <ellipse cx="720" cy="300" rx="200" ry="100" stroke="#8EA1FF" stroke-width="0.4" fill="none"/>
+    <path d="M200 200 Q500 160 1200 200" stroke="#8EA1FF" stroke-width="0.5" fill="none" stroke-dasharray="6 4"/>
+    <path d="M200 400 Q500 440 1200 400" stroke="#8EA1FF" stroke-width="0.5" fill="none" stroke-dasharray="6 4"/>
+  </svg>
+
+  <div class="container">
+    <div class="reveal">
+      <span class="overline">How It Works</span>
+      <h1><span class="accent">Pay.</span></h1>
+      <p class="hero-sub">Every Frontline Worker is paid for their impactful work. Paying for results, not effort.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TRANSPARENT FROM EARNING TO DELIVERY
+     ============================================ -->
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="narrative-block">
+      <div class="narrative-text reveal">
+        <span class="overline">Transparency</span>
+        <h3>Transparent From Earning to Delivery</h3>
+        <p>Frontline workers see the full payment cycle -- from the moment a task is completed and verified to the instant funds arrive. Every step is visible, every calculation is clear.</p>
+        <p>No hidden deductions. No opaque formulas. Workers know exactly what they earned, why they earned it, and when they will be paid. This is not an incentive program -- it is fair compensation for verified work.</p>
+        <p>Full transparency builds trust and motivates workers to deliver quality services, knowing they will be recognized and compensated fairly.</p>
+      </div>
+      <div class="narrative-visual reveal">
+        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Topo accent -->
+          <path d="M320 40 Q260 80 200 90 Q140 100 40 80" stroke="#8EA1FF" stroke-width="0.6" fill="none" opacity="0.3"/>
+          <path d="M320 60 Q260 100 200 110 Q140 120 40 100" stroke="#8EA1FF" stroke-width="0.5" fill="none" opacity="0.2" stroke-dasharray="4 3"/>
+          <!-- Stacked rectangles (payment flow) -->
+          <rect x="80" y="70" width="200" height="44" rx="8" fill="#3843D0" opacity="0.08" stroke="#3843D0" stroke-width="1.5"/>
+          <rect x="80" y="126" width="200" height="44" rx="8" fill="#8EA1FF" opacity="0.1" stroke="#8EA1FF" stroke-width="1.5"/>
+          <rect x="80" y="182" width="200" height="44" rx="8" fill="#FC5F36" opacity="0.08" stroke="#FC5F36" stroke-width="1.5"/>
+          <!-- Flow arrows -->
+          <path d="M180 118v5" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+          <path d="M176 121l4 4 4-4" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M180 174v5" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+          <path d="M176 177l4 4 4-4" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Labels -->
+          <text x="130" y="97" font-family="Work Sans" font-size="13" font-weight="600" fill="#3843D0">Earn</text>
+          <text x="127" y="153" font-family="Work Sans" font-size="13" font-weight="600" fill="#5F6A7D">Verify</text>
+          <text x="133" y="209" font-family="Work Sans" font-size="13" font-weight="600" fill="#FC5F36">Pay</text>
+          <!-- Checkmarks -->
+          <path d="M240 88l4 4 8-8" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M240 144l4 4 8-8" stroke="#8EA1FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M240 200l4 4 8-8" stroke="#FC5F36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     THE ECONOMIC MULTIPLIER
+     ============================================ -->
+<section class="roi-section">
+  <svg class="roi-topo" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="720" cy="200" rx="600" ry="180" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <ellipse cx="720" cy="200" rx="480" ry="140" stroke="#8EA1FF" stroke-width="0.7" fill="none"/>
+    <ellipse cx="720" cy="200" rx="360" ry="100" stroke="#8EA1FF" stroke-width="0.5" fill="none"/>
+    <path d="M100 150 Q400 100 1340 150" stroke="#8EA1FF" stroke-width="0.4" fill="none" stroke-dasharray="6 4"/>
+    <path d="M100 250 Q400 300 1340 250" stroke="#8EA1FF" stroke-width="0.4" fill="none" stroke-dasharray="6 4"/>
+  </svg>
+
+  <div class="container reveal">
+    <span class="overline" style="color: var(--sky);">The Economic Multiplier</span>
+    <div class="roi-stat">$10:1</div>
+    <div class="roi-label">Return on Investment</div>
+    <p class="roi-desc">Fair compensation is not just the right thing to do -- it is economically powerful. Every dollar paid to a frontline worker generates an estimated tenfold return in community health outcomes, economic activity, and system-level savings.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW PAYMENTS WORK
+     ============================================ -->
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">Payment Flow</span>
+      <h2 class="section-heading">How Payments Work</h2>
+      <div class="gradient-line"></div>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Card 1: Earnings Calculated -->
+      <div class="info-card reveal">
+        <div class="step-number-inline">1</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3>Earnings Calculated</h3>
+        <p>As verified service deliveries are confirmed, earnings are calculated in real time. Workers see exactly how much they have earned and for which tasks -- no guesswork, no surprises.</p>
+      </div>
+
+      <!-- Card 2: Payment Processed -->
+      <div class="info-card reveal">
+        <div class="step-number-inline">2</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <path d="M2 10h20"/>
+          </svg>
+        </div>
+        <h3>Payment Processed</h3>
+        <p>Payments are batched and processed through secure mobile money channels. The entire transaction is logged and auditable, giving funders and managers full visibility into where funds flow.</p>
+      </div>
+
+      <!-- Card 3: Worker Receives -->
+      <div class="info-card reveal">
+        <div class="step-number-inline">3</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Worker Receives</h3>
+        <p>Funds arrive directly to the worker's mobile wallet. Workers receive a confirmation with a full breakdown of their earnings -- no intermediaries, no delays, no deductions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA
+     ============================================ -->
+<section class="page-cta">
+  <div class="container reveal">
+    <h2>See how transparent payments drive impact.</h2>
+    <p>Learn how Connect ensures every frontline worker is compensated fairly for verified results.</p>
+    <a href="mailto:connect@dimagi.com" class="btn-primary">
+      Get in Touch
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 4px; display: inline-flex;">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" style="height: 32px; width: auto;">
+        </a>
+        <p>A new model for global development — linking funding directly to verified service delivery at the frontline.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="learn.html">Learn</a>
+        <a href="deliver.html">Deliver</a>
+        <a href="verify.html">Verify</a>
+        <a href="pay.html">Pay</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="for-funders.html">Funders</a>
+        <a href="for-enterprises.html">Enterprises</a>
+        <a href="for-llos.html">LLOs</a>
+        <a href="for-workers.html">Workers</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="index.html#impact">Child Health Campaigns</a>
+        <a href="index.html#impact">Kangaroo Mother Care</a>
+        <a href="index.html#impact">Early Childhood Development</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html#about">About</a>
+        <a href="mailto:connect@dimagi.com">Contact</a>
+        <a href="https://dimagi.com" target="_blank" rel="noopener">Dimagi</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Dimagi, Inc. All rights reserved.</span>
+      <span>Powering the Frontline. Paying for Results.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // --- Scroll Reveal ---
+  var reveals = document.querySelectorAll('.reveal');
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion) {
+    reveals.forEach(function(el, i) {
+      el.classList.add('hidden');
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+    });
+
+    function checkReveal() {
+      reveals.forEach(function(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) {
+          el.classList.remove('hidden');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkReveal, { passive: true });
+    window.addEventListener('resize', checkReveal, { passive: true });
+    checkReveal();
+  }
+
+  // --- Header scroll shadow ---
+  var header = document.querySelector('.site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // --- Dropdown navigation ---
+  var navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(function(item) {
+    var btn = item.querySelector('.nav-link[aria-haspopup]');
+    if (!btn) return;
+
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var isOpen = item.classList.contains('open');
+      navItems.forEach(function(ni) { ni.classList.remove('open'); });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      navItems.forEach(function(ni) {
+        ni.classList.remove('open');
+        var b = ni.querySelector('[aria-haspopup]');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // --- Mobile menu ---
+  var toggle = document.querySelector('.mobile-toggle');
+  var mobileNav = document.querySelector('.mobile-nav');
+  var overlay = document.querySelector('.mobile-overlay');
+
+  function openMobile() {
+    toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+    mobileNav.classList.add('open');
+    overlay.style.display = 'block';
+    requestAnimationFrame(function() {
+      overlay.classList.add('active');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobile() {
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    mobileNav.classList.remove('open');
+    overlay.classList.remove('active');
+    setTimeout(function() { overlay.style.display = 'none'; }, 350);
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function() {
+    if (mobileNav.classList.contains('open')) {
+      closeMobile();
+    } else {
+      openMobile();
+    }
+  });
+
+  overlay.addEventListener('click', closeMobile);
+
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMobile);
+  });
+
+  // --- Smooth scroll for anchor links ---
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var id = this.getAttribute('href');
+      if (id === '#') return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>

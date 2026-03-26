@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn — Connect by Dimagi</title>
+<meta name="description" content="Frontline Workers use a mobile app to build skills at their own pace, preparing for high-impact service delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Learn page-specific hero sizing */
+.learn-hero {
+  min-height: 50vh;
+  padding: calc(72px + var(--space-2xl)) 0 var(--space-2xl);
+}
+.learn-hero .container {
+  display: block;
+  text-align: center;
+}
+.learn-hero .hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* Content sections */
+.content-section {
+  padding: var(--space-3xl) 0;
+}
+.content-section.bg-off-white {
+  background: var(--off-white);
+}
+.content-section.bg-white {
+  background: var(--white);
+}
+.content-section .section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+.benefit-card {
+  background: var(--white);
+  border: 1px solid rgba(142, 161, 255, 0.15);
+  border-top: 3px solid var(--indigo);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(22, 0, 109, 0.1);
+}
+.benefit-card h4 {
+  font-weight: var(--fw-semibold);
+  font-size: 18px;
+  color: var(--deep-purple);
+  margin-bottom: var(--space-xs);
+}
+.benefit-card p {
+  font-size: 14px;
+  color: var(--fern-blue);
+  line-height: 1.6;
+}
+.benefit-card:nth-child(2) {
+  border-top-color: var(--mango);
+}
+.benefit-card:nth-child(3) {
+  border-top-color: var(--sky);
+}
+.content-body {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.content-body p {
+  font-size: clamp(16px, 2vw, 18px);
+  color: var(--fern-blue);
+  line-height: 1.7;
+}
+@media (max-width: 768px) {
+  .benefit-grid { grid-template-columns: 1fr; }
+  .learn-hero { min-height: auto; }
+}
+</style>
+
+<body>
+
+<!-- ============================================
+     HEADER / NAVIGATION
+     ============================================ -->
+<header class="site-header" role="banner">
+  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+    <!-- Logo -->
+    <a href="index.html" class="logo" aria-label="Connect by Dimagi — Home">
+      <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" style="height: 36px; width: auto;">
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links">
+      <!-- How It Works Dropdown -->
+      <li class="nav-item" role="none">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          How It Works
+          <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="learn.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><path d="M3 13V5a2 2 0 012-2h8a2 2 0 012 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M1 13h16M9 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Learn
+          </a>
+          <a href="deliver.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><rect x="4" y="2" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Deliver
+          </a>
+          <a href="verify.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><path d="M9 2L3 5v4c0 4 3 6.5 6 7.5 3-1 6-3.5 6-7.5V5L9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.5 9.5L8 11l3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verify
+          </a>
+          <a href="pay.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v8M7 7h3.5a1.5 1.5 0 010 3H7m0 0h4a1.5 1.5 0 010 3H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Pay
+          </a>
+        </div>
+      </li>
+
+      <!-- Who It's For Dropdown -->
+      <li class="nav-item" role="none">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Who It's For
+          <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="for-funders.html" role="menuitem">Funders</a>
+          <a href="for-enterprises.html" role="menuitem">Enterprises</a>
+          <a href="for-llos.html" role="menuitem">LLOs</a>
+          <a href="for-workers.html" role="menuitem">Workers</a>
+        </div>
+      </li>
+
+      <li class="nav-item" role="none">
+        <a class="nav-link" href="index.html#impact">Impact</a>
+      </li>
+      <li class="nav-item" role="none">
+        <a class="nav-link" href="index.html#about">About</a>
+      </li>
+    </ul>
+
+    <!-- Nav CTA -->
+    <div class="nav-cta-wrapper">
+      <a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <div class="mobile-nav-group">
+    <div class="mobile-nav-group-title">How It Works</div>
+    <a href="learn.html">Learn</a>
+    <a href="deliver.html">Deliver</a>
+    <a href="verify.html">Verify</a>
+    <a href="pay.html">Pay</a>
+  </div>
+  <div class="mobile-nav-group">
+    <div class="mobile-nav-group-title">Who It's For</div>
+    <a href="for-funders.html">Funders</a>
+    <a href="for-enterprises.html">Enterprises</a>
+    <a href="for-llos.html">LLOs</a>
+    <a href="for-workers.html">Workers</a>
+  </div>
+  <div class="mobile-nav-group">
+    <a href="index.html#impact">Impact</a>
+    <a href="index.html#about">About</a>
+  </div>
+  <a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a>
+</nav>
+
+<main>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero learn-hero">
+  <svg class="hero-topo" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="900" cy="400" rx="500" ry="350" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <ellipse cx="900" cy="400" rx="420" ry="290" stroke="#8EA1FF" stroke-width="0.8" fill="none"/>
+    <ellipse cx="900" cy="400" rx="340" ry="230" stroke="#8EA1FF" stroke-width="0.6" fill="none"/>
+    <ellipse cx="900" cy="400" rx="260" ry="170" stroke="#8EA1FF" stroke-width="0.5" fill="none"/>
+    <path d="M400 300 Q700 250 1400 300" stroke="#8EA1FF" stroke-width="0.5" fill="none" stroke-dasharray="6 4"/>
+    <path d="M300 500 Q700 450 1400 500" stroke="#8EA1FF" stroke-width="0.5" fill="none" stroke-dasharray="6 4"/>
+  </svg>
+
+  <div class="container">
+    <div class="hero-content reveal">
+      <span class="overline">How It Works: Step 1</span>
+      <h1>Learn.</h1>
+      <p class="hero-sub">Frontline Workers use a mobile app to build skills at their own pace, preparing for high-impact service delivery.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 1: TRAINING
+     ============================================ -->
+<section class="content-section bg-off-white">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">Training</span>
+      <h2 class="section-heading">Training That Meets Workers<br>Where They Are</h2>
+      <div class="gradient-line"></div>
+    </div>
+
+    <div class="content-body reveal">
+      <p>Workers select training modules directly on their mobile phones -- no classroom required. Connect's learning platform is designed for low-bandwidth environments and basic smartphones, so workers in even the most remote communities can access the skills they need. Modules are short, practical, and built around the specific services workers will deliver in the field.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 2: FROM KNOWLEDGE TO ACTION
+     ============================================ -->
+<section class="content-section bg-white">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">Outcomes</span>
+      <h2 class="section-heading">From Knowledge to Action</h2>
+      <div class="gradient-line"></div>
+    </div>
+
+    <div class="content-body reveal">
+      <p>Training on Connect is not just about learning -- it is the gateway to real job opportunities. Once a worker completes a training module and demonstrates competency, they become eligible for funded service delivery assignments. Every skill gained maps directly to a service that communities need.</p>
+    </div>
+
+    <div class="benefit-grid">
+      <div class="benefit-card reveal">
+        <h4>Self-Paced</h4>
+        <p>Workers learn on their own schedule, fitting training around family and community responsibilities without losing income.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <h4>Mobile-First</h4>
+        <p>Designed for basic Android smartphones and low-bandwidth networks. No laptop, no Wi-Fi, no problem.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <h4>Skill Verification</h4>
+        <p>Competency is confirmed before workers enter the field, ensuring quality service delivery from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA
+     ============================================ -->
+<section class="final-cta">
+  <svg class="final-cta-topo" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <path d="M-100 200 Q200 100 500 180 Q800 260 1100 160 Q1400 60 1600 200" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <path d="M-100 240 Q200 140 500 220 Q800 300 1100 200 Q1400 100 1600 240" stroke="#8EA1FF" stroke-width="0.7" fill="none" stroke-dasharray="6 4"/>
+    <path d="M-100 280 Q200 180 500 260 Q800 340 1100 240 Q1400 140 1600 280" stroke="#8EA1FF" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <div class="container">
+    <div class="reveal">
+      <h2>Ready to build your frontline workforce?</h2>
+      <p>See how Connect's training platform prepares workers for verified, high-impact service delivery.</p>
+      <a href="mailto:connect@dimagi.com" class="btn-primary" style="font-size:18px; padding: 16px 40px;">
+        Get in Touch
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 4px; display: inline-flex;">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" style="height: 32px; width: auto;">
+        </a>
+        <p>A new model for global development — linking funding directly to verified service delivery at the frontline.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="learn.html">Learn</a>
+        <a href="deliver.html">Deliver</a>
+        <a href="verify.html">Verify</a>
+        <a href="pay.html">Pay</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="for-funders.html">Funders</a>
+        <a href="for-enterprises.html">Enterprises</a>
+        <a href="for-llos.html">LLOs</a>
+        <a href="for-workers.html">Workers</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="index.html#impact">Child Health Campaigns</a>
+        <a href="index.html#impact">Kangaroo Mother Care</a>
+        <a href="index.html#impact">Early Childhood Development</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html#about">About</a>
+        <a href="mailto:connect@dimagi.com">Contact</a>
+        <a href="https://dimagi.com" target="_blank" rel="noopener">Dimagi</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Dimagi, Inc. All rights reserved.</span>
+      <span>Powering the Frontline. Paying for Results.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // --- Scroll Reveal ---
+  var reveals = document.querySelectorAll('.reveal');
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion) {
+    reveals.forEach(function(el, i) {
+      el.classList.add('hidden');
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+    });
+
+    function checkReveal() {
+      reveals.forEach(function(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) {
+          el.classList.remove('hidden');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkReveal, { passive: true });
+    window.addEventListener('resize', checkReveal, { passive: true });
+    checkReveal();
+  }
+
+  // --- Header scroll shadow ---
+  var header = document.querySelector('.site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // --- Dropdown navigation ---
+  var navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(function(item) {
+    var btn = item.querySelector('.nav-link[aria-haspopup]');
+    if (!btn) return;
+
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var isOpen = item.classList.contains('open');
+      navItems.forEach(function(ni) { ni.classList.remove('open'); });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      navItems.forEach(function(ni) {
+        ni.classList.remove('open');
+        var b = ni.querySelector('[aria-haspopup]');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // --- Mobile menu ---
+  var toggle = document.querySelector('.mobile-toggle');
+  var mobileNav = document.querySelector('.mobile-nav');
+  var overlay = document.querySelector('.mobile-overlay');
+
+  function openMobile() {
+    toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+    mobileNav.classList.add('open');
+    overlay.style.display = 'block';
+    requestAnimationFrame(function() {
+      overlay.classList.add('active');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobile() {
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    mobileNav.classList.remove('open');
+    overlay.classList.remove('active');
+    setTimeout(function() { overlay.style.display = 'none'; }, 350);
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function() {
+    if (mobileNav.classList.contains('open')) {
+      closeMobile();
+    } else {
+      openMobile();
+    }
+  });
+
+  overlay.addEventListener('click', closeMobile);
+
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMobile);
+  });
+
+  // --- Smooth scroll for anchor links ---
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var id = this.getAttribute('href');
+      if (id === '#') return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>

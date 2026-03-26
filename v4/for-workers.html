@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Frontline Workers — Connect by Dimagi</title>
+<meta name="description" content="Use a mobile app to learn skills, deliver services, and verify that your work meets quality standards in order to get paid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<body>
+
+<!-- ============================================
+     HEADER / NAVIGATION
+     ============================================ -->
+<header class="site-header" role="banner">
+  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+    <!-- Logo -->
+    <a href="index.html" class="logo" aria-label="Connect by Dimagi — Home">
+      <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" style="height: 36px; width: auto;">
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links">
+      <!-- How It Works Dropdown -->
+      <li class="nav-item" role="none">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          How It Works
+          <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="learn.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><path d="M3 13V5a2 2 0 012-2h8a2 2 0 012 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M1 13h16M9 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Learn
+          </a>
+          <a href="deliver.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><rect x="4" y="2" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Deliver
+          </a>
+          <a href="verify.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><path d="M9 2L3 5v4c0 4 3 6.5 6 7.5 3-1 6-3.5 6-7.5V5L9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.5 9.5L8 11l3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verify
+          </a>
+          <a href="pay.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v8M7 7h3.5a1.5 1.5 0 010 3H7m0 0h4a1.5 1.5 0 010 3H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Pay
+          </a>
+        </div>
+      </li>
+
+      <!-- Who It's For Dropdown -->
+      <li class="nav-item" role="none">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Who It's For
+          <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="for-funders.html" role="menuitem">Funders</a>
+          <a href="for-enterprises.html" role="menuitem">Enterprises</a>
+          <a href="for-llos.html" role="menuitem">LLOs</a>
+          <a href="for-workers.html" role="menuitem">Workers</a>
+        </div>
+      </li>
+
+      <li class="nav-item" role="none">
+        <a class="nav-link" href="index.html#impact">Impact</a>
+      </li>
+      <li class="nav-item" role="none">
+        <a class="nav-link" href="index.html#about">About</a>
+      </li>
+    </ul>
+
+    <!-- Nav CTA -->
+    <div class="nav-cta-wrapper">
+      <a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <div class="mobile-nav-group">
+    <div class="mobile-nav-group-title">How It Works</div>
+    <a href="learn.html">Learn</a>
+    <a href="deliver.html">Deliver</a>
+    <a href="verify.html">Verify</a>
+    <a href="pay.html">Pay</a>
+  </div>
+  <div class="mobile-nav-group">
+    <div class="mobile-nav-group-title">Who It's For</div>
+    <a href="for-funders.html">Funders</a>
+    <a href="for-enterprises.html">Enterprises</a>
+    <a href="for-llos.html">LLOs</a>
+    <a href="for-workers.html">Workers</a>
+  </div>
+  <div class="mobile-nav-group">
+    <a href="index.html#impact">Impact</a>
+    <a href="index.html#about">About</a>
+  </div>
+  <a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a>
+</nav>
+
+<main>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" style="min-height: 50vh;">
+  <!-- Topographic Background -->
+  <svg class="hero-topo" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="720" cy="400" rx="500" ry="300" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <ellipse cx="720" cy="400" rx="400" ry="240" stroke="#8EA1FF" stroke-width="0.8" fill="none"/>
+    <ellipse cx="720" cy="400" rx="300" ry="180" stroke="#8EA1FF" stroke-width="0.6" fill="none"/>
+    <ellipse cx="720" cy="400" rx="200" ry="120" stroke="#8EA1FF" stroke-width="0.4" fill="none"/>
+    <path d="M200 300 Q500 260 900 300 Q1200 340 1400 300" stroke="#8EA1FF" stroke-width="0.5" fill="none" stroke-dasharray="6 4"/>
+    <path d="M100 500 Q500 460 900 500 Q1200 540 1400 500" stroke="#8EA1FF" stroke-width="0.4" fill="none"/>
+  </svg>
+
+  <div class="container" style="display: block; text-align: center;">
+    <div class="hero-content reveal" style="max-width: 720px; margin: 0 auto;">
+      <h1>For Frontline Workers.</h1>
+      <p class="hero-sub" style="max-width: 620px; margin-left: auto; margin-right: auto;">Use a mobile app to learn skills, deliver services, and verify that your work meets quality standards in order to get paid.</p>
+      <div class="hero-ctas" style="justify-content: center;">
+        <a href="mailto:connect@dimagi.com" class="btn-primary">
+          Join the Frontline
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="index.html#how-it-works" class="btn-secondary">See How It Works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     YOUR WORK, YOUR CHOICE
+     ============================================ -->
+<section class="features">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">Your Work</span>
+      <h2 class="section-heading">Your Work, Your Choice</h2>
+      <div class="gradient-line"></div>
+    </div>
+
+    <div class="feature-block reveal">
+      <div class="feature-text">
+        <h3>Connect puts you in control of your work.</h3>
+        <p>You choose the tasks you want to take on. You see exactly what you will earn before you start. You decide when and where you work. There are no hidden deductions, no surprises, and no middlemen taking a cut.</p>
+        <p style="margin-top: var(--space-sm);">Every task you complete is recorded and verified. Your earnings are tracked transparently, so you always know what you are owed. Connect respects your time, your skills, and the essential work you do in your community.</p>
+      </div>
+      <div class="feature-visual">
+        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Topo lines -->
+          <path d="M40 240 Q100 180 180 170 Q260 160 320 120" stroke="#8EA1FF" stroke-width="0.8" fill="none" opacity="0.4"/>
+          <path d="M40 220 Q110 160 190 150 Q270 140 320 100" stroke="#8EA1FF" stroke-width="0.6" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+          <!-- Task list representation -->
+          <rect x="100" y="60" width="160" height="36" rx="8" fill="#3843D0" opacity="0.08" stroke="#3843D0" stroke-width="1.5"/>
+          <rect x="100" y="108" width="160" height="36" rx="8" fill="#3843D0" opacity="0.08" stroke="#3843D0" stroke-width="1.5"/>
+          <rect x="100" y="156" width="160" height="36" rx="8" fill="#FC5F36" opacity="0.08" stroke="#FC5F36" stroke-width="1.5"/>
+          <!-- Checkboxes -->
+          <rect x="112" y="72" width="12" height="12" rx="3" stroke="#3843D0" stroke-width="1.5" fill="none"/>
+          <path d="M114 78l3 3 5-5" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="112" y="120" width="12" height="12" rx="3" stroke="#3843D0" stroke-width="1.5" fill="none"/>
+          <path d="M114 126l3 3 5-5" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="112" y="168" width="12" height="12" rx="3" stroke="#FC5F36" stroke-width="1.5" fill="none"/>
+          <!-- Task labels -->
+          <rect x="134" y="75" width="50" height="6" rx="3" fill="#3843D0" opacity="0.3"/>
+          <rect x="134" y="123" width="60" height="6" rx="3" fill="#3843D0" opacity="0.3"/>
+          <rect x="134" y="171" width="45" height="6" rx="3" fill="#FC5F36" opacity="0.25"/>
+          <!-- Earnings -->
+          <text x="230" y="83" font-family="Work Sans" font-size="11" font-weight="600" fill="#3843D0" opacity="0.6">$12</text>
+          <text x="230" y="131" font-family="Work Sans" font-size="11" font-weight="600" fill="#3843D0" opacity="0.6">$15</text>
+          <text x="230" y="179" font-family="Work Sans" font-size="11" font-weight="600" fill="#FC5F36" opacity="0.5">$10</text>
+          <!-- Hand pointer cursor -->
+          <path d="M280 170 Q275 155 280 145 L285 145 Q290 155 285 170 Z" stroke="#8EA1FF" stroke-width="1.5" fill="none" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW IT WORKS FOR FLWs
+     ============================================ -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">Step by Step</span>
+      <h2 class="section-heading">How It Works for FLWs</h2>
+      <div class="gradient-line"></div>
+    </div>
+
+    <div class="steps-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <!-- Step 1: Learn New Skills -->
+      <div class="step-card reveal">
+        <div class="step-icon-wrap">
+          <span class="step-number">1</span>
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 24V8a2 2 0 012-2h7" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 6h6a2 2 0 012 2v3" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 14v10" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 6v16" stroke="#3843D0" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 2"/>
+            <path d="M4 24h10" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+            <path d="M18 24h6" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 12h5" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <path d="M8 16h4" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3>Learn New Skills</h3>
+        <p>Access training modules on your phone. Build new skills at your own pace and qualify for more tasks and higher pay.</p>
+      </div>
+
+      <!-- Step 2: Deliver & Get Verified -->
+      <div class="step-card reveal">
+        <div class="step-icon-wrap">
+          <span class="step-number">2</span>
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16 4L6 8v6c0 7 4.5 11 10 13" stroke="#3843D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 27c5.5-2 10-6 10-13V8l-10-4" stroke="#3843D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 2"/>
+            <path d="M11 16l3 3" stroke="#3843D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.5 17.5L21 12" stroke="#3843D0" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Deliver & Get Verified</h3>
+        <p>Deliver services in your community. Your work is verified automatically so there is a clear, trusted record of what you did.</p>
+      </div>
+
+      <!-- Step 3: Get Paid Fairly -->
+      <div class="step-card reveal">
+        <div class="step-icon-wrap">
+          <span class="step-number">3</span>
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 10h16a2 2 0 012 2v10a2 2 0 01-2 2H8a2 2 0 01-2-2V10z" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 10V8a2 2 0 012-2h10" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="17" r="2" stroke="#3843D0" stroke-width="1.5" fill="none"/>
+            <path d="M26 10V4m0 0l-2.5 2.5M26 4l2.5 2.5" stroke="#3843D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Get Paid Fairly</h3>
+        <p>See exactly what you earned and when payment is coming. Fair compensation, sent directly to you. No hidden deductions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     YOU ARE THE FRONTLINE (Impact-style, indigo bg)
+     ============================================ -->
+<section class="impact">
+  <svg class="impact-topo" viewBox="0 0 1440 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="720" cy="250" rx="600" ry="200" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <ellipse cx="720" cy="250" rx="480" ry="160" stroke="#8EA1FF" stroke-width="0.8" fill="none"/>
+    <ellipse cx="720" cy="250" rx="360" ry="120" stroke="#8EA1FF" stroke-width="0.6" fill="none" stroke-dasharray="8 4"/>
+    <ellipse cx="720" cy="250" rx="240" ry="80" stroke="#8EA1FF" stroke-width="0.4" fill="none"/>
+    <path d="M100 150 Q400 120 700 140 Q1000 160 1340 130" stroke="#8EA1FF" stroke-width="0.4" fill="none" stroke-dasharray="4 4"/>
+    <path d="M100 350 Q400 380 700 360 Q1000 340 1340 370" stroke="#8EA1FF" stroke-width="0.4" fill="none" stroke-dasharray="4 4"/>
+  </svg>
+
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">The Frontline</span>
+      <h2 class="section-heading">You are the frontline.</h2>
+    </div>
+
+    <div class="stats-grid reveal">
+      <div class="stat-item">
+        <div class="stat-number">350,000+</div>
+        <div class="stat-label">Frontline Workers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">80+</div>
+        <div class="stat-label">Countries</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">101,000+</div>
+        <div class="stat-label">Services Delivered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Transparent Payments</div>
+      </div>
+    </div>
+
+    <p class="impact-source reveal">Every number represents real people delivering real services in communities around the world. Workers like you.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     FINAL CTA
+     ============================================ -->
+<section class="final-cta">
+  <svg class="final-cta-topo" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <path d="M-100 200 Q200 100 500 180 Q800 260 1100 160 Q1400 60 1600 200" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <path d="M-100 240 Q200 140 500 220 Q800 300 1100 200 Q1400 100 1600 240" stroke="#8EA1FF" stroke-width="0.7" fill="none" stroke-dasharray="6 4"/>
+    <path d="M-100 280 Q200 180 500 260 Q800 340 1100 240 Q1400 140 1600 280" stroke="#8EA1FF" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <div class="container">
+    <div class="reveal">
+      <h2>Join the frontline.</h2>
+      <p>Learn skills. Deliver services. Get paid fairly. Your work matters — Connect makes sure of it.</p>
+      <a href="mailto:connect@dimagi.com" class="btn-primary" style="font-size:18px; padding: 16px 40px;">
+        Get Started
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 4px; display: inline-flex;">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" style="height: 32px; width: auto;">
+        </a>
+        <p>A new model for global development — linking funding directly to verified service delivery at the frontline.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="learn.html">Learn</a>
+        <a href="deliver.html">Deliver</a>
+        <a href="verify.html">Verify</a>
+        <a href="pay.html">Pay</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="for-funders.html">Funders</a>
+        <a href="for-enterprises.html">Enterprises</a>
+        <a href="for-llos.html">LLOs</a>
+        <a href="for-workers.html">Workers</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="index.html#impact">Child Health Campaigns</a>
+        <a href="index.html#impact">Kangaroo Mother Care</a>
+        <a href="index.html#impact">Early Childhood Development</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html#about">About</a>
+        <a href="mailto:connect@dimagi.com">Contact</a>
+        <a href="https://dimagi.com" target="_blank" rel="noopener">Dimagi</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Dimagi, Inc. All rights reserved.</span>
+      <span>Powering the Frontline. Paying for Results.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // --- Scroll Reveal ---
+  var reveals = document.querySelectorAll('.reveal');
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion) {
+    reveals.forEach(function(el, i) {
+      el.classList.add('hidden');
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+    });
+
+    function checkReveal() {
+      reveals.forEach(function(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) {
+          el.classList.remove('hidden');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkReveal, { passive: true });
+    window.addEventListener('resize', checkReveal, { passive: true });
+    checkReveal();
+  }
+
+  // --- Header scroll shadow ---
+  var header = document.querySelector('.site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // --- Dropdown navigation ---
+  var navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(function(item) {
+    var btn = item.querySelector('.nav-link[aria-haspopup]');
+    if (!btn) return;
+
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var isOpen = item.classList.contains('open');
+      navItems.forEach(function(ni) { ni.classList.remove('open'); });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      navItems.forEach(function(ni) {
+        ni.classList.remove('open');
+        var b = ni.querySelector('[aria-haspopup]');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // --- Mobile menu ---
+  var toggle = document.querySelector('.mobile-toggle');
+  var mobileNav = document.querySelector('.mobile-nav');
+  var overlay = document.querySelector('.mobile-overlay');
+
+  function openMobile() {
+    toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+    mobileNav.classList.add('open');
+    overlay.style.display = 'block';
+    requestAnimationFrame(function() {
+      overlay.classList.add('active');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobile() {
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    mobileNav.classList.remove('open');
+    overlay.classList.remove('active');
+    setTimeout(function() { overlay.style.display = 'none'; }, 350);
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function() {
+    if (mobileNav.classList.contains('open')) {
+      closeMobile();
+    } else {
+      openMobile();
+    }
+  });
+
+  overlay.addEventListener('click', closeMobile);
+
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMobile);
+  });
+
+  // --- Smooth scroll for anchor links ---
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var id = this.getAttribute('href');
+      if (id === '#') return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>

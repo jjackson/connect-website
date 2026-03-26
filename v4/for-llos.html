@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Locally-Led Organizations — Connect by Dimagi</title>
+<meta name="description" content="Connect provides locally-led organizations with access to sustainable funding, workforce tools, and verified outcomes that make your impact visible to funders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<body>
+
+<!-- ============================================
+     HEADER / NAVIGATION
+     ============================================ -->
+<header class="site-header" role="banner">
+  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+    <!-- Logo -->
+    <a href="index.html" class="logo" aria-label="Connect by Dimagi — Home">
+      <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" style="height: 36px; width: auto;">
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links">
+      <!-- How It Works Dropdown -->
+      <li class="nav-item" role="none">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          How It Works
+          <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="learn.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><path d="M3 13V5a2 2 0 012-2h8a2 2 0 012 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M1 13h16M9 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Learn
+          </a>
+          <a href="deliver.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><rect x="4" y="2" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Deliver
+          </a>
+          <a href="verify.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><path d="M9 2L3 5v4c0 4 3 6.5 6 7.5 3-1 6-3.5 6-7.5V5L9 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.5 9.5L8 11l3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verify
+          </a>
+          <a href="pay.html" role="menuitem">
+            <svg class="dd-icon" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v8M7 7h3.5a1.5 1.5 0 010 3H7m0 0h4a1.5 1.5 0 010 3H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Pay
+          </a>
+        </div>
+      </li>
+
+      <!-- Who It's For Dropdown -->
+      <li class="nav-item" role="none">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Who It's For
+          <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a href="for-funders.html" role="menuitem">Funders</a>
+          <a href="for-enterprises.html" role="menuitem">Enterprises</a>
+          <a href="for-llos.html" role="menuitem">LLOs</a>
+          <a href="for-workers.html" role="menuitem">Workers</a>
+        </div>
+      </li>
+
+      <li class="nav-item" role="none">
+        <a class="nav-link" href="index.html#impact">Impact</a>
+      </li>
+      <li class="nav-item" role="none">
+        <a class="nav-link" href="index.html#about">About</a>
+      </li>
+    </ul>
+
+    <!-- Nav CTA -->
+    <div class="nav-cta-wrapper">
+      <a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <div class="mobile-nav-group">
+    <div class="mobile-nav-group-title">How It Works</div>
+    <a href="learn.html">Learn</a>
+    <a href="deliver.html">Deliver</a>
+    <a href="verify.html">Verify</a>
+    <a href="pay.html">Pay</a>
+  </div>
+  <div class="mobile-nav-group">
+    <div class="mobile-nav-group-title">Who It's For</div>
+    <a href="for-funders.html">Funders</a>
+    <a href="for-enterprises.html">Enterprises</a>
+    <a href="for-llos.html">LLOs</a>
+    <a href="for-workers.html">Workers</a>
+  </div>
+  <div class="mobile-nav-group">
+    <a href="index.html#impact">Impact</a>
+    <a href="index.html#about">About</a>
+  </div>
+  <a href="mailto:connect@dimagi.com" class="nav-cta">Request a Demo</a>
+</nav>
+
+<main>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" style="min-height: 50vh;">
+  <!-- Topographic Background -->
+  <svg class="hero-topo" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="720" cy="400" rx="500" ry="300" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <ellipse cx="720" cy="400" rx="400" ry="240" stroke="#8EA1FF" stroke-width="0.8" fill="none"/>
+    <ellipse cx="720" cy="400" rx="300" ry="180" stroke="#8EA1FF" stroke-width="0.6" fill="none"/>
+    <ellipse cx="720" cy="400" rx="200" ry="120" stroke="#8EA1FF" stroke-width="0.4" fill="none"/>
+    <path d="M200 300 Q500 260 900 300 Q1200 340 1400 300" stroke="#8EA1FF" stroke-width="0.5" fill="none" stroke-dasharray="6 4"/>
+    <path d="M100 500 Q500 460 900 500 Q1200 540 1400 500" stroke="#8EA1FF" stroke-width="0.4" fill="none"/>
+  </svg>
+
+  <div class="container" style="display: block; text-align: center;">
+    <div class="hero-content reveal" style="max-width: 720px; margin: 0 auto;">
+      <h1>For Locally-Led Organizations.</h1>
+      <p class="hero-sub" style="max-width: 600px; margin-left: auto; margin-right: auto;">For LLOs, Connect provides access to sustainable funding and tools to support delivering vital services.</p>
+      <div class="hero-ctas" style="justify-content: center;">
+        <a href="mailto:connect@dimagi.com" class="btn-primary">
+          Get Started
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="index.html#how-it-works" class="btn-secondary">See How It Works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONNECTED TO SUSTAINABLE FUNDING
+     ============================================ -->
+<section class="features">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">Sustainable Funding</span>
+      <h2 class="section-heading">Connected to Sustainable Funding</h2>
+      <div class="gradient-line"></div>
+    </div>
+
+    <div class="feature-block reveal">
+      <div class="feature-text">
+        <h3>LLOs are closest to the communities they serve. Connect makes that visible.</h3>
+        <p>Locally-led organizations understand their communities better than anyone. You know the needs, the people, and the context. But too often, that deep knowledge is invisible to the funders who could support your work.</p>
+        <p style="margin-top: var(--space-sm);">Connect changes that. By verifying every service your workers deliver, Connect creates an auditable record of outcomes that funders can trust. Your impact becomes visible, measurable, and fundable — creating a sustainable path to the resources your organization needs to grow.</p>
+      </div>
+      <div class="feature-visual">
+        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Topo lines -->
+          <path d="M40 240 Q100 180 180 170 Q260 160 320 120" stroke="#8EA1FF" stroke-width="0.8" fill="none" opacity="0.4"/>
+          <path d="M40 220 Q110 160 190 150 Q270 140 320 100" stroke="#8EA1FF" stroke-width="0.6" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+          <!-- Community circle (center) -->
+          <circle cx="180" cy="140" r="40" fill="#3843D0" opacity="0.08" stroke="#3843D0" stroke-width="2"/>
+          <!-- Surrounding nodes (LLO network) -->
+          <circle cx="100" cy="80" r="16" fill="#8EA1FF" opacity="0.15" stroke="#8EA1FF" stroke-width="1.5"/>
+          <circle cx="260" cy="80" r="16" fill="#8EA1FF" opacity="0.15" stroke="#8EA1FF" stroke-width="1.5"/>
+          <circle cx="80" cy="200" r="16" fill="#FC5F36" opacity="0.1" stroke="#FC5F36" stroke-width="1.5"/>
+          <circle cx="280" cy="200" r="16" fill="#FEAF31" opacity="0.15" stroke="#FEAF31" stroke-width="1.5"/>
+          <!-- Connecting lines -->
+          <path d="M115 90l40 35" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M245 90l-40 35" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M95 190l55-35" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+          <path d="M265 190l-55-35" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+          <!-- Center people icon -->
+          <circle cx="180" cy="130" r="8" stroke="#3843D0" stroke-width="1.5" fill="none"/>
+          <path d="M168 152c0-6 5-10 12-10s12 4 12 10" stroke="#3843D0" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Checkmarks at nodes -->
+          <path d="M95 78l3 3 5-5" stroke="#8EA1FF" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M255 78l3 3 5-5" stroke="#8EA1FF" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHAT CHANGES FOR YOUR LLO
+     ============================================ -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">Your Organization</span>
+      <h2 class="section-heading">What Changes for Your LLO</h2>
+      <div class="gradient-line"></div>
+    </div>
+
+    <div class="audience-grid">
+      <!-- Card 1: Access to Sustainable Funding -->
+      <div class="audience-card reveal" style="cursor: default;">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L3 7v4c0 6 4 10 9 12 5-2 9-6 9-12V7L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Access to Sustainable Funding</h3>
+        <p>Verified outcomes create a track record that funders can trust. Connect makes your impact visible, helping you move beyond short-term grants toward sustained, outcomes-based funding that grows with your organization.</p>
+      </div>
+
+      <!-- Card 2: FLW Training & Growth -->
+      <div class="audience-card reveal" style="cursor: default;">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5a2 2 0 012-2h8a2 2 0 012 2v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M2 19h16M10 3v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M18 8l3 2-3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>FLW Training & Growth</h3>
+        <p>Equip your frontline workers with digital training that builds real skills. Workers learn at their own pace, gain new competencies, and deliver higher-quality services — strengthening your organization from within.</p>
+      </div>
+
+      <!-- Card 3: Fair, Timely Payment -->
+      <div class="audience-card reveal" style="cursor: default;">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v10M9 9h4.5a1.5 1.5 0 010 3H9m0 0h5a1.5 1.5 0 010 3H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Fair, Timely Payment</h3>
+        <p>Workers see exactly what they have earned and when they will be paid. Transparent compensation managed through the platform means no hidden deductions, no delays, and no guesswork for your team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     BUILT FOR WHERE LLOs WORK
+     ============================================ -->
+<section class="features" style="background: var(--white);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="overline">Built for the Field</span>
+      <h2 class="section-heading">Built for Where LLOs Work</h2>
+      <div class="gradient-line"></div>
+    </div>
+
+    <div class="feature-block reveal">
+      <div class="feature-text">
+        <span class="feature-tag">Low Bandwidth</span>
+        <h3>Works where connectivity is limited.</h3>
+        <p>Connect is built on CommCare, a platform designed for low-resource settings. It works on low-bandwidth networks, so your workers can collect data and deliver services even in areas with limited or intermittent connectivity.</p>
+      </div>
+      <div class="feature-visual">
+        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M40 240 Q120 200 200 210 Q280 220 340 180" stroke="#8EA1FF" stroke-width="0.6" fill="none" opacity="0.3"/>
+          <path d="M40 260 Q120 220 200 230 Q280 240 340 200" stroke="#8EA1FF" stroke-width="0.5" fill="none" opacity="0.2" stroke-dasharray="4 3"/>
+          <!-- Signal bars -->
+          <rect x="145" y="160" width="14" height="30" rx="3" fill="#3843D0" opacity="0.7"/>
+          <rect x="165" y="145" width="14" height="45" rx="3" fill="#3843D0" opacity="0.5"/>
+          <rect x="185" y="130" width="14" height="60" rx="3" fill="#3843D0" opacity="0.3"/>
+          <rect x="205" y="115" width="14" height="75" rx="3" fill="#8EA1FF" opacity="0.2"/>
+          <!-- Checkmark over low bars -->
+          <path d="M140 140l12 12 20-24" stroke="#FC5F36" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Small dots -->
+          <circle cx="100" cy="180" r="4" fill="#8EA1FF" opacity="0.4"/>
+          <circle cx="280" cy="150" r="3" fill="#8EA1FF" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="feature-block reveal">
+      <div class="feature-text">
+        <span class="feature-tag">Basic Smartphones</span>
+        <h3>Runs on the devices your workers already own.</h3>
+        <p>No expensive hardware required. Connect runs on basic Android smartphones, meeting your workforce where they are. Workers use the devices they already carry to learn, deliver, and get verified.</p>
+      </div>
+      <div class="feature-visual">
+        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M320 60 Q260 100 200 110 Q140 120 40 100" stroke="#8EA1FF" stroke-width="0.6" fill="none" opacity="0.3"/>
+          <!-- Phone outline -->
+          <rect x="130" y="50" width="100" height="180" rx="16" stroke="#3843D0" stroke-width="2" fill="none"/>
+          <!-- Screen -->
+          <rect x="140" y="70" width="80" height="130" rx="4" fill="#3843D0" opacity="0.05"/>
+          <!-- Screen content lines -->
+          <rect x="150" y="85" width="40" height="4" rx="2" fill="#3843D0" opacity="0.2"/>
+          <rect x="150" y="97" width="60" height="4" rx="2" fill="#8EA1FF" opacity="0.3"/>
+          <rect x="150" y="109" width="50" height="4" rx="2" fill="#8EA1FF" opacity="0.2"/>
+          <!-- Checkmark on screen -->
+          <path d="M158 135l8 8 16-16" stroke="#FC5F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Home button -->
+          <circle cx="180" cy="218" r="6" stroke="#3843D0" stroke-width="1.5" fill="none" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="feature-block reveal">
+      <div class="feature-text">
+        <span class="feature-tag">Offline Sync</span>
+        <h3>Collect data offline. Sync when connected.</h3>
+        <p>Workers can complete forms and record service delivery even without an internet connection. Data syncs automatically when connectivity is restored, so no work is ever lost and your records stay complete.</p>
+      </div>
+      <div class="feature-visual">
+        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M40 80 Q120 60 200 70 Q280 80 340 60" stroke="#8EA1FF" stroke-width="0.5" fill="none" opacity="0.25"/>
+          <!-- Circular sync arrows -->
+          <path d="M140 140 A50 50 0 0 1 220 140" stroke="#3843D0" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M220 140 A50 50 0 0 1 140 140" stroke="#3843D0" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="5 3"/>
+          <!-- Arrow heads -->
+          <path d="M218 132l4 8-8-2" stroke="#3843D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M142 148l-4-8 8 2" stroke="#3843D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Cloud icon -->
+          <path d="M160 100 Q150 80 170 75 Q180 68 195 78 Q210 72 215 88 Q225 90 222 105 Q220 115 205 115 H170 Q155 115 155 105 Z" stroke="#8EA1FF" stroke-width="1.5" fill="none" opacity="0.5"/>
+          <!-- Data dots -->
+          <circle cx="155" cy="170" r="4" fill="#FC5F36" opacity="0.3"/>
+          <circle cx="180" cy="180" r="5" fill="#3843D0" opacity="0.15"/>
+          <circle cx="205" cy="170" r="4" fill="#FEAF31" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FINAL CTA
+     ============================================ -->
+<section class="final-cta">
+  <svg class="final-cta-topo" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <path d="M-100 200 Q200 100 500 180 Q800 260 1100 160 Q1400 60 1600 200" stroke="#8EA1FF" stroke-width="1" fill="none"/>
+    <path d="M-100 240 Q200 140 500 220 Q800 300 1100 200 Q1400 100 1600 240" stroke="#8EA1FF" stroke-width="0.7" fill="none" stroke-dasharray="6 4"/>
+    <path d="M-100 280 Q200 180 500 260 Q800 340 1100 240 Q1400 140 1600 280" stroke="#8EA1FF" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <div class="container">
+    <div class="reveal">
+      <h2>Connect your LLO to verified outcomes.</h2>
+      <p>See how Connect helps locally-led organizations access sustainable funding through verified service delivery.</p>
+      <a href="mailto:connect@dimagi.com" class="btn-primary" style="font-size:18px; padding: 16px 40px;">
+        Get in Touch
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom: 4px; display: inline-flex;">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" style="height: 32px; width: auto;">
+        </a>
+        <p>A new model for global development — linking funding directly to verified service delivery at the frontline.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="learn.html">Learn</a>
+        <a href="deliver.html">Deliver</a>
+        <a href="verify.html">Verify</a>
+        <a href="pay.html">Pay</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="for-funders.html">Funders</a>
+        <a href="for-enterprises.html">Enterprises</a>
+        <a href="for-llos.html">LLOs</a>
+        <a href="for-workers.html">Workers</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="index.html#impact">Child Health Campaigns</a>
+        <a href="index.html#impact">Kangaroo Mother Care</a>
+        <a href="index.html#impact">Early Childhood Development</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html#about">About</a>
+        <a href="mailto:connect@dimagi.com">Contact</a>
+        <a href="https://dimagi.com" target="_blank" rel="noopener">Dimagi</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Dimagi, Inc. All rights reserved.</span>
+      <span>Powering the Frontline. Paying for Results.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // --- Scroll Reveal ---
+  var reveals = document.querySelectorAll('.reveal');
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion) {
+    reveals.forEach(function(el, i) {
+      el.classList.add('hidden');
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+    });
+
+    function checkReveal() {
+      reveals.forEach(function(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) {
+          el.classList.remove('hidden');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkReveal, { passive: true });
+    window.addEventListener('resize', checkReveal, { passive: true });
+    checkReveal();
+  }
+
+  // --- Header scroll shadow ---
+  var header = document.querySelector('.site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // --- Dropdown navigation ---
+  var navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(function(item) {
+    var btn = item.querySelector('.nav-link[aria-haspopup]');
+    if (!btn) return;
+
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var isOpen = item.classList.contains('open');
+      navItems.forEach(function(ni) { ni.classList.remove('open'); });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      navItems.forEach(function(ni) {
+        ni.classList.remove('open');
+        var b = ni.querySelector('[aria-haspopup]');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // --- Mobile menu ---
+  var toggle = document.querySelector('.mobile-toggle');
+  var mobileNav = document.querySelector('.mobile-nav');
+  var overlay = document.querySelector('.mobile-overlay');
+
+  function openMobile() {
+    toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+    mobileNav.classList.add('open');
+    overlay.style.display = 'block';
+    requestAnimationFrame(function() {
+      overlay.classList.add('active');
+    });
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobile() {
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    mobileNav.classList.remove('open');
+    overlay.classList.remove('active');
+    setTimeout(function() { overlay.style.display = 'none'; }, 350);
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function() {
+    if (mobileNav.classList.contains('open')) {
+      closeMobile();
+    } else {
+      openMobile();
+    }
+  });
+
+  overlay.addEventListener('click', closeMobile);
+
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMobile);
+  });
+
+  // --- Smooth scroll for anchor links ---
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var id = this.getAttribute('href');
+      if (id === '#') return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
