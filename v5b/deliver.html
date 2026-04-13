@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deliver — Connect by Dimagi</title>
+  <meta name="description" content="Proven health services delivered through trusted, locally-led organizations using CommCare on Connect by Dimagi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Reading Progress -->
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header site-header--transparent" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Connect by Dimagi home">
+        <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" class="logo--light">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" class="logo--dark">
+      </a>
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <div class="site-header__links">
+          <div class="site-header__dropdown-wrap">
+            <a href="index.html#how-it-works" class="site-header__link">How It Works</a>
+            <div class="site-header__dropdown">
+              <a href="learn.html">Learn</a>
+              <a href="deliver.html">Deliver</a>
+              <a href="verify.html">Verify</a>
+              <a href="pay.html">Pay</a>
+            </div>
+          </div>
+          <a href="programs.html" class="site-header__link">Programs</a>
+          <a href="index.html#impact" class="site-header__link">Impact</a>
+        </div>
+        <a href="index.html#get-started" class="btn btn--pill btn--primary">Get Started</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html#how-it-works" class="mobile-nav__link">How It Works</a>
+    <a href="learn.html" class="mobile-nav__link">Learn</a>
+    <a href="deliver.html" class="mobile-nav__link">Deliver</a>
+    <a href="verify.html" class="mobile-nav__link">Verify</a>
+    <a href="pay.html" class="mobile-nav__link">Pay</a>
+    <a href="programs.html" class="mobile-nav__link">Programs</a>
+    <a href="index.html#impact" class="mobile-nav__link">Impact</a>
+    <a href="index.html#get-started" class="btn btn--pill btn--primary btn--lg">Get Started</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="ldvp-hero" aria-label="Deliver hero">
+      <div class="hero__bg-shapes" aria-hidden="true"></div>
+      <div class="container">
+        <div class="ldvp-hero__content">
+          <div class="ldvp-breadcrumb">
+            <a href="index.html#how-it-works">How It Works</a>
+            <span class="ldvp-breadcrumb__sep" aria-hidden="true">/</span>
+            <span class="ldvp-breadcrumb__current">Step 02</span>
+          </div>
+          <span class="ldvp-hero__step-label">Step 02 of 04</span>
+          <h1 class="ldvp-hero__title">Deliver</h1>
+          <div class="ldvp-hero__gradient-line" aria-hidden="true"></div>
+          <p class="ldvp-hero__subtitle">Proven health services delivered through trusted, locally-led organizations using CommCare.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES: Alternating Magazine Layout -->
+    <section class="section section--lg" aria-label="Delivery features">
+      <div class="container">
+
+        <!-- Feature 1: Guided Workflows -->
+        <div class="ldvp-feature sr">
+          <div class="ldvp-feature__visual">
+            <span class="ldvp-feature__number" aria-hidden="true">01</span>
+            <div class="ldvp-feature__icon" style="background: linear-gradient(135deg, rgba(252, 95, 54, 0.1), rgba(254, 175, 49, 0.15));">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M24 4v20" stroke="#FC5F36" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M16 16l8 8 8-8" stroke="#FC5F36" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="8" y="28" width="32" height="16" rx="4" stroke="#FEAF31" stroke-width="2.5"/>
+                <path d="M18 36h12" stroke="#FC5F36" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="ldvp-feature__text">
+            <span class="ldvp-feature__label">Feature 01</span>
+            <h3 class="ldvp-feature__title">Guided Workflows</h3>
+            <p class="ldvp-feature__desc">CommCare guides FLWs step-by-step through each visit — registration, counseling, screening, treatment. Every protocol is structured so workers deliver consistent, evidence-based services.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2: Locally-Led Implementation -->
+        <div class="ldvp-feature sr">
+          <div class="ldvp-feature__visual">
+            <span class="ldvp-feature__number" aria-hidden="true">02</span>
+            <div class="ldvp-feature__icon" style="background: linear-gradient(135deg, rgba(56, 67, 208, 0.1), rgba(142, 161, 255, 0.2));">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="14" r="8" stroke="#3843D0" stroke-width="2.5"/>
+                <path d="M12 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#8EA1FF" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="10" cy="20" r="5" stroke="#3843D0" stroke-width="2"/>
+                <circle cx="38" cy="20" r="5" stroke="#3843D0" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="ldvp-feature__text">
+            <span class="ldvp-feature__label">Feature 02</span>
+            <h3 class="ldvp-feature__title">Locally-Led Implementation</h3>
+            <p class="ldvp-feature__desc">LLOs manage approvals, smartphones, localization, FLW recruitment and onboarding. Local organizations bring community trust and cultural knowledge that makes programs effective.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Real-Time Data -->
+        <div class="ldvp-feature sr">
+          <div class="ldvp-feature__visual">
+            <span class="ldvp-feature__number" aria-hidden="true">03</span>
+            <div class="ldvp-feature__icon" style="background: linear-gradient(135deg, rgba(22, 0, 109, 0.1), rgba(56, 67, 208, 0.15));">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="6" y="6" width="36" height="36" rx="4" stroke="#16006D" stroke-width="2.5"/>
+                <path d="M14 32V22" stroke="#3843D0" stroke-width="3" stroke-linecap="round"/>
+                <path d="M22 32V16" stroke="#8EA1FF" stroke-width="3" stroke-linecap="round"/>
+                <path d="M30 32V26" stroke="#3843D0" stroke-width="3" stroke-linecap="round"/>
+                <path d="M38 32V12" stroke="#FC5F36" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="ldvp-feature__text">
+            <span class="ldvp-feature__label">Feature 03</span>
+            <h3 class="ldvp-feature__title">Real-Time Data</h3>
+            <p class="ldvp-feature__desc">Every interaction captured digitally. Program managers get real-time visibility across regions, enabling rapid response to gaps and evidence-based program improvement.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICE TYPES (Dark Section) -->
+    <section class="ldvp-dark-section" aria-label="Service types">
+      <div class="container">
+        <div class="section-heading sr">
+          <span class="section-heading__label">Service Delivery</span>
+          <h2 class="section-heading__title">Types of Services</h2>
+        </div>
+        <div class="ldvp-service-list sr">
+          <div class="ldvp-service-item">
+            <span class="ldvp-service-item__icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#FC5F36" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Door-to-door household visits (CHC, KMC, ECD, Readers)</span>
+          </div>
+          <div class="ldvp-service-item">
+            <span class="ldvp-service-item__icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#FC5F36" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Community health campaigns (Vitamin A, deworming, immunization)</span>
+          </div>
+          <div class="ldvp-service-item">
+            <span class="ldvp-service-item__icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#FC5F36" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Screening and assessment (vision, malnutrition, danger signs)</span>
+          </div>
+          <div class="ldvp-service-item">
+            <span class="ldvp-service-item__icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#FC5F36" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Counseling and education</span>
+          </div>
+          <div class="ldvp-service-item">
+            <span class="ldvp-service-item__icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="#FC5F36" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>Product distribution (reading glasses, ORS, therapeutic food)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS RIBBON -->
+    <section class="ldvp-stats" aria-label="Delivery statistics">
+      <div class="container">
+        <div class="ldvp-stats__grid">
+          <div class="ldvp-stats__item sr">
+            <div class="ldvp-stats__number">1M+</div>
+            <div class="ldvp-stats__label">Services</div>
+          </div>
+          <div class="ldvp-stats__item sr">
+            <div class="ldvp-stats__number">8</div>
+            <div class="ldvp-stats__label">Countries</div>
+          </div>
+          <div class="ldvp-stats__item sr">
+            <div class="ldvp-stats__number">28+</div>
+            <div class="ldvp-stats__label">LLOs</div>
+          </div>
+          <div class="ldvp-stats__item sr">
+            <div class="ldvp-stats__number">10</div>
+            <div class="ldvp-stats__label">Programs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT STEP -->
+    <section class="ldvp-next" aria-label="Next step">
+      <div class="container">
+        <a href="verify.html" class="ldvp-next__link sr">
+          Next: Verify <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+          <p>A global platform for funding verified service delivery. Every dollar tied to a result.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Platform</h4>
+          <div class="site-footer__links">
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="learn.html">Learn</a>
+            <a href="deliver.html">Deliver</a>
+            <a href="verify.html">Verify</a>
+            <a href="pay.html">Pay</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Programs</h4>
+          <div class="site-footer__links">
+            <a href="programs/kmc.html">Kangaroo Mother Care</a>
+            <a href="programs/readers.html">Readers &mdash; Vision Care</a>
+            <a href="programs.html">View All</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2024 Connect by <a href="https://dimagi.com" target="_blank" rel="noopener noreferrer">Dimagi</a></span>
+        <span>Powering the Frontline. Paying for Results.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Header ---
+      var header = document.getElementById('siteHeader');
+      function updateHeader() {
+        if (window.scrollY > 60) {
+          header.classList.remove('site-header--transparent');
+          header.classList.add('site-header--solid');
+        } else {
+          header.classList.remove('site-header--solid');
+          header.classList.add('site-header--transparent');
+        }
+      }
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
+
+      // --- Mobile Nav ---
+      var hamburger = document.getElementById('hamburgerBtn');
+      var mobileNav = document.getElementById('mobileNav');
+      hamburger.addEventListener('click', function() {
+        var isOpen = mobileNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mobileNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('is-open');
+          hamburger.classList.remove('is-active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // --- Reading Progress ---
+      var progressBar = document.getElementById('readingProgress');
+      function updateProgress() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // --- Scroll Reveal ---
+      var srElements = document.querySelectorAll('.sr');
+      srElements.forEach(function(el) { el.classList.add('sr-hidden'); });
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('sr-reveal');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+      srElements.forEach(function(el) { observer.observe(el); });
+
+      // --- Smooth scroll for anchor links ---
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>

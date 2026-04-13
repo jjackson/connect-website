@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect by Dimagi — Powering the Frontline. Paying for Results.</title>
+  <meta name="description" content="Connect is building a new model for global development — one that directly links funding to verified service delivery at the frontline, enabling more transparency, accountability, and impact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo" aria-label="Connect by Dimagi — Home">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" width="160" height="36">
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-item">
+          <a href="#how-it-works" class="nav-link">
+            How It Works
+            <svg class="chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="learn.html" class="dropdown-link" role="menuitem">
+              Learn
+              <small>Digital training via mobile app</small>
+            </a>
+            <a href="deliver.html" class="dropdown-link" role="menuitem">
+              Deliver
+              <small>Health services with CommCare</small>
+            </a>
+            <a href="verify.html" class="dropdown-link" role="menuitem">
+              Verify
+              <small>Biometric and GPS validation</small>
+            </a>
+            <a href="pay.html" class="dropdown-link" role="menuitem">
+              Pay
+              <small>Mobile money compensation</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="programs.html" class="nav-link">Programs</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="#audiences" class="nav-link">
+            Who It's For
+            <svg class="chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu">
+            <a href="#audiences" class="dropdown-link" role="menuitem">
+              Funders
+              <small>Transparent, verified outcomes</small>
+            </a>
+            <a href="#audiences" class="dropdown-link" role="menuitem">
+              Local Organizations
+              <small>Sustainable funding and tools</small>
+            </a>
+            <a href="#audiences" class="dropdown-link" role="menuitem">
+              Frontline Workers
+              <small>Learn, deliver, get paid</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="#impact" class="nav-link">Impact</a>
+        </div>
+
+        <div class="header-cta">
+          <a href="#contact" class="btn btn-primary btn-sm">Request a Demo</a>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <!-- Topographic SVG background element -->
+        <svg class="topo-1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="300" cy="300" r="60" stroke="#3843D0" stroke-width="1" fill="none"/>
+          <circle cx="300" cy="300" r="100" stroke="#3843D0" stroke-width="0.8" fill="none"/>
+          <circle cx="300" cy="300" r="150" stroke="#3843D0" stroke-width="0.6" fill="none"/>
+          <circle cx="300" cy="300" r="210" stroke="#3843D0" stroke-width="0.5" fill="none"/>
+          <circle cx="300" cy="300" r="280" stroke="#3843D0" stroke-width="0.4" fill="none"/>
+          <line x1="0" y1="150" x2="600" y2="200" stroke="#16006D" stroke-width="0.5" stroke-dasharray="8,6"/>
+          <line x1="50" y1="400" x2="550" y2="350" stroke="#16006D" stroke-width="0.4" stroke-dasharray="4,8"/>
+          <path d="M100,500 Q300,420 500,480" stroke="#3843D0" stroke-width="0.5" fill="none"/>
+        </svg>
+        <svg class="topo-2" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="250" cy="250" rx="80" ry="60" stroke="#16006D" stroke-width="0.8" fill="none"/>
+          <ellipse cx="250" cy="250" rx="140" ry="100" stroke="#16006D" stroke-width="0.6" fill="none"/>
+          <ellipse cx="250" cy="250" rx="210" ry="150" stroke="#16006D" stroke-width="0.4" fill="none"/>
+          <line x1="0" y1="100" x2="500" y2="180" stroke="#3843D0" stroke-width="0.4" stroke-dasharray="6,4"/>
+        </svg>
+      </div>
+
+      <!-- Geometric shapes representing modular platform -->
+      <div class="hero-shapes" aria-hidden="true">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <!-- Stackable geometric shapes -->
+          <rect x="180" y="60" width="120" height="120" rx="24" fill="#3843D0" opacity="0.08" transform="rotate(12, 240, 120)"/>
+          <rect x="250" y="140" width="100" height="100" rx="20" fill="#FC5F36" opacity="0.06" transform="rotate(-6, 300, 190)"/>
+          <rect x="140" y="200" width="140" height="140" rx="28" fill="#8EA1FF" opacity="0.08" transform="rotate(8, 210, 270)"/>
+          <rect x="300" y="270" width="110" height="110" rx="22" fill="#16006D" opacity="0.05" transform="rotate(-10, 355, 325)"/>
+          <rect x="200" y="340" width="90" height="90" rx="18" fill="#FEAF31" opacity="0.06" transform="rotate(15, 245, 385)"/>
+          <!-- Connecting dots -->
+          <circle cx="240" cy="120" r="4" fill="#3843D0" opacity="0.2"/>
+          <circle cx="300" cy="190" r="3" fill="#FC5F36" opacity="0.2"/>
+          <circle cx="210" cy="270" r="4" fill="#8EA1FF" opacity="0.25"/>
+          <circle cx="355" cy="325" r="3" fill="#16006D" opacity="0.15"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="hero-content reveal">
+          <p class="section-label">Connect by Dimagi</p>
+          <h1>Powering the Frontline.<br><span class="accent">Paying for Results.</span></h1>
+          <p class="hero-description">
+            Connect is building a new model for global development — one that directly
+            links funding to verified service delivery at the frontline, enabling more
+            transparency, accountability, and impact.
+          </p>
+          <div class="btn-group">
+            <a href="#contact" class="btn btn-primary">Request a Demo</a>
+            <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="hiw-heading">
+      <div class="container text-center">
+        <div class="reveal">
+          <p class="section-label">How It Works</p>
+          <h2 id="hiw-heading" class="section-heading">Four Steps From Funding to Verified Impact</h2>
+          <p class="section-subheading">
+            Connect's Learn-Deliver-Verify-Pay model creates a transparent, end-to-end
+            pipeline that links every dollar to a verified outcome.
+          </p>
+        </div>
+
+        <div class="steps-grid reveal-stagger">
+          <div class="step-card">
+            <div class="step-number">
+              <!-- Book/Learn icon -->
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 6v20c3-2 7-2 11 0V6C12 4 8 4 5 6z"/>
+                <path d="M27 6v20c-3-2-7-2-11 0V6c4-2 8-2 11 0z"/>
+              </svg>
+            </div>
+            <p class="step-label">Step 1</p>
+            <h3>Learn</h3>
+            <p>Workers receive digital training through a mobile app, building skills at their own pace with structured modules.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">
+              <!-- Clipboard/Deliver icon -->
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <rect x="7" y="4" width="18" height="24" rx="3"/>
+                <path d="M12 4V2h8v2"/>
+                <line x1="12" y1="13" x2="20" y2="13"/>
+                <line x1="12" y1="17" x2="18" y2="17"/>
+                <line x1="12" y1="21" x2="20" y2="21"/>
+              </svg>
+            </div>
+            <p class="step-label">Step 2</p>
+            <h3>Deliver</h3>
+            <p>Workers deliver health services in their communities, using CommCare for structured data collection and case management.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">
+              <!-- Shield/Verify icon -->
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 3L4 8v8c0 7.2 5.1 13.4 12 16 6.9-2.6 12-8.8 12-16V8L16 3z"/>
+                <polyline points="11,16 14,19 21,12"/>
+              </svg>
+            </div>
+            <p class="step-label">Step 3</p>
+            <h3>Verify</h3>
+            <p>Biometric verification, GPS tracking, and algorithmic validation confirm that services were delivered as reported.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">
+              <!-- Dollar/Pay icon -->
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="12"/>
+                <path d="M16 8v16M12 12c0-2 2-3 4-3s4 1 4 3-2 3-4 3-4 1-4 3 2 3 4 3 4-1 4-3"/>
+              </svg>
+            </div>
+            <p class="step-label">Step 4</p>
+            <h3>Pay</h3>
+            <p>Fair, transparent compensation via mobile money — workers see exactly what they earned and why, building trust and retention.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROGRAMS ========== -->
+    <section class="programs" id="programs" aria-labelledby="programs-heading">
+      <div class="container">
+        <div class="text-center reveal">
+          <p class="section-label">Programs</p>
+          <h2 id="programs-heading" class="section-heading">Active Programs Across the Globe</h2>
+          <p class="section-subheading">
+            From child health to vision care, Connect powers verified service delivery
+            across a growing portfolio of programs.
+          </p>
+        </div>
+
+        <div class="programs-grid reveal-stagger">
+
+          <!-- CHC -->
+          <div class="program-card">
+            <div class="card-header">
+              <div>
+                <h3>Child Health Campaign</h3>
+                <p class="program-sector">Child Health &amp; Nutrition</p>
+              </div>
+              <span class="badge badge-active">Active</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Regions:</span> Nigeria, DRC, CAR, Kenya, Uganda, Tanzania, Zambia, Sierra Leone</span>
+              <span><span class="meta-label">Funders:</span> GiveWell, Founders Pledge, Gavi</span>
+              <span><span class="meta-label">Impact:</span> 1M+ visits, 28 LLOs</span>
+            </div>
+          </div>
+
+          <!-- KMC -->
+          <a href="programs/kmc.html" class="program-card has-link" aria-label="View Kangaroo Mother Care program details">
+            <div class="card-header">
+              <div>
+                <h3>Kangaroo Mother Care</h3>
+                <p class="program-sector">Maternal &amp; Child Health</p>
+              </div>
+              <span class="badge badge-active">Active</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Regions:</span> Uganda, Kenya, India, Nigeria</span>
+              <span><span class="meta-label">Funder:</span> Eleanor Crook Foundation</span>
+              <span><span class="meta-label">Scale:</span> 5,000 cases</span>
+            </div>
+            <span class="card-link">
+              Learn more
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+
+          <!-- ECD -->
+          <div class="program-card">
+            <div class="card-header">
+              <div>
+                <h3>Early Childhood Development</h3>
+                <p class="program-sector">Health</p>
+              </div>
+              <span class="badge badge-active">Active</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Regions:</span> Malawi, Nigeria</span>
+              <span><span class="meta-label">Funder:</span> Founders Pledge</span>
+              <span><span class="meta-label">Impact:</span> 80k visits</span>
+            </div>
+          </div>
+
+          <!-- MBW -->
+          <div class="program-card">
+            <div class="card-header">
+              <div>
+                <h3>Mother-Baby Wellness</h3>
+                <p class="program-sector">Maternal Health</p>
+              </div>
+              <span class="badge badge-active">Active</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Regions:</span> Multiple countries</span>
+              <span><span class="meta-label">Funder:</span> GiveWell</span>
+            </div>
+          </div>
+
+          <!-- Readers -->
+          <a href="programs/readers.html" class="program-card has-link" aria-label="View Readers vision care program details">
+            <div class="card-header">
+              <div>
+                <h3>Readers — Vision Care</h3>
+                <p class="program-sector">Health, Livelihood</p>
+              </div>
+              <span class="badge badge-active">Active</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Region:</span> Nigeria</span>
+              <span><span class="meta-label">Funder:</span> Restoring Vision</span>
+              <span><span class="meta-label">Scale:</span> 15,000 glasses</span>
+            </div>
+            <span class="card-link">
+              Learn more
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+
+          <!-- Chlorine -->
+          <div class="program-card">
+            <div class="card-header">
+              <div>
+                <h3>Chlorine Dispenser</h3>
+                <p class="program-sector">Water &amp; Sanitation</p>
+              </div>
+              <span class="badge badge-active">Active</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Funder:</span> GiveWell</span>
+              <span><span class="meta-label">Grant:</span> $1M</span>
+            </div>
+          </div>
+
+          <!-- WellMe -->
+          <div class="program-card">
+            <div class="card-header">
+              <div>
+                <h3>WellMe — Mental Health</h3>
+                <p class="program-sector">Mental Health</p>
+              </div>
+              <span class="badge badge-soon">Coming Soon</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Regions:</span> Multiple countries</span>
+            </div>
+          </div>
+
+          <!-- RUTF -->
+          <div class="program-card">
+            <div class="card-header">
+              <div>
+                <h3>RUTF Distribution</h3>
+                <p class="program-sector">Nutrition</p>
+              </div>
+              <span class="badge badge-soon">Coming Soon</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Regions:</span> Multiple countries</span>
+            </div>
+          </div>
+
+          <!-- Interviews -->
+          <div class="program-card">
+            <div class="card-header">
+              <div>
+                <h3>Interviews</h3>
+                <p class="program-sector">Survey &amp; Data Collection</p>
+              </div>
+              <span class="badge badge-active">Active</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Funder:</span> GiveWell</span>
+              <span><span class="meta-label">Grant:</span> $225k</span>
+            </div>
+          </div>
+
+          <!-- Rooftop Sampling -->
+          <div class="program-card">
+            <div class="card-header">
+              <div>
+                <h3>Rooftop Sampling</h3>
+                <p class="program-sector">Environmental Health</p>
+              </div>
+              <span class="badge badge-soon">Coming Soon</span>
+            </div>
+            <div class="program-meta">
+              <span><span class="meta-label">Regions:</span> Multiple countries</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center reveal" style="margin-top: 40px;">
+          <a href="programs.html" class="btn btn-secondary">View All Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== IMPACT ========== -->
+    <section class="impact" id="impact" aria-labelledby="impact-heading">
+      <div class="container">
+        <h2 id="impact-heading" class="sr-only">Impact Statistics</h2>
+        <div class="impact-grid reveal-stagger">
+          <div class="impact-stat">
+            <div class="stat-number">1<span class="accent">M+</span></div>
+            <div class="stat-label">Verified services delivered</div>
+          </div>
+          <div class="impact-stat">
+            <div class="stat-number">28<span class="accent">+</span></div>
+            <div class="stat-label">LLO partners across 8 countries</div>
+          </div>
+          <div class="impact-stat">
+            <div class="stat-number">$5.9<span class="accent">M</span></div>
+            <div class="stat-label">In funding raised (vs $2M target)</div>
+          </div>
+          <div class="impact-stat">
+            <div class="stat-number">$90<span class="accent">k+</span></div>
+            <div class="stat-label">In FLW payments disbursed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHO IT'S FOR ========== -->
+    <section class="audiences" id="audiences" aria-labelledby="audiences-heading">
+      <div class="container">
+        <div class="text-center reveal">
+          <p class="section-label">Who It's For</p>
+          <h2 id="audiences-heading" class="section-heading">Built for Every Stakeholder in the Chain</h2>
+          <p class="section-subheading">
+            From global funders to frontline workers, Connect aligns incentives and
+            creates value at every level.
+          </p>
+        </div>
+
+        <div class="audiences-grid reveal-stagger">
+          <!-- Funders -->
+          <div class="audience-card">
+            <div class="audience-icon">
+              <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="14" r="11"/>
+                <path d="M14 7v14M10 10.5c0-1.7 1.8-2.5 4-2.5s4 .8 4 2.5-1.8 2.5-4 2.5-4 .8-4 2.5 1.8 2.5 4 2.5 4-.8 4-2.5"/>
+              </svg>
+            </div>
+            <h3>Funders</h3>
+            <ul>
+              <li>Transparent investment with verified outcome data</li>
+              <li>Cost-effective delivery through locally-led organizations</li>
+              <li>Real-time dashboards tracking every dollar to impact</li>
+              <li>Independent verification reduces risk of misreporting</li>
+            </ul>
+          </div>
+
+          <!-- LLOs -->
+          <div class="audience-card">
+            <div class="audience-icon">
+              <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 24V12l10-8 10 8v12H4z"/>
+                <rect x="10" y="16" width="8" height="8"/>
+                <line x1="14" y1="16" x2="14" y2="24"/>
+              </svg>
+            </div>
+            <h3>Locally-Led Organizations</h3>
+            <ul>
+              <li>Access to sustainable, performance-based funding</li>
+              <li>Digital tools for workforce management and training</li>
+              <li>Support for government approvals and localization</li>
+              <li>Build institutional capacity through structured programs</li>
+            </ul>
+          </div>
+
+          <!-- FLWs -->
+          <div class="audience-card">
+            <div class="audience-icon">
+              <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="9" r="5"/>
+                <path d="M4 24c0-5.5 4.5-10 10-10s10 4.5 10 10"/>
+              </svg>
+            </div>
+            <h3>Frontline Workers</h3>
+            <ul>
+              <li>Learn skills through structured mobile training</li>
+              <li>Deliver services with guided digital workflows</li>
+              <li>Verified work builds a professional track record</li>
+              <li>Fair, prompt payment via mobile money</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA / CONTACT ========== -->
+    <section class="cta-section" id="contact" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-content reveal">
+          <p class="section-label" style="color: var(--sky);">Get Started</p>
+          <h2 id="cta-heading">Ready to Fund Verified Impact?</h2>
+          <p>Whether you're a funder, an organization, or a potential partner — we'd like to hear from you.</p>
+
+          <form class="cta-form" action="#" method="POST" aria-label="Request a demo form">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="jane@organization.org" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-org">Organization</label>
+              <input type="text" id="contact-org" name="organization" placeholder="Your organization">
+            </div>
+            <div class="form-group">
+              <label for="contact-role">I am a...</label>
+              <select id="contact-role" name="role">
+                <option value="" disabled selected>Select your role</option>
+                <option value="funder">Funder / Donor</option>
+                <option value="llo">Local Organization (LLO)</option>
+                <option value="government">Government Partner</option>
+                <option value="researcher">Researcher</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" placeholder="Tell us about your interest in Connect..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent">Request a Demo</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" width="140" height="32">
+          <p>Building a new model for global development — linking funding to verified service delivery at the frontline.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="learn.html">Learn</a>
+          <a href="deliver.html">Deliver</a>
+          <a href="verify.html">Verify</a>
+          <a href="pay.html">Pay</a>
+        </div>
+        <div class="footer-col">
+          <h4>Audiences</h4>
+          <a href="#audiences">Funders</a>
+          <a href="#audiences">Local Organizations</a>
+          <a href="#audiences">Frontline Workers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="programs.html">Programs</a>
+          <a href="#contact">Request a Demo</a>
+          <a href="https://www.dimagi.com" target="_blank" rel="noopener noreferrer">Dimagi.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dimagi. All rights reserved.</p>
+        <p class="dimagi-credit">A product by <a href="https://www.dimagi.com" target="_blank" rel="noopener noreferrer">Dimagi</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Header scroll effect ---
+      const header = document.querySelector('.site-header');
+      let lastScroll = 0;
+
+      function onScroll() {
+        const scrollY = window.scrollY;
+        if (scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScroll = scrollY;
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // --- Mobile menu ---
+      const toggle = document.querySelector('.mobile-toggle');
+      const nav = document.querySelector('.main-nav');
+
+      if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+          const isOpen = nav.classList.toggle('open');
+          toggle.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', isOpen);
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+
+        // Mobile dropdown toggles
+        nav.querySelectorAll('.nav-item').forEach(function(item) {
+          const link = item.querySelector('.nav-link');
+          const dropdown = item.querySelector('.nav-dropdown');
+          if (link && dropdown) {
+            link.addEventListener('click', function(e) {
+              if (window.innerWidth <= 768) {
+                if (dropdown) {
+                  e.preventDefault();
+                  item.classList.toggle('mobile-open');
+                }
+              }
+            });
+          }
+        });
+
+        // Close nav on link click (mobile)
+        nav.querySelectorAll('.dropdown-link, .nav-item:not(:has(.nav-dropdown)) .nav-link').forEach(function(link) {
+          link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+              nav.classList.remove('open');
+              toggle.classList.remove('active');
+              toggle.setAttribute('aria-expanded', 'false');
+              document.body.style.overflow = '';
+            }
+          });
+        });
+      }
+
+      // --- Scroll reveal ---
+      // Only add animation classes if user hasn't opted out
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const reveals = document.querySelectorAll('.reveal, .reveal-stagger');
+        reveals.forEach(function(el) {
+          el.classList.add('js-reveal');
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.15,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        reveals.forEach(function(el) {
+          observer.observe(el);
+        });
+      }
+
+      // --- Smooth scroll for anchor links ---
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            const offset = 80;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+
+    })();
+  </script>
+
+</body>
+</html>

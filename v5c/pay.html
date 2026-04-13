@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay — How It Works — Connect by Dimagi</title>
+  <meta name="description" content="Fair compensation tied to verified results. Over $90,000 paid directly to Frontline Workers through mobile money with full transparency.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav" role="banner">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Connect by Dimagi home">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" width="160" height="28">
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="deliver.html">Deliver</a></li>
+          <li><a href="verify.html">Verify</a></li>
+          <li><a href="pay.html" aria-current="page">Pay</a></li>
+          <li><a href="index.html#contact" class="nav-cta">Request a Demo</a></li>
+        </ul>
+      </nav>
+      <div class="nav-overlay" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Subpage Header -->
+    <section class="subpage-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html#how-it-works">How It Works</a> <span aria-hidden="true">/</span> Pay
+        </nav>
+        <h1>Pay</h1>
+        <p class="lead">Fair compensation tied to verified results.</p>
+      </div>
+    </section>
+
+    <!-- Key Display -->
+    <section aria-label="Key statistic">
+      <div class="container">
+        <div class="fade-in" style="text-align: center; padding: var(--space-lg) 0;">
+          <p class="hero-number">$90,000+</p>
+          <p class="hero-description">paid directly to Frontline Workers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Payment Works -->
+    <section aria-label="How payment works">
+      <div class="container">
+        <div class="content-section fade-in">
+          <h2>How Payment Works</h2>
+          <div class="enablers-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="enabler">
+              <h4>Performance-Based</h4>
+              <p>Paid per verified service. Every action has a known value.</p>
+            </div>
+            <div class="enabler">
+              <h4>Mobile Money</h4>
+              <p>Direct to worker accounts. No intermediaries.</p>
+            </div>
+            <div class="enabler">
+              <h4>Full Transparency</h4>
+              <p>Funder to frontline, every dollar tracked.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Model -->
+    <section aria-label="The model">
+      <div class="container">
+        <div class="content-section fade-in">
+          <h2>The Model</h2>
+          <p>Connect's pay-for-outcomes model aligns everyone. Workers deliver quality because pay depends on verification. Funders get accountability. LLOs demonstrate impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Metrics -->
+    <section aria-label="Payment metrics">
+      <div class="container">
+        <div class="metrics-row fade-in">
+          <div class="metric">
+            <p class="metric-value">$90K+</p>
+            <p class="metric-label">Payments</p>
+          </div>
+          <div class="metric">
+            <p class="metric-value">Direct</p>
+            <p class="metric-label">Mobile money</p>
+          </div>
+          <div class="metric">
+            <p class="metric-value">Real-time</p>
+            <p class="metric-label">Visibility</p>
+          </div>
+          <div class="metric">
+            <p class="metric-value">Zero</p>
+            <p class="metric-label">Intermediary fees</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="pay-cta">
+      <div class="container">
+        <div class="fade-in">
+          <h2 id="pay-cta">See our programs</h2>
+          <a href="programs.html" class="btn-primary">Explore Programs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <a href="index.html" class="footer-logo" aria-label="Connect home">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" width="120" height="20">
+      </a>
+      <p class="footer-text">&copy; 2025 <a href="https://dimagi.com" target="_blank" rel="noopener">Dimagi</a>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    @media (max-width: 640px) {
+      .enablers-grid[style*="repeat(3"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+  <script>
+    // Mobile Navigation
+    (function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const menu = document.querySelector('.nav-menu');
+      const overlay = document.querySelector('.nav-overlay');
+
+      function closeMenu() {
+        toggle.classList.remove('is-open');
+        menu.classList.remove('is-open');
+        overlay.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+
+      toggle.addEventListener('click', function() {
+        if (menu.classList.contains('is-open')) {
+          closeMenu();
+        } else {
+          toggle.classList.add('is-open');
+          menu.classList.add('is-open');
+          overlay.classList.add('is-open');
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-label', 'Close menu');
+        }
+      });
+
+      overlay.addEventListener('click', closeMenu);
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+
+    // Scroll Fade-in
+    (function() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var elements = document.querySelectorAll('.fade-in');
+      elements.forEach(function(el) { el.classList.add('is-hidden'); });
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('is-hidden');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      elements.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>
