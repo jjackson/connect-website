@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kangaroo Mother Care (KMC) — Connect by Dimagi</title>
+  <meta name="description" content="Digitally-enabled, community-based care for small and vulnerable newborns. Connect-KMC equips frontline workers with digital tools for structured home-based counseling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <!-- Reading Progress -->
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header site-header--transparent" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="../index.html" class="site-header__logo" aria-label="Connect by Dimagi home">
+        <img src="../assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" class="logo--light">
+        <img src="../assets/connect-by-dimagi.png" alt="Connect by Dimagi" class="logo--dark">
+      </a>
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <div class="site-header__links">
+          <div class="site-header__dropdown-wrap">
+            <a href="../index.html#how-it-works" class="site-header__link">How It Works</a>
+            <div class="site-header__dropdown">
+              <a href="../learn.html">Learn</a>
+              <a href="../deliver.html">Deliver</a>
+              <a href="../verify.html">Verify</a>
+              <a href="../pay.html">Pay</a>
+            </div>
+          </div>
+          <a href="../programs.html" class="site-header__link">Programs</a>
+          <a href="../index.html#impact" class="site-header__link">Impact</a>
+        </div>
+        <a href="../index.html#get-started" class="btn btn--pill btn--primary">Get Started</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="../index.html#how-it-works" class="mobile-nav__link">How It Works</a>
+    <a href="../learn.html" class="mobile-nav__link">Learn</a>
+    <a href="../deliver.html" class="mobile-nav__link">Deliver</a>
+    <a href="../verify.html" class="mobile-nav__link">Verify</a>
+    <a href="../pay.html" class="mobile-nav__link">Pay</a>
+    <a href="../programs.html" class="mobile-nav__link">Programs</a>
+    <a href="../index.html#impact" class="mobile-nav__link">Impact</a>
+    <a href="../index.html#get-started" class="btn btn--pill btn--primary btn--lg">Get Started</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="program-hero" aria-label="Program hero">
+      <div class="hero__bg-shapes" aria-hidden="true"></div>
+      <div class="container">
+        <div class="program-hero__content">
+          <a href="../programs.html" class="program-hero__back">&larr; All Programs</a>
+          <span class="program-hero__tag">Maternal &amp; Child Health</span>
+          <h1 class="program-hero__title">Kangaroo Mother Care</h1>
+          <p class="program-hero__subtitle">Digitally-enabled, community-based care for small and vulnerable newborns.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT + SIDEBAR -->
+    <div class="container">
+      <div class="program-layout">
+
+        <!-- Main Content -->
+        <article class="program-content">
+
+          <!-- The Challenge -->
+          <section class="program-content__section sr" id="challenge">
+            <h2>The Challenge</h2>
+            <p>Small and vulnerable newborns (SVNs) account for approximately 35% of the more than 2 million neonatal deaths each year. Kangaroo Mother Care, which involves prolonged skin-to-skin contact and exclusive breastfeeding, has been shown to reduce neonatal mortality by up to 40%.</p>
+            <p>Yet despite decades of evidence and WHO endorsement, global KMC adoption remains below 5%. The barriers are systemic: under-resourced health facilities, limited community awareness, and a lack of structured follow-up after hospital discharge.</p>
+          </section>
+
+          <!-- The Solution -->
+          <section class="program-content__section sr" id="solution">
+            <h2>The Solution</h2>
+            <p>Connect-KMC equips frontline health workers with digital tools for structured, home-based KMC counseling. Each worker delivers 7 to 10 structured visits to enrolled families, covering:</p>
+            <ul style="list-style: disc; padding-left: 1.5rem; margin-top: var(--space-sm); display: flex; flex-direction: column; gap: 0.5rem; color: var(--fern-blue);">
+              <li>KMC initiation and correct positioning</li>
+              <li>Exclusive breastfeeding support</li>
+              <li>Infection prevention and hygiene</li>
+              <li>Danger sign recognition and referral</li>
+              <li>Newborn growth monitoring and tracking</li>
+              <li>Household support and caregiver education</li>
+            </ul>
+            <p style="margin-top: var(--space-md);">The program aligns with WHO 2022 guidance on KMC, emphasizing community-based implementation as a complement to facility-based care. By training local workers and equipping them with structured mobile protocols, Connect-KMC brings life-saving care directly into homes.</p>
+          </section>
+
+          <!-- How Connect Powers It -->
+          <section class="program-content__section sr" id="how-it-works">
+            <h2>How Connect Powers It</h2>
+            <div class="powers-grid">
+              <div class="powers-card">
+                <div class="powers-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h4>FLW-Led Home Visits</h4>
+                <p>Frontline workers conduct structured visits using a mobile app that guides each session with evidence-based protocols.</p>
+              </div>
+              <div class="powers-card">
+                <div class="powers-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h4>Locally-Led Implementation</h4>
+                <p>LLO partners recruit, train, and oversee workers, ensuring cultural relevance and community trust.</p>
+              </div>
+              <div class="powers-card">
+                <div class="powers-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h4>Verified Performance Payments</h4>
+                <p>Every visit is validated through biometric and GPS verification before triggering mobile money payments to workers.</p>
+              </div>
+              <div class="powers-card">
+                <div class="powers-card__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h4>Monitoring &amp; Supervision</h4>
+                <p>Real-time dashboards track service delivery, enabling supervisors to identify gaps and support worker performance.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Impact -->
+          <section class="program-content__section sr" id="impact">
+            <h2>Impact</h2>
+            <p>Since launch, Connect-KMC has enrolled 5,000 cases across four countries, with each newborn receiving an average of 8 structured home visits. The program has demonstrated measurable improvements in KMC adherence, exclusive breastfeeding rates, and early detection of danger signs.</p>
+            <p>By shifting KMC delivery from facilities to communities and equipping workers with digital decision-support tools, the program is helping close the gap between evidence and practice, one home visit at a time.</p>
+          </section>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="program-sidebar">
+          <div class="program-sidebar__sticky">
+
+            <nav class="program-sidebar__nav" aria-label="Page sections">
+              <div class="program-sidebar__nav-title">On this page</div>
+              <div class="program-sidebar__nav-links">
+                <a href="#challenge" class="program-sidebar__nav-link is-active">The Challenge</a>
+                <a href="#solution" class="program-sidebar__nav-link">The Solution</a>
+                <a href="#how-it-works" class="program-sidebar__nav-link">How Connect Powers It</a>
+                <a href="#impact" class="program-sidebar__nav-link">Impact</a>
+              </div>
+            </nav>
+
+            <div class="program-sidebar__card">
+              <div class="program-sidebar__card-title">Program Details</div>
+              <div class="program-sidebar__detail">
+                <div class="program-sidebar__detail-label">Regions</div>
+                <div class="program-sidebar__detail-value">Uganda, Kenya, India, Nigeria</div>
+              </div>
+              <div class="program-sidebar__detail">
+                <div class="program-sidebar__detail-label">Sector</div>
+                <div class="program-sidebar__detail-value">Maternal &amp; Child Health</div>
+              </div>
+              <div class="program-sidebar__detail">
+                <div class="program-sidebar__detail-label">Scale</div>
+                <div class="program-sidebar__detail-value">5,000 cases enrolled</div>
+              </div>
+              <div class="program-sidebar__detail">
+                <div class="program-sidebar__detail-label">Funder</div>
+                <div class="program-sidebar__detail-value">Eleanor Crook Foundation</div>
+              </div>
+              <div class="program-sidebar__detail">
+                <div class="program-sidebar__detail-label">Partners</div>
+                <div class="program-sidebar__detail-value">PIPNU, Nama, Global Health Innovations, Ansh, BERI, EHA</div>
+              </div>
+              <div class="program-sidebar__detail">
+                <div class="program-sidebar__detail-label">Alignment</div>
+                <div class="program-sidebar__detail-value">WHO 2022 KMC Guidance</div>
+              </div>
+              <div class="program-sidebar__detail">
+                <div class="program-sidebar__detail-label">Resources</div>
+                <div class="program-sidebar__detail-value">
+                  <a href="https://www.youtube.com/watch?v=o1nHOWhInbY" target="_blank" rel="noopener">Ugandan National TV: KMC in Action</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-block" style="margin-top: var(--space-2xl);" aria-label="See all programs">
+      <div class="container">
+        <h2 class="cta-block__title sr">Explore More Programs</h2>
+        <p class="cta-block__subtitle sr">Discover the full portfolio of Connect interventions across health, nutrition, and livelihood sectors.</p>
+        <a href="../programs.html" class="btn btn--pill btn--white btn--lg sr">See All Programs</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <img src="../assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+          <p>A global platform for funding verified service delivery. Every dollar tied to a result.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Platform</h4>
+          <div class="site-footer__links">
+            <a href="../index.html#how-it-works">How It Works</a>
+            <a href="../learn.html">Learn</a>
+            <a href="../deliver.html">Deliver</a>
+            <a href="../verify.html">Verify</a>
+            <a href="../pay.html">Pay</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Programs</h4>
+          <div class="site-footer__links">
+            <a href="kmc.html">Kangaroo Mother Care</a>
+            <a href="readers.html">Readers &mdash; Vision Care</a>
+            <a href="../programs.html">View All</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2024 Connect by <a href="https://dimagi.com" target="_blank" rel="noopener noreferrer">Dimagi</a></span>
+        <span>Powering the Frontline. Paying for Results.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Header ---
+      var header = document.getElementById('siteHeader');
+      function updateHeader() {
+        if (window.scrollY > 60) {
+          header.classList.remove('site-header--transparent');
+          header.classList.add('site-header--solid');
+        } else {
+          header.classList.remove('site-header--solid');
+          header.classList.add('site-header--transparent');
+        }
+      }
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
+
+      // --- Mobile Nav ---
+      var hamburger = document.getElementById('hamburgerBtn');
+      var mobileNav = document.getElementById('mobileNav');
+      hamburger.addEventListener('click', function() {
+        var isOpen = mobileNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mobileNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('is-open');
+          hamburger.classList.remove('is-active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // --- Reading Progress ---
+      var progressBar = document.getElementById('readingProgress');
+      function updateProgress() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // --- Scroll Reveal ---
+      var srElements = document.querySelectorAll('.sr');
+      srElements.forEach(function(el) { el.classList.add('sr-hidden'); });
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('sr-reveal');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+      srElements.forEach(function(el) { observer.observe(el); });
+
+      // --- Sticky side nav active state ---
+      var sections = document.querySelectorAll('.program-content__section');
+      var navLinks = document.querySelectorAll('.program-sidebar__nav-link');
+      var sectionObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function(link) { link.classList.remove('is-active'); });
+            var id = entry.target.getAttribute('id');
+            var activeLink = document.querySelector('.program-sidebar__nav-link[href="#' + id + '"]');
+            if (activeLink) activeLink.classList.add('is-active');
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
+      sections.forEach(function(section) { sectionObserver.observe(section); });
+
+      // --- Smooth scroll for anchor links ---
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>

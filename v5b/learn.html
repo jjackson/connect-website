@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn — Connect by Dimagi</title>
+  <meta name="description" content="Frontline Workers build skills at their own pace through mobile-first digital training on Connect by Dimagi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Reading Progress -->
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header site-header--transparent" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Connect by Dimagi home">
+        <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" class="logo--light">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" class="logo--dark">
+      </a>
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <div class="site-header__links">
+          <div class="site-header__dropdown-wrap">
+            <a href="index.html#how-it-works" class="site-header__link">How It Works</a>
+            <div class="site-header__dropdown">
+              <a href="learn.html">Learn</a>
+              <a href="deliver.html">Deliver</a>
+              <a href="verify.html">Verify</a>
+              <a href="pay.html">Pay</a>
+            </div>
+          </div>
+          <a href="programs.html" class="site-header__link">Programs</a>
+          <a href="index.html#impact" class="site-header__link">Impact</a>
+        </div>
+        <a href="index.html#get-started" class="btn btn--pill btn--primary">Get Started</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html#how-it-works" class="mobile-nav__link">How It Works</a>
+    <a href="learn.html" class="mobile-nav__link">Learn</a>
+    <a href="deliver.html" class="mobile-nav__link">Deliver</a>
+    <a href="verify.html" class="mobile-nav__link">Verify</a>
+    <a href="pay.html" class="mobile-nav__link">Pay</a>
+    <a href="programs.html" class="mobile-nav__link">Programs</a>
+    <a href="index.html#impact" class="mobile-nav__link">Impact</a>
+    <a href="index.html#get-started" class="btn btn--pill btn--primary btn--lg">Get Started</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="ldvp-hero" aria-label="Learn hero">
+      <div class="hero__bg-shapes" aria-hidden="true"></div>
+      <div class="container">
+        <div class="ldvp-hero__content">
+          <div class="ldvp-breadcrumb">
+            <a href="index.html#how-it-works">How It Works</a>
+            <span class="ldvp-breadcrumb__sep" aria-hidden="true">/</span>
+            <span class="ldvp-breadcrumb__current">Step 01</span>
+          </div>
+          <span class="ldvp-hero__step-label">Step 01 of 04</span>
+          <h1 class="ldvp-hero__title">Learn</h1>
+          <div class="ldvp-hero__gradient-line" aria-hidden="true"></div>
+          <p class="ldvp-hero__subtitle">Frontline Workers build skills at their own pace through mobile-first digital training.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES: Alternating Magazine Layout -->
+    <section class="section section--lg" aria-label="Training features">
+      <div class="container">
+
+        <!-- Feature 1: Mobile-First Training -->
+        <div class="ldvp-feature sr">
+          <div class="ldvp-feature__visual">
+            <span class="ldvp-feature__number" aria-hidden="true">01</span>
+            <div class="ldvp-feature__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="14" y="4" width="20" height="40" rx="4" stroke="#3843D0" stroke-width="2.5"/>
+                <path d="M22 38h4" stroke="#8EA1FF" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M20 16h8M20 22h8M20 28h4" stroke="#3843D0" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="ldvp-feature__text">
+            <span class="ldvp-feature__label">Feature 01</span>
+            <h3 class="ldvp-feature__title">Mobile-First Training</h3>
+            <p class="ldvp-feature__desc">Workers access training modules on their phones. Interactive content and assessments build health service delivery skills, reaching workers wherever they are without requiring classroom time or travel.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2: Self-Paced Progress -->
+        <div class="ldvp-feature sr">
+          <div class="ldvp-feature__visual">
+            <span class="ldvp-feature__number" aria-hidden="true">02</span>
+            <div class="ldvp-feature__icon" style="background: linear-gradient(135deg, rgba(252, 95, 54, 0.1), rgba(254, 175, 49, 0.15));">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="24" r="18" stroke="#FC5F36" stroke-width="2.5"/>
+                <path d="M24 14v10l6 6" stroke="#FEAF31" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 8l-4-4M32 8l4-4" stroke="#FC5F36" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="ldvp-feature__text">
+            <span class="ldvp-feature__label">Feature 02</span>
+            <h3 class="ldvp-feature__title">Self-Paced Progress</h3>
+            <p class="ldvp-feature__desc">Pre-tests and post-tests measure knowledge. Workers move at their own speed, proving readiness before they begin delivering. Only those who demonstrate competence proceed to service delivery.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Locally Relevant Content -->
+        <div class="ldvp-feature sr">
+          <div class="ldvp-feature__visual">
+            <span class="ldvp-feature__number" aria-hidden="true">03</span>
+            <div class="ldvp-feature__icon" style="background: linear-gradient(135deg, rgba(22, 0, 109, 0.1), rgba(56, 67, 208, 0.15));">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="24" r="18" stroke="#16006D" stroke-width="2.5"/>
+                <path d="M24 6v36M6 24h36" stroke="#3843D0" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <circle cx="24" cy="24" r="10" stroke="#8EA1FF" stroke-width="2"/>
+                <circle cx="24" cy="24" r="3" fill="#3843D0"/>
+              </svg>
+            </div>
+          </div>
+          <div class="ldvp-feature__text">
+            <span class="ldvp-feature__label">Feature 03</span>
+            <h3 class="ldvp-feature__title">Locally Relevant Content</h3>
+            <p class="ldvp-feature__desc">Materials localized for each intervention and region. Cultural relevance and practical applicability ensured through collaboration with locally-led organizations who understand their communities.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHAT WORKERS LEARN -->
+    <section class="section section--lg" style="background: var(--off-white);" aria-label="What workers learn">
+      <div class="container">
+        <div class="section-heading sr">
+          <span class="section-heading__label">Curriculum</span>
+          <h2 class="section-heading__title">What Workers Learn</h2>
+        </div>
+        <div class="ldvp-numbered-list sr">
+          <div class="ldvp-numbered-item">
+            <span class="ldvp-numbered-item__number">01</span>
+            <span class="ldvp-numbered-item__text">Health service protocols (KMC positioning, CHC screening)</span>
+          </div>
+          <div class="ldvp-numbered-item">
+            <span class="ldvp-numbered-item__number">02</span>
+            <span class="ldvp-numbered-item__text">Data collection via CommCare</span>
+          </div>
+          <div class="ldvp-numbered-item">
+            <span class="ldvp-numbered-item__number">03</span>
+            <span class="ldvp-numbered-item__text">Safety and infection prevention</span>
+          </div>
+          <div class="ldvp-numbered-item">
+            <span class="ldvp-numbered-item__number">04</span>
+            <span class="ldvp-numbered-item__text">Danger sign recognition and referral</span>
+          </div>
+          <div class="ldvp-numbered-item">
+            <span class="ldvp-numbered-item__number">05</span>
+            <span class="ldvp-numbered-item__text">Community engagement and counseling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE CONNECT ADVANTAGE (Dark Section) -->
+    <section class="ldvp-dark-section" aria-label="The Connect Advantage">
+      <div class="container">
+        <div class="section-heading sr">
+          <span class="section-heading__label">The Connect Advantage</span>
+          <h2 class="section-heading__title">Training Without Barriers</h2>
+        </div>
+        <p class="ldvp-dark-section__quote sr">Digital training means no classroom time. Workers learn on their devices, prove readiness, and begin delivering only after demonstrating competence.</p>
+      </div>
+    </section>
+
+    <!-- NEXT STEP -->
+    <section class="ldvp-next" aria-label="Next step">
+      <div class="container">
+        <a href="deliver.html" class="ldvp-next__link sr">
+          Next: Deliver <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+          <p>A global platform for funding verified service delivery. Every dollar tied to a result.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Platform</h4>
+          <div class="site-footer__links">
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="learn.html">Learn</a>
+            <a href="deliver.html">Deliver</a>
+            <a href="verify.html">Verify</a>
+            <a href="pay.html">Pay</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Programs</h4>
+          <div class="site-footer__links">
+            <a href="programs/kmc.html">Kangaroo Mother Care</a>
+            <a href="programs/readers.html">Readers &mdash; Vision Care</a>
+            <a href="programs.html">View All</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2024 Connect by <a href="https://dimagi.com" target="_blank" rel="noopener noreferrer">Dimagi</a></span>
+        <span>Powering the Frontline. Paying for Results.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Header ---
+      var header = document.getElementById('siteHeader');
+      function updateHeader() {
+        if (window.scrollY > 60) {
+          header.classList.remove('site-header--transparent');
+          header.classList.add('site-header--solid');
+        } else {
+          header.classList.remove('site-header--solid');
+          header.classList.add('site-header--transparent');
+        }
+      }
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
+
+      // --- Mobile Nav ---
+      var hamburger = document.getElementById('hamburgerBtn');
+      var mobileNav = document.getElementById('mobileNav');
+      hamburger.addEventListener('click', function() {
+        var isOpen = mobileNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mobileNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('is-open');
+          hamburger.classList.remove('is-active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // --- Reading Progress ---
+      var progressBar = document.getElementById('readingProgress');
+      function updateProgress() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // --- Scroll Reveal ---
+      var srElements = document.querySelectorAll('.sr');
+      srElements.forEach(function(el) { el.classList.add('sr-hidden'); });
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('sr-reveal');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+      srElements.forEach(function(el) { observer.observe(el); });
+
+      // --- Smooth scroll for anchor links ---
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
