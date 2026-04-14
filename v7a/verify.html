@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify — Connect by Dimagi</title>
+<meta name="description" content="Every service is confirmed, not tracked. Microplanning for equitable coverage, adversarial fraud testing, and the design distinction between guardrails and hard stops.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,600;1,200;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap-wide nav">
+    <a class="nav-logo" href="index.html" aria-label="Connect by Dimagi home">
+      <img src="assets/connect.png" alt="">
+      <span>Connect</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">How It Works</button>
+          <div class="nav-dropdown-panel" role="menu">
+            <a href="learn.html">Learn <span>Training FLWs before delivery</span></a>
+            <a href="deliver.html">Deliver <span>Services through locally-led orgs</span></a>
+            <a href="verify.html">Verify <span>Biometric, GPS, algorithmic</span></a>
+            <a href="pay.html">Pay <span>Performance-based compensation</span></a>
+          </div>
+        </li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html#impact">Impact</a></li>
+        <li><a class="btn btn-primary" href="index.html#demo">Request a Demo</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap-wide">
+    <div class="stepper">
+      <a class="step" href="learn.html">
+        <div class="hairline">01 · Learn</div>
+        <h3>Digital training with a pass bar.</h3>
+        <p>Self-paced. Assessment-gated.</p>
+      </a>
+      <a class="step" href="deliver.html">
+        <div class="hairline">02 · Deliver</div>
+        <h3>Locally-led, app-guided service.</h3>
+        <p>44 LLOs across 11 countries.</p>
+      </a>
+      <a class="step is-active" href="verify.html">
+        <div class="hairline">03 · Verify</div>
+        <h3>Biometric, GPS, algorithmic.</h3>
+        <p>Four independent layers.</p>
+      </a>
+      <a class="step" href="pay.html">
+        <div class="hairline">04 · Pay</div>
+        <h3>Mobile money on verification.</h3>
+        <p>Costs fall as the network scales.</p>
+      </a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="crumbs">
+        <a href="index.html">How It Works</a><span class="sep">/</span><span>Verify</span>
+      </div>
+      <h1 class="hero-headline">Every service <em>confirmed.</em> Not tracked. Not monitored.</h1>
+      <p class="hero-sub">Verification is not a step bolted on at the end. It is how the platform operates. Every dollar a funder commits is tied to a service that has been confirmed by biometrics, GPS, photo, and algorithmic analysis — in that order, stacked, independent. This page explains why we redesigned our verification philosophy when we realized the first instinct was wrong.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="num">94%</div>
+          <div class="label">population coverage with microplans (vs 82–84% without)</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">1.4×</div>
+          <div class="label">visits per eligible child under microplans vs 0.4 without</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">AUC 0.91</div>
+          <div class="label">fraud detection discrimination from 3 data elements</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">2.5%</div>
+          <div class="label">of real workers scoring above any adversarial faker</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Microplanning (Insight 2) -->
+  <section class="longform">
+    <div class="wrap">
+      <div class="longform-head">
+        <div class="num">01</div>
+        <h2>Give workers a neighborhood and a quota, and they will cherry-pick.</h2>
+      </div>
+      <div class="longform-body">
+        <div class="prose">
+          <p>When we first ran door-to-door child health campaigns, we did what every field program does. We gave each Frontline Worker a target area and a visit quota and we trusted them to figure out the route. This is the reasonable default. Workers know their neighborhoods. Micromanaging a route from Boston is worse than letting them plan it.</p>
+          <p>Then we measured what happened. Across campaigns without structured coverage requirements, workers averaged <strong>0.4 visits per estimated eligible child in their area</strong>. The pattern was obvious once we looked for it: they were visiting the accessible households and skipping the harder ones. The houses behind the long footpath, the compounds that required climbing a hill, the blocks with a reputation for skepticism — those went unvisited. Which meant the families who got seen were systematically those with <em>higher</em> baseline health coverage. We were doing convenience sampling at the exact moment equity was the goal.</p>
+          <p>The response was microplanning. Before a campaign, Connect overlays a grid on the operational area using Google Open Buildings, OpenStreetMap, and Microsoft building data. Grid cells with at least one building become <strong>Delivery Units</strong>. Delivery Units group into <strong>Service Areas</strong> sized for one to two weeks of work per FLW. And here is the forcing function: <strong>a worker cannot move to the next Service Area until they close every Delivery Unit in the current one</strong> — either completing visits or confirming there are no eligible children at home.</p>
+          <p>The data from the Founders Pledge Child Health Campaign is the cleanest comparison we have. In microplan-supported campaigns, coverage reached <strong>94% of the estimated population in visited cells</strong>, compared to 84% in experienced LLO campaigns without microplans, and 82% in a well-run non-Connect CommCare campaign used as a benchmark. The thoroughness metric moved even more sharply: <strong>1.4 visits per estimated child under microplans, versus 0.4 without</strong>. Same workers, same program, different constraint structure.</p>
+          <p>The geographic coverage story has a second-order effect that is worth saying out loud. The population we were missing — the 10–15% in the non-microplanned campaigns — was systematically the population with the lower baseline coverage. Funders investing in child health equity should want the 94% number not because it looks better, but because the marginal 10% contains the children who had not been reached before. Verification, in this frame, is not a fraud-prevention measure. It is an equity measure enforced by software.</p>
+          <p>Where microplans fail, we have been honest about. <strong>In dispersed settlement patterns, workers walked long distances to Delivery Units that turned out to have no actual buildings.</strong> Some DUs fell on inaccessible land — factory grounds, prison grounds, land where the satellite data was misleading. One campaign removed microplan execution entirely due to partner constraints. The geographic model is right on average and wrong in specific ways, and we are iterating.</p>
+        </div>
+        <aside class="rail" aria-label="Supporting material for microplanning">
+          <div class="rail-block">
+            <h4>Method</h4>
+            <p>Grid overlay from Google Open Buildings + OpenStreetMap + Microsoft building data. Cells with at least one building become Delivery Units; DUs group into 1–2 week Service Areas. Workers unlock the next Service Area only after closing the current one.</p>
+          </div>
+          <div class="rail-stat">
+            <div class="num">94%</div>
+            <div class="lbl">Population coverage in microplanned campaigns</div>
+          </div>
+          <div class="rail-stat">
+            <div class="num">65%</div>
+            <div class="lbl">Populated cells visited under microplans (vs 55% without)</div>
+          </div>
+          <div class="rail-stat">
+            <div class="num">1.4</div>
+            <div class="lbl">Visits per estimated child under microplans (vs 0.4 without)</div>
+          </div>
+          <p class="rail-pullquote">We were doing convenience sampling at the exact moment equity was the goal.</p>
+          <p class="source">Source: Founders Pledge Final Report, Feb 2026 — Coverage comparison table, CHC microplanning analysis.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Adversarial fraud testing (Insight 3) -->
+  <section class="longform">
+    <div class="wrap">
+      <div class="longform-head">
+        <div class="num">02</div>
+        <h2>We paid experienced workers to defeat our fraud model. Then we watched them fail.</h2>
+      </div>
+      <div class="longform-body">
+        <div class="prose">
+          <p>Most organizations run fraud detection as a promise. They have a system, they say the system catches fraud, and they do not stress-test the system until a regulator makes them. The Connect verification stack has biometrics, GPS, and photos built in. Our instinct was to say "good enough" and move on. We decided not to.</p>
+          <p>We asked a harder question: <strong>what if a motivated insider tried to fake the data?</strong> Not a random tester, not a researcher. An experienced FLW who had spent a year in the field and knew exactly what a real visit record looks like. Could statistical patterns alone — no GPS, no timestamps, no photos — tell us they were fabricating? Because if the answer was yes, we had a verification layer operating beneath the obvious ones. If the answer was no, we had a structural problem.</p>
+          <p>So we paid people to try. We hired experienced FLWs and asked each of them to submit <strong>100 fake visit records</strong>. We ran three rounds. After each round, we coached the fakers on what had given them away — told them, explicitly, what to avoid. <strong>We offered bonuses to the top 25% most convincing fabricators.</strong> This is the kind of adversarial testing that most organizations only do when a regulator makes them. We did it because we wanted to know.</p>
+          <p>The result: using only three data elements — age, gender, and MUAC (mid-upper arm circumference) — a Random Forest model achieved an <strong>AUC of 0.91 ± 0.09</strong>. That is excellent discrimination by any clinical or statistical standard. More practically, <strong>only 2.5% of real workers received fraud risk scores higher than even the lowest-scoring fabricator</strong>. Out of 33 adversarial fakers across three rounds, we detected them with near-perfect discrimination using data patterns alone — before GPS verification, before photo verification, before biometric checks.</p>
+          <p>What this does to our verification story is important. Fraud detection stops being a claim and becomes an empirically validated layer. And because verification has <strong>four independent layers</strong> — biometric identity, GPS geolocation, photo capture, and algorithmic pattern analysis — a fabricated visit has to beat all four. A fabricator with plausible demographics still has to account for being in the right place at the right time with the right person. A fabricator with the right location still has to pass pattern analysis. Stacking is the point.</p>
+          <p>The caveat is that adversarial testing of this kind is a continuous practice, not a one-time audit. The fakers we tested learned across rounds. A real bad actor with months of context and knowledge of the model could do better than our paid testers did. Our response is to keep running these exercises on new data, to rotate which fields the model depends on, and to never treat a single AUC number as the final answer. The number above describes what we can detect today. Tomorrow's number is earned by continuing to attack the system.</p>
+        </div>
+        <aside class="rail" aria-label="Supporting material for adversarial testing">
+          <div class="rail-block">
+            <h4>Method</h4>
+            <p>Three rounds. Experienced FLWs paid to submit 100 fake visits each. Fakers coached between rounds. Bonus to top 25% most convincing. Random Forest model trained on age, gender, MUAC — only three data elements.</p>
+          </div>
+          <div class="rail-stat">
+            <div class="num">0.91</div>
+            <div class="lbl">AUC (±0.09) for fraud discrimination from three data elements</div>
+          </div>
+          <div class="rail-stat">
+            <div class="num">2.5%</div>
+            <div class="lbl">Real workers scoring higher than the lowest adversarial faker</div>
+          </div>
+          <div class="rail-stat">
+            <div class="num">4</div>
+            <div class="lbl">Independent verification layers — biometric, GPS, photo, algorithmic</div>
+          </div>
+          <p class="rail-pullquote">We paid experienced workers to defeat our fraud model. Then we watched them fail.</p>
+          <p class="source">Source: Founders Pledge Final Report, Feb 2026 — Adversarial fraud testing appendix.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Guardrails vs hard stops (Insight 10) -->
+  <section class="longform">
+    <div class="wrap">
+      <div class="longform-head">
+        <div class="num">03</div>
+        <h2>Not every miss should block payment. If it does, you stop getting honest data.</h2>
+      </div>
+      <div class="longform-body">
+        <div class="prose">
+          <p>The natural instinct, when you build a verification system, is to make it enforce. If an FLW misses the target — first KMC home visit within three days of discharge, say — the system should reject the visit. Withhold payment. Send a signal. That is how you get compliance. That, at least, was the working model when we began.</p>
+          <p>We changed it. After watching the first year of field data, we drew a line between two different kinds of rule. <strong>Payment criteria</strong> are hard — they must be met to be paid. A visit has to have biometrics, GPS, photo, and algorithmic pass; if any layer fails, the money does not move. <strong>Guardrails</strong> are soft — they trigger audits, performance conversations, and LLO coaching, but they do not block payment.</p>
+          <p>The canonical example lives in our Kangaroo Mother Care program. KMC has a payment criterion of four mandatory home visits per small or vulnerable newborn. Miss it, no payment. Non-negotiable. But the guardrail that says <strong>"first visit within three days of discharge"</strong> is different. Current performance on that guardrail is <strong>50% against a 70% target</strong>. The guardrail is failing. We know the guardrail is failing. The system flags it and we act on it — through LLO coaching, scheduling support, discharge notification integration with partner hospitals. <strong>We do not withhold payment for it.</strong></p>
+          <p>The reason for that distinction is not generosity. It is data integrity. <strong>Platforms that punish missed guardrails do not get honest data.</strong> If we enforced the three-day rule as a hard stop, an FLW arriving on day four has two options: tell us it was day four and lose the payment, or record it as day three and be paid. A rational worker under financial pressure will eventually choose the second. The platform will learn nothing about why the first visit slips, because the slips will be hidden. The program will not improve. The guardrail will <em>appear</em> to be met, and we will be structurally unable to make it actually true.</p>
+          <p>By separating audits from payment, we get the real distribution. We know that enrollment within three days is at 50%. We know the early discharge rate is 7.6% — slightly above our 5% target. We know the FLW visit completion is 3.4 per case on average against our 5-visit guardrail. None of these numbers are flattering. All of them are load-bearing, because they are real. They are what lets us invest in the right interventions — discharge-notification APIs, better scheduling support, stronger LLO coaching cycles — instead of optimizing against a gamed metric.</p>
+          <p>This is a design philosophy that shows up across the platform, not just in KMC. It is why we treat fraud detection as a stacked probability model rather than a single hard pass-fail. It is why our payment rules are narrower than our quality rules. And it is why, when a funder asks whether Connect is "strict enough," the answer is that we are strict on the things payment should be strict on, and we are deliberately soft on the things where strictness would turn the data into a lie.</p>
+        </div>
+        <aside class="rail" aria-label="Supporting material for guardrails vs hard stops">
+          <div class="rail-block">
+            <h4>Design distinction</h4>
+            <p><strong>Payment criteria</strong> are hard — must be met to be paid. <strong>Guardrails</strong> are soft — trigger audits and coaching, but do not block payment. The separation protects data integrity.</p>
+          </div>
+          <div class="rail-stat">
+            <div class="num">50%</div>
+            <div class="lbl">KMC enrollment within 3 days of discharge (target: 70%) — audited, not enforced</div>
+          </div>
+          <div class="rail-stat">
+            <div class="num">3.4</div>
+            <div class="lbl">Average FLW visits per KMC case (guardrail: 5) — flagged, not blocked</div>
+          </div>
+          <div class="rail-stat">
+            <div class="num">7.6%</div>
+            <div class="lbl">Early discharge rate (target: 5%) — real data, not gamed data</div>
+          </div>
+          <p class="rail-pullquote">Platforms that punish missed guardrails do not get honest data.</p>
+          <p class="source">Source: Connect KMC program data (March 2026, n=4,005 cases); Connect insight 10.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-step">
+    <div class="wrap">
+      <div class="kicker">Next in the cycle</div>
+      <a href="pay.html">
+        <span class="label">04 · Pay</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="programs/kmc.html">
+        <span class="label">Or: read how guardrails are applied in KMC</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap-wide">
+    <div class="footer-grid">
+      <div class="footer-mark">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi">
+        <p>Powering the frontline. Paying for results. A platform for funding verified service delivery from funder to frontline worker.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="deliver.html">Deliver</a></li>
+          <li><a href="verify.html">Verify</a></li>
+          <li><a href="pay.html">Pay</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs/chc.html">Child Health Campaign</a></li>
+          <li><a href="programs/kmc.html">Kangaroo Mother Care</a></li>
+          <li><a href="programs/ecd.html">Early Childhood Development</a></li>
+          <li><a href="programs/readers.html">Readers</a></li>
+          <li><a href="programs.html">All programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="index.html#impact">Impact</a></li>
+          <li><a href="https://www.dimagi.com" target="_blank" rel="noopener">About Dimagi</a></li>
+          <li><a href="index.html#demo">Request a Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dimagi, Inc. All rights reserved.</span>
+      <span>Built on CommCare. Aligned with WHO guidance.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.getElementById('nav-links');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+
+</body>
+</html>

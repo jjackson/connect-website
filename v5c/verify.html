@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify — How It Works — Connect by Dimagi</title>
+  <meta name="description" content="Every service confirmed. Every dollar tied to a result. Three layers of verification on every service delivered through Connect.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav" role="banner">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Connect by Dimagi home">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" width="160" height="28">
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="deliver.html">Deliver</a></li>
+          <li><a href="verify.html" aria-current="page">Verify</a></li>
+          <li><a href="pay.html">Pay</a></li>
+          <li><a href="index.html#contact" class="nav-cta">Request a Demo</a></li>
+        </ul>
+      </nav>
+      <div class="nav-overlay" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Subpage Header -->
+    <section class="subpage-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html#how-it-works">How It Works</a> <span aria-hidden="true">/</span> Verify
+        </nav>
+        <h1>Verify</h1>
+        <p class="lead">Every service confirmed. Every dollar tied to a result.</p>
+      </div>
+    </section>
+
+    <!-- Key Display -->
+    <section aria-label="Key statistic">
+      <div class="container">
+        <div class="fade-in" style="text-align: center; padding: var(--space-lg) 0;">
+          <p class="hero-number">3</p>
+          <p class="hero-description">layers of verification on every service delivered.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three Layers -->
+    <section aria-label="Three layers of verification">
+      <div class="container">
+        <div class="content-section fade-in">
+          <h2>Three Layers</h2>
+          <div class="enablers-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="enabler">
+              <h4>Biometric Verification</h4>
+              <p>Unique ID confirms real people received real services.</p>
+            </div>
+            <div class="enabler">
+              <h4>GPS &amp; Location</h4>
+              <p>Geolocation confirms the right places. Microplan execution ensures coverage.</p>
+            </div>
+            <div class="enabler">
+              <h4>Algorithmic Validation</h4>
+              <p>AI detects anomalies, flags suspicious patterns, ensures data integrity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section aria-label="Why verification matters">
+      <div class="container">
+        <div class="content-section fade-in">
+          <h2>Why It Matters</h2>
+          <p>Traditional programs rely on self-reported data. Connect builds verification into delivery. It's not a separate step — it's how the system works.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Each Stakeholder Sees -->
+    <section aria-label="Stakeholder visibility">
+      <div class="container">
+        <div class="content-section fade-in">
+          <h2>What Each Stakeholder Sees</h2>
+          <div class="enablers-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="enabler">
+              <h4>Funders</h4>
+              <p>Where money went, what it achieved.</p>
+            </div>
+            <div class="enabler">
+              <h4>LLOs</h4>
+              <p>Auditable proof for reporting.</p>
+            </div>
+            <div class="enabler">
+              <h4>Workers</h4>
+              <p>Transparent records determining pay.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Link -->
+    <section aria-label="Next step">
+      <div class="container">
+        <a href="pay.html" class="back-link" style="flex-direction: row-reverse;">Next: Pay <span class="arrow" aria-hidden="true" style="transform: scaleX(-1);">&larr;</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <a href="index.html" class="footer-logo" aria-label="Connect home">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" width="120" height="20">
+      </a>
+      <p class="footer-text">&copy; 2025 <a href="https://dimagi.com" target="_blank" rel="noopener">Dimagi</a>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    @media (max-width: 640px) {
+      .enablers-grid[style*="repeat(3"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+  <script>
+    // Mobile Navigation
+    (function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const menu = document.querySelector('.nav-menu');
+      const overlay = document.querySelector('.nav-overlay');
+
+      function closeMenu() {
+        toggle.classList.remove('is-open');
+        menu.classList.remove('is-open');
+        overlay.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+
+      toggle.addEventListener('click', function() {
+        if (menu.classList.contains('is-open')) {
+          closeMenu();
+        } else {
+          toggle.classList.add('is-open');
+          menu.classList.add('is-open');
+          overlay.classList.add('is-open');
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-label', 'Close menu');
+        }
+      });
+
+      overlay.addEventListener('click', closeMenu);
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+
+    // Scroll Fade-in
+    (function() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var elements = document.querySelectorAll('.fade-in');
+      elements.forEach(function(el) { el.classList.add('is-hidden'); });
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('is-hidden');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      elements.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>

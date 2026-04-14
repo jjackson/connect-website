@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn — Connect by Dimagi</title>
+<meta name="description" content="How Connect's digital training evolved: from knowledge tests to layered competence, with AI coaching and supervised observation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="./index.html"><img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi"></a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">How It Works <span>▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="./learn.html">Learn<small>Digital training with assessment gates</small></a>
+          <a href="./deliver.html">Deliver<small>LLO-led service delivery at scale</small></a>
+          <a href="./verify.html">Verify<small>Four layers of verification per visit</small></a>
+          <a href="./pay.html">Pay<small>Mobile money on verified completion</small></a>
+        </div>
+      </div>
+      <a href="./programs.html">Programs</a>
+      <a href="./index.html#impact">Impact</a>
+      <a href="./index.html#contact" class="cta-pill">Request a Demo</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">≡</button>
+  </div>
+</header>
+
+<!-- ======================= SUB HERO ======================= -->
+<section class="sub-hero">
+  <div class="grid-bg"></div>
+  <div class="aurora"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
+    <nav class="breadcrumbs"><a href="./index.html">Connect</a><span class="sep">/</span>How It Works<span class="sep">/</span>Learn</nav>
+    <div class="eyebrow-row">
+      <span class="step-chip"><span class="sc-bullet"></span>Step 01 of 04</span>
+      <span class="step-chip" style="color:rgba(238,240,255,0.7);background:transparent;">The training layer</span>
+    </div>
+    <h1>Workers train on a <em>phone</em>, then prove competence — before delivery.</h1>
+    <p class="lede">The training stack evolved in public. Version one was a knowledge test. It wasn't enough. What shipped is a five-layer model — digital learning, assessment gate, daily AI coaching, peer practice, and supervised observation — validated against ~400 FLWs across iterative experiments.</p>
+
+    <div class="sub-hero-stats">
+      <div class="s"><div class="s-num">85%</div><div class="s-cap">FLW progression from training to delivery</div></div>
+      <div class="s"><div class="s-num">88%</div><div class="s-cap">Scored &gt;70% on first observed visit</div></div>
+      <div class="s"><div class="s-num">9.5/10</div><div class="s-cap">LLO rating of digital resources</div></div>
+      <div class="s"><div class="s-num">~400</div><div class="s-cap">FLWs in iterative validation</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PILLARS ======================= -->
+<section class="wrap">
+  <div class="pillars">
+    <div class="pillar">
+      <div class="p-num">PILLAR 01</div>
+      <h4>Mobile-first, offline-capable</h4>
+      <p>Workers access modules on their own phones, without connectivity. No classroom scheduling. No travel costs. The cost of adding the 10,000th FLW approaches zero.</p>
+    </div>
+    <div class="pillar">
+      <div class="p-num">PILLAR 02</div>
+      <h4>Locally-relevant content</h4>
+      <p>Training is localized per intervention and region. Content is approved by subject matter experts — the LLO, or an SME identified by Dimagi for that geography.</p>
+    </div>
+    <div class="pillar">
+      <div class="p-num">PILLAR 03</div>
+      <h4>Assessment-gated progression</h4>
+      <p>Workers must pass an in-app knowledge test before they can deliver services. The bar is standard across all LLOs for a given program. Competence is verified before compensation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LEARNINGS (Pattern D) ======================= -->
+<section class="wrap-narrow">
+
+  <!-- LEARNING 1: Knowledge != competence -->
+  <article class="learning">
+    <div class="learning-head">
+      <div>
+        <div class="l-num">01</div>
+        <div class="l-tag">Learning · Layered training</div>
+      </div>
+      <div>
+        <h2>The knowledge test wasn't enough. We had to build around it.</h2>
+        <p class="l-sub">Our first training version assumed that if a worker could pass an in-app test, they could deliver the visit. They couldn't. The gap between knowledge and competence turned out to be the hardest problem in the Learn stack — and the most interesting.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-rail" aria-hidden="true"></div>
+      <div class="phase-list">
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Early 2024 · The starting assumption</div>
+            <h4>"Pass the test, start the work."</h4>
+            <p>We built a self-paced digital course inside the Learn app, followed by a multiple-choice knowledge assessment. If the FLW scored above threshold, they were cleared to deliver. That was the whole gate. Simple, scalable, measurable — and we trusted the test.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Late 2024 · What the field showed</div>
+            <h4>Competence doesn't equal knowledge</h4>
+            <p>Workers who aced the test still struggled with the nuances of in-person counseling. Handling a skeptical caregiver. Recognizing subtle danger signs. Practicing motivational interviewing instead of reading a script. Supervised observations revealed a category of skill the multiple-choice format couldn't reach.</p>
+            <p>We were selecting for people who could memorize facts, not for people who could make a hesitant mother feel heard.</p>
+            <div class="phase-data">Observed gap: <strong>knowledge &gt; behavior</strong> on every early cohort</div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">2025 · What we changed</div>
+            <h4>A five-layer training stack</h4>
+            <p>Instead of strengthening the test, we added layers around it. Workers now complete self-paced digital learning, pass the in-app knowledge test, interact daily with an AI coach bot (built on Dimagi's Open Chat Studio), practice with peers, and finally complete one supervised observation visit rated by an LLO supervisor. Each layer addresses something the previous one missed.</p>
+            <p>The AI coach specifically fills the space between text-based knowledge and real encounters — scenario-based practice, motivational-interviewing drills, daily reflection on real visit experiences, and conversational identification of knowledge gaps.</p>
+            <div class="phase-data">Layers added to the gate: <strong>4 new ones</strong></div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">2026 · What the data says now</div>
+            <h4>Layered training validated against ~400 FLWs</h4>
+            <p><strong>85%</strong> of FLWs progress from training to service delivery. <strong>88%</strong> score above 70% on their first observed visits. <strong>77%</strong> pass the supervised observation gate. This isn't an ideal test environment — it's ECD, CHC, and KMC rollouts across multiple LLOs and countries. The stack holds.</p>
+            <p>We now treat the knowledge test as one of five signals, not the signal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="learning-source"><strong>Sources:</strong> ECD Overview (Feb 2026), CLP Stage 2 Report (Feb 2026). Insight 8 in the public insights log.</p>
+  </article>
+
+  <!-- LEARNING 2: Attitudes correct, knowledge/behavior is the gap -->
+  <article class="learning">
+    <div class="learning-head">
+      <div>
+        <div class="l-num">02</div>
+        <div class="l-tag">Learning · Target the right gap</div>
+      </div>
+      <div>
+        <h2>Caregivers already believe. Training has to move knowledge and behavior instead.</h2>
+        <p class="l-sub">A good training program addresses the actual gap, not the one in the proposal. For ECD, baseline data told us we were aiming at the wrong thing — and reallocating the intervention mattered more than expanding it.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-rail" aria-hidden="true"></div>
+      <div class="phase-list">
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">2023 · Proposal assumptions</div>
+            <h4>"We'll build attitudes about responsive caregiving."</h4>
+            <p>A conventional ECD intervention targets all three: caregiver attitudes, caregiver knowledge, and caregiver behavior. The design lens of most parenting programs is "build belief, then build skill." Our pilot plan followed that convention.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Q2 2025 · Malawi baseline</div>
+            <h4>50 caregivers already scored high on attitudes</h4>
+            <p>Nearly all baseline caregivers agreed that talk-and-play supports brain development, endorsed responsive caregiving, and rejected harsh correction. Attitude scores were high before the intervention started — and stayed high after it finished. We were planning to convince people of something they already believed.</p>
+            <div class="phase-data">Baseline attitude scores: <strong>already at ceiling</strong></div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Q3 2025 · Endline results</div>
+            <h4>The movement was in knowledge and observed behavior</h4>
+            <p>Where the intervention actually moved the needle: <strong>+33%</strong> on knowledge of rapid child development timing, <strong>+41%</strong> on ways to support mental development, <strong>+21%</strong> observed improvement in teaching, <strong>+21%</strong> observed improvement in encouraging autonomy. Attitudes didn't need to move. Behavior did.</p>
+            <div class="phase-data">Knowledge gain: <strong>+33% to +41%</strong></div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">2026 · What we changed</div>
+            <h4>From 3 visits to 8-10, focused on practice</h4>
+            <p>We're expanding the pilot from 3 visits to 8-10 visits across 12 months — not because caregivers need more convincing, but because behavior change requires sustained practice and feedback. Digital training content shifted weight away from attitude modules toward knowledge scaffolding and behavior rehearsal. The program is now evidence-guided, not just evidence-based.</p>
+            <p>We're still working on the hardest subdomain: encouragement of autonomy sits at 47% at endline. Moving it is open work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="learning-source"><strong>Sources:</strong> ECD Overview (Feb 2026), Malawi pilot (April-July 2025, 76 FLWs, 9,510+ visits). Insight 7 in the public insights log.</p>
+  </article>
+
+</section>
+
+<!-- ======================= NEXT STEP ======================= -->
+<section class="next-step">
+  <div class="wrap">
+    <div class="next-step-inner">
+      <div>
+        <div class="ns-label">Next in the cycle</div>
+        <h3>Once workers are cleared, <em>delivery</em> begins — guided by the app.</h3>
+      </div>
+      <a href="./deliver.html" class="next-step-cta">Continue to Deliver →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+        <p>Connect is a Dimagi platform linking funding to verified service delivery at the frontline.</p>
+      </div>
+      <div class="footer-col"><h5>Platform</h5><ul>
+        <li><a href="./learn.html">Learn</a></li>
+        <li><a href="./deliver.html">Deliver</a></li>
+        <li><a href="./verify.html">Verify</a></li>
+        <li><a href="./pay.html">Pay</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Programs</h5><ul>
+        <li><a href="./programs/chc.html">CHC</a></li>
+        <li><a href="./programs/kmc.html">KMC</a></li>
+        <li><a href="./programs/ecd.html">ECD</a></li>
+        <li><a href="./programs/readers.html">Readers</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Connect</h5><ul>
+        <li><a href="./index.html#impact">Impact</a></li>
+        <li><a href="https://www.dimagi.com">About Dimagi</a></li>
+        <li><a href="./index.html#contact">Request a Demo</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Dimagi, Inc. All rights reserved.</div>
+      <div>Connect by Dimagi</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const t = document.getElementById('navToggle');
+  const l = document.getElementById('navLinks');
+  if (t && l) t.addEventListener('click', () => l.classList.toggle('is-open'));
+</script>
+</body>
+</html>

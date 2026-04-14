@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs — Connect by Dimagi</title>
+  <meta name="description" content="Explore Connect's growing portfolio of verified service delivery programs across health, nutrition, water, sanitation, and livelihood sectors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header site-header--transparent" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Connect by Dimagi home">
+        <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" class="logo--light">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" class="logo--dark">
+      </a>
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <div class="site-header__links">
+          <div class="site-header__dropdown-wrap">
+            <a href="index.html#how-it-works" class="site-header__link">How It Works</a>
+            <div class="site-header__dropdown">
+              <a href="learn.html">Learn</a>
+              <a href="deliver.html">Deliver</a>
+              <a href="verify.html">Verify</a>
+              <a href="pay.html">Pay</a>
+            </div>
+          </div>
+          <a href="programs.html" class="site-header__link">Programs</a>
+          <a href="index.html#impact" class="site-header__link">Impact</a>
+        </div>
+        <a href="index.html#get-started" class="btn btn--pill btn--primary">Get Started</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html#how-it-works" class="mobile-nav__link">How It Works</a>
+    <a href="learn.html" class="mobile-nav__link">Learn</a>
+    <a href="deliver.html" class="mobile-nav__link">Deliver</a>
+    <a href="verify.html" class="mobile-nav__link">Verify</a>
+    <a href="pay.html" class="mobile-nav__link">Pay</a>
+    <a href="programs.html" class="mobile-nav__link">Programs</a>
+    <a href="index.html#impact" class="mobile-nav__link">Impact</a>
+    <a href="index.html#get-started" class="btn btn--pill btn--primary btn--lg">Get Started</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="programs-catalog-hero" aria-label="Programs hero">
+      <div class="hero__bg-shapes" aria-hidden="true"></div>
+      <div class="container" style="position: relative; z-index: 1;">
+        <span class="hero__label" style="display: block; margin-bottom: var(--space-sm);">Our Programs</span>
+        <h1>Proven Interventions,<br>Verified Impact</h1>
+        <p style="max-width: 600px;">From child health to vision care, each program connects funders to frontline impact through a growing network of locally-led organizations across 8 countries.</p>
+      </div>
+    </section>
+
+    <!-- FILTERS & GRID -->
+    <section class="section section--lg" aria-label="Programs catalog">
+      <div class="container">
+        <div class="programs-filter sr">
+          <button class="programs-filter__btn is-active" data-filter="all">All Programs</button>
+          <button class="programs-filter__btn" data-filter="health">Health</button>
+          <button class="programs-filter__btn" data-filter="nutrition">Nutrition</button>
+          <button class="programs-filter__btn" data-filter="wash">Water &amp; Sanitation</button>
+          <button class="programs-filter__btn" data-filter="research">Research</button>
+          <button class="programs-filter__btn" data-filter="livelihood">Livelihood</button>
+        </div>
+
+        <div class="programs-grid">
+
+          <!-- CHC -->
+          <div class="program-card sr" data-sector="health nutrition">
+            <span class="program-card__tag">Child Health &amp; Nutrition</span>
+            <h3 class="program-card__name">Child Health Campaign (CHC)</h3>
+            <p class="program-card__desc">Door-to-door child health screenings covering nutrition assessment, vaccination status, deworming, and vitamin A supplementation across Sub-Saharan Africa.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Nigeria</span>
+              <span class="program-card__badge">DRC</span>
+              <span class="program-card__badge">CAR</span>
+              <span class="program-card__badge">Kenya</span>
+              <span class="program-card__badge">Uganda</span>
+              <span class="program-card__badge">Tanzania</span>
+              <span class="program-card__badge">Zambia</span>
+              <span class="program-card__badge">Sierra Leone</span>
+            </div>
+            <div class="program-card__scale">1M+ verified visits &middot; 28 LLOs</div>
+            <span class="program-card__cta">View Program <span aria-hidden="true">&rarr;</span></span>
+          </div>
+
+          <!-- KMC -->
+          <div class="program-card sr" data-sector="health">
+            <span class="program-card__tag">Maternal &amp; Child Health</span>
+            <h3 class="program-card__name">Kangaroo Mother Care (KMC)</h3>
+            <p class="program-card__desc">Digitally-enabled, community-based care for small and vulnerable newborns. Structured home visits covering KMC initiation, positioning, breastfeeding, and danger sign recognition.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Uganda</span>
+              <span class="program-card__badge">Kenya</span>
+              <span class="program-card__badge">India</span>
+              <span class="program-card__badge">Nigeria</span>
+            </div>
+            <div class="program-card__scale">5,000 cases</div>
+            <a href="programs/kmc.html" class="program-card__cta">Explore Program <span aria-hidden="true">&rarr;</span></a>
+          </div>
+
+          <!-- ECD -->
+          <div class="program-card sr" data-sector="health">
+            <span class="program-card__tag">Health</span>
+            <h3 class="program-card__name">Early Childhood Development (ECD)</h3>
+            <p class="program-card__desc">Structured early childhood interventions promoting healthy growth and cognitive development through home-based visits and caregiver education.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Malawi</span>
+              <span class="program-card__badge">Nigeria</span>
+            </div>
+            <div class="program-card__scale">80K verified visits</div>
+            <span class="program-card__cta">View Program <span aria-hidden="true">&rarr;</span></span>
+          </div>
+
+          <!-- MBW -->
+          <div class="program-card program-card--coming-soon sr" data-sector="health">
+            <span class="program-card__tag">Maternal Health</span>
+            <h3 class="program-card__name">Mother-Baby Wellness (MBW)</h3>
+            <p class="program-card__desc">Comprehensive maternal and infant health support through community-based frontline workers across multiple countries.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Multiple countries</span>
+            </div>
+            <span class="program-card__cta">Coming Soon</span>
+          </div>
+
+          <!-- Readers -->
+          <div class="program-card sr" data-sector="health livelihood">
+            <span class="program-card__tag">Health &amp; Livelihood</span>
+            <h3 class="program-card__name">Readers &mdash; Community Vision Care</h3>
+            <p class="program-card__desc">Door-to-door near vision screenings and reading glasses distribution for underserved communities, restoring productivity and quality of life.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Nigeria (Northeast)</span>
+            </div>
+            <div class="program-card__scale">15,000 glasses distributed</div>
+            <a href="programs/readers.html" class="program-card__cta">Explore Program <span aria-hidden="true">&rarr;</span></a>
+          </div>
+
+          <!-- Chlorine -->
+          <div class="program-card sr" data-sector="wash">
+            <span class="program-card__tag">Water &amp; Sanitation</span>
+            <h3 class="program-card__name">Chlorine Dispenser</h3>
+            <p class="program-card__desc">Community water treatment through chlorine dispensers installed at water collection points, reducing waterborne disease.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Multiple countries</span>
+            </div>
+            <div class="program-card__scale">$1M grant</div>
+            <span class="program-card__cta">View Program <span aria-hidden="true">&rarr;</span></span>
+          </div>
+
+          <!-- WellMe -->
+          <div class="program-card program-card--coming-soon sr" data-sector="health">
+            <span class="program-card__tag">Mental Health</span>
+            <h3 class="program-card__name">WellMe</h3>
+            <p class="program-card__desc">Community-based mental health screening and support delivered by trained frontline workers using structured mobile protocols.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Multiple countries</span>
+            </div>
+            <span class="program-card__cta">Coming Soon</span>
+          </div>
+
+          <!-- RUTF -->
+          <div class="program-card program-card--coming-soon sr" data-sector="nutrition">
+            <span class="program-card__tag">Nutrition</span>
+            <h3 class="program-card__name">Therapeutic Food (RUTF)</h3>
+            <p class="program-card__desc">Ready-to-use therapeutic food distribution for community-based management of acute malnutrition in children under five.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Multiple countries</span>
+            </div>
+            <span class="program-card__cta">Coming Soon</span>
+          </div>
+
+          <!-- Interviews -->
+          <div class="program-card sr" data-sector="research">
+            <span class="program-card__tag">Research</span>
+            <h3 class="program-card__name">Interviews &mdash; Survey &amp; Data</h3>
+            <p class="program-card__desc">Field data collection, household surveys, and research interviews powered by trained community workers with digital tools.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Multiple countries</span>
+            </div>
+            <div class="program-card__scale">$225K funding</div>
+            <span class="program-card__cta">View Program <span aria-hidden="true">&rarr;</span></span>
+          </div>
+
+          <!-- Rooftop Sampling -->
+          <div class="program-card program-card--coming-soon sr" data-sector="health research">
+            <span class="program-card__tag">Environmental Health</span>
+            <h3 class="program-card__name">Rooftop Sampling</h3>
+            <p class="program-card__desc">Environmental data collection and sampling from rooftop locations for public health surveillance and air quality research.</p>
+            <div class="program-card__meta">
+              <span class="program-card__badge">Multiple countries</span>
+            </div>
+            <span class="program-card__cta">Coming Soon</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-block" aria-label="Get started">
+      <div class="container">
+        <h2 class="cta-block__title sr">Want to Fund a Program?</h2>
+        <p class="cta-block__subtitle sr">Connect with us to discuss funding verified service delivery through our growing portfolio of proven interventions.</p>
+        <a href="mailto:connect@dimagi.com" class="btn btn--pill btn--white btn--lg sr">Request a Demo</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+          <p>A global platform for funding verified service delivery. Every dollar tied to a result.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Platform</h4>
+          <div class="site-footer__links">
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="learn.html">Learn</a>
+            <a href="deliver.html">Deliver</a>
+            <a href="verify.html">Verify</a>
+            <a href="pay.html">Pay</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Programs</h4>
+          <div class="site-footer__links">
+            <a href="programs/kmc.html">Kangaroo Mother Care</a>
+            <a href="programs/readers.html">Readers &mdash; Vision Care</a>
+            <a href="programs.html">View All</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2024 Connect by <a href="https://dimagi.com" target="_blank" rel="noopener noreferrer">Dimagi</a></span>
+        <span>Powering the Frontline. Paying for Results.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Header ---
+      var header = document.getElementById('siteHeader');
+      function updateHeader() {
+        if (window.scrollY > 60) {
+          header.classList.remove('site-header--transparent');
+          header.classList.add('site-header--solid');
+        } else {
+          header.classList.remove('site-header--solid');
+          header.classList.add('site-header--transparent');
+        }
+      }
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
+
+      // --- Mobile Nav ---
+      var hamburger = document.getElementById('hamburgerBtn');
+      var mobileNav = document.getElementById('mobileNav');
+      hamburger.addEventListener('click', function() {
+        var isOpen = mobileNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mobileNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('is-open');
+          hamburger.classList.remove('is-active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // --- Scroll Reveal ---
+      var srElements = document.querySelectorAll('.sr');
+      srElements.forEach(function(el) { el.classList.add('sr-hidden'); });
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('sr-reveal');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+      srElements.forEach(function(el) { observer.observe(el); });
+
+      // --- Filter buttons (visual only, CSS-driven) ---
+      var filterBtns = document.querySelectorAll('.programs-filter__btn');
+      var cards = document.querySelectorAll('.program-card');
+      filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(function(b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var filter = btn.getAttribute('data-filter');
+          cards.forEach(function(card) {
+            if (filter === 'all') {
+              card.style.display = '';
+            } else {
+              var sectors = (card.getAttribute('data-sector') || '').split(' ');
+              card.style.display = sectors.includes(filter) ? '' : 'none';
+            }
+          });
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>

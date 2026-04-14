@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Learn — Connect by Dimagi</title>
+<meta name="description" content="How Connect trains frontline workers at scale. Knowledge tests, AI coaching, supervised observation. Evidence from ECD pilots and CLP self-service deployments." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" /></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button>How It Works</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="learn.html"><span class="dd-num">01</span>Learn</a></li>
+          <li><a href="deliver.html"><span class="dd-num">02</span>Deliver</a></li>
+          <li><a href="verify.html"><span class="dd-num">03</span>Verify</a></li>
+          <li><a href="pay.html"><span class="dd-num">04</span>Pay</a></li>
+        </ul>
+      </li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="index.html#impact">Impact</a></li>
+      <li><a href="index.html#demo" class="btn">Request a Demo</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Connect</a><span class="sep">/</span><a href="index.html#impact">How It Works</a><span class="sep">/</span>01 Learn</div>
+    <h1>Competence before compensation.</h1>
+    <p class="core-msg">Before any frontline worker delivers a service through Connect, they complete mandatory digital training and pass an in-app knowledge assessment. No classroom time. No placeholder credentials. What follows is what we've learned designing that step.</p>
+  </div>
+</section>
+
+<section class="ribbon">
+  <div class="wrap">
+    <div class="ribbon-grid">
+      <div class="ribbon-cell"><span class="n">85<sup>%</sup></span><span class="lbl">FLWs who progress from training to service delivery</span></div>
+      <div class="ribbon-cell"><span class="n">88<sup>%</sup></span><span class="lbl">FLWs scoring above 70% on first observed visits</span></div>
+      <div class="ribbon-cell"><span class="n">77<sup>%</sup></span><span class="lbl">Pass rate on supervised observation (ECD, ~400 FLWs)</span></div>
+      <div class="ribbon-cell"><span class="n">97.8<sup>%</sup></span><span class="lbl">AI coach queries resolved without human escalation (Kenya)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RETRO 1 — Insight 8 ============ -->
+<article class="retro">
+  <div class="wrap">
+    <div class="retro-num">Learning 01 / Methodology</div>
+    <h2>Knowledge tests alone don't produce competent FLWs. We tried. They didn't.</h2>
+
+    <div class="retro-grid">
+
+      <div class="retro-phase-label">The question we had</div>
+      <div class="retro-phase-body">
+        <p>The original Connect Learn design treated training as an information-transfer problem. Build the module, have the worker read it, give them a multiple-choice assessment, let them progress if they pass. The assumption: if an FLW can correctly answer questions about ORS dosing or KMC positioning, they can deliver the service competently.</p>
+        <p>We suspected — but had not yet measured — that this assumption was wrong.</p>
+      </div>
+
+      <div class="retro-phase-label">What we tried</div>
+      <div class="retro-phase-body">
+        <p>We ran the digital-only pipeline across several programs. FLWs self-paced through Learn modules, took a gated knowledge test, and proceeded to service delivery if they passed. Supervisors shadowed a sample of first visits and rated them against the same rubric we'd expect from a traditionally-trained worker.</p>
+      </div>
+
+      <div class="retro-phase-label">What we found</div>
+      <div class="retro-phase-body">
+        <p>Workers who passed the knowledge test still struggled with the nuances of in-person counseling — how to handle a skeptical caregiver, how to recognize subtle danger signs, how to practice motivational interviewing. <b>Knowledge ≠ competence.</b> The test measured whether the worker had absorbed the content. It did not measure whether they could apply it under pressure in a real household with a real caregiver.</p>
+        <p>This mismatch shows up most visibly in programs where the "right answer" depends on context — vaccine hesitancy counselling, responsive caregiving in ECD, breastfeeding troubleshooting in KMC. A worker can ace a quiz on motivational interviewing principles and still fail to use them at the doorstep.</p>
+      </div>
+
+      <div class="retro-phase-label">What changed</div>
+      <div class="retro-phase-body">
+        <p>We layered the model. The current Learn pipeline has five gates, not one:</p>
+        <p>(1) Self-paced digital learning in the Learn app. (2) An in-app knowledge test — must pass to progress. (3) Daily interaction with an AI coach bot, built on Dimagi's Open Chat Studio, that runs scenario-based practice and motivational-interviewing drills. (4) Peer practice. (5) One supervised observation visit rated by an LLO supervisor before the worker is cleared to earn.</p>
+        <p>The AI coach is the key addition. It converts learning from a one-shot event into a daily, conversational practice. It asks about yesterday's visits. It role-plays a reluctant caregiver. It catches knowledge gaps that multiple-choice can't.</p>
+      </div>
+
+      <div class="retro-phase-label">What's still open</div>
+      <div class="retro-phase-body">
+        <p>We have strong evidence this layered model produces competent delivery — 88% of FLWs scored above 70% on first observed visits, 85% progressed from training to service delivery, validated across ~400 FLWs in iterative ECD experiments. What we don't yet know is how much each layer contributes independently. The coach bot is expensive to run at scale; the supervised observation is expensive to staff. A cleaner ablation study is planned for 2026.</p>
+      </div>
+
+    </div>
+
+    <div class="retro-source"><span>Source</span>ECD Overview · Feb 2026 — Malawi pilot, 76 FLWs, iterative experiments with ~400 FLWs total. CLP Stage 2 Report · Feb 2026.</div>
+  </div>
+</article>
+
+<!-- ============ RETRO 2 — Insight 7 (ECD attitudes vs knowledge vs behavior) ============ -->
+<article class="retro">
+  <div class="wrap">
+    <div class="retro-num">Learning 02 / Program design</div>
+    <h2>We learned caregiver attitudes were already correct. The gap is knowledge and behavior.</h2>
+
+    <div class="retro-grid">
+
+      <div class="retro-phase-label">The question we had</div>
+      <div class="retro-phase-body">
+        <p>An ECD intervention exists to change something. The question a training designer has to answer is: change <em>what</em>? Build positive attitudes about responsive caregiving? Teach specific practices? Shift observable behavior? Each implies a different curriculum, a different visit structure, and a different cost.</p>
+        <p>We structured the Malawi pilot to measure all three — attitude, knowledge, behavior — so we could let evidence decide where the intervention's weight should land.</p>
+      </div>
+
+      <div class="retro-phase-label">What we tried</div>
+      <div class="retro-phase-body">
+        <p>A 3-visit ECD pilot across 76 FLWs who conducted 9,510+ visits. Baseline and endline surveys with 50 caregivers. Attitudes measured by agreement scales. Knowledge measured by domain-specific questions. Behavior measured by observed caregiver-child interaction rated against a rubric (teaching, encouragement of autonomy, affection, responsiveness).</p>
+      </div>
+
+      <div class="retro-phase-label">What we found</div>
+      <div class="retro-phase-body">
+        <p>Caregivers <b>already held positive ECD attitudes at baseline</b>. Nearly all agreed talk-and-play supports brain development. Nearly all endorsed responsive caregiving. Attitude scores were high before the intervention and high after. The pilot moved them slightly, but attitude was not the gap.</p>
+        <p>Where the intervention actually moved the needle: knowledge of <span class="data-note">timing of rapid child development (+33%)</span>, knowledge of <span class="data-note">ways to support mental development (+41%)</span>, and observed behavior — <span class="data-note">teaching (+21%)</span>, <span class="data-note">encouragement of autonomy (+21%)</span>. The last of these, encouragement of autonomy, remained the hardest subdomain, ending at only 47% at endline. It's the one that requires sustained practice rather than one-time exposure.</p>
+      </div>
+
+      <div class="retro-phase-label">What changed</div>
+      <div class="retro-phase-body">
+        <p>We reallocated the intervention. The Malawi pilot used 3 visits per caregiver. The expansion is moving to 8-10 visits across 12 months — not because we need more time to convince caregivers ECD matters (they know), but because behavior change takes sustained practice.</p>
+        <p>Curriculum content shifted weight away from attitude-framing (already correct) toward specific practices (teaching behaviors, autonomy encouragement, timing-of-development knowledge) that we have evidence we can move.</p>
+      </div>
+
+      <div class="retro-phase-label">What's still open</div>
+      <div class="retro-phase-body">
+        <p>The baseline-positive-attitude finding comes from 50 caregivers in Malawi. It may not generalize to Nigeria and Mozambique where the program is also running. We are running baseline surveys in those contexts before committing to the same curriculum reallocation. It is also possible the attitude scales we used were too easy — socially desirable responses can mask genuine uncertainty.</p>
+      </div>
+
+    </div>
+
+    <div class="retro-source"><span>Source</span>ECD Overview Report · Feb 2026 — Malawi pilot, April–July 2025, 50-caregiver baseline/endline survey.</div>
+  </div>
+</article>
+
+<!-- ============ RETRO 3 — AI coach / CLP self-service ============ -->
+<article class="retro">
+  <div class="wrap">
+    <div class="retro-num">Learning 03 / Scale</div>
+    <h2>Ongoing support can be AI-delivered. We verified that with 511 real queries.</h2>
+
+    <div class="retro-grid">
+
+      <div class="retro-phase-label">The question we had</div>
+      <div class="retro-phase-body">
+        <p>A digital training model scales asymmetrically on the first run — the 10,000th FLW takes the module at the same marginal cost as the 100th. Ongoing support does not. When a worker is in the field and has a question — an unexpected caregiver response, a dosing edge case, a danger sign they haven't seen — who answers?</p>
+        <p>The traditional answer is an LLO-employed supervisor with WhatsApp open. That answer scales linearly. It contradicts Connect's operating premise.</p>
+      </div>
+
+      <div class="retro-phase-label">What we tried</div>
+      <div class="retro-phase-body">
+        <p>We built a conversational AI chatbot on Dimagi's Open Chat Studio platform and gave FLWs a WhatsApp channel to it. The bot's knowledge base included the program-specific training content, dosing tables, decision trees, and sample transcripts of supervisor responses to common questions.</p>
+        <p>FLWs were told: use the chatbot first. If it can't answer, it escalates to a human supervisor.</p>
+      </div>
+
+      <div class="retro-phase-label">What we found</div>
+      <div class="retro-phase-body">
+        <p>Across the Kenya CHC pilot, the bot handled <b>500 of 511 queries (97.8%)</b> without human escalation. Average response time: 5 seconds. An independent evaluation scored the responses at <b>88.7% accuracy</b> and <b>81.5% usefulness</b> — not perfect, but well inside the band where field workers would rather get an instant adequate answer than wait hours for a perfect one.</p>
+        <p>A parallel finding from the CLP Stage 2 vaccine campaign: the seven locally-led organizations operating largely without direct Dimagi support rated the digital training resources at <b>9–9.5 out of 10</b>. All seven completed their campaigns. The self-service path works when the materials are built for it.</p>
+      </div>
+
+      <div class="retro-phase-label">What changed</div>
+      <div class="retro-phase-body">
+        <p>The AI coach is now part of the standard Learn/Deliver pipeline for ECD and is being rolled into CHC and KMC. Daily coach interactions are a paid FLW activity — we want workers using it, reflecting on visits, asking questions. The bot is a first-line support layer, not a replacement for human supervision.</p>
+      </div>
+
+      <div class="retro-phase-label">What's still open</div>
+      <div class="retro-phase-body">
+        <p>511 queries is not an enormous evaluation set. We're continuing to score bot outputs in every program that deploys it, with quarterly audits against a reference panel. The 11 queries that did escalate are the interesting ones — we want the bot to know when it doesn't know, and we're still tuning the threshold.</p>
+      </div>
+
+    </div>
+
+    <div class="retro-source"><span>Source</span>Founders Pledge Final Report · Feb 2026; CLP Stage 2 Report · Feb 2026.</div>
+  </div>
+</article>
+
+</main>
+
+<section class="next-step">
+  <div class="wrap">
+    <div class="next-meta">Next step · 02 / Deliver</div>
+    <h3>Trained workers need somewhere to deliver. That's where LLOs come in.</h3>
+    <p>Once a worker has passed Learn, they become part of an LLO's delivery roster. The next page walks through how we activate LLOs — including the Trial Run model that replaced our original pre-vetting approach — and how microplanning forces equitable coverage.</p>
+    <a href="deliver.html" class="btn">Continue to Deliver →</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-logo"><img src="assets/connect-white.png" alt="Connect by Dimagi" /><p class="foot-tag">A global platform for funding verified service delivery.</p></div>
+      <div><h4>Platform</h4><ul><li><a href="learn.html">Learn</a></li><li><a href="deliver.html">Deliver</a></li><li><a href="verify.html">Verify</a></li><li><a href="pay.html">Pay</a></li></ul></div>
+      <div><h4>Programs</h4><ul><li><a href="programs/chc.html">Child Health Campaign</a></li><li><a href="programs/kmc.html">Kangaroo Mother Care</a></li><li><a href="programs/ecd.html">ECD Parenting</a></li><li><a href="programs/readers.html">Readers</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="index.html#impact">Impact</a></li><li><a href="https://www.dimagi.com">About Dimagi</a></li><li><a href="index.html#demo">Request a Demo</a></li></ul></div>
+    </div>
+    <div class="foot-copy"><span>© 2026 Dimagi, Inc.</span><span>Connect · by Dimagi</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

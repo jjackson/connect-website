@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify — Connect by Dimagi</title>
+  <meta name="description" content="Every service confirmed through biometric verification, GPS location, and algorithmic validation on Connect by Dimagi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Reading Progress -->
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header site-header--transparent" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Connect by Dimagi home">
+        <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" class="logo--light">
+        <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" class="logo--dark">
+      </a>
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <div class="site-header__links">
+          <div class="site-header__dropdown-wrap">
+            <a href="index.html#how-it-works" class="site-header__link">How It Works</a>
+            <div class="site-header__dropdown">
+              <a href="learn.html">Learn</a>
+              <a href="deliver.html">Deliver</a>
+              <a href="verify.html">Verify</a>
+              <a href="pay.html">Pay</a>
+            </div>
+          </div>
+          <a href="programs.html" class="site-header__link">Programs</a>
+          <a href="index.html#impact" class="site-header__link">Impact</a>
+        </div>
+        <a href="index.html#get-started" class="btn btn--pill btn--primary">Get Started</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html#how-it-works" class="mobile-nav__link">How It Works</a>
+    <a href="learn.html" class="mobile-nav__link">Learn</a>
+    <a href="deliver.html" class="mobile-nav__link">Deliver</a>
+    <a href="verify.html" class="mobile-nav__link">Verify</a>
+    <a href="pay.html" class="mobile-nav__link">Pay</a>
+    <a href="programs.html" class="mobile-nav__link">Programs</a>
+    <a href="index.html#impact" class="mobile-nav__link">Impact</a>
+    <a href="index.html#get-started" class="btn btn--pill btn--primary btn--lg">Get Started</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="ldvp-hero" aria-label="Verify hero">
+      <div class="hero__bg-shapes" aria-hidden="true"></div>
+      <div class="container">
+        <div class="ldvp-hero__content">
+          <div class="ldvp-breadcrumb">
+            <a href="index.html#how-it-works">How It Works</a>
+            <span class="ldvp-breadcrumb__sep" aria-hidden="true">/</span>
+            <span class="ldvp-breadcrumb__current">Step 03</span>
+          </div>
+          <span class="ldvp-hero__step-label">Step 03 of 04</span>
+          <h1 class="ldvp-hero__title">Verify</h1>
+          <div class="ldvp-hero__gradient-line" aria-hidden="true"></div>
+          <p class="ldvp-hero__subtitle">Every service confirmed. Not tracked. Not monitored. Verified.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE PILLARS -->
+    <section class="section section--lg" aria-label="Verification pillars">
+      <div class="container">
+        <div class="section-heading section-heading--center sr">
+          <span class="section-heading__label">Three Pillars</span>
+          <h2 class="section-heading__title">How Verification Works</h2>
+        </div>
+        <div class="ldvp-pillars">
+
+          <!-- Pillar 1: Biometric -->
+          <div class="ldvp-pillar sr">
+            <div class="ldvp-pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 4C8.477 4 4 8.477 4 14s4.477 10 10 10 10-4.477 10-10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <path d="M14 8c-3.314 0-6 2.686-6 6s2.686 6 6 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="14" cy="14" r="2" fill="white"/>
+                <path d="M20 4v5h5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Biometric Verification</h3>
+            <p>Unique ID confirms real individuals received real services. No duplicates, no ghosts. Every beneficiary is a verified person.</p>
+          </div>
+
+          <!-- Pillar 2: GPS -->
+          <div class="ldvp-pillar sr">
+            <div class="ldvp-pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 3C9.029 3 5 7.029 5 12c0 6.5 9 14 9 14s9-7.5 9-14c0-4.971-4.029-9-9-9z" stroke="white" stroke-width="2"/>
+                <circle cx="14" cy="12" r="3" stroke="white" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>GPS &amp; Location</h3>
+            <p>Geolocation confirms services in the right places. Microplan execution ensures coverage across targeted communities and regions.</p>
+          </div>
+
+          <!-- Pillar 3: Algorithmic -->
+          <div class="ldvp-pillar sr">
+            <div class="ldvp-pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="22" height="22" rx="4" stroke="white" stroke-width="2"/>
+                <path d="M8 18l4-6 4 3 4-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="20" cy="8" r="2" fill="white"/>
+              </svg>
+            </div>
+            <h3>Algorithmic Validation</h3>
+            <p>AI analyzes patterns, detects anomalies, flags suspicious activity, and ensures data integrity across all programs.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY IT MATTERS (Dark Section) -->
+    <section class="ldvp-dark-section" aria-label="Why verification matters">
+      <div class="container">
+        <div class="section-heading sr">
+          <span class="section-heading__label">Why It Matters</span>
+          <h2 class="section-heading__title">Verification Built Into Delivery</h2>
+        </div>
+        <p class="ldvp-dark-section__quote sr">Traditional programs rely on self-reported data and periodic audits. Connect builds verification directly into delivery. Every dollar is tied to a verified result.</p>
+
+        <!-- Stakeholder Value -->
+        <div class="ldvp-stakeholders sr">
+          <div class="ldvp-stakeholder">
+            <div class="ldvp-stakeholder__label">Funders</div>
+            <p class="ldvp-stakeholder__text">See exactly where money went and what outcomes it produced.</p>
+          </div>
+          <div class="ldvp-stakeholder">
+            <div class="ldvp-stakeholder__label">LLOs</div>
+            <p class="ldvp-stakeholder__text">Auditable proof of delivery that demonstrates impact to sustain funding.</p>
+          </div>
+          <div class="ldvp-stakeholder">
+            <div class="ldvp-stakeholder__label">Workers</div>
+            <p class="ldvp-stakeholder__text">Transparent records that determine pay, building trust and motivation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT STEP -->
+    <section class="ldvp-next" aria-label="Next step">
+      <div class="container">
+        <a href="pay.html" class="ldvp-next__link sr">
+          Next: Pay <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+          <p>A global platform for funding verified service delivery. Every dollar tied to a result.</p>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Platform</h4>
+          <div class="site-footer__links">
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="learn.html">Learn</a>
+            <a href="deliver.html">Deliver</a>
+            <a href="verify.html">Verify</a>
+            <a href="pay.html">Pay</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="site-footer__heading">Programs</h4>
+          <div class="site-footer__links">
+            <a href="programs/kmc.html">Kangaroo Mother Care</a>
+            <a href="programs/readers.html">Readers &mdash; Vision Care</a>
+            <a href="programs.html">View All</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2024 Connect by <a href="https://dimagi.com" target="_blank" rel="noopener noreferrer">Dimagi</a></span>
+        <span>Powering the Frontline. Paying for Results.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Header ---
+      var header = document.getElementById('siteHeader');
+      function updateHeader() {
+        if (window.scrollY > 60) {
+          header.classList.remove('site-header--transparent');
+          header.classList.add('site-header--solid');
+        } else {
+          header.classList.remove('site-header--solid');
+          header.classList.add('site-header--transparent');
+        }
+      }
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
+
+      // --- Mobile Nav ---
+      var hamburger = document.getElementById('hamburgerBtn');
+      var mobileNav = document.getElementById('mobileNav');
+      hamburger.addEventListener('click', function() {
+        var isOpen = mobileNav.classList.toggle('is-open');
+        hamburger.classList.toggle('is-active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mobileNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('is-open');
+          hamburger.classList.remove('is-active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // --- Reading Progress ---
+      var progressBar = document.getElementById('readingProgress');
+      function updateProgress() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+
+      // --- Scroll Reveal ---
+      var srElements = document.querySelectorAll('.sr');
+      srElements.forEach(function(el) { el.classList.add('sr-hidden'); });
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('sr-reveal');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+      srElements.forEach(function(el) { observer.observe(el); });
+
+      // --- Smooth scroll for anchor links ---
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>

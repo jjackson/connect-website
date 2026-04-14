@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Child Health Campaign — Connect by Dimagi</title>
+<meta name="description" content="1,016,000+ visits across 8 countries. Microplanning drives 94% population coverage. AI supervision handles 97.8% of queries. Adversarial fraud testing at AUC 0.91." />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="../assets/connect-by-dimagi.png" alt="Connect by Dimagi" /></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button>How It Works</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="../learn.html"><span class="dd-num">01</span>Learn</a></li>
+          <li><a href="../deliver.html"><span class="dd-num">02</span>Deliver</a></li>
+          <li><a href="../verify.html"><span class="dd-num">03</span>Verify</a></li>
+          <li><a href="../pay.html"><span class="dd-num">04</span>Pay</a></li>
+        </ul>
+      </li>
+      <li><a href="../programs.html">Programs</a></li>
+      <li><a href="../index.html#impact">Impact</a></li>
+      <li><a href="../index.html#demo" class="btn">Request a Demo</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="crumb"><a href="../index.html">Connect</a><span class="sep">/</span><a href="../programs.html">Programs</a><span class="sep">/</span>Child Health Campaign</div>
+    <h1>Child Health Campaign</h1>
+    <p class="core-msg">Door-to-door Vitamin A, deworming, ORS, MUAC screening, and immunization promotion for children 0–59 months. Connect's largest program. Eight countries. 28 active LLOs. Over one million verified visits.</p>
+  </div>
+</section>
+
+<section class="metrics-row">
+  <div class="wrap">
+    <div class="metrics-grid">
+      <div class="metric"><span class="n">1,016,000<sup>+</sup></span><span class="lbl">Total visits delivered in 2025</span></div>
+      <div class="metric"><span class="n">880,000<sup>+</sup></span><span class="lbl">Verified visits in 14 months (Founders Pledge)</span></div>
+      <div class="metric"><span class="n">94<sup>%</sup></span><span class="lbl">Population coverage with microplanning</span></div>
+      <div class="metric"><span class="n">$1.70</span><span class="lbl">Cost per verified visit (down from $2.20)</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="challenge">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="col-label">The challenge</div>
+      <div class="col-body">
+        <p>Child health campaigns — vitamin A supplementation, deworming, ORS for diarrhoea, MUAC-based malnutrition screening, vaccine promotion — are among the most cost-effective interventions in global health. The science is not in question. The delivery problem is.</p>
+        <p>Traditional campaign models rely on a patchwork of government health workers, NGO implementers, and short-term volunteers. Coverage is variable. Cost-per-outcome is hard to compute because the denominator — actual services delivered — is often poorly measured. And the populations systematically missed tend to be exactly those with the lowest baseline health coverage.</p>
+        <p>CHC on Connect is what happens when each of those problems becomes an engineering problem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">How it works</div>
+        <h2>Four mechanisms. One campaign.</h2>
+      </div>
+    </div>
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="how-num">01</div>
+        <h4>Microplanned operational area</h4>
+        <p>Satellite building-footprint data overlays a grid onto the campaign area. Grid cells with buildings become Delivery Units; DUs group into Service Areas sized for 1-2 weeks per FLW.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">02</div>
+        <h4>LLO-led delivery</h4>
+        <p>28 active LLOs (44 contracted) manage recruitment, training oversight, and local government relationships. Connect manages the platform, the microplan, and the verification stack.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">03</div>
+        <h4>App-guided visits</h4>
+        <p>FLWs walk through each visit in the app: eligibility screening, dosing, MUAC measurement, referral if needed. GPS and timestamps captured automatically.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">04</div>
+        <h4>Four-layer verification</h4>
+        <p>Biometric ID, GPS, photo where applicable, and algorithmic pattern detection. Payment only triggers against a verified record.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNING 1: Microplanning (Insight 2) -->
+<article class="learning">
+  <div class="wrap">
+    <div class="learning-num">Learning 01 · Coverage</div>
+    <h3>Workers naturally cluster. Microplans force them outward — and the coverage numbers show it.</h3>
+    <div class="prose">
+      <p>The original CHC operating model gave FLWs a target area and a visit quota and assumed they would distribute their work across the eligible population in a roughly equitable pattern. They did not. Given a neighborhood, workers averaged <span class="src">0.4 visits per estimated eligible child<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>Measured across Trial Run campaigns without geographic saturation requirements. The 0.4 figure reflects convenience-sampling behaviour — households along main roads and accessible compounds were visited repeatedly while peripheral households were not visited at all.</span></span> — visiting accessible households and skipping the harder ones. The populations missed were systematically those with lower baseline health coverage. Convenience sampling at exactly the moment equity was the goal.</p>
+
+      <p>Microplanning rebuilt the coverage mechanism. Before each campaign, Connect overlays a grid onto the operational area using <span class="src">Google Open Buildings, OpenStreetMap, and Microsoft building-footprint data<span class="src-pop"><span class="pop-meta">Microplanning data stack</span>All three sources are public. Google Open Buildings provides machine-learning-derived footprints for sub-Saharan Africa; OpenStreetMap adds human-verified structures; Microsoft building footprints add additional coverage. Grid cells that any of the three flag as containing at least one building become Delivery Units.</span></span>. Grid cells with at least one building become <b>Delivery Units</b>. DUs group into <b>Service Areas</b> sized for 1-2 weeks of work. A worker cannot move to the next Service Area until they close every DU in the current one — either completing visits or confirming no eligible children are present.</p>
+
+      <p>The coverage numbers are unambiguous. Microplanned CHC campaigns reach <span class="src">94% of the estimated population in visited cells<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>Computed as: percent of population (inferred from building footprints and census overlays) falling within cells that had at least one completed FLW visit. Across comparable non-microplanned CHC 84%, across a non-Connect well-run CommCare benchmark 82%.</span></span>, compared with 84% for experienced LLOs running without microplans and 82% for a well-run non-Connect CommCare campaign as benchmark. Thoroughness also jumps: <span class="src">1.4 visits per estimated child in microplanned cells versus 0.4 without — a 3.5× multiplier<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>"Visits per estimated child" means, within visited cells, the average number of FLW-child encounters divided by the estimated eligible child population in those cells. A ratio above 1.0 means many children were visited more than once in a campaign window, which is generally desirable for VAS and deworming delivery.</span></span>. Microplanning did not just improve coverage — it changed what coverage means.</p>
+
+      <p>Microplans failed in specific patterns. In dispersed settlement areas, workers walked long distances to DUs flagged by satellite imagery that turned out to be storage sheds or abandoned structures. Some DUs fell on inaccessible land — factory grounds, prison grounds — requiring manual intervention. One campaign removed microplan execution entirely due to partner constraints. These are active engineering problems.</p>
+    </div>
+
+    <div class="citations">
+      <ol>
+        <li><b>[1]</b>Founders Pledge Final Report · Feb 2026 · Coverage analysis across multi-country CHC campaigns.</li>
+        <li><b>[2]</b>Microplan stack · Google Open Buildings, OpenStreetMap, Microsoft ML Building Footprints.</li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<!-- LEARNING 2: Trial Run (Insight 1) -->
+<article class="learning">
+  <div class="wrap">
+    <div class="learning-num">Learning 02 · Partner activation</div>
+    <h3>Connect activated 44 LLOs without pre-vetting any of them.</h3>
+    <div class="prose">
+      <p>Across the Founders Pledge grant period we contracted <span class="src">37 LLOs under the Trial Run model<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>37 total contracted LLOs. The grant period spans January 2025 to February 2026. Total LLOs across the full program (including outside the Founders Pledge grant) reached 44, across 11 countries.</span></span>. None were pre-vetted in the traditional procurement sense — no capacity assessment, no past-performance scoring, no team-size minimums. Each got a small initial contract: $3,000 setup fee for 3,000 verified child visits. Performance-based payment meant Connect bore minimal financial risk if the LLO failed.</p>
+
+      <p>The outcomes are specific. <span class="src">24 LLOs entered Trial Runs<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>Entered Trial Runs means: signed initial $3K/3,000-visit contract and began delivery. The other 13 of the 37 included 3 who went straight to larger campaigns (prior track record) and 10 who did not proceed past onboarding for various reasons.</span></span> and were evaluated on actual delivery. <span class="src">10 underperformed<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>Underperformance criteria included: visit rate below target, verification failure rate above threshold, or inability to scale within campaign window. All 10 were paid for verified visits completed — Trial Run is a graduated activation, not a zero-sum selection.</span></span> and were not continued. <span class="src">3 went straight to larger campaigns<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>Based on prior track record with Dimagi or strong external signal. These 3 bypassed the Trial Run because the specific verification-based payment model meant we could accept more risk at onboarding.</span></span> based on prior track record. <b>17 organizations completed campaigns following successful trials</b>. The activation model produced a 65% conversion from Trial Run to larger campaign — a working hit rate for a system that makes no effort to pre-screen.</p>
+
+      <p>The economics of pay-for-verified-delivery do the filtering that document-based procurement would otherwise attempt. An LLO that cannot deliver does not get paid. The financial exposure of a failed activation is the $3,000 setup fee, which is small against the counterfactual cost of a missed campaign window. And the Trial Run model has turned out to be sector-agnostic — we have reused it unchanged for reading glasses distribution, KMC, and chlorine dispensers.</p>
+    </div>
+
+    <div class="citations">
+      <ol>
+        <li><b>[1]</b>Founders Pledge Final Report · Feb 2026 · LLO activation model and outcomes.</li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<!-- LEARNING 3: Fraud detection (Insight 3) -->
+<article class="learning">
+  <div class="wrap">
+    <div class="learning-num">Learning 03 · Integrity</div>
+    <h3>We paid experienced FLWs to fabricate CHC visit data. The model caught them at AUC 0.91.</h3>
+    <div class="prose">
+      <p>Verification on Connect is a stack: biometric identity, GPS, photo where applicable, and algorithmic pattern detection. Each layer independently makes large-scale fabrication harder. We wanted to know whether the algorithmic layer alone — without GPS, photo, or identifying information — was a credible backstop. So we tested it adversarially.</p>
+
+      <p>Experienced FLWs were paid to submit <span class="src">100 fake CHC visit records each across three rounds<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026 · Adversarial testing protocol</span>33 total fabricators across three rounds. After each round, fabricators were coached on what gave them away — meaning each round's records are adversarially harder than the last. Bonuses were offered to the top 25% most convincing fabricators to ensure the test was adversarial rather than sloppy.</span></span>. After each round, fabricators were coached on what gave them away. Bonuses went to the top 25% most convincing fakers. Then we stripped GPS, timestamps, photos, and identifying information from every record — real and fake — and trained a Random Forest model on three data elements: age, gender, MUAC.</p>
+
+      <p>The model achieved <span class="src">AUC 0.91 ± 0.09<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>AUC (Area Under ROC) is a standard discrimination metric. 1.0 is perfect; 0.5 is random. 0.91 is excellent in applied classification contexts and extraordinary given the deliberately limited feature set.</span></span>. Only <span class="src">2.5% of real workers received fraud risk scores higher than even the lowest-scoring fabricator<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>This is the key operational statistic. It means almost no real worker sits in a fraud-risk band that overlaps with fabricated data. The 2.5% that do are flagged for audit with GPS and photo review — not for automatic payment withholding.</span></span>. Out of 33 adversarial fakers, the model detected them with near-perfect discrimination using data patterns alone — before GPS and photo verification even kicked in. Humans generating synthetic data, even experienced ones with coaching, tend to under-vary edge cases and over-smooth joint distributions. The model sees both.</p>
+
+      <p>This is not a claim about any particular campaign being fraud-free. It is a claim that the statistical backstop is real and measurable, and that it combines with the three other verification layers to produce a system where a fabricated visit has to defeat all four independently.</p>
+    </div>
+
+    <div class="citations">
+      <ol>
+        <li><b>[1]</b>Founders Pledge Final Report · Feb 2026 · Adversarial fraud testing protocol and results.</li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<!-- LEARNING 4: Cost inversion (Insight 4) -->
+<article class="learning">
+  <div class="wrap">
+    <div class="learning-num">Learning 04 · Unit economics</div>
+    <h3>Cost per verified CHC visit fell 22% while volume grew by orders of magnitude.</h3>
+    <div class="prose">
+      <p>The default economics of development programs: as scale goes up, per-unit cost flattens or rises because staff, supervision, and coordination grow with volume. The default was budgeted into the Founders Pledge grant. We instrumented the cost line per-visit per-country per-month to watch for the curve.</p>
+
+      <p>The curve bent the other way. Cost per verified visit fell from <span class="src">$2.20 to $1.70 — a 22% reduction<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>"Cost per verified visit" includes: FLW payment, LLO share, commodity costs (where applicable), and platform overhead. Does not include one-time grant setup costs or Dimagi's fixed staff base, which grew only marginally during this period.</span></span> during the grant period. The underlying structure is country- and bundle-specific: <span class="src">Nigeria with ORS/Zinc co-packs averaged $1.30/visit across 14 LLO contracts<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>Nigeria costs include commodity procurement and distribution for ORS/Zinc co-packs, which pushes the bundle cost higher than the no-commodity baseline.</span></span>, while <span class="src">outside Nigeria, without ORS/Zinc, average cost was $0.78/visit across 17 contracts<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>The VAS + deworming bundle has lower commodity cost. This is the closer analogue to a traditional "child health campaign" and is the more portable per-visit economic benchmark.</span></span>. A single Sierra Leone LLO delivered ORS/Zinc at $1.00/visit. Setup fees averaged $0.40/visit during the grant and are projected to fall toward $0.10/visit at the next scale step.</p>
+
+      <p>Three structural reasons this works: LLOs have inherently low overhead because they are local and lean; performance-based payment ensures costs track actual delivery rather than organizational size; digital technology is integrated into every step — worker guidance, verification, payment — creating efficiency gains that compound as the network grows. The combined effect is that <span class="src">Connect scaled to a rate capable of supporting millions of child visits per year without substantial growth in Dimagi's team<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026</span>Dimagi's Connect team grew modestly during the grant period — hiring in specific functional gaps (data science, partner management) — but not in proportion to delivery volume. This is the structural anomaly that distinguishes Connect from other Dimagi programs.</span></span>.</p>
+    </div>
+
+    <div class="citations">
+      <ol>
+        <li><b>[1]</b>Founders Pledge Final Report · Feb 2026 · Cost analysis across 880,000+ verified visits.</li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<!-- LEARNING 5: AI supervision / religious leaders (condensed, combining Insights 6 + the AI coach) -->
+<article class="learning">
+  <div class="wrap">
+    <div class="learning-num">Learning 05 · Support at scale</div>
+    <h3>AI-powered supervision handles 97.8% of queries. Religious leaders handle the ones it can't reach.</h3>
+    <div class="prose">
+      <p>A CHC campaign at million-visit scale generates operational questions at a rate that a traditional human-supervision model cannot meet without linear headcount growth. The Kenya pilot tested a WhatsApp-accessible AI chatbot built on <span class="src">Dimagi's Open Chat Studio platform<span class="src-pop"><span class="pop-meta">Dimagi Open Chat Studio</span>Open Chat Studio is Dimagi's own LLM orchestration platform, used across multiple programs. The CHC chatbot was configured with CHC-specific training content, dosing tables, decision trees, and sample supervisor responses.</span></span> as a first-line support layer for FLWs in the field. The chatbot handled <span class="src">500 of 511 queries (97.8%) without escalation<span class="src-pop"><span class="pop-meta">Founders Pledge Final Report · Feb 2026 · Kenya AI supervision pilot</span>511 total queries from FLWs over the pilot window. 500 resolved by the bot. 11 escalated to human supervisors. Response time: 5 seconds average. Independent evaluation: 88.7% accuracy, 81.5% usefulness.</span></span>. Average response time 5 seconds. Independent evaluation: 88.7% accuracy, 81.5% usefulness.</p>
+
+      <p>What the bot cannot do is navigate community trust. The CLP Stage 2 vaccine campaign made this explicit: of the <span class="src">seven LLOs operating in the campaign, five to six independently leveraged religious leaders, community leaders, or existing community relationships<span class="src-pop"><span class="pop-meta">CLP Stage 2 Report · Feb 2026</span>The count is 5-6 rather than a precise number because in one LLO's case the distinction between "existing community relationship" and "religious leader engagement" was not sharply separable in the qualitative debrief. All seven LLOs engaged community institutions; at least five did so specifically through religious leaders.</span></span> as part of their vaccine-uptake outreach strategy. One FLW countered hesitancy with a personal example — "We were immunized, we have children." Another LLO had FLWs who were recommended by the community itself, lending immediate credibility. None of this was in the training content.</p>
+
+      <p>The combination is intentional. The AI supervision layer handles scaleable operational support — dosing questions, eligibility edge cases, procedural clarifications. The LLO layer handles local trust and community-specific strategy, which does not scale centrally and shouldn't. <b>The platform's job is to enable the LLO's local knowledge, not to replace it.</b></p>
+    </div>
+
+    <div class="citations">
+      <ol>
+        <li><b>[1]</b>Founders Pledge Final Report · Feb 2026 · Kenya AI supervision pilot.</li>
+        <li><b>[2]</b>CLP Stage 2 Report · Feb 2026 · Seven-LLO vaccine campaign debriefs.</li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<section class="meta-strip">
+  <div class="wrap">
+    <div class="section-head" style="border: 0; padding-bottom: 0.5rem; margin-bottom: 1rem;"><div><div class="eyebrow">Program details</div></div></div>
+    <dl class="meta-strip-grid">
+      <div><dt>Regions</dt><dd>Nigeria · DRC · CAR · Kenya · Uganda · Tanzania · Zambia · Sierra Leone</dd></div>
+      <div><dt>Funders</dt><dd>GiveWell · Founders Pledge · Gavi</dd></div>
+      <div><dt>Active LLOs</dt><dd>28 active; 44 contracted</dd></div>
+      <div><dt>Services</dt><dd>VAS · Deworming · ORS · MUAC screening · Immunization promotion</dd></div>
+      <div><dt>Target population</dt><dd>Children 0-59 months</dd></div>
+      <div><dt>Cost per verified visit</dt><dd>$0.78 (VAS + deworming) to $1.30 (with ORS/Zinc co-packs)</dd></div>
+      <div><dt>Research</dt><dd>RCT with IPA · 2026 · $1.5M PRO Impact grant</dd></div>
+      <div><dt>Verification</dt><dd>Biometric · GPS · Photo · Algorithmic (AUC 0.91)</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="resources">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Resources</div><h2>Public resources</h2></div></div>
+    <a href="https://www.youtube.com/watch?v=VRbvUj9LTUg" class="res-item" target="_blank" rel="noopener">
+      <span class="res-type">Video · 2026</span>
+      <span class="res-title">Inside the Child Health Campaign in Kenya</span>
+      <span class="res-arrow">Watch →</span>
+    </a>
+    <a href="https://www.youtube.com/watch?v=oiUuT5v6ir0" class="res-item" target="_blank" rel="noopener">
+      <span class="res-type">Video · 2025</span>
+      <span class="res-title">CommCare Connect Demo: Pay for Outcomes, Not Effort</span>
+      <span class="res-arrow">Watch →</span>
+    </a>
+    <div class="embed" style="margin-top: 1.5rem;">
+      <iframe src="https://www.youtube.com/embed/VRbvUj9LTUg" title="Inside the Child Health Campaign in Kenya" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="next-step">
+  <div class="wrap">
+    <div class="next-meta">Back to catalog</div>
+    <h3>Same platform. Different intervention.</h3>
+    <p>Connect KMC applies the same Learn → Deliver → Verify → Pay architecture to post-discharge newborn care. ECD applies it to caregiver-focused home visits. Readers applies it to vision screening and glasses distribution.</p>
+    <a href="../programs.html" class="btn">All programs →</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-logo"><img src="../assets/connect-white.png" alt="Connect by Dimagi" /><p class="foot-tag">A global platform for funding verified service delivery.</p></div>
+      <div><h4>Platform</h4><ul><li><a href="../learn.html">Learn</a></li><li><a href="../deliver.html">Deliver</a></li><li><a href="../verify.html">Verify</a></li><li><a href="../pay.html">Pay</a></li></ul></div>
+      <div><h4>Programs</h4><ul><li><a href="chc.html">Child Health Campaign</a></li><li><a href="kmc.html">Kangaroo Mother Care</a></li><li><a href="ecd.html">ECD Parenting</a></li><li><a href="readers.html">Readers</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="../index.html#impact">Impact</a></li><li><a href="https://www.dimagi.com">About Dimagi</a></li><li><a href="../index.html#demo">Request a Demo</a></li></ul></div>
+    </div>
+    <div class="foot-copy"><span>© 2026 Dimagi, Inc.</span><span>Connect · by Dimagi</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
