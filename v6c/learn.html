@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Learn — Connect by Dimagi</title>
+<meta name="description" content="Step 1 of the Connect platform. FLWs complete self-paced digital training and pass an in-app assessment before delivering services." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" /></a>
+    <nav>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="nav-links">
+        <li class="nav__dropdown">
+          <button aria-haspopup="true">How It Works <svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a href="learn.html">Learn<span>Digital training for frontline workers</span></a>
+            <a href="deliver.html">Deliver<span>Mobile-guided service delivery</span></a>
+            <a href="verify.html">Verify<span>Biometric, GPS & algorithmic verification</span></a>
+            <a href="pay.html">Pay<span>Performance-based mobile money</span></a>
+          </div>
+        </li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html#impact">Impact</a></li>
+        <li><a href="index.html#demo" class="btn btn--primary">Request a Demo</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- STEP HERO -->
+<section class="step-hero">
+  <div class="container">
+    <div class="step-hero__crumb"><a href="index.html">Connect</a> · <a href="index.html#how">How It Works</a> · Learn</div>
+    <div class="step-hero__inner">
+      <div>
+        <div class="step-indicator">
+          <strong>Step 01</strong> of 04 · Learn
+          <span class="step-indicator__dots">
+            <span class="step-indicator__dot active"></span>
+            <span class="step-indicator__dot"></span>
+            <span class="step-indicator__dot"></span>
+            <span class="step-indicator__dot"></span>
+          </span>
+        </div>
+        <h1>Digital training that prepares workers before they deliver.</h1>
+        <p class="lead">Before any FLW begins service delivery through Connect, they must complete mandatory digital training and pass an in-app knowledge assessment. No classroom time. No placeholder credentials. Competence verified before compensation.</p>
+      </div>
+
+      <!-- mini flow diagram -->
+      <div class="flow-mini reveal">
+        <div class="flow-mini__row">
+          <div class="flow-mini__cell flow-mini__cell--active">Learn<span>Step 01</span></div>
+          <div class="flow-mini__cell">Deliver<span>Step 02</span></div>
+          <div class="flow-mini__cell">Verify<span>Step 03</span></div>
+          <div class="flow-mini__cell">Pay<span>Step 04</span></div>
+        </div>
+        <p style="margin-top: 20px; color: rgba(255,255,255,0.72); font-size: .88rem; text-align:center;">Competence is the gate. No assessment pass, no delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE FEATURES -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">How training works</span>
+      <h2>Three mechanisms that make digital training deliver.</h2>
+    </div>
+
+    <div class="feature-grid reveal">
+      <div class="feature feature--third">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 18h6"/></svg></div>
+        <h3>Mobile-first training</h3>
+        <p>Workers access training modules on their own phones via the Learn app. Self-paced. Offline-capable. No classroom scheduling, no travel costs. Includes interactive lessons, practice scenarios, and assessment-driven progression.</p>
+      </div>
+      <div class="feature feature--third">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
+        <h3>Locally relevant content</h3>
+        <p>Training materials are localized for each intervention and region — ensuring cultural relevance and practical applicability. Content is approved by subject matter experts, often the LLO or a program-specific SME Dimagi identifies per geography.</p>
+      </div>
+      <div class="feature feature--third">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12l4 4L19 6"/></svg></div>
+        <h3>Assessment-gated progression</h3>
+        <p>FLWs must pass an in-app learning assessment before they're cleared to deliver services. Failure means retaking the module. The assessment is standardized across all LLOs and FLWs for a program — one bar of competence, everywhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WORKERS LEARN -->
+<section class="section--tint">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Curriculum samples</span>
+      <h2>What FLWs learn, by program.</h2>
+      <p>Content is configured per intervention. The platform is the same; the curriculum differs.</p>
+    </div>
+    <div class="feature-grid reveal">
+      <div class="feature feature--half">
+        <h3 style="color:var(--indigo)">KMC</h3>
+        <p>KMC positioning, danger sign recognition, exclusive breastfeeding counseling, pulse oximeter operation, home-visit schedule management.</p>
+      </div>
+      <div class="feature feature--half">
+        <h3 style="color:var(--indigo)">Child Health Campaign</h3>
+        <p>Vitamin A dosing, deworming eligibility, MUAC screening technique, ORS/Zinc administration, vaccine hesitancy navigation.</p>
+      </div>
+      <div class="feature feature--half">
+        <h3 style="color:var(--indigo)">Early Childhood Development</h3>
+        <p>Responsive caregiving, motivational interviewing (open-ended questions, affirmations, reflective listening), age-appropriate activities.</p>
+      </div>
+      <div class="feature feature--half">
+        <h3 style="color:var(--indigo)">Readers</h3>
+        <p>Near vision screening protocol, lens strength matching (+1.0 to +3.0 diopters), presbyopia identification, on-site fitting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Evidence</span>
+      <h2>The platform produces competent workers at scale.</h2>
+      <p>Findings from Dimagi's ECD pilot in Malawi and the CLP Stage 2 self-service validation report.</p>
+    </div>
+
+    <div class="evidence-grid reveal">
+      <div class="evidence">
+        <div class="evidence__source">ECD Pilot · Malawi · Feb 2026</div>
+        <div class="evidence__headline"><strong>88%</strong> of FLWs scored above 70% on their first observed field visits.</div>
+        <p>Of the 76 FLWs who advanced through Autonomous Learning to delivery, supervised observation confirmed that digital training translated to field competence. <strong>85%</strong> of FLWs progressed successfully from digital learning into service delivery. The Autonomous Learning process was validated through iterative experiments with ~400 FLWs.</p>
+      </div>
+      <div class="evidence">
+        <div class="evidence__source">CLP Stage 2 Report · Feb 2026</div>
+        <div class="evidence__headline"><strong>9–9.5 / 10</strong> self-service rating for digital training resources.</div>
+        <p>Locally-led organizations rated the digital training resources 9 to 9.5 out of 10 when operating without direct Dimagi support. All seven Stage 2 organizations completed their vaccine promotion campaigns using only digital resources — the clearest signal yet that LLOs can self-serve the platform.</p>
+      </div>
+
+      <div class="evidence evidence--wide">
+        <div class="evidence__source">AI Coach · Open Chat Studio</div>
+        <div class="evidence__headline">Ongoing learning doesn't stop at the assessment. <strong>An AI coach reinforces it daily.</strong></div>
+        <p>Built on Dimagi's Open Chat Studio, the AI coach interacts with FLWs every day they work. It offers example scenarios to identify knowledge gaps, practices motivational interviewing techniques, and provides tailored feedback based on self-reported visit experiences. In the Kenya CHC pilot, a similar AI supervisor handled <strong>500 of 511 queries (97.8%)</strong> without escalating to a human — with an 81.5% usefulness rating from an independent evaluation and an average 5-second response time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE CONNECT ADVANTAGE -->
+<section class="section--dark">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow eyebrow--dark">The mechanism</span>
+      <h2>Traditional training scales linearly. Digital training scales asymmetrically.</h2>
+    </div>
+    <div class="feature-grid reveal">
+      <div class="feature feature--half" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1);">
+        <h3 style="color:#fff;">The old model</h3>
+        <p style="color: rgba(255,255,255,0.72);">Classroom time. Travel costs. Expert supervisors flown in. Cost and complexity scale linearly with workers. Quality degrades as you cascade through layers of trainers-training-trainers.</p>
+      </div>
+      <div class="feature feature--half" style="background: linear-gradient(135deg, rgba(56,67,208,0.35), rgba(252,95,54,0.25)); border-color: rgba(252,95,54,0.35);">
+        <h3 style="color:#fff;">The Connect model</h3>
+        <p style="color: rgba(255,255,255,0.86);">Adding the 10,000th FLW costs almost nothing. Progression depends on passing a standardized assessment, so <strong style="color:#fff;">quality isn't sacrificed for scale</strong>. Every FLW meets the same bar — from Uganda to India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGINATION -->
+<section>
+  <div class="container">
+    <div class="pagination">
+      <a href="index.html">
+        <div class="pagination__dir">← Back to</div>
+        <div class="pagination__title">Connect <span>Overview</span></div>
+      </a>
+      <a href="deliver.html" class="pagination--right">
+        <div class="pagination__dir">Step 02 →</div>
+        <div class="pagination__title"><span>Deliver</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" />
+      <p>A new model for global development — linking funding directly to verified service delivery at the frontline.</p>
+    </div>
+    <div>
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="verify.html">Verify</a></li>
+        <li><a href="pay.html">Pay</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs/chc.html">Child Health Campaign</a></li>
+        <li><a href="programs/kmc.html">Kangaroo Mother Care</a></li>
+        <li><a href="programs/ecd.html">Early Childhood Development</a></li>
+        <li><a href="programs/readers.html">Readers</a></li>
+        <li><a href="programs.html">All programs →</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="index.html#impact">Impact</a></li>
+        <li><a href="https://www.dimagi.com" rel="noopener" target="_blank">About Dimagi</a></li>
+        <li><a href="index.html#demo">Request a Demo</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 Dimagi, Inc. All rights reserved.</span>
+    <span>Connect by Dimagi · Powering the Frontline. Paying for Results.</span>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  const toggle = document.querySelector('.nav__toggle');
+  const links = document.getElementById('nav-links');
+  toggle?.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Connect by Dimagi — Powering the Frontline. Paying for Results.</title>
+<meta name="description" content="A platform that links funding directly to verified service delivery at the frontline. Learn, Deliver, Verify, Pay — one loop that scales." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Connect by Dimagi home">
+      <img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" />
+    </a>
+    <nav>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="nav-links">
+        <li class="nav__dropdown">
+          <button aria-haspopup="true" aria-expanded="false">How It Works <svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+          <div class="nav__dropdown-menu" role="menu">
+            <a href="learn.html">Learn<span>Digital training for frontline workers</span></a>
+            <a href="deliver.html">Deliver<span>Mobile-guided service delivery</span></a>
+            <a href="verify.html">Verify<span>Biometric, GPS & algorithmic verification</span></a>
+            <a href="pay.html">Pay<span>Performance-based mobile money</span></a>
+          </div>
+        </li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#demo" class="btn btn--primary">Request a Demo</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO WITH ANIMATED LDVP DIAGRAM -->
+<section class="hero">
+  <div class="hero__inner">
+    <div>
+      <span class="eyebrow eyebrow--dark">The platform for verified service delivery</span>
+      <h1>Powering the <span class="underline-accent">Frontline</span>.<br>Paying for Results.</h1>
+      <p class="lead">Connect links funders directly to verified service delivery. Every dollar ties to a real result — delivered by a growing network of locally-led organizations, verified before payment, and paid straight to the workers who did the work.</p>
+      <div class="hero__ctas">
+        <a href="#demo" class="btn btn--primary">Request a Demo
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how" class="btn btn--ghost">See How It Works</a>
+      </div>
+      <div class="hero__badges">
+        <span><strong>1M+</strong> verified services</span>
+        <span><strong>44</strong> LLO partners</span>
+        <span><strong>11</strong> countries</span>
+        <span><strong>$5.9M</strong> raised</span>
+      </div>
+    </div>
+
+    <!-- LDVP animated diagram -->
+    <div class="ldvp-diagram reveal">
+      <div class="ldvp-diagram__title">
+        <span>The Connect Platform</span>
+        <span class="status">live</span>
+      </div>
+      <div class="ldvp-cycle">
+        <div class="ldvp-node" data-step="1" id="node-learn">
+          <div class="ldvp-node__n">1</div>
+          <div class="ldvp-node__label">Learn</div>
+          <div class="ldvp-node__desc">Self-paced digital training with pass-gate assessment</div>
+        </div>
+        <div class="ldvp-node" data-step="2" id="node-deliver">
+          <div class="ldvp-node__n">2</div>
+          <div class="ldvp-node__label">Deliver</div>
+          <div class="ldvp-node__desc">Mobile-guided visits, LLOs manage locally</div>
+        </div>
+        <div class="ldvp-node" data-step="3" id="node-verify">
+          <div class="ldvp-node__n">3</div>
+          <div class="ldvp-node__label">Verify</div>
+          <div class="ldvp-node__desc">Biometric + GPS + algorithmic fraud detection</div>
+        </div>
+        <div class="ldvp-node" data-step="4" id="node-pay">
+          <div class="ldvp-node__n">4</div>
+          <div class="ldvp-node__label">Pay</div>
+          <div class="ldvp-node__desc">Direct mobile money on verified delivery</div>
+        </div>
+      </div>
+      <div class="ldvp-diagram__stream" id="stream">
+        <span class="dot">●</span> Connecting platform events…
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP RIBBON / HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>One platform. Four steps. Composable for any intervention.</h2>
+      <p>Connect isn't a program — it's a platform that composes programs. Each of the 10 programs running today uses the same four-step loop, configured for its specific workflow.</p>
+    </div>
+
+    <div class="step-ribbon reveal">
+      <a href="learn.html" class="step" data-step="1">
+        <div class="step__num">01</div>
+        <h3>Learn</h3>
+        <p>FLWs complete self-paced digital training on their phones. Must pass an in-app assessment before delivering.</p>
+        <span class="step__link">Inside training</span>
+      </a>
+      <a href="deliver.html" class="step" data-step="2">
+        <div class="step__num">02</div>
+        <h3>Deliver</h3>
+        <p>Mobile-guided visits in real communities. LLOs handle approvals, recruitment, oversight.</p>
+        <span class="step__link">Inside delivery</span>
+      </a>
+      <a href="verify.html" class="step" data-step="3">
+        <div class="step__num">03</div>
+        <h3>Verify</h3>
+        <p>Biometric identity, GPS coverage, and algorithmic fraud detection — every service confirmed.</p>
+        <span class="step__link">Inside verification</span>
+      </a>
+      <a href="pay.html" class="step" data-step="4">
+        <div class="step__num">04</div>
+        <h3>Pay</h3>
+        <p>Mobile money flows directly to workers on verified delivery. No intermediaries, no delay.</p>
+        <span class="step__link">Inside payment</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM CAPABILITIES GRID (Bento) -->
+<section class="section--tint">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Platform capabilities</span>
+      <h2>Everything verified delivery needs, composed in one place.</h2>
+      <p>Each capability is a building block. Programs like KMC, CHC, ECD, and Readers are just different configurations of the same platform.</p>
+    </div>
+
+    <div class="feature-grid reveal">
+      <div class="feature feature--wide">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><circle cx="7.5" cy="6.5" r=".5" fill="currentColor"/></svg></div>
+        <h3>Microplanning grids from satellite data</h3>
+        <p>Overlays an open-source geospatial grid (Google Open Buildings, OSM, Microsoft) onto any operational area. Workers close Delivery Units sequentially — pushing them into places they'd otherwise skip. 94% population coverage versus 82% for traditional campaigns.</p>
+      </div>
+      <div class="feature feature--third">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.6 5.3L20 8l-4 4 1 6-5-2.6L7 18l1-6-4-4 5.4-.7L12 2z"/></svg></div>
+        <h3>Assessment-gated training</h3>
+        <p>FLWs must pass a standardized in-app test before delivery. 77% supervised-visit pass rate across the Malawi ECD pilot.</p>
+      </div>
+
+      <div class="feature feature--third">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+        <h3>Biometric PersonalID</h3>
+        <p>Unique identification prevents duplicates, ghost visits, and cross-FLW fraud before it's ever recorded.</p>
+      </div>
+      <div class="feature feature--third">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-8 8-14a8 8 0 10-16 0c0 6 8 14 8 14z"/><circle cx="12" cy="8" r="2.5"/></svg></div>
+        <h3>GPS coverage audit</h3>
+        <p>Every visit stamps location + timestamp. Coverage maps reveal which populations were reached — in real time.</p>
+      </div>
+      <div class="feature feature--third">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20V10M9 20V4M15 20v-8M21 20v-5"/></svg></div>
+        <h3>Fraud detection ML</h3>
+        <p>AUC 0.91 from just 3 data elements. Statistically detects fabricated data even without GPS or photos.</p>
+      </div>
+
+      <div class="feature feature--half">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 8h10M7 12h10M7 16h6"/><rect x="3" y="3" width="18" height="18" rx="3"/></svg></div>
+        <h3>AI supervision on WhatsApp</h3>
+        <p>Conversational AI on Open Chat Studio handled 97.8% of FLW queries without human escalation in the Kenya pilot. Average response time: 5 seconds.</p>
+      </div>
+      <div class="feature feature--half">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12l3 3 7-7"/><circle cx="17" cy="17" r="4"/><path d="M17 15v2l1.5 1"/></svg></div>
+        <h3>Pay-on-verification via mobile money</h3>
+        <p>Payment only triggers after verification passes. $90,000+ paid directly to FLWs. Performance-based contracts invert the traditional grant model.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT STATS (DARK) -->
+<section class="section--dark" id="impact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow eyebrow--dark">Impact at scale</span>
+      <h2>The frontline, made legible.</h2>
+      <p>Numbers from the Founders Pledge grant (2024–2026), GiveWell-funded CHC, and the ECD pilot in Malawi.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat">
+        <div class="stat__value">1,000,000<span style="color:var(--mango)">+</span></div>
+        <div class="stat__label">Verified services delivered across all Connect programs</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">880,000<span style="color:var(--mango)">+</span></div>
+        <div class="stat__label">Child Health Campaign visits in 14 months</div>
+        <div class="stat__source">Founders Pledge report</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">22<span style="color:var(--mango)">%</span></div>
+        <div class="stat__label">Cost reduction per verified visit during grant period</div>
+        <div class="stat__source">$2.20 → $1.70</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">94<span style="color:var(--mango)">%</span></div>
+        <div class="stat__label">Population coverage on microplanned campaigns</div>
+        <div class="stat__source">vs 82% industry benchmark</div>
+      </div>
+    </div>
+    <div class="stats reveal" style="margin-top:24px;">
+      <div class="stat">
+        <div class="stat__value">44</div>
+        <div class="stat__label">LLO partners across 11 countries</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">5,000<span style="color:var(--mango)">+</span></div>
+        <div class="stat__label">Frontline Workers trained and activated</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">$90,000<span style="color:var(--mango)">+</span></div>
+        <div class="stat__label">Paid directly to FLWs via mobile money</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">97.8<span style="color:var(--mango)">%</span></div>
+        <div class="stat__label">FLW questions resolved by AI supervisor in Kenya</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS SHOWCASE -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Programs on the platform</span>
+      <h2>10 interventions. One platform. Each a case study.</h2>
+      <p>Every program deployed on Connect runs the same four-step loop — configured for its intervention, its regions, its LLOs, its verification rules.</p>
+    </div>
+
+    <div class="programs-grid reveal">
+      <a href="programs/chc.html" class="program-card">
+        <span class="program-card__badge program-card__badge--live">Live · 8 countries</span>
+        <h3>Child Health Campaign</h3>
+        <p class="program-card__meta">Vitamin A, deworming, ORS, malnutrition screening · GiveWell, Founders Pledge, Gavi</p>
+        <div class="program-card__scale">1M+ visits delivered</div>
+        <span class="program-card__arrow">→</span>
+      </a>
+      <a href="programs/kmc.html" class="program-card">
+        <span class="program-card__badge program-card__badge--live">Live · 4 countries</span>
+        <h3>Kangaroo Mother Care</h3>
+        <p class="program-card__meta">Home-based KMC for small vulnerable newborns · Eleanor Crook Foundation</p>
+        <div class="program-card__scale">5,000 cases enrolled</div>
+        <span class="program-card__arrow">→</span>
+      </a>
+      <a href="programs/ecd.html" class="program-card">
+        <span class="program-card__badge program-card__badge--live">Live · 3 countries</span>
+        <h3>Early Childhood Development</h3>
+        <p class="program-card__meta">Responsive caregiving home visits · Founders Pledge</p>
+        <div class="program-card__scale">27,000+ visits completed</div>
+        <span class="program-card__arrow">→</span>
+      </a>
+      <a href="programs/readers.html" class="program-card">
+        <span class="program-card__badge">Launching 2026</span>
+        <h3>Readers</h3>
+        <p class="program-card__meta">Vision screening + reading glasses distribution · RestoringVision</p>
+        <div class="program-card__scale">15,000 glasses donated</div>
+        <span class="program-card__arrow">→</span>
+      </a>
+      <div class="program-card">
+        <span class="program-card__badge">Live</span>
+        <h3>Mother-Baby Wellness</h3>
+        <p class="program-card__meta">Maternal health home visits · GiveWell</p>
+        <div class="program-card__scale">Active delivery</div>
+      </div>
+      <div class="program-card">
+        <span class="program-card__badge program-card__badge--soon">Coming soon</span>
+        <h3>Chlorine Dispenser</h3>
+        <p class="program-card__meta">Water & sanitation in Nigeria · GiveWell ($1M)</p>
+        <div class="program-card__scale">Launching 2026</div>
+      </div>
+      <div class="program-card">
+        <span class="program-card__badge program-card__badge--soon">Coming soon</span>
+        <h3>WellMe</h3>
+        <p class="program-card__meta">Mental health support in Uganda</p>
+        <div class="program-card__scale">Launching 2026</div>
+      </div>
+      <div class="program-card">
+        <span class="program-card__badge program-card__badge--soon">Coming soon</span>
+        <h3>RUTF</h3>
+        <p class="program-card__meta">Therapeutic food distribution · CIFF ($1M)</p>
+        <div class="program-card__scale">Launching 2026</div>
+      </div>
+      <div class="program-card">
+        <span class="program-card__badge program-card__badge--soon">Coming soon</span>
+        <h3>Interviews</h3>
+        <p class="program-card__meta">Survey & data collection · GiveWell ($225k)</p>
+        <div class="program-card__scale">Launching 2026</div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="programs.html" class="btn btn--secondary">View the full catalog →</a>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCES -->
+<section class="section--tint">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Who it's for</span>
+      <h2>One platform, three audiences, aligned incentives.</h2>
+    </div>
+    <div class="audiences reveal">
+      <div class="audience">
+        <span class="audience__tag">For Funders</span>
+        <h3>Pay for outcomes, not effort.</h3>
+        <p>A transparent, cost-effective way to invest in verified outcomes. Every dollar ties to a delivered service with GPS, timestamp, and image capture. Microplanning ensures equitable coverage. Cost-per-verified-outcome drops as the network scales.</p>
+      </div>
+      <div class="audience">
+        <span class="audience__tag">For LLOs</span>
+        <h3>Sustainable funding, modern tools.</h3>
+        <p>Performance-based contracts let you scale without adding overhead. The platform handles verification, payment, and oversight infrastructure so you can focus on the work that only locally-led organizations can do.</p>
+      </div>
+      <div class="audience">
+        <span class="audience__tag">For FLWs</span>
+        <h3>Paid for your impact.</h3>
+        <p>Learn new skills digitally on your phone. Deliver meaningful services in your community. Get paid directly via mobile money for verified work — no intermediaries, no delays, no missing paperwork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO VIDEO SECTION -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">See the platform</span>
+      <h2>Pay for outcomes, not effort.</h2>
+      <p>A 3-minute demo of CommCare Connect in action.</p>
+    </div>
+    <div class="video-embed reveal" style="max-width: 960px; margin: 0 auto;">
+      <iframe src="https://www.youtube.com/embed/oiUuT5v6ir0" title="CommCare Connect Demo: Pay for Outcomes, Not Effort" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="demo">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div>
+        <h2>Ready to create impact at the frontline?</h2>
+        <p>Whether you're a funder seeking verified outcomes, a locally-led organization ready to deliver, or a partner exploring new programs — let's talk.</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a href="mailto:connect@dimagi.com" class="btn btn--primary">Request a Demo →</a>
+        <a href="programs.html" class="btn btn--ghost">Explore Programs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi" />
+      <p>A new model for global development — linking funding directly to verified service delivery at the frontline.</p>
+    </div>
+    <div>
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="verify.html">Verify</a></li>
+        <li><a href="pay.html">Pay</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs/chc.html">Child Health Campaign</a></li>
+        <li><a href="programs/kmc.html">Kangaroo Mother Care</a></li>
+        <li><a href="programs/ecd.html">Early Childhood Development</a></li>
+        <li><a href="programs/readers.html">Readers</a></li>
+        <li><a href="programs.html">All programs →</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="https://www.dimagi.com" rel="noopener" target="_blank">About Dimagi</a></li>
+        <li><a href="#demo">Request a Demo</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 Dimagi, Inc. All rights reserved.</span>
+    <span>Connect by Dimagi · Powering the Frontline. Paying for Results.</span>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  // Mobile nav toggle
+  const toggle = document.querySelector('.nav__toggle');
+  const links = document.getElementById('nav-links');
+  toggle?.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Animated LDVP cycle + stream
+  const nodes = document.querySelectorAll('.ldvp-node');
+  const stream = document.getElementById('stream');
+  const events = [
+    '<span class="dot">●</span> FLW Amara passed KMC assessment (Uganda)',
+    '<span class="dot">●</span> 47 visits verified · GPS match · paying…',
+    '<span class="dot">●</span> Microplan cell 7B closed — 12/12 households',
+    '<span class="dot">●</span> Mobile money disbursed: $1.30 × 47 = $61.10',
+    '<span class="dot">●</span> AI coach answered 3 FLW questions in 5.2s',
+    '<span class="dot">●</span> LLO PIPNU onboarded 6 new FLWs for KMC',
+    '<span class="dot">●</span> Fraud model score: 0.03 — clean submission'
+  ];
+  let i = 0, activeIdx = 0;
+  setInterval(() => {
+    nodes.forEach(n => n.classList.remove('ldvp-node--active'));
+    if (nodes[activeIdx]) nodes[activeIdx].classList.add('ldvp-node--active');
+    activeIdx = (activeIdx + 1) % nodes.length;
+  }, 1400);
+  setInterval(() => {
+    if (!stream) return;
+    stream.innerHTML = events[i % events.length];
+    i++;
+  }, 2600);
+</script>
+</body>
+</html>

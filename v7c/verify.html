@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verify — Connect by Dimagi</title>
+<meta name="description" content="Four independent layers of verification: biometrics, GPS + microplanning, photo capture, and algorithmic fraud detection validated adversarially at AUC 0.91.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="./index.html"><img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi"></a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">How It Works <span>▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="./learn.html">Learn<small>Digital training with assessment gates</small></a>
+          <a href="./deliver.html">Deliver<small>LLO-led service delivery at scale</small></a>
+          <a href="./verify.html">Verify<small>Four layers of verification per visit</small></a>
+          <a href="./pay.html">Pay<small>Mobile money on verified completion</small></a>
+        </div>
+      </div>
+      <a href="./programs.html">Programs</a>
+      <a href="./index.html#impact">Impact</a>
+      <a href="./index.html#contact" class="cta-pill">Request a Demo</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">≡</button>
+  </div>
+</header>
+
+<section class="sub-hero">
+  <div class="grid-bg"></div>
+  <div class="aurora"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
+    <nav class="breadcrumbs"><a href="./index.html">Connect</a><span class="sep">/</span>How It Works<span class="sep">/</span>Verify</nav>
+    <div class="eyebrow-row">
+      <span class="step-chip"><span class="sc-bullet"></span>Step 03 of 04</span>
+      <span class="step-chip" style="color:rgba(238,240,255,0.7);background:transparent;">The verification layer</span>
+    </div>
+    <h1>Every service <em>confirmed</em>. Not tracked. Not monitored. Verified.</h1>
+    <p class="lede">Verification is how the system defines a delivery in the first place — not a checkpoint applied after the fact. Four independent layers: biometric identity, geographic coverage, photo capture, and algorithmic fraud detection. Payment only triggers once the layers agree.</p>
+
+    <div class="sub-hero-stats">
+      <div class="s"><div class="s-num">94%</div><div class="s-cap">Population coverage with microplans</div></div>
+      <div class="s"><div class="s-num">3.5×</div><div class="s-cap">Thoroughness gain from microplanning</div></div>
+      <div class="s"><div class="s-num">0.91</div><div class="s-cap">AUC on adversarial fraud test</div></div>
+      <div class="s"><div class="s-num">2.5%</div><div class="s-cap">Real workers above the lowest faker score</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="pillars">
+    <div class="pillar">
+      <div class="p-num">LAYER 01</div>
+      <h4>Biometric identity</h4>
+      <p>PersonalID confirms that real individuals received real services. No duplicates. No ghosts. The same record can't be claimed twice under different names.</p>
+    </div>
+    <div class="pillar">
+      <div class="p-num">LAYER 02</div>
+      <h4>GPS + microplanning</h4>
+      <p>Geolocation confirms visits happened in the right places. Microplan execution forces coverage — workers must close every Delivery Unit in their Service Area before moving on.</p>
+    </div>
+    <div class="pillar">
+      <div class="p-num">LAYER 03</div>
+      <h4>Photo + algorithmic</h4>
+      <p>Image capture at visit time. Statistical models analyze submission patterns to flag anomalies. Fabrication has to beat all four layers, not just one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MICROPLAN VIZ -->
+<section class="wrap-narrow" style="padding:40px 32px 20px;">
+  <div class="section-head">
+    <div class="eyebrow">Microplan coverage</div>
+    <h2>How the grid forces outward movement.</h2>
+    <p>Each cell is a Delivery Unit. Workers cannot advance to the next Service Area until every DU in the current one is closed — either visited or confirmed empty. Cherry-picking is no longer an option.</p>
+  </div>
+  <div class="microplan-viz" role="img" aria-label="Microplan grid visualization showing coverage pattern">
+    <!-- row 1 -->
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell visited"></div>
+    <div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell empty"></div>
+    <!-- row 2 -->
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div>
+    <!-- row 3 -->
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell visited"></div>
+    <div class="mp-cell visited"></div><div class="mp-cell skipped"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div>
+    <!-- row 4 -->
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell visited"></div><div class="mp-cell visited"></div>
+    <div class="mp-cell skipped"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div>
+    <!-- row 5 -->
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell empty"></div>
+    <div class="mp-cell empty"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div>
+  </div>
+  <div class="mp-legend">
+    <span><span class="sw" style="background:linear-gradient(135deg,var(--indigo),var(--mango));"></span>Fully covered (visits completed)</span>
+    <span><span class="sw" style="background:var(--indigo);"></span>Visited (in progress)</span>
+    <span><span class="sw" style="background:rgba(252,95,54,0.15);border:1px solid rgba(252,95,54,0.3);"></span>Inaccessible (audited)</span>
+    <span><span class="sw" style="background:transparent;border:1px dashed rgba(142,161,255,0.3);"></span>Empty (no buildings)</span>
+  </div>
+</section>
+
+<!-- ======================= LEARNINGS ======================= -->
+<section class="wrap-narrow">
+
+  <!-- LEARNING 1: Microplanning -->
+  <article class="learning">
+    <div class="learning-head">
+      <div>
+        <div class="l-num">01</div>
+        <div class="l-tag">Learning · Coverage geometry</div>
+      </div>
+      <div>
+        <h2>Workers cluster. Microplans force them outward.</h2>
+        <p class="l-sub">The hardest problem in field verification wasn't fraud — it was the invisible choice of which households to skip. The answer was to take that choice out of the worker's hands and put it in a grid.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-rail" aria-hidden="true"></div>
+      <div class="phase-list">
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Early 2024 · The baseline approach</div>
+            <h4>"Assign a catchment. Set a quota. Trust the process."</h4>
+            <p>Give an FLW a neighborhood and a visit target. They'll figure out who to reach. Operationally simple, widely used, and the default across community health programs.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Mid-2024 · What the data showed</div>
+            <h4>0.4 visits per eligible child</h4>
+            <p>Without geographic enforcement, FLWs averaged <strong>0.4 visits per estimated eligible child</strong> — cherry-picking accessible households and skipping the harder ones. The populations systematically missed were those with lower baseline health coverage. At the exact moment equity was the goal, we were producing convenience sampling.</p>
+            <div class="phase-data">Convenience sampling coverage: <strong>0.4 visits / child</strong></div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Late 2024 · The microplan intervention</div>
+            <h4>Build the grid. Force saturation.</h4>
+            <p>Before a campaign, we overlay a grid onto the operational area using Google Open Buildings, OpenStreetMap, and Microsoft data. Cells with at least one building become <strong>Delivery Units</strong>. DUs group into <strong>Service Areas</strong> sized for 1-2 weeks of work. A worker cannot advance to the next Service Area until every DU in the current one is closed — either completing the visits or confirming no eligible children are present.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">2025-2026 · What the grid produced</div>
+            <h4>1.4 visits per child. 94% population coverage.</h4>
+            <p><strong>1.4 visits per estimated child</strong> in microplanned cells, vs 0.4 without — a <strong>3.5× increase in thoroughness</strong>. Population coverage in visited cells jumped from 82-84% to <strong>94%</strong>. To reach 95% of the population, microplanned campaigns needed 91% of cells; non-microplanned needed 72% — revealing how concentrated coverage was in the easy cells.</p>
+            <div class="phase-data">Coverage: <strong>82-84% → 94%</strong></div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">What didn't work</div>
+            <h4>Dispersed settlements and inaccessible land</h4>
+            <p>Microplans failed in dispersed settlement patterns — workers walked long distances to DUs with no actual buildings. Some DUs fell on inaccessible land (factory grounds, prison grounds). One campaign removed microplan execution entirely due to partner constraints. The grid is not universal; it's a tool that suits density. Open work: making the approach robust to sparse or irregular terrain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="learning-source"><strong>Source:</strong> Founders Pledge Final Report (Feb 2026). Insight 2 in the public insights log.</p>
+  </article>
+
+  <!-- LEARNING 2: Adversarial fraud testing -->
+  <article class="learning">
+    <div class="learning-head">
+      <div>
+        <div class="l-num">02</div>
+        <div class="l-tag">Learning · Fraud as a test case</div>
+      </div>
+      <div>
+        <h2>We paid people to defeat our fraud detection. We watched them fail.</h2>
+        <p class="l-sub">Most fraud-detection claims in the sector are aspirational. We ran the adversarial study — paid experienced workers to fabricate convincingly — so we could report a number instead of a promise.</p>
+      </div>
+    </div>
+
+    <!-- AUC GAUGE INLINE -->
+    <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;margin-bottom:30px;">
+      <div class="auc-gauge" aria-hidden="true">
+        <div class="ring-bg"></div>
+        <div class="center"><div class="num">0.91</div><div class="cap">AUC ± 0.09</div></div>
+      </div>
+      <div style="flex:1;min-width:260px;">
+        <h4 style="font-weight:400;color:#fff;margin-bottom:8px;">Random Forest on 3 data elements</h4>
+        <p style="color:rgba(238,240,255,0.7);font-size:14.5px;line-height:1.55;">Age, gender, and MUAC measurements alone — no GPS, no timestamps, no photos. Only 2.5% of real workers received fraud risk scores higher than even the lowest-scoring fabricator.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-rail" aria-hidden="true"></div>
+      <div class="phase-list">
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Pre-test · The comfortable assumption</div>
+            <h4>"Our verification stack handles fraud."</h4>
+            <p>We had biometrics, GPS, photo capture. On paper, the stack looked like more than enough. The question we hadn't answered honestly: what if a motivated insider tried to fake data? Could we catch them with statistics alone — before GPS or photos even mattered?</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">The adversarial study</div>
+            <h4>Three rounds. 33 fakers. Escalating coaching.</h4>
+            <p>We paid experienced FLWs to submit <strong>100 fake visit records each</strong>. Ran three rounds. After each round, we coached the fakers on what had given them away. We offered bonuses to the top 25% most convincing fabricators. This is the kind of adversarial testing most development organizations only do when a regulator forces them to.</p>
+            <div class="phase-data">Coached rounds: <strong>3</strong> · fabricators: <strong>33</strong></div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">The result</div>
+            <h4>AUC 0.91 ± 0.09 from three fields alone</h4>
+            <p>A Random Forest model trained on <strong>three data elements</strong> — age, gender, and MUAC measurements — achieved an <strong>AUC of 0.91 ± 0.09</strong>. Only <strong>2.5%</strong> of real workers received fraud risk scores higher than even the lowest-scoring fabricator. This is statistical discrimination alone, before GPS and photo verification kick in.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">What it means</div>
+            <h4>Fraud detection as an empirical layer, not a promise</h4>
+            <p>A fabricated visit on Connect has to beat all four independent layers — biometric identity, GPS + microplan constraints, photo capture, and statistical pattern detection. Each layer uses different signal. Coordinating a fake that defeats all of them requires more effort than delivering the visit honestly, which is the design intent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="learning-source"><strong>Source:</strong> Founders Pledge Final Report (Feb 2026). Insight 3 in the public insights log.</p>
+  </article>
+
+  <!-- LEARNING 3: Guardrails vs hard stops -->
+  <article class="learning">
+    <div class="learning-head">
+      <div>
+        <div class="l-num">03</div>
+        <div class="l-tag">Learning · Design philosophy</div>
+      </div>
+      <div>
+        <h2>Guardrails are not hard stops. The data changes when you confuse them.</h2>
+        <p class="l-sub">Platforms that punish missed guardrails don't get honest data. Separating payment criteria from audit signals was one of our most important architectural decisions — and it took a while to see why.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-rail" aria-hidden="true"></div>
+      <div class="phase-list">
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">The initial instinct</div>
+            <h4>"If they miss the target, don't pay."</h4>
+            <p>The first instinct when a quality target isn't met — first visit within 3 days of discharge, for example — is to withhold payment. It feels fair. It seems like accountability. We considered it.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">Why we didn't</div>
+            <h4>Punishing a guardrail corrupts the data</h4>
+            <p>If missing the 3-day window costs an FLW money, they'll falsify visit dates to hit it. The platform will show 100% compliance. We'll have no idea what's actually happening. The guardrail will have measured nothing, because the measurement itself changed the behavior. This is the fundamental problem with conflating a signal with a sanction.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">The distinction we drew</div>
+            <h4>Payment criteria vs guardrails</h4>
+            <p><strong>Payment criteria</strong> are hard — a visit must meet these or it isn't paid (identity verified, GPS on-site, minimum visit duration). <strong>Guardrails</strong> are soft — they trigger audits and performance conversations, but don't block payment. The distinction is small on paper and large in behavior: it determines whether the platform sees what actually happens or only what workers want us to see.</p>
+            <div class="phase-data">Two classes of check: <strong>payment vs audit</strong></div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-dot"></div>
+          <div class="phase-body">
+            <div class="phase-date">2026 · Live example</div>
+            <h4>KMC first-visit-within-3-days: audited, not enforced</h4>
+            <p>In the KMC program, 4 mandatory home visits per SVN is a payment criterion. The guardrail "first visit within 3 days of discharge" is currently at <strong>50%</strong> compliance against a <strong>70%</strong> target. That's a real number — because we chose to get it instead of getting a fake 100%. We're working on it through LLO coaching, scheduling support, and discharge notification integration. Not through punishment.</p>
+            <p>A platform that doesn't punish missed guardrails gets the real data it needs to improve the program.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="learning-source"><strong>Source:</strong> KMC Conceptual Model (March 2026). Insight 10 in the public insights log.</p>
+  </article>
+
+</section>
+
+<section class="next-step">
+  <div class="wrap">
+    <div class="next-step-inner">
+      <div>
+        <div class="ns-label">Next in the cycle</div>
+        <h3>Verified delivery is the trigger for <em>payment</em>.</h3>
+      </div>
+      <a href="./pay.html" class="next-step-cta">Continue to Pay →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+        <p>Connect is a Dimagi platform linking funding to verified service delivery at the frontline.</p>
+      </div>
+      <div class="footer-col"><h5>Platform</h5><ul>
+        <li><a href="./learn.html">Learn</a></li>
+        <li><a href="./deliver.html">Deliver</a></li>
+        <li><a href="./verify.html">Verify</a></li>
+        <li><a href="./pay.html">Pay</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Programs</h5><ul>
+        <li><a href="./programs/chc.html">CHC</a></li>
+        <li><a href="./programs/kmc.html">KMC</a></li>
+        <li><a href="./programs/ecd.html">ECD</a></li>
+        <li><a href="./programs/readers.html">Readers</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Connect</h5><ul>
+        <li><a href="./index.html#impact">Impact</a></li>
+        <li><a href="https://www.dimagi.com">About Dimagi</a></li>
+        <li><a href="./index.html#contact">Request a Demo</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Dimagi, Inc. All rights reserved.</div>
+      <div>Connect by Dimagi</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const t = document.getElementById('navToggle');
+  const l = document.getElementById('navLinks');
+  if (t && l) t.addEventListener('click', () => l.classList.toggle('is-open'));
+</script>
+</body>
+</html>
