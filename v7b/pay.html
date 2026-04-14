@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pay — Connect by Dimagi</title>
+<meta name="description" content="Pay-for-outcomes. Cost per verified visit dropped from $2.20 to $1.70. How Connect became the rare development program that got leaner as it scaled." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/connect-by-dimagi.png" alt="Connect by Dimagi" /></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button>How It Works</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="learn.html"><span class="dd-num">01</span>Learn</a></li>
+          <li><a href="deliver.html"><span class="dd-num">02</span>Deliver</a></li>
+          <li><a href="verify.html"><span class="dd-num">03</span>Verify</a></li>
+          <li><a href="pay.html"><span class="dd-num">04</span>Pay</a></li>
+        </ul>
+      </li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="index.html#impact">Impact</a></li>
+      <li><a href="index.html#demo" class="btn">Request a Demo</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Connect</a><span class="sep">/</span>How It Works<span class="sep">/</span>04 Pay</div>
+    <h1>Every worker paid for verified impact.<br/>Every dollar tracked end-to-end.</h1>
+    <p class="core-msg">Connect's pay-for-outcomes model aligns incentives across the chain. Workers have direct financial motivation to deliver quality. LLOs have motivation to recruit and supervise well. Funders bear no financial risk for undelivered work. What follows is what we've learned about the economics.</p>
+  </div>
+</section>
+
+<section class="ribbon">
+  <div class="wrap">
+    <div class="ribbon-grid">
+      <div class="ribbon-cell"><span class="n">$1.70</span><span class="lbl">Cost per verified CHC visit (down from $2.20)</span></div>
+      <div class="ribbon-cell"><span class="n">22<sup>%</sup></span><span class="lbl">Cost reduction during Founders Pledge scale-up</span></div>
+      <div class="ribbon-cell"><span class="n">$90,000<sup>+</sup></span><span class="lbl">Paid directly to frontline workers via mobile money</span></div>
+      <div class="ribbon-cell"><span class="n">$5.9M</span><span class="lbl">Total funding raised against a $2M target</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RETRO 1: Insight 4 — Cost inversion -->
+<article class="retro">
+  <div class="wrap">
+    <div class="retro-num">Learning 01 / Unit economics</div>
+    <h2>Most organizations get less lean as they scale. Connect got leaner.</h2>
+
+    <div class="retro-grid">
+
+      <div class="retro-phase-label">The question we had</div>
+      <div class="retro-phase-body">
+        <p>Scaling costs money. That is the default assumption in development operations. Every other Dimagi program follows a version of the same curve: as a campaign grows, staff grow, supervision grows, coordination overhead grows, and the per-unit cost of delivery flattens or rises.</p>
+        <p>When we planned the Founders Pledge grant period, we budgeted against this curve. We also instrumented the system to measure whether Connect's architecture — performance-based contracting, locally-led delivery, digital infrastructure per-step — would actually change it.</p>
+      </div>
+
+      <div class="retro-phase-label">What we tried</div>
+      <div class="retro-phase-body">
+        <p>We tracked cost per verified visit continuously across the grant period. We broke it down by country, commodity bundle, and setup vs ongoing cost. We compared Dimagi staff growth against delivery volume growth.</p>
+      </div>
+
+      <div class="retro-phase-label">What we found</div>
+      <div class="retro-phase-body">
+        <p><b>Connect inverts the pattern.</b> During the Founders Pledge grant period, we scaled to a rate capable of supporting millions of child visits per year <b>without substantial growth in Dimagi's team</b>. Cost per verified visit dropped from <span class="data-note">$2.20 to $1.70</span> — a 22% reduction — as we grew.</p>
+        <p>The per-country breakdown tells the mechanism more plainly. Nigeria with ORS/Zinc co-packs averaged $1.30 per visit across 14 LLO contracts. Outside Nigeria, where the bundle is VAS plus deworming with no ORS, average cost was $0.78 per visit across 17 contracts. A single Sierra Leone LLO delivered ORS/Zinc for $1.00 per visit. Setup fees averaged $0.40 per visit during the grant and are expected to fall to ~$0.10 per visit at the next scale step.</p>
+        <p>Three structural reasons this works: LLOs have inherently low overhead because they are local and lean; performance-based payment ensures costs track actual delivery rather than organizational size; digital technology is integrated into every step — worker guidance, verification, payment — creating efficiency gains that compound as the network grows.</p>
+      </div>
+
+      <div class="retro-phase-label">What changed</div>
+      <div class="retro-phase-body">
+        <p>Internally, how we plan grants. We no longer budget Connect programs against the default scaling-cost curve that applies to our traditional technical-assistance work. Externally, how we present cost to funders — the number we report is cost per verified outcome, not cost per planned activity, and it gets more favorable with scale, not less.</p>
+      </div>
+
+      <div class="retro-phase-label">What's still open</div>
+      <div class="retro-phase-body">
+        <p>The 22% reduction came over 14 months of intensive scale-up. The curve has to flatten somewhere — there is a floor on per-visit cost that's determined by commodity price, FLW wage norms, and infrastructure. We haven't found that floor yet. We have a theoretical model that suggests it's meaningfully below current levels, but the most honest thing to say is: we'll know when we see the curve bend.</p>
+      </div>
+
+    </div>
+
+    <div class="retro-source"><span>Source</span>Founders Pledge Final Report · Feb 2026 — 880,000+ verified visits, 14 months, 44 LLOs.</div>
+  </div>
+</article>
+
+<!-- RETRO 2: Insight 5 — No displacement -->
+<article class="retro">
+  <div class="wrap">
+    <div class="retro-num">Learning 02 / Worker economics</div>
+    <h2>Campaign work doesn't displace routine health services. We thought it might. It doesn't.</h2>
+
+    <div class="retro-grid">
+
+      <div class="retro-phase-label">The question we had</div>
+      <div class="retro-phase-body">
+        <p>A reasonable funder concern: if Connect pays FLWs to do campaign visits, will they neglect their unpaid volunteer community-health work? This is the "crowd-out" question. It has a specific answer, and the specific answer matters because it determines whether Connect is a net positive or a trade-off for the community health system.</p>
+        <p>We suspected the concern was built on assumptions that don't match context, but we had to test it properly.</p>
+      </div>
+
+      <div class="retro-phase-label">What we tried</div>
+      <div class="retro-phase-body">
+        <p>Commissioned by GiveWell: 24 in-depth interviews with 20 FLWs, 2 LLO staff, and 2 local health representatives across Gombe and Sokoto states in Nigeria. Semi-structured protocol. Questions about volunteer workload during campaigns, perceived effects on routine services, income changes, and what FLWs would do with Connect income.</p>
+      </div>
+
+      <div class="retro-phase-label">What we found</div>
+      <div class="retro-phase-body">
+        <p>Campaign work is <b>normal and expected</b> in Nigeria's community health volunteer system. CHVs routinely do campaigns — it is their main income source. When our FLWs reduced volunteer hours to work on Connect campaigns, <b>other volunteers at the facility covered the work</b>, as they typically do during any campaign. In Gombe specifically, FLWs maintained volunteer hours by shifting schedules within Connect's flexible 7am-7pm window.</p>
+        <p>The deeper point is one funders often miss: the "displacement" concern is built on Western assumptions about what CHVs do. In the actual context, campaigns are <b>not a disruption of the system</b>. They <em>are</em> the system. Connect's visible financial footprint is large because we verify it; a traditional NGO's campaign footprint is often invisible, but the campaign activity itself has the same relationship to routine work.</p>
+        <p>Workers reported real, positive secondary effects: substantial income increases (CHC became a primary income source for most interviewees), new technology skills (CommCare app, Google Maps), improved communication abilities, and greater confidence. None of the interviewees described Connect work as trading against something they would otherwise have done.</p>
+      </div>
+
+      <div class="retro-phase-label">What changed</div>
+      <div class="retro-phase-body">
+        <p>We now address the displacement question directly in funder conversations with specific field evidence rather than theoretical argument. We also use the FLW income-impact finding in how we scope program expansion — the per-worker financial footprint is a feature for the community system, not a cost to it.</p>
+      </div>
+
+      <div class="retro-phase-label">What's still open</div>
+      <div class="retro-phase-body">
+        <p>The interview cohort was Nigeria-specific and relatively small. The finding is consistent with the structure of community health volunteer systems in much of sub-Saharan Africa, but it is not universal. Where a community health system is structured differently — salaried cadres, for instance — displacement dynamics could look different, and we should not generalize the Nigeria finding beyond the contexts we have evidence for.</p>
+      </div>
+
+    </div>
+
+    <div class="retro-source"><span>Source</span>GiveWell FLW Displacement Survey · Oct 2025 — 24 in-depth interviews, Gombe & Sokoto, Nigeria.</div>
+  </div>
+</article>
+
+</main>
+
+<section class="next-step">
+  <div class="wrap">
+    <div class="next-meta">Next · the programs</div>
+    <h3>The platform is the mechanism. The programs are where it meets the world.</h3>
+    <p>Ten active programs run on Connect today. Four have detail pages where the learnings are specific to the program — KMC's post-discharge gap, CHC's microplanning innovations, ECD's pilot reallocations, Readers' partnership model.</p>
+    <a href="programs.html" class="btn">See all programs →</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-logo"><img src="assets/connect-white.png" alt="Connect by Dimagi" /><p class="foot-tag">A global platform for funding verified service delivery.</p></div>
+      <div><h4>Platform</h4><ul><li><a href="learn.html">Learn</a></li><li><a href="deliver.html">Deliver</a></li><li><a href="verify.html">Verify</a></li><li><a href="pay.html">Pay</a></li></ul></div>
+      <div><h4>Programs</h4><ul><li><a href="programs/chc.html">Child Health Campaign</a></li><li><a href="programs/kmc.html">Kangaroo Mother Care</a></li><li><a href="programs/ecd.html">ECD Parenting</a></li><li><a href="programs/readers.html">Readers</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="index.html#impact">Impact</a></li><li><a href="https://www.dimagi.com">About Dimagi</a></li><li><a href="index.html#demo">Request a Demo</a></li></ul></div>
+    </div>
+    <div class="foot-copy"><span>© 2026 Dimagi, Inc.</span><span>Connect · by Dimagi</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

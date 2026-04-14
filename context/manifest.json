@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-04-14T18:00:00Z",
+  "sources": [
+    {
+      "type": "confluence",
+      "space": "connect",
+      "pages_pulled": ["Connect Marketing (3352166410)", "Connect - KMC (3309568021)", "Connect - Readers (3620077569)", "Connect - CHC 2025 (3331588142)", "Connect - ECD (3309568038)"]
+    },
+    {
+      "type": "google_drive_folder",
+      "folder_id": "1olY9pD1NNkaGmoWavwhjv9gMsc_Cs_PL",
+      "name": "KMC program folder",
+      "files_pulled": 3,
+      "files_indexed": 12,
+      "pulled": ["[Blog] Closing the Post-Discharge Gap", "[Public] EOI KMC", "Conceptual Model for the Connect KMC Program"],
+      "skipped": ["9 internal docs (EOI responses, product showcase, mid-project review)"]
+    },
+    {
+      "type": "google_drive_folder",
+      "folder_id": "1cmx5_P9FkZiUsoKjigqtE-YTWf-h394r",
+      "name": "Readers program folder",
+      "files_pulled": 1,
+      "files_indexed": 9,
+      "pulled": ["[Public] EOI Announcement for Readers"],
+      "skipped": ["8 internal docs; System Design returned 404"]
+    },
+    {
+      "type": "google_drive_folder",
+      "folder_id": "1XiRyhwlQKrWZF62HIo4SAPye-7P-JNS3",
+      "name": "Learnings and Details folder",
+      "files_pulled": 4,
+      "files_indexed": 4,
+      "pulled": ["[Internal] Connect for ECD Overview", "Dimagi Final Report Founders Pledge Feb2026", "CLP Stage 2 Report", "FLW displacement surveys for GiveWell"],
+      "notes": "All four resolved correctly via shortcut fix in ace-gdrive"
+    }
+  ],
+  "programs": [
+    {"slug": "chc", "name": "Child Health Campaign", "has_overview": true, "has_detailed_content": true, "has_resources": true, "detail_page": true},
+    {"slug": "kmc", "name": "Kangaroo Mother Care", "has_overview": true, "has_detailed_content": true, "has_resources": true, "detail_page": true},
+    {"slug": "ecd", "name": "Early Childhood Development", "has_overview": true, "has_detailed_content": true, "has_resources": false, "detail_page": true},
+    {"slug": "readers", "name": "Vision Care / Readers", "has_overview": true, "has_detailed_content": false, "has_resources": false, "detail_page": true},
+    {"slug": "mbw", "name": "Mother-Baby Wellness", "has_overview": false, "has_detailed_content": false, "has_resources": false, "detail_page": false},
+    {"slug": "chlorine", "name": "Chlorine Dispenser", "has_overview": false, "has_detailed_content": false, "has_resources": false, "detail_page": false},
+    {"slug": "wellme", "name": "WellMe (Mental Health)", "has_overview": false, "has_detailed_content": false, "has_resources": false, "detail_page": false},
+    {"slug": "rutf", "name": "RUTF (Therapeutic Food)", "has_overview": false, "has_detailed_content": false, "has_resources": false, "detail_page": false},
+    {"slug": "interviews", "name": "Interviews (Survey & Data)", "has_overview": false, "has_detailed_content": false, "has_resources": false, "detail_page": false},
+    {"slug": "rooftop", "name": "Rooftop Sampling", "has_overview": false, "has_detailed_content": false, "has_resources": false, "detail_page": false}
+  ],
+  "content_classification": {
+    "public": [
+      "https://www.youtube.com/watch?v=oiUuT5v6ir0 (CommCare Connect Demo)",
+      "https://www.youtube.com/watch?v=VRbvUj9LTUg (Inside CHC Kenya)",
+      "https://www.youtube.com/watch?v=o1nHOWhInbY (Ugandan National TV - PIPNU KMC)",
+      "Connect Marketing Hub narrative (tagline, elevator pitch, descriptions)",
+      "[Blog] Closing the Post-Discharge Gap (KMC narrative)",
+      "[Public] KMC EOI content (program design)",
+      "Confluence program page overviews (stats, funders, partners)"
+    ],
+    "internal_only": [
+      "Google Drive folder links",
+      "Salesforce/Asana project links",
+      "Internal EOI response spreadsheets",
+      "Mid-project review decks",
+      "Conceptual Model documents (contain open questions, performance data — use data externally but not direct link)",
+      "Learnings and Details reports (use insights, not direct links)"
+    ]
+  }
+}
