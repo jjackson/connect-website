@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I. Learn / Connect Report 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="site">
+
+<header class="report-header">
+  <a href="index.html" class="logo">Connect · by Dimagi <span class="stamp">Report · 2026</span></a>
+  <nav class="report-nav" aria-label="Primary">
+    <a href="learn.html" class="active">I Learn</a>
+    <a href="deliver.html">II Deliver</a>
+    <a href="verify.html">III Verify</a>
+    <a href="pay.html">IV Pay</a>
+    <a href="programs.html">V Programs</a>
+    <a href="index.html#contact" class="cta">Request a demo</a>
+  </nav>
+</header>
+
+<main>
+<section class="cover">
+  <div class="cover-wrap">
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="left"><strong>Connect · Essay I</strong> Learn · The training surface of the platform</div>
+        <div class="right"><strong>Scoped: Platform</strong> Validated across ~400 FLWs</div>
+      </div>
+      <div class="cover-vol">Essay I · Learn</div>
+      <h1 class="cover-title">Training that <span class="accent">survives</span> the <span class="soft">doorstep.</span></h1>
+      <p class="cover-subtitle">Knowledge tests are the easy part. Competence — holding a conversation with a skeptical caregiver, noticing a subtle danger sign, running a motivational-interviewing drill — is the hard part. This is the essay of how we discovered the difference.</p>
+      <div class="cover-bottom">
+        <div>FLWs progressing to delivery<strong>85%</strong></div>
+        <div>&gt;70% on first observed visit<strong>88%</strong></div>
+        <div>Pass supervised observation<strong>77%</strong></div>
+        <div>AI coach resolves, no escalation<strong>97.8%</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="crumb"><a href="index.html">Connect</a> · Essay I · Learn</div>
+    <div class="section-num">I.</div>
+
+    <article class="essay">
+      <div class="essay-head">
+        <div class="meta">
+          <div><span class="label">Insight</span>08</div>
+          <div><span class="label">Topic</span>Methodology</div>
+          <div><span class="scope">Scope · Platform</span></div>
+        </div>
+        <div>
+          <div class="kicker">Essay I.1</div>
+          <h2>Knowledge tests alone don't <em>produce</em> competent FLWs. We tried. They didn't.</h2>
+        </div>
+      </div>
+
+      <div class="annotate-col">
+        <div class="annotate-body">
+          <p class="first">The first version of the Learn app shipped on the assumption that knowledge was the gate. The logic was clean: if a frontline worker can name the MUAC thresholds, describe the danger signs, and identify the right referral pathway, they know what they need to know. Build the curriculum, gate progression on a knowledge test<span class="ann">1</span>, and you have a trained worker. For a while, the knowledge-test scores looked the part — cohort after cohort passed.</p>
+          <p>What changed the picture was supervised observation. When LLO supervisors sat in on actual home visits and rated worker performance, the correlation with test scores was not what we had expected. Workers who had aced the test still <span class="under">struggled</span> with the real thing. Not on recall — on judgment. How do you redirect a caregiver who has already decided not to vaccinate? How do you notice the subtle danger sign in a child who otherwise looks fine? How do you run a motivational-interviewing technique on a noisy porch, with three siblings watching and a half-hour of daylight left? None of these are multiple-choice questions. Our test was grading the wrong thing<span class="ann">2</span>.</p>
+          <p>The redesign was to stop treating Learn as a test-gated linear curriculum and start treating it as a sequence of layers. Content first — self-paced, in the app. Knowledge test still gated, but no longer the final word. Then a daily AI coach built on Dimagi's <span class="under">Open Chat Studio</span><span class="ann">3</span>, which drills scenario-based practice and motivational-interviewing patterns in conversation. Then peer practice. Then a supervised observation visit, scored by an LLO supervisor, as the actual progression gate.</p>
+          <p>The AI coach is the piece that changed the ceiling. It runs drills a test cannot. "A caregiver tells you she doesn't want the vaccine; what do you say?" — and grades the answer on reasoning, not keyword match. It prompts daily reflection on real visit experiences and surfaces knowledge gaps through conversation. In deployment, the coach handles roughly <span class="under">97.8% of worker queries</span> without human escalation<span class="ann">4</span>. The edges — the 2.2% that do escalate — become training data for the next iteration.</p>
+          <p>The numbers, across roughly 400 FLWs in iterative experiments spanning CHC, ECD, and KMC<span class="ann">5</span>, are the ones we can sleep on. 85% of FLWs progress from training into service delivery. 88% score above 70% on their first observed visit. 77% pass the supervised observation. Workers who do not pass are not "failed"; they get targeted coaching on the specific drill they underperformed on, and most clear the bar on the next attempt.</p>
+          <p>It is worth saying what we haven't yet established. We don't know, experimentally, the marginal value of each layer. Could we drop peer practice and keep the coach? Could we ship Learn without the supervised observation in very-low-supervision contexts? We're designing the next round of experiments. Until then, the layered model is the system — and what we won't do is collapse it back to a test because the test is easier to measure.</p>
+        </div>
+        <aside class="annotate-margin">
+          <h4>Marginalia</h4>
+          <div class="note"><span class="n">¹</span>The original Learn app gated progression on a multi-choice knowledge test with a per-module pass threshold. This was standard at the time.</div>
+          <div class="note"><span class="n">²</span>The correlation between knowledge-test score and supervised-observation score was lower than cohort variance. We treated this as diagnostic.</div>
+          <div class="note"><span class="n">³</span>Dimagi's Open Chat Studio is the infrastructure layer we use to build domain-specific chatbots. The Learn AI coach is an OCS deployment.</div>
+          <div class="note"><span class="n">⁴</span>Source: CLP / Founders Pledge field data. Resolution defined as "worker does not escalate to human coach or supervisor within 24 hours."</div>
+          <div class="note"><span class="n">⁵</span>~400 FLWs is the cumulative figure across iterative experiments. No single experiment had ~400 participants.</div>
+        </aside>
+      </div>
+      <div class="src">Sources · ECD Overview, Feb 2026 · FP Final Report, Feb 2026 · ~400 FLWs across iterative experiments.</div>
+    </article>
+
+    <article class="essay">
+      <div class="essay-head">
+        <div class="meta">
+          <div><span class="label">Insight</span>07</div>
+          <div><span class="label">Topic</span>Intervention design</div>
+          <div><span class="scope program">Scope · ECD</span></div>
+        </div>
+        <div>
+          <div class="kicker">Essay I.2</div>
+          <h2>Caregiver attitudes were <em>already</em> correct. The gap was knowledge and behavior.</h2>
+        </div>
+      </div>
+
+      <div class="annotate-col">
+        <div class="annotate-body">
+          <p class="first">The second essay in Learn is not about the worker. It is about what the trained worker is trained to deliver. In the ECD pilot, the intervention as designed was aimed at building positive caregiver attitudes about responsive caregiving and talk-and-play. We assumed caregivers in low-income settings would need to be taught why early childhood development matters. We built visit scripts around that assumption.</p>
+          <p>The baseline survey<span class="ann">6</span> — 50 caregivers in Malawi — told us we had aimed at the wrong target. Caregivers <span class="under">already held positive ECD attitudes</span>. They agreed talk-and-play supports brain development. They endorsed responsive caregiving. The attitude scales were near ceiling before we started. The intervention was ready to move a variable that did not need moving.</p>
+          <p>Where the pilot actually produced results was in knowledge and observed behavior. Knowledge of the timing of rapid child development moved <span class="under">+33%</span>. Knowledge of ways to support mental development moved <span class="under">+41%</span>. Observed teaching behavior and observed encouragement of autonomy each moved +21%. Attitudes did not move. They did not need to.</p>
+          <p>What we changed. The 3-visit pilot is expanding to 8-10 visits across 12 months — not because more time is needed to convince caregivers ECD matters (they know), but because behavior change takes sustained practice<span class="ann">7</span>. Learn content for ECD now weights concrete knowledge reinforcement and behavioral rehearsal over attitudinal framing. The AI coach drills caregiver-facing behaviors directly. The intervention is evidence-guided, not merely evidence-based.</p>
+          <p>One behavior we haven't moved the way we want to: encouragement of autonomy, 47% at endline. It is up from baseline but short of target. Caregivers readily took up teaching behaviors. They were slower to adopt behaviors that require <em>stepping back</em> — letting a toddler struggle, tolerating frustration, resisting the impulse to rescue<span class="ann">8</span>. This is the hardest subdomain; we are not done with it.</p>
+        </div>
+        <aside class="annotate-margin">
+          <h4>Marginalia</h4>
+          <div class="note"><span class="n">⁶</span>Baseline and endline caregiver surveys: 50 caregivers, Malawi, ECD pilot 2025-2026. Detailed methodology in ECD Overview.</div>
+          <div class="note"><span class="n">⁷</span>The 8-10 visit expansion is based on the behavior-change literature and on specific failure modes observed in the 3-visit pilot (knowledge acquired but behavior not sustained).</div>
+          <div class="note"><span class="n">⁸</span>The autonomy subdomain is recognized in the ECD literature as one of the most resistant to brief-intervention designs.</div>
+        </aside>
+      </div>
+      <div class="src">Source · ECD Overview, Feb 2026 — Malawi pilot, 50 caregivers, baseline and endline.</div>
+    </article>
+
+    <div class="next-cycle">
+      <div>
+        <div class="prompt">Continue reading · Essay II</div>
+        <div class="target">Deliver → Activating locally-led organizations</div>
+      </div>
+      <a href="deliver.html" class="btn btn-ghost">Next essay →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="colophon">
+  <div class="container">
+    <div class="col-grid">
+      <div><div class="brand">Connect</div><p>A platform for running performance-based frontline health campaigns through locally-led organizations.</p></div>
+      <div><h4>Essays</h4><a href="learn.html">I. Learn</a><a href="deliver.html">II. Deliver</a><a href="verify.html">III. Verify</a><a href="pay.html">IV. Pay</a></div>
+      <div><h4>Programs</h4><a href="programs/chc.html">CHC</a><a href="programs/kmc.html">KMC</a><a href="programs/ecd.html">ECD</a><a href="programs/readers.html">Readers</a><a href="programs.html">All</a></div>
+      <div><h4>Masthead</h4><a href="https://www.dimagi.com" rel="noopener">Dimagi.com</a><a href="index.html#contact">Request a demo</a><a href="mailto:connect@dimagi.com">connect@dimagi.com</a></div>
+    </div>
+    <div class="col-bottom"><span>&copy; Dimagi, Inc. 2026</span><span>Vol. 1 · No. 4</span></div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

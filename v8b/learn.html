@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I. Learn — Connect, by Dimagi</title>
+<meta name="description" content="Why knowledge tests alone don't produce competent frontline health workers, and how Connect's layered training model filled the gap.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="site">
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="brand">Connect <span class="byline">By Dimagi · Est. 2023</span></a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="learn.html" class="active">Learn</a>
+      <a href="deliver.html">Deliver</a>
+      <a href="verify.html">Verify</a>
+      <a href="pay.html">Pay</a>
+      <a href="programs.html">Programs</a>
+      <a href="index.html#contact" class="cta">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container container-article">
+    <div class="crumb"><a href="index.html">Connect</a> · Learn</div>
+    <div class="issue">I. Learn · Platform essay · April 2026</div>
+    <h1>Training that <em>survives</em><br>contact with the doorstep.</h1>
+    <p class="lede">Knowledge tests are the easy part. Competence — holding a conversation with a skeptical caregiver, noticing a subtle danger sign, running a motivational-interviewing drill — is the hard part. This is the essay of how we discovered the difference.</p>
+    <div class="byline-line">Scoped: Platform, validated across ~400 frontline workers · Source: ECD Overview, Feb 2026; FP Final Report, Feb 2026</div>
+  </div>
+</section>
+
+<section>
+  <div class="container container-article">
+    <article class="article-section">
+      <div class="section-head">Insight 08 · Methodology · Platform</div>
+      <h2>Knowledge tests alone don't produce competent FLWs. We tried. They didn't.</h2>
+      <span class="scope-tag">◆ Scope · Platform</span>
+
+      <div class="twocol">
+        <div class="body">
+          <p>The first version of the Learn app shipped on the assumption that knowledge was the gate. The logic was clean. If a frontline worker can name the MUAC thresholds, describe the danger signs, and identify the right referral pathway, they know what they need to know. Build the curriculum, gate progression on a knowledge test, and you have a trained worker. For a while, the knowledge-test scores looked the part: cohort after cohort passed. We would have called that a result.</p>
+          <p>What changed the picture was supervised observation. When LLO supervisors sat in on actual home visits and rated the worker's performance, the correlation with test scores was not what we had expected. Workers who had aced the test still <em class="lit">struggled</em> with the real thing. Not on recall — on judgment. How do you redirect a caregiver who's already decided not to vaccinate? How do you notice the subtle danger sign in a child who otherwise looks fine? How do you run a motivational-interviewing technique on a noisy porch, with three siblings watching and a half-hour of daylight left? None of these are multiple-choice questions. Our test was grading the wrong thing.</p>
+          <p>The redesign was to stop treating Learn as a test-gated linear curriculum and start treating it as a sequence of layers. Content first — self-paced, in the app, the way we'd always done it. Knowledge test still gated, but no longer the final word. Then a <strong>daily AI coach</strong> built on Dimagi's Open Chat Studio, which drills scenario-based practice and motivational-interviewing patterns in conversation. Then peer practice. Then a supervised observation visit, scored by an LLO supervisor, as the actual progression gate.</p>
+          <p>The AI coach is the piece that changed the ceiling. It runs drills a test cannot run. "A caregiver tells you she doesn't want the vaccine; what do you say?" — and grades the answer on reasoning, not keyword match. It prompts daily reflection on real visit experiences and surfaces knowledge gaps through conversation. In deployment, the coach handles roughly 97.8% of worker queries without escalating to a human. The edges — the roughly 2.2% that do escalate — become training data for the next iteration.</p>
+          <p>The numbers, across roughly 400 FLWs in iterative experiments spanning CHC, ECD, and KMC, are the ones we can sleep on. 85% of FLWs progress from training into service delivery. 88% score above 70% on their first observed visit. 77% pass the supervised observation. Workers who don't pass aren't failed; they get targeted coaching on the specific drill they underperformed on, and most clear the bar on the next attempt. It is worth saying what we haven't yet established: we don't know, experimentally, the marginal value of each layer. Could we drop peer practice and keep the coach? Could we ship Learn without supervised observation in very-low-supervision contexts? We are designing the next round of experiments. Until then, the layered model is the system — and what we won't do is collapse it back to a test because the test is easier to measure.</p>
+        </div>
+        <aside>
+          <h4>Context</h4>
+          <div class="scope-note">Scope: Platform. Validated across ~400 FLWs in CHC, ECD, and KMC.</div>
+
+          <div class="stat-block">
+            <div class="stat-num">85%</div>
+            <div class="stat-lbl">FLWs progressing from training to service delivery</div>
+            <div class="stat-src">Platform · 2023-2026</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">88%</div>
+            <div class="stat-lbl">Score above 70% on first observed visit</div>
+            <div class="stat-src">ECD report, Feb 2026</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">77%</div>
+            <div class="stat-lbl">Pass the supervised observation visit</div>
+            <div class="stat-src">Platform</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">97.8%</div>
+            <div class="stat-lbl">AI coach queries resolved without human escalation</div>
+            <div class="stat-src">CLP / FP report</div>
+          </div>
+
+          <div class="pullquote">Knowledge tests graded recall. Home visits demanded judgment. Those are not the same skill.</div>
+
+          <h4 style="margin-top:28px">The five layers</h4>
+          <ol style="font-family:var(--sans); font-size:13px; padding-left:20px; color:var(--ink-2); line-height:1.8">
+            <li>Self-paced digital learning</li>
+            <li>In-app knowledge test (gated)</li>
+            <li>Daily AI coach (Open Chat Studio)</li>
+            <li>Peer practice</li>
+            <li>Supervised observation by LLO supervisor</li>
+          </ol>
+        </aside>
+      </div>
+      <div class="src">Sources: ECD Overview, Feb 2026 · Founders Pledge Final Report, Feb 2026 · ~400 FLWs across iterative experiments.</div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">Insight 07 · Evidence from ECD · Malawi pilot</div>
+      <h2>We learned caregiver attitudes were already correct. The gap was knowledge and behavior.</h2>
+      <span class="scope-tag program">◆ Scope · ECD, Malawi pilot (n=50)</span>
+
+      <div class="twocol">
+        <div class="body">
+          <p>The second essay in Learn is not about the worker. It's about what the trained worker is trained to deliver. In the ECD pilot, the intervention as designed was aimed at building positive caregiver attitudes about responsive caregiving and talk-and-play. We assumed caregivers in low-income settings would need to be taught why early childhood development matters. We built visit scripts around that assumption.</p>
+          <p>The baseline survey — 50 caregivers in Malawi — told us we had aimed at the wrong target. Caregivers <em class="lit">already</em> held positive ECD attitudes. They agreed talk-and-play supports brain development. They endorsed responsive caregiving. The attitude scales were near ceiling before we started. The intervention was ready to move a variable that did not need moving.</p>
+          <p>Where the pilot actually produced results was in knowledge and observed behavior. Knowledge of the timing of rapid child development moved up 33%. Knowledge of ways to support mental development moved 41%. Observed teaching behavior and observed encouragement of autonomy each moved 21%. Attitudes did not move. They did not need to.</p>
+          <p>What we changed. The 3-visit pilot is expanding to 8-10 visits across 12 months — not because more time is needed to convince caregivers ECD matters (they know), but because <strong>behavior change takes sustained practice</strong>. Learn content for ECD now weights concrete knowledge reinforcement and behavioral rehearsal over attitudinal framing. The AI coach drills the caregiver-facing behaviors directly. The intervention is evidence-guided, not merely evidence-based.</p>
+          <p>One behavior we have not yet moved the way we want to: encouragement of autonomy, which sits at 47% at endline. It is up from baseline but short of the target. Caregivers readily adopted teaching behaviors. They were slower to adopt the ones that require stepping back — letting a toddler struggle, tolerating frustration, resisting the impulse to rescue. This is the hardest subdomain in the ECD literature more broadly, and we have no illusions that we have solved it. The next pilot round is testing targeted coach drills specifically on autonomy-support scenarios.</p>
+        </div>
+        <aside>
+          <h4>Context</h4>
+          <div class="scope-note">Scope: ECD program · Malawi pilot · n=50 caregivers, baseline and endline.</div>
+          <div class="stat-block">
+            <div class="stat-num">+33%</div>
+            <div class="stat-lbl">Knowledge — timing of rapid child development</div>
+            <div class="stat-src">Malawi pilot</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">+41%</div>
+            <div class="stat-lbl">Knowledge — ways to support mental development</div>
+            <div class="stat-src">Malawi pilot</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">+21%</div>
+            <div class="stat-lbl">Observed teaching behavior at endline</div>
+            <div class="stat-src">Observed visits</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">0%</div>
+            <div class="stat-lbl">Attitude change — because attitudes were already at ceiling</div>
+            <div class="stat-src">Baseline survey</div>
+          </div>
+          <div class="pullquote">An intervention ready to move a variable that did not need moving.</div>
+        </aside>
+      </div>
+      <div class="src">Source: ECD Overview, Feb 2026 · Malawi pilot with 50-caregiver baseline and endline surveys.</div>
+    </article>
+
+    <div class="article-foot">
+      <div>
+        <div class="lbl">Next in the cycle</div>
+        <div class="to">II. Deliver — Activating locally-led organizations</div>
+      </div>
+      <a href="deliver.html" class="btn btn-ghost">Continue →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="colophon">
+  <div class="container">
+    <div class="colophon-grid">
+      <div><div class="brand" style="margin-bottom:12px">Connect <span class="byline">By Dimagi</span></div><p>A platform for running performance-based frontline health campaigns through locally-led organizations.</p></div>
+      <div><h4>Platform</h4><a href="learn.html">I. Learn</a><a href="deliver.html">II. Deliver</a><a href="verify.html">III. Verify</a><a href="pay.html">IV. Pay</a></div>
+      <div><h4>Programs</h4><a href="programs/chc.html">CHC</a><a href="programs/kmc.html">KMC</a><a href="programs/ecd.html">ECD</a><a href="programs/readers.html">Readers</a><a href="programs.html">All programs</a></div>
+      <div><h4>Masthead</h4><a href="https://www.dimagi.com" rel="noopener">About Dimagi</a><a href="index.html#contact">Request a demo</a><a href="mailto:connect@dimagi.com">connect@dimagi.com</a></div>
+    </div>
+    <div class="colophon-bottom"><span>&copy; 2026 Dimagi, Inc.</span><span>Vol. 1 · No. 4</span></div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

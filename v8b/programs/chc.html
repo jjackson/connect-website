@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHC — Connect, by Dimagi</title>
+<meta name="description" content="Child Health Campaigns on Connect: the program file that informed most of what Connect is. 44 LLOs, 880K+ visits, and the learnings that reshaped the platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="site">
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="../index.html" class="brand">Connect <span class="byline">By Dimagi · Est. 2023</span></a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="../learn.html">Learn</a>
+      <a href="../deliver.html">Deliver</a>
+      <a href="../verify.html">Verify</a>
+      <a href="../pay.html">Pay</a>
+      <a href="../programs.html" class="active">Programs</a>
+      <a href="../index.html#contact" class="cta">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container container-article">
+    <div class="crumb"><a href="../index.html">Connect</a> · <a href="../programs.html">Programs</a> · CHC</div>
+    <div class="issue">Program file · Child Health Campaigns · April 2026</div>
+    <h1>CHC — the program that<br><em>taught</em> Connect what<br>it should be.</h1>
+    <p class="lede">Child Health Campaigns delivers nutrition screening, treatment referral, and childhood vaccination through 44 locally-led organizations across Nigeria and Kenya. Most of the insights underneath Connect as a platform — the microplan, the Trial Run model, the adversarial fraud test, the cost inversion, the CAR failure — came out of CHC.</p>
+    <div class="byline-line">Dimagi · CHC program file · Scope: CHC. Platform-level claims named as such.</div>
+  </div>
+</section>
+
+<section class="ribbon">
+  <div class="container">
+    <div class="r-stat"><div class="num">880K+</div><div class="lbl">Verified child visits, 14 months</div><div class="src">CHC · FP report, Feb 2026</div></div>
+    <div class="r-stat"><div class="num">44</div><div class="lbl">LLOs activated</div><div class="src">CHC</div></div>
+    <div class="r-stat"><div class="num">94%</div><div class="lbl">Population coverage with microplan</div><div class="src">CHC</div></div>
+    <div class="r-stat"><div class="num">$1.70</div><div class="lbl">Cost per verified visit at end of period (from $2.20)</div><div class="src">CHC</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="container container-article">
+
+    <article class="article-section">
+      <div class="section-head">The question · 1</div>
+      <h2>Can you scale door-to-door child screening without the coordination layer eating the margin?</h2>
+      <div class="twocol">
+        <div class="body">
+          <p>Childhood nutrition screening and vaccination are labor-intensive, door-to-door activities. They work when workers show up at every house, measure MUAC correctly, refer cases that need treatment, and record the data truthfully. They fail — quietly, expensively — when workers cherry-pick, when data is fabricated, or when the coordination layer eats the margin. The question CHC was built to answer, across the 14 months of the Founders Pledge grant period, was whether a platform model could deliver against this at scale without the failure modes.</p>
+          <p>The answer, in summary: 880K+ verified visits, 44 LLOs, 94% population coverage with microplanning, and cost per verified visit falling from $2.20 to $1.70 across the period. These numbers are CHC's. They're the evidence base that the platform architecture underneath — Trial Run contracting for LLOs, five-layer training for FLWs, four-layer verification, performance-based payment — works in practice.</p>
+          <p>The structural reason this program could scale the way it did, without growing Dimagi's team substantially, is that the coordination layer was pushed down to LLOs and down to the platform itself. Dimagi did not build a parallel field-ops organization in Nigeria or Kenya. We contracted one that already existed (the LLOs) and gave it a platform (Connect) to run on. That is the argument — the program measured it.</p>
+        </div>
+        <aside>
+          <h4>Scope · CHC</h4>
+          <div class="scope-note">All numbers on this page are CHC-specific unless labeled Platform.</div>
+          <div class="stat-block"><div class="stat-num">2023<span style="font-size:18px; color:var(--ink-3)">–2026</span></div><div class="stat-lbl">Founders Pledge grant period</div></div>
+          <div class="stat-block"><div class="stat-num">NG / KE</div><div class="stat-lbl">Primary country deployments</div></div>
+        </aside>
+      </div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">The question · 2</div>
+      <h2>How do you get from 0 LLO partners to 44 in 14 months without betting the grant on the first few?</h2>
+      <span class="scope-tag">◆ Platform (Trial Run), CHC deployment</span>
+      <div class="twocol">
+        <div class="body">
+          <p>The Trial Run model is the answer. Every new LLO gets a small initial contract — $3,000 setup fee for 3,000 verified child visits, payment on delivery. If the LLO delivers cleanly, they graduate to a larger campaign. If they don't, we've spent less than the old diligence process cost, and both parties know why.</p>
+          <p>The CHC portfolio under this model: 37 LLOs contracted, 24 entered Trial Runs, 10 underperformed and were not continued, 3 went straight to larger campaigns based on prior evidence. The graduation pass rate is roughly 60%, which is the honest number — what the platform would have delivered without Trial Run is contracting everyone who looked right and removing partners mid-campaign, which is worse for everyone.</p>
+          <p>Without this model, CHC could not have reached 44 LLOs in 14 months. Traditional diligence scales linearly with Dimagi ops; Trial Run scales with LLO willingness and platform capacity. The 44-LLO number is as much a Trial Run number as it is a CHC number.</p>
+        </div>
+        <aside>
+          <h4>Portfolio</h4>
+          <div class="stat-block"><div class="stat-num">37</div><div class="stat-lbl">LLOs contracted under Trial Run</div></div>
+          <div class="stat-block"><div class="stat-num">24</div><div class="stat-lbl">Entered Trial Runs</div></div>
+          <div class="stat-block"><div class="stat-num">10</div><div class="stat-lbl">Underperformed, not continued</div></div>
+          <div class="pullquote">What the platform would have delivered without Trial Run is contracting everyone who looked right and removing partners mid-campaign.</div>
+        </aside>
+      </div>
+      <div class="src">Source: Founders Pledge Final Report, Feb 2026.</div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">The question · 3</div>
+      <h2>How do you stop FLWs from cherry-picking the easy houses?</h2>
+      <span class="scope-tag program">◆ Scope · CHC</span>
+      <div class="twocol">
+        <div class="body">
+          <p>The answer is microplanning, and the finding comes from the CHC evaluation specifically. Without a microplan, CHC FLWs averaged 0.4 visits per estimated eligible child in their assigned area. They visited the accessible households and skipped the harder ones. The missed populations were systematically those with lower baseline health coverage — the exact ones the program was designed to reach.</p>
+          <p>With the microplan layer — grid generated from Google Open Buildings + OpenStreetMap + Microsoft building-footprint data; cells with buildings become Delivery Units; DUs group into Service Areas; a worker cannot advance to the next Service Area without closing every DU in the current one — the number went to 1.4 visits per estimated child. Population coverage rose from 82-84% to 94%. Same per-visit payment; different gate.</p>
+          <p>Where microplanning didn't work inside CHC: dispersed settlements where workers walked to DUs with no actual buildings; DUs on inaccessible land (factory, prison, private estate); and one campaign that removed microplans due to partner constraints. The grid is configurable; the platform falls back to area-based assignment where it needs to.</p>
+        </div>
+        <aside>
+          <h4>Without / with</h4>
+          <div class="stat-block"><div class="stat-num">0.4</div><div class="stat-lbl">Visits / child without microplan</div></div>
+          <div class="stat-block"><div class="stat-num">1.4</div><div class="stat-lbl">Visits / child with microplan</div></div>
+          <div class="stat-block"><div class="stat-num">94%</div><div class="stat-lbl">Population coverage (from 82-84%)</div></div>
+        </aside>
+      </div>
+      <div class="src">Source: Founders Pledge Final Report, Feb 2026.</div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">The question · 4</div>
+      <h2>Can you trust the data when payment depends on it?</h2>
+      <span class="scope-tag">◆ Platform test, run on CHC data patterns</span>
+      <div class="twocol">
+        <div class="body">
+          <p>The adversarial fraud test described on the Verify page was run against CHC visit data. We paid experienced FLWs to submit 100 fake records each, across three rounds, coaching them between rounds on what had given them away and offering bonuses to the top 25% most convincing fabricators. Using three data elements — age, gender, and MUAC measurements — a Random Forest model achieved an AUC of 0.91 ± 0.09. Only 2.5% of real workers received fraud-risk scores as high as the lowest-scoring fabricator. Out of 33 fakers, we detected them with near-perfect discrimination using data patterns alone, before GPS and photo verification kicked in.</p>
+          <p>The model is now the algorithmic layer of verification for every Connect program. Same code path. The evidence that the layer works came from CHC. That's the scoping convention this site uses: the mechanism is Platform, the evaluation was CHC, and both facts are named each time.</p>
+        </div>
+        <aside>
+          <h4>Adversarial test</h4>
+          <div class="stat-block"><div class="stat-num">0.91</div><div class="stat-lbl">AUC, Random Forest, 3 inputs</div></div>
+          <div class="stat-block"><div class="stat-num">33</div><div class="stat-lbl">Adversarial fakers, 3 rounds</div></div>
+          <div class="stat-block"><div class="stat-num">2.5%</div><div class="stat-lbl">Real workers overlapping lowest fabricator</div></div>
+        </aside>
+      </div>
+      <div class="src">Source: Founders Pledge Final Report, Feb 2026.</div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">The question · 5</div>
+      <h2>Can scaling a campaign reduce cost per unit instead of raising it?</h2>
+      <span class="scope-tag program">◆ Scope · CHC</span>
+      <div class="twocol">
+        <div class="body">
+          <p>In the CHC program, yes. Across the Founders Pledge grant period, cost per verified visit fell from $2.20 to $1.70 — a 22% reduction as the program scaled to a rate capable of supporting millions of child visits per year, without substantial growth in Dimagi's team. This is a CHC number. Not a Connect-wide claim. The mechanism that produced it — LLO economics, performance-based payment, integrated digital tooling — sits at the platform level and is the reason we expect the same curve to hold for other programs; we measure it per program.</p>
+          <p>Most development programs face a structural ceiling on cost-effectiveness, where the more they scale, the more ops burden grows. CHC under the Connect architecture is one of the few measured examples where scale produced cost <em class="lit">reduction</em>. Whether the same curve holds for KMC, ECD, or Readers is an open empirical question that we're measuring.</p>
+        </div>
+        <aside>
+          <h4>Cost curve</h4>
+          <div class="stat-block"><div class="stat-num">$2.20 → $1.70</div><div class="stat-lbl">Cost per verified visit in CHC, start → end of FP period</div></div>
+          <div class="stat-block"><div class="stat-num">22%</div><div class="stat-lbl">Reduction</div></div>
+        </aside>
+      </div>
+      <div class="src">Source: Founders Pledge Final Report, Feb 2026.</div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">The question · 6</div>
+      <h2>What do LLOs bring that the platform can't?</h2>
+      <span class="scope-tag program">◆ Scope · CHC, CLP Stage 2</span>
+      <div class="twocol">
+        <div class="body">
+          <p>In the CLP Stage 2 vaccine campaign, 5-6 of 7 LLOs independently engaged religious leaders, community leaders, and existing community relationships to open doors and counter hesitancy. Dimagi did not design this into the protocol. It emerged. One FLW countered hesitancy with the line "We were immunized, we have children." Another LLO's FLWs were recommended by the community itself.</p>
+          <p>This is the evidence that tells us Connect's platform role is to <em class="lit">enable</em> local knowledge, not to <em class="lit">replace</em> it — and it's why CHC has shaped the way we now design for LLO autonomy across every other program on the platform.</p>
+        </div>
+        <aside>
+          <h4>CLP Stage 2 vaccine campaign</h4>
+          <div class="stat-block"><div class="stat-num">5-6<span style="font-size:20px">&nbsp;/&nbsp;7</span></div><div class="stat-lbl">LLOs that independently engaged religious / community leaders</div></div>
+          <div class="pullquote">The L in LLO is load-bearing.</div>
+        </aside>
+      </div>
+      <div class="src">Source: CLP Stage 2 Report, Feb 2026.</div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">Program file · Metadata</div>
+      <h2>Details and public resources.</h2>
+      <ul class="clean">
+        <li><strong>Regions:</strong> Primary — Nigeria (multi-state), Kenya. Additional deployments in discussion.</li>
+        <li><strong>Funder:</strong> Founders Pledge (grant period concluded Feb 2026; full report published).</li>
+        <li><strong>Partners:</strong> 44 locally-led organizations.</li>
+        <li><strong>Clinical protocol:</strong> MUAC nutrition screening, referral for severe and moderate cases, routine childhood vaccination.</li>
+        <li><strong>Standards alignment:</strong> WHO child-nutrition screening protocols.</li>
+        <li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=VRbvUj9LTUg" rel="noopener" class="link">Inside CHC Kenya (YouTube) →</a></li>
+      </ul>
+    </article>
+
+    <div class="article-foot">
+      <div>
+        <div class="lbl">Back to programs</div>
+        <div class="to">See KMC, ECD, Readers</div>
+      </div>
+      <a href="../programs.html" class="btn btn-ghost">All programs →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="colophon">
+  <div class="container">
+    <div class="colophon-grid">
+      <div><div class="brand" style="margin-bottom:12px">Connect <span class="byline">By Dimagi</span></div><p>A platform for running performance-based frontline health campaigns through locally-led organizations.</p></div>
+      <div><h4>Platform</h4><a href="../learn.html">I. Learn</a><a href="../deliver.html">II. Deliver</a><a href="../verify.html">III. Verify</a><a href="../pay.html">IV. Pay</a></div>
+      <div><h4>Programs</h4><a href="chc.html">CHC</a><a href="kmc.html">KMC</a><a href="ecd.html">ECD</a><a href="readers.html">Readers</a><a href="../programs.html">All programs</a></div>
+      <div><h4>Masthead</h4><a href="https://www.dimagi.com" rel="noopener">About Dimagi</a><a href="../index.html#contact">Request a demo</a><a href="mailto:connect@dimagi.com">connect@dimagi.com</a></div>
+    </div>
+    <div class="colophon-bottom"><span>&copy; 2026 Dimagi, Inc.</span><span>Vol. 1 · No. 4</span></div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

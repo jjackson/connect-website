@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Readers — Connect, by Dimagi</title>
+<meta name="description" content="Reading Glasses on Connect, with Restoring Vision. The first non-child-health deployment of the Connect architecture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="site">
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="../index.html" class="brand">Connect <span class="byline">By Dimagi · Est. 2023</span></a>
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="../learn.html">Learn</a><a href="../deliver.html">Deliver</a><a href="../verify.html">Verify</a><a href="../pay.html">Pay</a>
+      <a href="../programs.html" class="active">Programs</a>
+      <a href="../index.html#contact" class="cta">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container container-article">
+    <div class="crumb"><a href="../index.html">Connect</a> · <a href="../programs.html">Programs</a> · Readers</div>
+    <div class="issue">Program file · Reading Glasses · April 2026</div>
+    <h1>Readers — can the<br>Connect model do<br><em>vision</em> as well as it<br>does child health?</h1>
+    <p class="lede">Readers is the first non-child-health deployment of the Connect LDVP architecture. In partnership with Restoring Vision, FLWs screen adults for presbyopia and distribute reading glasses. The clinical domain is different. The infrastructure is the same — Trial Run contracting, Learn-app training, verified visits, performance-based payment. This file is less about evidence (we are early) and more about the question the program was designed to answer.</p>
+    <div class="byline-line">Program file · Scope: Readers. Evidence base is developing; claims named as such.</div>
+  </div>
+</section>
+
+<section>
+  <div class="container container-article">
+
+    <article class="article-section">
+      <div class="section-head">The question · 1</div>
+      <h2>Is Connect's architecture genuinely sector-agnostic, or is it a child-health platform that looks generic?</h2>
+      <div class="twocol">
+        <div class="body">
+          <p>CHC proved the Connect architecture works for childhood nutrition and vaccination. KMC proved it works for newborn care. ECD proved it works for behavior-change-heavy interventions. The open question — and it's a real one — is whether the architecture generalizes to sectors that don't live on Dimagi's home turf. Presbyopia screening is a different clinical domain. The screening protocol is optical. The "delivery" is a commodity (reading glasses). The verification elements are different — a photo of glasses fitted, not a MUAC tape reading. Readers is where we find out if the platform actually generalizes, or if our confidence was mostly the result of staying close to what we already knew.</p>
+        </div>
+        <aside>
+          <h4>Partner</h4>
+          <div class="stat-block"><div class="stat-num">Restoring Vision</div><div class="stat-lbl">Primary program partner</div></div>
+          <div class="scope-note">Evidence base is early. Scale-period cost curve, fraud model AUC on Readers-specific data, and long-tail LLO performance are all in-progress measurements.</div>
+        </aside>
+      </div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">The question · 2</div>
+      <h2>What's the same as the rest of Connect?</h2>
+      <div class="twocol">
+        <div class="body">
+          <p>Readers inherits the Connect LDVP architecture without structural modification. Learn runs the same 5-layer training model: Learn app content (optical screening, presbyopia basics, glasses fitting), knowledge test, AI coach with Readers-specific scenarios, peer practice, supervised observation. Deliver contracts LLOs under the Trial Run model — the exact same structure that scaled CHC to 44 LLOs. Verify runs the four-layer stack, with the algorithmic layer being retrained on Readers-specific data patterns. Pay is performance-based, per verified visit. There is no Readers-specific platform surface. That's the point.</p>
+        </div>
+        <aside>
+          <h4>Inherits from the platform</h4>
+          <ul style="font-family:var(--sans); font-size:13px; padding:0; color:var(--ink-2); line-height:1.7; list-style:none">
+            <li style="padding:6px 0; border-bottom:1px dashed var(--rule)">Trial Run contracting</li>
+            <li style="padding:6px 0; border-bottom:1px dashed var(--rule)">5-layer Learn sequence</li>
+            <li style="padding:6px 0; border-bottom:1px dashed var(--rule)">Four-layer verification</li>
+            <li style="padding:6px 0">Performance-based payment</li>
+          </ul>
+        </aside>
+      </div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">The question · 3</div>
+      <h2>What's different?</h2>
+      <div class="twocol">
+        <div class="body">
+          <p>Child health work is predominantly measurement + counseling + referral. Readers is predominantly screening + distribution. That changes several things at the visit level. The visit is shorter. The success criterion is tighter — did the right adult receive the right pair of glasses. The fraud surface is different; swapping a pair of glasses isn't the same attack as falsifying a MUAC reading. The Deliver-app UI has been adapted accordingly. But — and this is what we're watching — the <em class="lit">platform surfaces haven't needed to change</em>. Only the content and the configuration did. If that holds across Readers' early campaigns, it's evidence that the sector-agnostic claim is real.</p>
+        </div>
+        <aside>
+          <h4>Different visit shape</h4>
+          <ul style="font-family:var(--sans); font-size:13px; padding:0; color:var(--ink-2); line-height:1.6; list-style:none">
+            <li style="padding:6px 0; border-bottom:1px dashed var(--rule)">Screening + distribution (not counseling)</li>
+            <li style="padding:6px 0; border-bottom:1px dashed var(--rule)">Commodity delivery</li>
+            <li style="padding:6px 0">Different fraud attack surface</li>
+          </ul>
+        </aside>
+      </div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">The question · 4</div>
+      <h2>What will we know in 12 months?</h2>
+      <div class="twocol">
+        <div class="body">
+          <p>Readers is early. We don't yet have the scale-period cost curve, the fraud-model AUC on Readers-specific data, or the long-tail LLO performance distribution. We'll publish each of those as the evidence base develops. What we already have is a working Trial Run portfolio, a functioning Learn-app training sequence, and a verification stack that has absorbed a new sector without architectural change. The missing pieces are exactly the ones that only scale will produce.</p>
+          <p>If you're a funder considering vision-loss programs or a partner working in primary-care screening, this is the moment to join. The Connect architecture is proven in child health and actively testing in Readers. Early partners shape what "vision on Connect" becomes.</p>
+        </div>
+        <aside>
+          <h4>Publishing cadence</h4>
+          <div class="scope-note">We will add Readers-specific cost and fraud numbers to this file as they're measured.</div>
+        </aside>
+      </div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-head">Program file · Metadata</div>
+      <h2>Details.</h2>
+      <ul class="clean">
+        <li><strong>Partner:</strong> Restoring Vision.</li>
+        <li><strong>Clinical focus:</strong> Presbyopia screening and reading glasses distribution.</li>
+        <li><strong>Operating model:</strong> Trial Run LLO contracting (unchanged from CHC).</li>
+        <li><strong>Status:</strong> Early deployment. Scale and cost evidence pending.</li>
+      </ul>
+    </article>
+
+    <div class="article-foot">
+      <div>
+        <div class="lbl">Back to programs</div>
+        <div class="to">See CHC, KMC, ECD</div>
+      </div>
+      <a href="../programs.html" class="btn btn-ghost">All programs →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="colophon">
+  <div class="container">
+    <div class="colophon-grid">
+      <div><div class="brand" style="margin-bottom:12px">Connect <span class="byline">By Dimagi</span></div><p>A platform for running performance-based frontline health campaigns through locally-led organizations.</p></div>
+      <div><h4>Platform</h4><a href="../learn.html">I. Learn</a><a href="../deliver.html">II. Deliver</a><a href="../verify.html">III. Verify</a><a href="../pay.html">IV. Pay</a></div>
+      <div><h4>Programs</h4><a href="chc.html">CHC</a><a href="kmc.html">KMC</a><a href="ecd.html">ECD</a><a href="readers.html">Readers</a><a href="../programs.html">All programs</a></div>
+      <div><h4>Masthead</h4><a href="https://www.dimagi.com" rel="noopener">About Dimagi</a><a href="../index.html#contact">Request a demo</a><a href="mailto:connect@dimagi.com">connect@dimagi.com</a></div>
+    </div>
+    <div class="colophon-bottom"><span>&copy; 2026 Dimagi, Inc.</span><span>Vol. 1 · No. 4</span></div>
+  </div>
+</footer>
+</div>
+</body>
+</html>
