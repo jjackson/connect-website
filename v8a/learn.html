@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Learn — Connect by Dimagi</title>
+<meta name="description" content="How Connect trains frontline workers. Digital learning, AI coaching, peer practice, supervised observation — a layered model validated across ~400 FLWs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="site">
+<div class="aurora" aria-hidden="true"></div>
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img src="assets/connect-logomark-white.png" alt="">
+      <span class="brand-word">Connect <span class="muted-2" style="font-weight:400">by Dimagi</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="learn.html" class="active">Learn</a>
+      <a href="deliver.html">Deliver</a>
+      <a href="verify.html">Verify</a>
+      <a href="pay.html">Pay</a>
+      <a href="programs.html">Programs</a>
+      <a href="index.html#impact">Impact</a>
+      <a href="index.html#contact" class="nav-cta">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="crumb"><a href="index.html">Connect</a> / Learn</div>
+    <div class="eyebrow">Step 01 of 04 · Learn</div>
+    <h1>Training that survives<br>contact with <em>the doorstep.</em></h1>
+    <p class="lede">Knowledge tests are the easy part. Competence — holding a conversation with a skeptical caregiver, noticing a subtle danger sign, running a motivational-interviewing drill — is the hard part. Connect's Learn surface is the five-layer system we built after discovering that the test alone wasn't enough.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">85%</div><div class="lbl">FLWs progress from training to service delivery</div><div class="src">Platform · ~400 FLWs across programs</div></div>
+      <div class="stat"><div class="num">88%</div><div class="lbl">Score &gt;70% on first observed visits</div><div class="src">Platform · ECD program report, Feb 2026</div></div>
+      <div class="stat"><div class="num">77%</div><div class="lbl">Pass the supervised observation visit</div><div class="src">Platform</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container container-narrow">
+
+    <article class="learning">
+      <div class="header-row">
+        <div>
+          <div class="insight-n">Insight 08 · Methodology</div>
+          <h2>Knowledge tests alone don't produce competent FLWs. We tried. They didn't.</h2>
+          <span class="scope-tag platform">◆ Scope: Platform</span>
+        </div>
+      </div>
+      <p class="muted" style="font-size:17px; max-width:720px">Learn is the surface people assume is easiest: ship the content, make sure they watched it, they're ready. We believed that for longer than we should have.</p>
+
+      <div class="timeline">
+        <div class="phase">
+          <span class="phase-when">Phase 1 — starting assumption</span>
+          <h4>Ship the content. Test on it. If they pass, they're ready.</h4>
+          <p>We built a self-paced digital curriculum in the Learn app with an in-app knowledge test gated on progression. The logic was clean: if a worker can answer questions about MUAC thresholds, danger signs, and referral pathways, they know what they need to know. We deployed this against early cohorts and watched the knowledge-test scores climb across the board.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">Phase 2 — what the field showed us</span>
+          <h4>Knowledge ≠ competence. Workers aced the test and still struggled at the door.</h4>
+          <p>Supervised-observation visits told a different story. Workers who'd scored well on the test struggled with the actual <strong>nuances of in-person counseling</strong>: how to handle a skeptical caregiver, how to recognize a subtle danger sign, how to run motivational-interviewing techniques on a noisy front porch. The test graded recall. The visit demanded judgment. Those are not the same skill.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">Phase 3 — redesign</span>
+          <h4>Layer the training. Content + test + daily AI coach + peer practice + supervised observation.</h4>
+          <p>We re-architected Learn into five sequential layers. Self-paced digital learning comes first, followed by the in-app knowledge test (still mandatory to progress). Then a daily interaction with an <strong>AI coach bot</strong> built on Dimagi's Open Chat Studio, which drills scenario-based practice and motivational-interviewing patterns. Then peer practice. Then a supervised observation visit rated by an LLO supervisor. The test didn't go away. It stopped being the whole gate.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">Phase 4 — what the AI coach adds</span>
+          <h4>Scenario practice at scale. Daily reflection. Gap detection through conversation.</h4>
+          <p>The AI coach does what multiple-choice can't. It runs drills — <em>"a caregiver tells you she doesn't want the vaccine; what do you say?"</em> — and grades the answer on reasoning, not keywords. It prompts daily reflection on real visit experiences and surfaces knowledge gaps through conversation rather than score. In deployment, the coach handles 97.8% of worker queries without human escalation, and the edges — the 2.2% that do escalate — become training data for the next iteration.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">Phase 5 — what we measure now</span>
+          <h4>85% progress, 88% score above 70% on first observed visit, 77% pass the observation.</h4>
+          <p>Across ~400 FLWs in iterative experiments, the layered model produces the numbers that let us sleep at night. <strong>85% of FLWs progress</strong> from training into service delivery. <strong>88% score above 70%</strong> on their first observed visit. <strong>77% pass</strong> the supervised observation. Workers who don't pass aren't "failed" — they get targeted coaching on the specific drill they underperformed on, and most clear the bar on the next attempt.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">What's still open</span>
+          <h4>We don't yet know the marginal value of each layer.</h4>
+          <p>The five layers work as a system. What we haven't been able to isolate, experimentally, is how much each individual layer contributes. Could we drop peer practice and keep the coach? Could we ship Learn without the supervised observation in very-low-supervision contexts? We're designing the next round of experiments now.</p>
+        </div>
+      </div>
+
+      <div class="src">Sources: ECD Overview, Feb 2026 · Founders Pledge Final Report, Feb 2026 · ~400 FLWs across iterative experiments spanning CHC, ECD, and KMC programs.</div>
+    </article>
+
+    <article class="learning">
+      <div class="header-row">
+        <div>
+          <div class="insight-n">Insight 07 · Evidence from ECD</div>
+          <h2>Caregiver attitudes were already correct. The gap was knowledge and behavior.</h2>
+          <span class="scope-tag program">◆ Scope: ECD program · Malawi pilot</span>
+        </div>
+      </div>
+      <p class="muted" style="font-size:17px; max-width:720px">Learn isn't just worker-facing. In ECD, the FLW's visit is itself a learning surface for the caregiver. What Learn delivers depends on what we think the caregiver needs — and Malawi changed that.</p>
+
+      <div class="timeline">
+        <div class="phase">
+          <span class="phase-when">Phase 1 — intervention design</span>
+          <h4>Build positive ECD attitudes in caregivers. Talk-and-play. Responsive caregiving.</h4>
+          <p>The ECD pilot was designed around the standard assumption: that caregivers in low-income settings need to be taught why early childhood development matters. The visit script emphasized attitudinal content — framing talk-and-play as real developmental work, framing responsive caregiving as essential, pushing back on passive-caregiving norms.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">Phase 2 — baseline surprised us</span>
+          <h4>50 caregivers surveyed in Malawi. Attitudes already high. Essentially at ceiling.</h4>
+          <p>We ran a 50-caregiver baseline survey in Malawi. Caregivers <strong>already held positive ECD attitudes before the intervention.</strong> They agreed talk-and-play supports brain development. They endorsed responsive caregiving. The attitude scales had almost no room to move upward because they were already near ceiling. The intervention as designed was aimed at a problem we didn't have.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">Phase 3 — what actually moved</span>
+          <h4>Knowledge and observed behavior. Not attitudes.</h4>
+          <p>Where the Malawi pilot moved the needle was in <strong>knowledge</strong> (+33% on timing of rapid child development, +41% on ways to support mental development) and <strong>observed behavior</strong> (+21% in teaching behaviors, +21% in encouragement of autonomy). Attitudes did not move — because they didn't need to. What caregivers lacked was concrete, scheduled knowledge of when to do what, and the habit of doing it often enough.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">Phase 4 — reallocation</span>
+          <h4>3-visit pilot → 8-10 visits across 12 months. Evidence-guided, not just evidence-based.</h4>
+          <p>We reallocated. The 3-visit pilot is expanding to 8-10 visits across 12 months — <strong>not because more time is needed to convince caregivers ECD matters</strong> (they know), but because <strong>behavior change takes sustained practice</strong>. Learn content for ECD now weights knowledge-reinforcement and behavioral rehearsal over attitudinal framing. The AI coach drills the caregiver-facing behaviors directly.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-when">What we didn't move</span>
+          <h4>Encouragement of autonomy is at 47% at endline. It's the hardest subdomain.</h4>
+          <p>Autonomy remains the holdout. Caregivers readily took up teaching-oriented behaviors. They were slower to adopt behaviors that require <em>stepping back</em> — letting a toddler struggle with a task, tolerating frustration, resisting the impulse to rescue. 47% at endline is up from baseline but short of where we want it. We're designing more targeted drills for the coach; this one's still open.</p>
+        </div>
+      </div>
+
+      <div class="src">Source: ECD Overview, Feb 2026 — Malawi pilot, 50 caregiver surveys (baseline and endline), ~90 observed visits.</div>
+    </article>
+
+    <div class="callout">
+      <p><strong>How these two insights compose.</strong> The first reshapes how we train the worker. The second reshapes what the worker, once trained, is training for. Learn is the surface where both meet. The same Learn app + AI coach architecture runs for both; what changes per program is the content and the behavioral targets the coach drills against.</p>
+    </div>
+
+    <div class="next">
+      <div>
+        <div class="lbl">Next in the cycle</div>
+        <div class="to">Deliver → Activating locally-led organizations</div>
+      </div>
+      <a href="deliver.html" class="btn btn-ghost">Continue to Deliver →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom:12px">
+          <img src="assets/connect-logomark-white.png" alt="">
+          <span class="brand-word">Connect <span class="muted-2" style="font-weight:400">by Dimagi</span></span>
+        </div>
+        <p class="muted" style="max-width:320px; font-size:14px">A platform for running performance-based frontline health campaigns through locally-led organizations.</p>
+      </div>
+      <div class="footer-col"><h4>Platform</h4>
+        <a href="learn.html">Learn</a><a href="deliver.html">Deliver</a><a href="verify.html">Verify</a><a href="pay.html">Pay</a>
+      </div>
+      <div class="footer-col"><h4>Programs</h4>
+        <a href="programs/chc.html">CHC</a><a href="programs/kmc.html">KMC</a><a href="programs/ecd.html">ECD</a><a href="programs/readers.html">Readers</a><a href="programs.html">All programs</a>
+      </div>
+      <div class="footer-col"><h4>Connect</h4>
+        <a href="index.html#impact">Impact</a><a href="https://www.dimagi.com" rel="noopener">About Dimagi</a><a href="index.html#contact">Request a demo</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Dimagi, Inc.</span>
+      <span>Built to serve frontline workers.</span>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>
