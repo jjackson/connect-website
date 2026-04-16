@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn — Connect by Dimagi</title>
+<meta name="description" content="Digital training that prepares frontline workers before they deliver. Competence verified before compensation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,600;1,200;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav">
+    <a class="nav-logo" href="index.html"><img src="assets/connect-logomark.png" alt=""><span>Connect</span><small>by dimagi</small></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-trigger">How It Works</button>
+          <div class="nav-dropdown-panel">
+            <a href="learn.html">Learn <span>Training FLWs before delivery</span></a>
+            <a href="deliver.html">Deliver <span>Services through locally-led orgs</span></a>
+            <a href="verify.html">Verify <span>Biometric, GPS, algorithmic</span></a>
+            <a href="pay.html">Pay <span>Performance-based compensation</span></a>
+          </div>
+        </li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="index.html#impact">Impact</a></li>
+        <li><a class="btn btn-primary" href="index.html#demo">Request a Demo</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-controls="nav-links"><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumbs"><a href="index.html">Connect</a> <span class="sep">/</span> <a href="index.html#how">How It Works</a> <span class="sep">/</span> <span>01 · Learn</span></div>
+      <div class="dateline">
+        <span>Step 01 of 04</span>
+        <span class="sep">/</span>
+        <span>Mandatory training, mandatory assessment</span>
+        <span class="sep">/</span>
+        <span class="highlight">Malawi · Nigeria · Kenya</span>
+      </div>
+      <h1>Workers learn <em>before</em> they deliver.</h1>
+      <p class="lede">Every frontline worker completes self-paced digital training and passes an in-app knowledge assessment before they are cleared to deliver services. Competence is verified before compensation. The bar is the same everywhere.</p>
+      <div class="headline-stats">
+        <div>
+          <div class="num">85%</div>
+          <div class="label">FLWs progress from training to service delivery</div>
+        </div>
+        <div>
+          <div class="num">88%</div>
+          <div class="label">score above 70% on first observed visits</div>
+        </div>
+        <div>
+          <div class="num">~400</div>
+          <div class="label">FLWs validated across iterative experiments</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="hairline">Three pillars</div>
+        <h2>What the Learn module <em>actually does.</em></h2>
+      </div>
+      <div class="pillars">
+        <div>
+          <h4>01 / Mobile-first</h4>
+          <h3>Training on the worker's own phone.</h3>
+          <p>Self-paced. Offline-capable. No classroom time. No travel. Interactive lessons, practice scenarios, assessment-driven progression.</p>
+        </div>
+        <div>
+          <h4>02 / Locally relevant</h4>
+          <h3>Content approved by program SMEs.</h3>
+          <p>Training materials are localised per intervention and region. Approved by subject matter experts — usually the LLO or a program-specific SME identified for the geography.</p>
+        </div>
+        <div>
+          <h4>03 / Assessment-gated</h4>
+          <h3>Pass or don't deliver.</h3>
+          <p>Workers must pass the in-app assessment before they are cleared. Fail means retake. The bar is standard across LLOs and FLWs for any given program.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--offwhite);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="hairline">Field notes · Learn</div>
+        <h2>Where the method <em>had to change.</em></h2>
+        <p>Each entry below follows the same shape: what we thought, what the data told us, what we did about it. This is the methodology behind the pass rates.</p>
+      </div>
+
+      <div class="dispatch">
+        <div class="body">
+
+          <article class="field-note">
+            <div class="fn-meta"><span class="tag">Field note 01 · Malawi, 2025</span><span>~400 FLWs validated</span></div>
+            <h2>Knowledge tests alone don't produce competent FLWs. We tried. They didn't.</h2>
+            <p class="dropcap">Our initial assumption was simple: if a Frontline Worker passes an in-app knowledge test, they are ready to deliver. This is how most digital training programs operate. It is also how our first pilots were structured.</p>
+            <p>Iteration after iteration told us something different. Workers who aced the test still struggled with the nuances of in-person counselling — how to handle a sceptical caregiver, how to recognise the subtle danger signs that don't appear in a multiple-choice question, how to practice motivational interviewing instead of lecturing. <strong>Knowledge ≠ competence.</strong></p>
+            <div class="fn-grid">
+              <div>
+                <h4>What we thought</h4>
+                <p>Pass the test → ready to deliver. Digital-only, scalable, clean.</p>
+              </div>
+              <div>
+                <h4>What we learned</h4>
+                <p>The test measures recall. The field demands judgement, posture, patience. Recall alone left workers unprepared for edge cases.</p>
+              </div>
+            </div>
+            <div class="fn-changed">
+              <strong>What we changed</strong>
+              We layered the model. Self-paced digital learning, in-app knowledge test (must pass), daily interaction with an AI coach built on Open Chat Studio, practice with peers, and one supervised observation visit rated by an LLO supervisor. Five components, not one. The AI coach adds scenario-based practice and motivational-interviewing drills that no multiple-choice question can simulate.
+            </div>
+            <p style="margin-top:1.2rem;">The results tell the story. 85% of FLWs progress from training to service delivery. 88% score above 70% on their first observed visits. 77% pass the supervised observation on first try. Validated through iterative experiments with approximately 400 FLWs across Malawi, Nigeria and Mozambique.</p>
+            <p class="fn-source">Source: ECD Pilot Report, Feb 2026; iterative experiments, 2023–2025.</p>
+          </article>
+
+          <article class="field-note">
+            <div class="fn-meta"><span class="tag">Field note 02 · Malawi, 2025</span><span>50 caregiver surveys</span></div>
+            <h2>We learned caregiver attitudes were already correct. The gap was knowledge.</h2>
+            <p>An ECD intervention, by textbook, should build positive attitudes about responsive caregiving, talk-and-play, developmental support. That's the frame we brought into the Malawi pilot. It turned out to be wrong.</p>
+            <p>Baseline surveys with 50 caregivers showed that nearly all <em>already held</em> positive attitudes. They agreed that talk-and-play supports brain development. They endorsed responsive caregiving. Attitude surveys scored high before we started and high after we finished.</p>
+            <div class="fn-grid">
+              <div>
+                <h4>Where we moved the needle</h4>
+                <p>+33% on timing of rapid child development. +41% on ways to support mental development. +21% observed teaching behaviour. +21% observed encouragement of autonomy.</p>
+              </div>
+              <div>
+                <h4>Where we didn't</h4>
+                <p>Encouragement of autonomy still sits at 47% at endline. The hardest subdomain. Still working on it.</p>
+              </div>
+            </div>
+            <div class="fn-changed">
+              <strong>What we changed</strong>
+              The 3-visit pilot is expanding to 8–10 visits across 12 months. Not because caregivers need more convincing that ECD matters — they already know — but because behaviour change takes sustained practice. The Learn module is now evidence-guided, not just evidence-based. We reallocated the intervention toward knowledge and behaviour, away from attitude.
+            </div>
+            <p class="fn-source">Source: ECD Overview Feb 2026; 50-caregiver baseline/endline survey, Malawi April–July 2025.</p>
+          </article>
+
+          <article class="field-note">
+            <div class="fn-meta"><span class="tag">Field note 03 · Kenya pilot, 2025</span><span>511 queries handled</span></div>
+            <h2>An AI coach turned out to be the part of training that compounds.</h2>
+            <p>The initial Learn module was a closed loop: course, test, pass. Useful, but finite. Once a worker passed, the training ended. Real learning, of course, happens on the job — when something surprises a worker and they need guidance, fast, in context.</p>
+            <p>We built an AI coach on Dimagi's Open Chat Studio platform. It sits between Learn and Deliver. FLWs interact with the coach daily, paid for their interaction. It handles dosing questions, eligibility clarifications, procedural specifics — the things a supervisor used to answer on a crackly phone call, if at all.</p>
+            <div class="fn-grid">
+              <div>
+                <h4>Volume & quality</h4>
+                <p>500 of 511 queries (97.8%) handled without human escalation. Average response time: 5 seconds. Independent evaluation: 88.7% accuracy, 81.5% usefulness.</p>
+              </div>
+              <div>
+                <h4>What it adds</h4>
+                <p>Scenario-based practice. Motivational interviewing drills. Daily reflection on real visit experiences. Identifying knowledge gaps through conversation rather than multiple choice.</p>
+              </div>
+            </div>
+            <div class="fn-changed">
+              <strong>What we changed</strong>
+              Daily AI coach interaction is now part of the ECD program as a paid activity. Locally-led organisations rate the digital training resources 9–9.5/10 when operating without Dimagi support, and all 7 Stage-2 organisations completed vaccine-promotion campaigns using only digital resources. The coach is how ongoing support scales without adding supervisors.
+            </div>
+            <p class="fn-source">Source: Founders Pledge Final Report (Feb 2026); CLP Stage 2 Report; AI-Powered Supervision Demo (public video, Oct 2025).</p>
+          </article>
+
+        </div>
+        <aside>
+          <h5>On this page</h5>
+          <div class="note">
+            <a href="#note01">01 · Knowledge ≠ competence</a><br>
+            <a href="#note02">02 · Attitudes already correct</a><br>
+            <a href="#note03">03 · The AI coach compounds</a>
+          </div>
+          <h5>Methodology</h5>
+          <div class="note">
+            <p>ECD Pilot: baseline/endline surveys, 50 caregivers; observed behaviour scoring by supervisors across 4 subdomains.</p>
+          </div>
+          <h5>Key numbers</h5>
+          <div class="note">
+            <div class="stat">~400</div>
+            <div>FLWs validated across iterative Learn experiments.</div>
+          </div>
+          <div class="note">
+            <div class="stat">9.5/10</div>
+            <div>Rating LLOs give digital Learn resources when running without Dimagi support.</div>
+          </div>
+          <h5>Related</h5>
+          <div class="note">
+            <a href="programs/ecd.html">ECD program detail →</a><br>
+            <a href="deliver.html">Deliver: where Learn pays off →</a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="next-step">
+        <div>
+          <div class="hairline">Next in the cycle</div>
+          <h3>02 · Deliver — Locally-led, app-guided.</h3>
+        </div>
+        <a class="btn btn-dark" href="deliver.html">Continue to Deliver →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="cta-strip">
+    <div class="wrap">
+      <h2>Want a demo of the Learn app?</h2>
+      <a class="btn btn-dark" href="mailto:connect@dimagi.com">Request a Demo</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="brand">
+      <img src="assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+      <p>A global platform for funding verified service delivery, built by Dimagi.</p>
+    </div>
+    <div><h5>Platform</h5><ul><li><a href="learn.html">Learn</a></li><li><a href="deliver.html">Deliver</a></li><li><a href="verify.html">Verify</a></li><li><a href="pay.html">Pay</a></li></ul></div>
+    <div><h5>Programs</h5><ul><li><a href="programs/chc.html">CHC</a></li><li><a href="programs/kmc.html">KMC</a></li><li><a href="programs/ecd.html">ECD</a></li><li><a href="programs/readers.html">Readers</a></li></ul></div>
+    <div><h5>Connect</h5><ul><li><a href="index.html#impact">Impact</a></li><li><a href="https://www.dimagi.com" rel="noopener">About Dimagi</a></li><li><a href="mailto:connect@dimagi.com">Request a Demo</a></li></ul></div>
+    <div class="colophon"><span>© 2026 Dimagi, Inc.</span><span>Dispatch № 04 · v9a</span></div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function(){
+    var links = document.getElementById('nav-links');
+    links.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
