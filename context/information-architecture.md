@@ -1,7 +1,16 @@
 # Information Architecture — Connect by Dimagi Marketing Site
 
-Updated 2026-04-14 for v7 generation. Adds insight-driven content model with
-learning presentation patterns per variant.
+Updated 2026-04-29 for v10 generation (canopy v0.2.66). Adds:
+- `/insights` index page (required, not optional)
+- Homepage Trail Teasers table — every homepage→depth link is a verbatim
+  scoped claim, not a generic CTA
+- Open Questions Roster — every depth page lists 1–3 specific open questions,
+  sourced from insight caveats and nugget caveats
+- Pattern assignments for v10a (Foundation memo) / v10b (Field dispatch) /
+  v10c (Knowledge graph)
+
+Earlier (v7): insight-driven content model with learning presentation
+patterns per variant.
 
 **Key shift from v6 → v7:** Pages are no longer collections of stats and facts.
 On sub-pages (LDVP, program details), each insight is treated as a case entry
@@ -27,8 +36,49 @@ per variant × page-template below.
 | Readers | `/programs/readers.html` | program-detail | programs/readers/* | Ready (overview only) |
 | ECD | `/programs/ecd.html` | program-detail | programs/ecd/* | Ready (rich — pilot data) |
 | CHC | `/programs/chc.html` | program-detail | programs/chc/* | Ready (rich — microplanning, FP report) |
+| Insights | `/insights.html` | insights-index | nuggets.md + insights.md | Ready (required — v10) |
 
 **Programs in catalog only (no detail page):** MBW, Chlorine, WellMe, RUTF, Interviews, Rooftop Sampling — show as "Coming soon" cards.
+
+## Homepage Trail Teasers (v10 — required)
+
+For every homepage section linking to a depth page, the verbatim teaser text.
+Every teaser must be a specific scoped claim ≥8 words containing a number,
+mechanism, or named decision. Generic CTAs ("Learn more", "Explore",
+"Discover", category-only labels) are forbidden — the website-builder lints
+the generated HTML against this list.
+
+| Section → target | Teaser (verbatim, used as link text) |
+|------------------|--------------------------------------|
+| Hero proof → /verify | "We paid FLWs bonuses to defeat our fraud detection — they couldn't. 97.5% scored cleaner than the lowest fabricator. →" |
+| Programs card → /programs/chc | "In CHC, microplans tripled visits-per-child from 0.4 to 1.4 and pushed coverage from 84% to 94%. →" |
+| Programs card → /programs/kmc | "KMC reduces neonatal mortality up to 40%, yet global coverage is below 5% — we close the post-discharge gap. →" |
+| Programs card → /programs/ecd | "Caregivers' ECD attitudes were already correct — we moved knowledge +33% and observed teaching behavior +21%. →" |
+| Programs card → /programs/readers | "RestoringVision's 15,000 reading-glasses pairs delivered through Connect's verified-payment model. →" |
+| LDVP → /learn | "Knowledge tests didn't produce competent FLWs — we layered an AI coach. 88% score above 70% on first observed visits. →" |
+| LDVP → /deliver | "We invented the Trial Run because pre-vetting LLOs didn't predict performance — 65% conversion through it. →" |
+| LDVP → /verify | "Workers naturally cluster — microplans force them into harder areas, and fraud detection hits AUC 0.91. →" |
+| LDVP → /pay | "In CHC, cost per verified visit fell 22% — Nigeria $1.30 with ORS, outside Nigeria $0.78 without. →" |
+| Methodology → /insights | "Every claim, scoped to its evidence — the buffet view of what we've learned across programs. →" |
+
+## Open Questions Roster (v10 — required)
+
+For every depth page, 1–3 specific unresolved tensions, in-progress
+validations, or honest limitations. Sourced from insight caveats and
+nugget caveats. Pages without an Open Questions block fail the build.
+**Do not invent open questions.**
+
+| Page | Open Question 1 | Open Question 2 | Open Question 3 |
+|------|----------------|----------------|----------------|
+| /learn | Whether the AI coach or peer practice contributes more to the 77% supervised-observation pass rate — we have not yet published the decomposition. | Whether the 97.8% AI-coach handle rate from the Kenya CHC pilot holds in non-English-language deployments. | Encouragement-of-autonomy is the hardest ECD sub-domain (47% endline). Whether 8–10 visits will move it, or it needs a different design entirely. |
+| /deliver | Whether the 65% Trial Run conversion holds outside CHC — KMC, ECD, and Readers are still on too small a contract base to publish their own. | "Fragile context requires in-country presence" is a coarse rule learned from CAR. We don't have a sharper predictive model yet. | We have not built a structured framework for capturing what individual LLOs invent locally — the real intervention often lives in their heads. |
+| /verify | The 97.5% adversarial detection is from paid-bonus testing in CHC. Production false-positive rates against unmotivated fabrication aren't yet published. | Microplans failed in dispersed settlement patterns. We don't yet have a clean threshold for when settlement density makes microplanning counterproductive. | Photo verification quality degrades on low bandwidth. False-positive rate on the photo layer in low-bandwidth deployments isn't yet published. |
+| /pay | The $1.70 weighted average masks bundle differences ($1.30 Nigeria with ORS, $0.78 outside). Whether the 22% year-over-year curve holds in non-CHC programs is open. | The N=24 displacement survey is in two Nigerian states. Whether "campaigns are routine" holds in CHV systems with different structures — re-survey first. | Setup-fee projection ($0.40 → ~$0.10/visit at scale) is forward-looking. We will publish the converged number when the next cohort closes. |
+| /programs/chc | Whether the cost-per-verified-visit advantage holds outside Nigeria's commodity bundle — IPA RCT 2026 ($1.5M, PRO Impact) will test. | The 65% Trial Run conversion criteria are program-manager judgment calls today, not codified into a model an outside funder could replicate. | Microplan execution failed in CAR's dispersed settlement and on inaccessible land. We removed it from one campaign entirely. |
+| /programs/kmc | Whether discharge-notification integration alone closes the 50% → 70% within-3-days enrollment gap, or the 3-day target itself needs to be redesigned. | Equipment availability across the 6 KMC LLO partners has been uneven. We don't yet have a published audit of equipment uptime. | Whether KMC FLWs will sustain ≥4 visits per case at the 5,000+ scale; current average is 3.4 against a 5-visit guardrail. |
+| /programs/ecd | The 47% endline on encouragement-of-autonomy is the hardest sub-domain. Whether 8–10 visits will move it is open. | The Malawi pilot is N=50 caregivers. Whether the attitude-already-correct finding holds in Mozambique and Nigeria contexts is open. | Whether AI coach contribution to the 77% pass rate generalizes outside ECD — we have not run the controlled comparison. |
+| /programs/readers | LLOs finalized (eHA, C3HD); contract signing pending. Field-performance data won't exist until the first cohort runs. | Whether the screening protocol holds quality consistency across novice FLWs trained only digitally — first cohort will tell. | Whether door-to-door distribution finds the right adults (35+, presbyopic) at sufficient rates without targeting infrastructure. |
+| /insights | This page is only as honest as the insights and nuggets the team mines. Internal lore that didn't make it onto the public site is the rate-limiter, not the format. | Numbers without benchmarks are excluded by policy — but our benchmark library is uneven across programs. KMC and Readers have thinner comparators than CHC. | Whether the methodology-footer framing ("we have a methodology for what's on the website") survives a year of new programs without drift toward marketing copy. |
 
 ## Navigation
 
@@ -127,6 +177,9 @@ clicked in — reward the commitment.
 | **v7a Editorial** | Hero + teasers only (homepage stays light) | **Pattern B: Two-Column Long-Form** — body text left, supporting material (methodology notes, specific numbers, pull quotes drawn from body) right | **Pattern E: Question-Led** — each program frames 3-4 learnings as questions (e.g., "How do you scale KMC when global coverage is below 5%?") with 300-500 word answers |
 | **v7b Dashboard** | Hero + teasers only | **Pattern A: Engineering Retrospective** — each learning as a structured entry: The question / What we tried / What we found / What changed / What's still open, with data in prose and sources at bottom | **Pattern C: Annotated Discovery** — clean narrative surface with inline source markers (superscripts or small underlines) revealing citation, methodology, or caveat on hover |
 | **v7c Platform** | Hero + teasers only | **Pattern D: Progression of Thinking** — each learning as a timeline ("Q1 2025: we assumed X. By Q3, data suggested Y. By 2026, we'd redesigned to Z"), showing how the team's thinking evolved with data at each phase | **Pattern E: Question-Led** — each program as a case study of how the platform answered a specific delivery question |
+| **v10a Foundation memo** | Hero + verbatim trail teasers, dense and serif, footnoted | **Pattern C: Annotated Discovery** — clean serif prose with superscript citations and inline source notes; reads like a Gates Foundation internal memo | **Pattern C: Annotated Discovery** — same Pattern C treatment for program detail, with inline footnotes |
+| **v10b Field dispatch** | Hero + verbatim trail teasers, journal voice, large editorial typography | **Pattern D: Progression of Thinking** — timeline of how the team's thinking evolved on each LDVP step | **Pattern B: Two-Column Long-Form** — body on left, methodology/quotes on right; each program reads like a New Yorker dispatch |
+| **v10c Knowledge graph** | Hero + verbatim trail teasers, dense interlinked layout, evidence tier badges visible from homepage | **Pattern A: Engineering Retrospective** — each learning has structured headings (question / what we tried / what we found / what changed / what's still open) and a visible evidence-tier badge | **Pattern E: Question-Led** — each program frames 3–4 questions, each with an evidence-tier badge, deep-link nuggets are first-class navigation |
 
 ### Which Insights Go Where (from insights.md)
 
@@ -214,20 +267,41 @@ Internal links (NEVER as public href):
 
 Each variant generates:
 ```
-v6X/
+v10X/
   index.html
   learn.html
   deliver.html
   verify.html
   pay.html
   programs.html
+  insights.html         (NEW — required v10)
   programs/
     kmc.html
     readers.html
     ecd.html
     chc.html
   styles.css
-  assets/  (copy from v5a/assets/)
 ```
 
-Total: 10 HTML files + 1 CSS + assets per variant × 3 variants.
+Total: 11 HTML files + 1 CSS per variant × 3 variants = 33 pages, 3 CSS files.
+
+## /insights Page Template (v10 — required)
+
+Hero: "What we've learned" + one-sentence framing.
+
+Index (the buffet): every Kept insight from `insights.md` and every
+above-threshold nugget from `nuggets.md` listed as a one-sentence teaser
+with Scope, source link, and an optional Open Question.
+
+Grouped by Scope. Programs first (CHC, ECD, KMC, Readers), then Platform
+mechanisms. Within each group, ordered by judge-anticipated score
+descending.
+
+Methodology footer: a paragraph explaining what makes the cut — claims
+scoped to evidence, numbers carry benchmarks, in-validation findings
+named with the evaluation underway.
+
+Per Pattern assignments:
+- **v10a:** Annotated Discovery — clean prose surface, inline source markers
+- **v10b:** Field-dispatch journal voice — each entry as a stub of a longer story
+- **v10c:** Evidence-tier badges visible on every entry, deep-link anchors

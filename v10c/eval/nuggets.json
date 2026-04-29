@@ -1,0 +1,157 @@
+{
+  "run": "v10c",
+  "judge_run_at": "2026-04-29",
+  "design_direction": "Knowledge graph — slate cool palette, evidence-tier badges visible on every claim, Pattern A engineering-retrospective on LDVP, Pattern E question-led on programs, /insights as anchor home base with deep-link teasers",
+  "pages_judged": [
+    {
+      "page": "learn.html",
+      "title": "Learn — Knowledge tests didn't produce competent FLWs",
+      "most_memorable_quote": "Workers who aced the digital knowledge test still struggled with the parts of frontline work that are not test-shaped — handling a skeptical caregiver, recognising subtle danger signs in a quiet baby, motivational interviewing during a five-minute visit while another child cries on a hip.",
+      "evidence_tier": "named (Founders Pledge Final Report Feb 2026; Open Chat Studio platform; ~400 FLWs validation cohort; Kenya CHC pilot 500/511 queries 88.7% accuracy 81.5% usefulness; ECD Overview Feb 2026 with N=50 caregiver panel)",
+      "scope_accurate": true,
+      "scope_notes": "97.8% AI-coach handle rate explicitly scoped to 'Kenya CHC pilot'; 88% first-visit pass rate scoped to 'across the layered pipeline ~400 FLWs spanning ECD, CHC, KMC'; ECD Malawi pilot scoped to N=50 baseline/endline panel; +33%/+41%/+21% scoped to endline behavior sub-domains.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Have not yet published failure-mode analysis on 11 Kenya escalations",
+        "97.8% handle rate not yet tested in non-English-language deployments",
+        "Have not decomposed AI-coach contribution from peer-practice contribution to the 77% pass rate",
+        "47% encouragement-of-autonomy is endline; whether 8–10 visits will move it is open",
+        "Whether attitude-already-correct finding holds beyond Malawi N=50 in Mozambique and Nigeria contexts is open"
+      ],
+      "score": 9,
+      "judge_notes": "Three substantive learning sections (470/337/344 words), each with explicit Pattern A structure: 'The question we had / What we tried / What we found / What changed / What's still open'. Scope discipline strong: AI-coach numbers tied to Kenya pilot, ECD numbers to Malawi N=50 panel. Multiple named limitations with specific next steps. The 'kicker line' (test passed, visit failed) is sharp. Each learning carries a visible evidence-tier badge plus a deep-link to insights anchor. Loses one point for the same reason v10a's learn.html did — has not yet decomposed AI-coach vs peer-practice contributions to the 77% pass rate, which the judge would have wanted to see attempted."
+    },
+    {
+      "page": "deliver.html",
+      "title": "Deliver — We invented the Trial Run because pre-vetting didn't predict performance",
+      "most_memorable_quote": "The signal we were screening on was decoupled from the outcome we were paying for. After three campaigns we stopped pretending the screening worked.",
+      "evidence_tier": "named (FP Final Report Feb 2026 with full LLO funnel: 107 EOIs / 37 contracts / 24 Trials / 14 campaigns; CLP Stage 2 Report Feb 2026; CAR cohort post-mortem documented)",
+      "scope_accurate": true,
+      "scope_notes": "Trial Run conversion 65% scoped to CHC; 5/7 religious-leader finding scoped explicitly to CLP Stage 2 vaccine campaign within CHC; CAR drop-out scoped to CHC vaccine work with three named features (staffing concentration, connectivity fragility, concurrent emergency-response load).",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "65% conversion criteria are program-manager judgment calls, not codified into a model",
+        "Whether 65% holds outside CHC is open — KMC, ECD, Readers too small a contract base to publish their own",
+        "'In-country presence' rule for fragile contexts is coarse, lacks predictive model",
+        "No structured framework for capturing what individual LLOs invent locally"
+      ],
+      "score": 9,
+      "judge_notes": "Strong: publishes the full funnel (not just the favorable conversion rate), publishes a failure (CAR), explicitly says the screening machinery is 'human, not algorithmic.' The 'There was no recoverable middle path' line lands. Pattern A structure clean across all three learnings (447/376/271 words). The CAR section connects connectivity AND staffing AND concurrent emergency-response load. The deep-link arrows to insights anchors strengthen the knowledge-graph treatment. CAR section (3rd) at 271 words is on the shorter end but stays specific."
+    },
+    {
+      "page": "verify.html",
+      "title": "Verify — Microplans, the adversarial test, and guardrails-vs-payment-criteria",
+      "most_memorable_quote": "Convenience sampling at the exact moment equity was the goal.",
+      "evidence_tier": "named (FP Final Report Feb 2026 with adversarial test methodology including 3 rounds, 33 fakers, AUC 0.91 ± 0.09; KMC Conceptual Model March 2026 for 50% vs 70% guardrail across 4,005 cases)",
+      "scope_accurate": true,
+      "scope_notes": "Microplanning numbers (0.4→1.4, 82-84%→94%) scoped to CHC. AUC 0.91 scoped to CHC adversarial test with paid-bonus structure named. Guardrails-vs-payment-criteria distinction described as platform-level with KMC 3-day window as live example (50% vs 70%, 4,005 cases).",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Microplans failed in dispersed settlement; no clean threshold for when settlement density makes them counterproductive",
+        "Production false-positive rate against unmotivated fabrication not yet published",
+        "Photo-layer false-positive rate in low-bandwidth deployments not yet published",
+        "If discharge-notification integration ships and 50%→70% number doesn't move, we'll redesign the target"
+      ],
+      "score": 10,
+      "judge_notes": "Strongest depth page in v10c, matching v10a's verify.html score. Three meaty learnings (472/364/333 words). The adversarial test section is the signature: explains why three features rather than 20, names the bonus structure, distinguishes the algorithmic layer from the other three layers explicitly. The guardrails section gives the KMC live example honestly (50% vs 70%) and explains the philosophical reason punishment fails ('Punishing FLWs for that gap would produce falsified timestamps, not faster contact'). Multiple limitations named with explicit 'we will publish' commitments. Pattern A executed cleanly with each step labelled; the badging adds another layer of evidence-tier transparency on top."
+    },
+    {
+      "page": "pay.html",
+      "title": "Pay — In CHC, cost per verified visit fell 22%",
+      "most_memorable_quote": "Weighted averages are convenient for headlines and dishonest for procurement.",
+      "evidence_tier": "named (FP Final Report Feb 2026 with bundle separation: $1.30 Nigeria/14 contracts vs $0.78 outside/17 contracts; FLW Displacement Survey Oct 2025 with N=24 in Gombe and Sokoto)",
+      "scope_accurate": true,
+      "scope_notes": "22% cost reduction scoped explicitly to CHC during FP grant period. Bundle separation specifies country/commodity. Displacement finding scoped to 24 interviews in 2 Nigerian states with explicit 're-survey before claiming it elsewhere.' Methodology learning scoped as platform-level commitment.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "$1.70 weighted hides bundle differences; 22% curve in non-CHC programs is open",
+        "N=24 displacement is in two Nigerian states; CHV systems with different structures untested",
+        "Setup-fee projection ($0.40→$0.10) is forward-looking, not measured",
+        "Verified-visit cost can itself be gamed if verification stack is shallow; per-layer false-positive rates not yet published"
+      ],
+      "score": 10,
+      "judge_notes": "Excellent scope discipline. The repeated correction 'In the CHC program, cost per verified visit fell 22%' uses the language insights.md prescribes, and the page calls out the wrong framing ('Connect got 22% leaner') explicitly. The bundle-separation section is the kind of methodological honesty most marketing sites can't bring themselves to do. The displacement section names the Western-assumption problem directly. Three substantive learnings (418/306/310 words). Pattern A executed cleanly. The methodology learning (Q2) on metric choice is itself an improvement over v10a — explicitly defending the choice of cost-per-verified-visit."
+    },
+    {
+      "page": "programs/chc/index.html",
+      "title": "CHC — Child Health Campaign",
+      "most_memorable_quote": "Out of 33 adversarial fakers across the three rounds, only 2.5% of real workers received fraud-risk scores higher than the lowest-scoring fabricator.",
+      "evidence_tier": "named (FP Final Report Feb 2026; CLP Stage 2 Report Feb 2026; embedded YouTube link to Inside CHC Kenya)",
+      "scope_accurate": true,
+      "scope_notes": "All five questions scoped consistently to CHC. The page acknowledges that the mechanisms (Trial Run, microplanning, fraud detection, cost inversion) are platform-portable but the published numbers are CHC-specific. Pattern E question-led: each of 5 mechanisms framed as a literal question the team had to answer.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Cost-per-verified-visit advantage outside Nigeria's bundle untested; IPA RCT 2026 will test",
+        "65% Trial Run conversion criteria are program-manager judgment calls today",
+        "Microplan execution failed in CAR's dispersed settlement and on inaccessible land",
+        "We have not built a structured framework for capturing what LLOs invent locally"
+      ],
+      "score": 9,
+      "judge_notes": "Pattern E executed cleanly across 5 questions (367/309/329/283/273 words each). The 'How do we vet LLOs when past reputation doesn't predict performance?' framing is exactly what the IA prescribed for Pattern E. Each question card carries an evidence-tier badge plus deep-links to both the LDVP step and the insights index — the knowledge-graph interlinking pays off here. Loses one point because the question framing is slightly less crisp than the v10a Annotated Discovery prose for the same content (a stylistic trade-off — the badging+question structure costs some prose density)."
+    },
+    {
+      "page": "programs/kmc/index.html",
+      "title": "KMC — Kangaroo Mother Care",
+      "most_memorable_quote": "Punishing FLWs for that gap would produce falsified timestamps, not faster contact.",
+      "evidence_tier": "named (KMC Conceptual Model March 2026 with 4,005 cases; WHO 2022 KMC guidance; YouTube link to PIPNU interview)",
+      "scope_accurate": true,
+      "scope_notes": "WHO 40% mortality reduction scoped to WHO 2022 guidance; <5% global coverage scoped to coverage gap. 12.8-day average and 50% within-3-days scoped to 4,005 cases as of March 2026. Equipment standard scoped to KMC platform-wide rule.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Whether discharge-notification integration alone closes 50%→70% gap, or 3-day target needs redesign",
+        "Equipment availability across 6 KMC LLO partners has been uneven — uptime audit not yet published",
+        "Whether KMC FLWs will sustain ≥4 visits at 5,000+ scale; current 3.4 average against 5-visit guardrail"
+      ],
+      "score": 9,
+      "judge_notes": "Pattern E executed across 4 questions (316/335/266/305 words). The guardrails question (Q3) is the strongest section — the 50% vs 70% target stays honest, the discharge-notification gap is named as the upstream cause, and the philosophy is connected to the Verify page treatment. The visit-completion question (Q4) carries a hypothesis badge correctly because the 4,005-case data is real but the 5,000+ projection isn't yet measured. The hypothesis badge usage on Q4 is exactly the v10c knowledge-graph commitment in action."
+    },
+    {
+      "page": "programs/ecd/index.html",
+      "title": "ECD — Early Childhood Development",
+      "most_memorable_quote": "The intervention didn't need to convince them — it needed to close the gap between belief and practice.",
+      "evidence_tier": "named (ECD Overview Feb 2026; Malawi pilot, 76 FLWs, 9,510+ visits, 50-caregiver baseline/endline panel; cross-link to Connect Learn pipeline)",
+      "scope_accurate": true,
+      "scope_notes": "+33%/+41%/+21% scoped to Malawi endline panel of 50. 47% endline encouragement-of-autonomy scoped to same panel. Cost $7-$18 per child scoped to dosage-redesigned cohort.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "47% endline on encouragement-of-autonomy hardest sub-domain; whether 8-10 visits will move it is open",
+        "Malawi pilot N=50; whether attitude-already-correct holds in Mozambique and Nigeria contexts is open",
+        "Whether AI coach contribution to 77% pass rate generalizes outside ECD — controlled comparison not run"
+      ],
+      "score": 9,
+      "judge_notes": "Pattern E across 4 questions (295/301/332/321 words). Q1 'Were caregivers' attitudes already where we needed them?' is exactly the question-led framing the IA prescribed for v10c programs. Q4 'Why is encouragement-of-autonomy the hardest sub-domain?' is treated honestly with the hypothesis badge — the page does not claim the dosage redesign will close the gap, it names the question and commits to publishing the next endline. Attitude-already-correct finding stays N=50 scoped throughout."
+    },
+    {
+      "page": "programs/readers/index.html",
+      "title": "Readers — Reading Glasses Distribution",
+      "most_memorable_quote": "We will publish the first cohort's results — including cost-per-verified-pair, Trial Run conversion, and verification-layer performance — as the data lands.",
+      "evidence_tier": "design intent (RestoringVision partnership commitment of 15,000 pairs; LLOs eHA and C3HD finalized; Trial Run model carry-forward from CHC)",
+      "scope_accurate": true,
+      "scope_notes": "All three questions correctly scoped as pre-cohort design intent rather than measured findings. Trial Run mechanism reference scoped to CHC (where it was measured). The page is unusual in that it deliberately reports on what hasn't happened yet — and the hypothesis badge on every question makes that transparent.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Field-performance data won't exist until first cohort runs",
+        "Whether screening protocol holds quality consistency across novice FLWs trained only digitally — first cohort will tell",
+        "Whether door-to-door distribution finds 35+ presbyopic adults at sufficient rates without targeting infrastructure"
+      ],
+      "score": 8,
+      "judge_notes": "Pattern E across 3 questions (286/285/273 words). Earns +1 over v10a's readers.html (which scored 7) because the badging system makes the pre-cohort framing structurally explicit — every question carries a hypothesis badge, the insights index entry carries a hypothesis badge, and the page itself names the badging commitment as the methodology. The v10c knowledge-graph treatment is doing real work on the page that has the least field data; that's a meaningful improvement over v10a where the same page lacked a structural way to flag pre-cohort claims."
+    },
+    {
+      "page": "insights.html",
+      "title": "Insights — the knowledge graph anchor",
+      "most_memorable_quote": "This is the home base of v10c. The same evidence-tier badges visible here are the badges that appear on every depth page.",
+      "evidence_tier": "buffet of named sources (FP Final Report Feb 2026, ECD Overview, CLP Stage 2, KMC Conceptual Model, FLW Displacement Survey, WHO 2022 guidance) — 20 entries above threshold from nuggets.md",
+      "scope_accurate": true,
+      "scope_notes": "Every entry includes a Scope line. Programs first (CHC 10 entries, ECD 2, KMC 4, Readers 1), then Platform (3). Within each group ordered by judge-anticipated weight. Methodology footer explicitly states the inclusion rule.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "This page is only as honest as the insights and nuggets the team mines; internal lore that didn't make it on is the rate-limiter",
+        "Numbers without benchmarks excluded by policy — but benchmark library is uneven across programs (KMC and Readers thinner than CHC)",
+        "Whether the methodology-footer framing survives a year of new programs without drift toward marketing copy"
+      ],
+      "score": 10,
+      "judge_notes": "v10c's strongest page by design — the IA called for /insights to be the anchor of the knowledge-graph treatment, and the page delivers: every entry carries a visible evidence-tier badge, the legend at the top of the page makes the badging commitment explicit, the deep links land on the specific anchor of the home page that treats each claim, and the methodology footer is more substantive than v10a's (explicitly defending the badge tiers and tying the v10c structure to the same commitment as the rest of the site). The 'this page is the home base of v10c' framing in the lede pays off in the layout: scope groups, anchors per entry, and a tier legend make the page genuinely scannable as well as readable. Earns 10 because for the first time the insights page does specific structural work the depth pages cannot — it makes the badging system itself legible."
+    }
+  ]
+}

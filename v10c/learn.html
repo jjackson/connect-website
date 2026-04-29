@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Learn — Connect by Dimagi</title>
+<meta name="description" content="Why a knowledge test is not a competence test — the engineering retrospective on the four layers we built around it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="brand">Connect <span class="by">/ by Dimagi</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="learn.html" class="current">Learn</a>
+      <a href="deliver.html">Deliver</a>
+      <a href="verify.html">Verify</a>
+      <a href="pay.html">Pay</a>
+      <a href="programs/index.html">Programs</a>
+      <a href="insights.html">Insights</a>
+    </nav>
+    <span class="meta">§1 LEARN · v10c</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <p class="crumbs"><a href="index.html">Home</a> / <a href="insights.html">Insights</a> / Learn</p>
+
+  <section class="hero">
+    <p class="kicker">§1 · Learn · how digital training produces competent FLWs</p>
+    <h1>Knowledge tests didn't produce competent FLWs. We had to layer.</h1>
+    <p class="lede">Workers who aced the digital knowledge test still struggled in real visits. We stopped treating the test as a release gate and built four additional layers around it. Across roughly <span class="n">400</span> FLWs of iterative experimentation: <span class="n">88%</span> score above 70% on first observed visits and <span class="n">85%</span> progress from training to delivery. This page is the engineering retrospective: the question we had, what we tried, what we found, what changed, and what's still open.</p>
+  </section>
+
+  <section class="stat-row" aria-label="Headline numbers">
+    <div class="stat"><span class="num">88%</span><span class="k">first-visit ≥70% pass</span></div>
+    <div class="stat"><span class="num">85%</span><span class="k">training → delivery</span></div>
+    <div class="stat"><span class="num">77%</span><span class="k">supervised observation pass</span></div>
+    <div class="stat"><span class="num">~400</span><span class="k">FLWs across pipeline</span></div>
+  </section>
+
+  <!-- LEARNING 1 — Knowledge ≠ competence -->
+  <article class="learning" id="layered">
+    <div class="learning-head">
+      <span class="section-label">Learning 1 of 3 · Platform · I8 · N5</span>
+      <span class="badge hard">hard data</span>
+      <a class="deep" href="insights.html#n5">⟶ insights#n5</a>
+    </div>
+    <h2>The test passed. The visit failed.</h2>
+
+    <div class="retro-step">
+      <span class="step-label">The question we had</span>
+      <p>If a frontline worker can answer 70% of multiple-choice questions about a protocol — danger signs, dosage, when to refer — does that mean they can deliver the visit competently in a real home? Our first Learn pipeline implicitly said yes. The test was the release gate; passing it was the credential.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What we tried</span>
+      <p>Self-paced modules in a Connect Learn app, one per program. An in-app multiple-choice test at the end with a <span class="n">70%</span> pass-mark. Workers who passed went to service delivery. Workers who failed re-took the modules. Clean, auditable, and — for the FLWs we were sending into homes — insufficient. Our supervised-observation visit, the last step in the pipeline, kept catching workers the test had passed.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What we found</span>
+      <p>Knowledge is not competence. Workers who aced the digital test still struggled with the parts of frontline work that are not test-shaped — handling a skeptical caregiver, recognising subtle danger signs in a quiet baby, motivational interviewing during a five-minute visit while another child cries on a hip. The pattern was consistent across ECD, CHC, and KMC pilots. Test scores predicted exam-shaped recall; they did not predict in-home performance.</p>
+      <p>What we did measure: in our Kenya CHC pilot, an AI coach we built on Dimagi's Open Chat Studio — accessed by FLWs through WhatsApp — handled <span class="n">500 of 511</span> queries (<span class="n">97.8%</span>) without escalating to a human supervisor, with a <span class="n">5-second</span> average response time. Independent evaluation: <span class="n">88.7%</span> accuracy and <span class="n">81.5%</span> usefulness<sup class="fn"><a href="#s1">1</a></sup>. The handle rate was the empirical evidence that an AI coach could carry the routine middle of supervision; the <span class="n">2.2%</span> escalation stream is the dataset we now mine to extend the bot.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What changed</span>
+      <p>The test was demoted from release gate to midpoint. The pipeline now runs in five stages: self-paced learning, in-app knowledge test, daily AI-coach interaction, structured peer practice, and one supervised-observation visit rated by an LLO supervisor. The test gates progress to the AI coach; the AI coach is what closes the gap to competence. Across roughly <span class="n">400</span> FLWs of iterative experimentation<sup class="fn"><a href="#s2">2</a></sup>: <span class="n">85%</span> of workers progress from training to service delivery, <span class="n">88%</span> score above 70% on their first observed visit, and <span class="n">77%</span> pass the supervised observation. The <span class="n">23%</span> who don't pass get coaching, not termination — and the AI coach captures the patterns of where they failed for the next iteration of the Learn content.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What's still open</span>
+      <p>We have not yet published the failure-mode analysis on the eleven Kenya escalations, nor whether the <span class="n">97.8%</span> handle rate holds in non-English-language deployments. The Open Chat Studio platform supports multilingual content, but the FLW prompt corpus we use is English-heavy. We also have not decomposed the AI-coach contribution from peer-practice contribution to the <span class="n">77%</span> supervised-observation pass rate; we will publish the decomposition when the next pilot closes.</p>
+    </div>
+
+    <div class="src">
+      <strong>Source:</strong> Founders Pledge Final Report (Feb 2026), CHC §AI-Powered Supervision; Connect Learn pipeline metrics validated across ~400 FLWs spanning ECD, CHC, KMC. <a href="#s1">[1]</a> <a href="#s2">[2]</a>
+    </div>
+  </article>
+
+  <!-- LEARNING 2 — ECD floor effect -->
+  <article class="learning" id="ecd-floor">
+    <div class="learning-head">
+      <span class="section-label">Learning 2 of 3 · ECD Malawi · I7 · N6</span>
+      <span class="badge hard">hard data</span>
+      <a class="deep" href="insights.html#n6">⟶ insights#n6</a>
+    </div>
+    <h2>In ECD, attitudes were already correct. Knowledge and behavior were the gap.</h2>
+
+    <div class="retro-step">
+      <span class="step-label">The question we had</span>
+      <p>The standard ECD intervention thesis says caregivers undervalue talk-and-play and need attitude change. Was that true in our population, and was the curriculum we shipped to FLWs designed against the right gap?</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What we tried</span>
+      <p>A three-visit pilot built around attitude shift — modules and FLW prompts emphasizing why responsive caregiving matters, why the first 1,000 days matter, why language exposure matters. Then a baseline survey across <span class="n">50</span> caregivers in Malawi<sup class="fn"><a href="#s3">3</a></sup> to measure both attitudes and knowledge before the intervention started.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What we found</span>
+      <p>The baseline scrambled the thesis. Nearly all <span class="n">50</span> caregivers <em>already</em> held positive ECD attitudes. They agreed talk-and-play supports brain development. They endorsed responsive caregiving. The attitude scores were a ceiling, not a floor — high before we started and high after we finished. Where we actually moved the needle, in the endline panel: knowledge of the timing of rapid child development rose <span class="n">+33</span> percentage points; knowledge of ways to support mental development rose <span class="n">+41</span>; observed teaching behavior rose <span class="n">+21</span>; observed encouragement-of-autonomy rose <span class="n">+21</span> but reached only <span class="n">47%</span> at endline. The pattern was consistent: knowledge moved sharply when given, behavior moved more slowly because behavior is not a quiz answer.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What changed</span>
+      <p>We rebuilt the dosage. The 3-visit pilot is being expanded to <span class="n">8–10</span> visits across 12 months — not because we need more time to convince caregivers ECD matters (they know it matters) but because behavior change takes sustained practice. The extra visits are not more talk; they are more observed practice with feedback. The Learn content for ECD now opens with a frank acknowledgement of the floor effect — "you already know this matters" — and routes the curriculum into practical sequencing of rapid-development milestones.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What's still open</span>
+      <p>Encouragement-of-autonomy at <span class="n">47%</span> endline is the hardest sub-domain. We do not yet know whether <span class="n">8–10</span> visits will move it, or whether it requires a different intervention design entirely. The Malawi panel is N=<span class="n">50</span>; whether the attitude-already-correct finding holds in Mozambique and Nigeria contexts is open.</p>
+    </div>
+
+    <div class="src">
+      <strong>Source:</strong> ECD Overview (Feb 2026); Malawi pilot, 76 FLWs, 9,510+ visits, 50-caregiver baseline/endline panel. <a href="#s3">[3]</a>
+    </div>
+  </article>
+
+  <!-- LEARNING 3 — AI coach handle rate -->
+  <article class="learning" id="ai-coach">
+    <div class="learning-head">
+      <span class="section-label">Learning 3 of 3 · CHC Kenya · N14</span>
+      <span class="badge hard">hard data</span>
+      <a class="deep" href="insights.html#n14">⟶ insights#n14</a>
+    </div>
+    <h2>The AI coach handles 97.8% of queries. The 2.2% is the data we use most.</h2>
+
+    <div class="retro-step">
+      <span class="step-label">The question we had</span>
+      <p>One human supervisor for ten FLWs is expensive and slow; one for fifty is cheap and unsupervised. Could an AI coach occupy the middle layer well enough that human supervisors only see the genuinely novel cases — and could we prove it with numbers a foundation officer would accept?</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What we tried</span>
+      <p>A chatbot built on Dimagi's Open Chat Studio, trained on the CHC protocol corpus, deployed via WhatsApp because that's the surface FLWs already used daily. We logged every query and every response. We set up an independent rater process to score responses on accuracy and usefulness, blind to the bot's internal confidence.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What we found</span>
+      <p>In the Kenya CHC pilot<sup class="fn"><a href="#s1">1</a></sup>, the chatbot handled <span class="n">500 of 511</span> FLW queries — <span class="n">97.8%</span> — without escalating to a human supervisor, at a <span class="n">5-second</span> average response time. Independent rating: <span class="n">88.7%</span> accuracy, <span class="n">81.5%</span> usefulness. The architectural reason this matters is leverage: the AI coach as middle layer answers the routine 97.8% — protocol questions, dosage clarifications, "what do I do if the caregiver refuses" scenarios — and routes only genuinely novel queries to human supervisors. That <span class="n">2.2%</span> escalation stream is also the dataset we mine to extend the bot. Every escalation is a flagged gap in either the Learn content, the protocol, or the bot's prompt; we triage them weekly.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What changed</span>
+      <p>The AI coach is now a permanent middle layer in the Learn pipeline, not a pilot artifact. We standardized the eval — handle rate, accuracy, usefulness, response time — and run it per-program on rollout. The CHC numbers above are the calibration; KMC and ECD are running the same eval now.</p>
+    </div>
+
+    <div class="retro-step">
+      <span class="step-label">What's still open</span>
+      <p>Whether the <span class="n">97.8%</span> handle rate holds in non-English-language deployments. The Open Chat Studio platform is multilingual; the FLW prompt corpus we have used to refine prompts is English-heavy. A clean apples-to-apples comparison across languages is something we expect to publish when the next pilot closes. We also have not run a controlled comparison of AI coach contribution vs peer-practice contribution to the supervised-observation pass rate.</p>
+    </div>
+
+    <div class="src">
+      <strong>Source:</strong> Founders Pledge Final Report (Feb 2026), CHC §AI-Powered Supervision — Kenya pilot, 500/511 queries, independent eval 88.7% accuracy / 81.5% usefulness / 5-second response time. <a href="#s1">[1]</a>
+    </div>
+  </article>
+
+  <!-- Open questions -->
+  <section class="open-questions">
+    <h3>Open questions on Learn</h3>
+    <ol>
+      <li>Whether the AI coach or peer practice contributes more to the <span class="n">77%</span> supervised-observation pass rate — we have not yet published the decomposition.</li>
+      <li>Whether the <span class="n">97.8%</span> AI-coach handle rate from the Kenya CHC pilot holds in non-English-language deployments.</li>
+      <li>Encouragement-of-autonomy is the hardest ECD sub-domain (<span class="n">47%</span> endline). Whether <span class="n">8–10</span> visits will move it, or it needs a different design entirely.</li>
+    </ol>
+  </section>
+
+  <!-- Sources -->
+  <aside class="sources">
+    <h3>Sources</h3>
+    <ol>
+      <li id="s1">CHC overview, "AI-Powered Supervision" — Kenya pilot of Open Chat Studio FLW chatbot via WhatsApp; 500/511 queries handled without escalation; independent eval 88.7% accuracy, 81.5% usefulness; 5-second response time; Founders Pledge Final Report (Feb 2026).</li>
+      <li id="s2">Connect Learn pipeline metrics, validated across ~400 FLWs spanning ECD, CHC, KMC; first-observed-visit pass rate 88%, supervised-observation pass rate 77%, training-to-delivery progression 85%.</li>
+      <li id="s3">ECD Overview (Feb 2026) — Malawi pilot endline survey; 50 caregivers in baseline/endline panel; 76 FLWs; 9,510+ visits.</li>
+    </ol>
+  </aside>
+
+  <div class="next-step">
+    <span class="label-line">§2 →</span>
+    <a href="deliver.html">Deliver — why pre-vetting LLOs didn't predict performance, and the Trial Run that replaced it ⟶</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="colophon">
+      <strong>Connect by Dimagi</strong><br />
+      A platform for verified frontline work.
+    </div>
+    <div>
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="verify.html">Verify</a></li>
+        <li><a href="pay.html">Pay</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs/chc/index.html">CHC</a></li>
+        <li><a href="programs/kmc/index.html">KMC</a></li>
+        <li><a href="programs/ecd/index.html">ECD</a></li>
+        <li><a href="programs/readers/index.html">Readers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Graph</h4>
+      <ul>
+        <li><a href="insights.html">Insights index</a></li>
+        <li><a href="index.html">Up to home</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

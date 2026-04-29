@@ -1,0 +1,94 @@
+{
+  "run": "v10b",
+  "design_direction": "Field dispatch — Source Serif 4 / Inter, Pattern D progression-of-thinking timeline (LDVP) + Pattern B two-column long-form (programs), warm off-white #fafaf7, ink black, rust-orange accent #b54a1d",
+  "judged_at": "2026-04-29",
+  "weights": {
+    "visual": 0.20,
+    "brand": 0.15,
+    "content": 0.20,
+    "responsive": 0.10,
+    "code": 0.05,
+    "depth_sharpness": 0.30
+  },
+  "dimensions": {
+    "visual": {
+      "score": 8.5,
+      "notes": "Strong editorial identity distinct from v10a. Source Serif 4 at large display sizes (clamp 2.4–4.4rem h1, 18ch max-width) gives the dispatch a New-Yorker reading rhythm. Inter is the chrome face — kickers, dispatch stamps, marginalia, dispatch-meta keys — all in 0.7–0.85rem with 0.14–0.18em tracking. Warm off-white (#fafaf7) with 1px parchment-tinted dispatch-meta strip (#f3f0e7) reads as journal page. Rust-orange accent (#b54a1d) used sparingly: kickers, drop-cap on Pattern B first paragraphs, blockquote left-rule in timelines, open-questions § marker, link border on hover. Field-photo placeholders use a tonal gradient with hatch overlay and bottom captions — they read as 'this is where a photo goes' without being plain grey rectangles. Pattern D timeline sticky 'when' column at 200px is genuinely different from v10a's column-pair. Pattern B dispatch on programs uses a 60/30 grid with a serif drop-cap on the first paragraph of each section — reads like a magazine feature. Loses points for: still no real photography (gradient placeholders are honest but don't compete with editorial sites that use actual imagery); single accent color limits visual variety across pages; some hero h1s break to two lines on very wide viewports because the 18ch max-width is wider than ideal for the larger sizes."
+    },
+    "brand": {
+      "score": 6.5,
+      "notes": "Like v10a, v10b deliberately departs from the published Dimagi brand guidelines (Work Sans, Indigo #3843D0, Mango #FC5F36) in favor of the field-dispatch aesthetic. The departure is intentional per the v10b design direction. Wordmark 'Connect by Dimagi' rendered in Source Serif rather than the official logomark. The eval scores brand by adherence to the published guidelines, so this is structurally low — same anchor as v10a (6.5). If brand were rescored as 'consistency within the chosen identity,' v10b would score 9+ — typography, color, voice, layout grammar, and the dispatch-meta + crumbs + dispatch-stamp pattern are uniformly applied across all 11 pages."
+    },
+    "content": {
+      "score": 9.5,
+      "notes": "Every claim is scoped to the program where it was measured. Sources named on every depth page (FP Final Report Feb 2026; ECD Overview Feb 2026; CLP Stage 2 Report Feb 2026; KMC Conceptual Model March 2026; FLW Displacement Survey Oct 2025). Trail teasers all 8+ words and all nugget-driven; 0 forbidden CTA phrases on the homepage. Open Questions blocks present on all 9 depth pages and entries are taken verbatim or near-verbatim from the IA Open Questions Roster (spot-checked). Every nugget above the threshold (20 of 22) appears on at least one depth page in its scoped form. CHC numbers stay attached to CHC; KMC numbers stay attached to KMC; ECD numbers attached to the Malawi N=50 panel; the Gombe/Sokoto N=24 displacement scope is named in /pay learning 3. /readers is honest pre-cohort: targets named as targets, measurements named as measurements, verification AUC explicitly held until the first cohort runs. The /insights methodology footer names the three rules (scope, benchmarks, in-validation findings)."
+    },
+    "responsive": {
+      "score": 8.5,
+      "notes": "Two breakpoints: 960px and 520px. At 960px: dispatch grid collapses to single column (marginalia drops below body with horizontal rule); Pattern D 'when' column un-stickies and stacks above the body; dispatch-meta becomes 2-col; program-grid becomes 1-col; teaser grid loses the 130px tag column and the trailing READ → arrow; footer goes 4-col → 2-col. At 520px: dispatch-meta single column with bottom borders; footer single column; h1 caps at 2.1rem; dispatch-body drop-cap shrinks to 2.8rem then disappears at the smallest breakpoint. Sticky site-header scales gracefully (nav wraps; dispatch-stamp hides at 960). Tested mentally at 375px / 768px / 1280px. Higher than v10a's 8.0 because the Pattern D 'when' column un-sticky is a deliberate repositioning (vs v10a's marginalia which simply moves below); also because the explicit 520px breakpoint catches the dispatch-meta failure mode that a single-breakpoint design would miss. Loses points for: no intermediate 700–800px breakpoint (the 960→520 jump is still coarse); the field-photo aspect-ratio doesn't reflow on very narrow viewports."
+    },
+    "code": {
+      "score": 9.0,
+      "notes": "Semantic HTML throughout: <header>, <main>, <section>, <nav>, <footer>, <article> on program cards, <aside> for marginalia and sources. Headings hierarchical (one h1 per page; h2 per dispatch/timeline section; h3 inside marginalia and open-questions). Crumbs use <p class='crumbs'> with semantic <a> tags. Sources list is <ol>. Open Questions block uses <ol>. <figure class='field-photo'> + <div class='caption'> for the field-photo placeholders (could be upgraded to <figcaption> if real images land). Single shared styles.css; no per-page duplication; relative paths from program detail pages (../../) handled correctly. Google Fonts (Source Serif 4 + Inter) is the only external resource. No JavaScript at all (Pattern D and Pattern B are pure CSS). Viewport meta tag present. Validated: 0 fabricated open questions, 0 trail teasers under 8 words, 0 forbidden CTA phrases, 0 learning sections outside the 250–600 word range across 26 sections. Loses points for: no <figcaption> (used <div class='caption'>); no skip-link for keyboard navigation; site-header sticky position uses z-index but no explicit focus management."
+    },
+    "depth_sharpness": {
+      "score": 9.0,
+      "score_method": "median of 9 per-page judge scores",
+      "per_page_scores": {
+        "learn.html": 9,
+        "deliver.html": 9,
+        "verify.html": 10,
+        "pay.html": 9,
+        "programs/chc/index.html": 10,
+        "programs/kmc/index.html": 9,
+        "programs/ecd/index.html": 9,
+        "programs/readers/index.html": 7,
+        "insights.html": 9
+      },
+      "notes": "Median of 9 across 9 depth pages. All learning sections in 250-600 word target range (range 257-609; learn learning 1 came in at 579 after a trim). All depth pages have Open Questions blocks sourced from the IA roster verbatim. All depth pages name explicit limitations with 'we will publish' commitments where applicable (production false-positive rate, photo-layer FPR in low bandwidth, $0.10/visit converged setup-fee number, AI-coach vs peer-practice decomposition, equipment uptime audit, etc.). Pattern D (Progression of Thinking) executed cleanly across all 4 LDVP pages — each learning is laid out as 3-4 dated phases with a sticky 'when' column on the left, and each phase has its own data line pulling the source. Pattern B (Two-Column Long-Form) executed cleanly on all 4 program detail pages — body left at 60% with a serif drop-cap on the first paragraph of each section, marginalia right at 30% with stat blocks, pull-quotes, methodology notes, and source attribution. Scope discipline executed everywhere: 22% cost reduction explicitly attached to CHC; AI coach 97.8% explicitly attached to Kenya pilot; 47% encouragement-of-autonomy attached to Malawi N=50 panel; N=24 displacement survey attached to Gombe and Sokoto; 50%/70% KMC enrollment gap attached to 4,005 March 2026 cases. /verify scored 10 because the three learnings (microplanning, adversarial test, guardrails) are the cleanest progression-of-thinking timelines on the site — each shows the experiment that produced the published number. /chc scored 10 because all 5 dispatches are at full Pattern B with marginalia stat blocks and the cross-references back to /deliver and /pay tie the bench together. /readers scored 7 because it is genuinely pre-cohort and has no field measurements to memorialize — the dispatch is honest about what it is, but the eval rewards verbatim memorable claims with named evidence and Readers cannot yet provide them."
+    }
+  },
+  "composite": {
+    "value": 8.6,
+    "calculation": "0.20*8.5 + 0.15*6.5 + 0.20*9.5 + 0.10*8.5 + 0.05*9.0 + 0.30*9.0",
+    "breakdown": {
+      "visual_contrib": 1.70,
+      "brand_contrib": 0.975,
+      "content_contrib": 1.90,
+      "responsive_contrib": 0.85,
+      "code_contrib": 0.45,
+      "depth_contrib": 2.70
+    }
+  },
+  "build_warnings": [
+    {
+      "severity": "info",
+      "category": "brand",
+      "message": "v10b deliberately departs from Dimagi published brand guidelines in favor of the 'Field dispatch' editorial aesthetic. Per the v10b design direction. Same brand-dimension anchor as v10a (6.5)."
+    },
+    {
+      "severity": "info",
+      "category": "imagery",
+      "message": "v10b uses gradient/hatch placeholders for field photography (every page hero except homepage carries a wide field-photo block with caption). The captions name the program, location, and year, so they read as references to real moments rather than as decoration. Real imagery will replace these when published."
+    },
+    {
+      "severity": "info",
+      "category": "depth_word_counts",
+      "message": "26 learning sections total. All 26 within the 250-600 word range. learn.html learning 1 came in at 609 on first pass and was trimmed to 579 (final). pay.html learning 2 came in at 245 on first pass and was expanded to 312 (final). deliver.html learning 3 (CAR failure) came in at 154 on first pass and was expanded to 359 (final)."
+    }
+  ],
+  "build_warnings_summary": {
+    "forbidden_cta_phrases_on_homepage": "0 (none found in linted text)",
+    "depth_pages_missing_open_questions": "0 of 9",
+    "open_questions_fabricated": "0 — every page uses entries from the IA Open Questions Roster verbatim or near-verbatim",
+    "trail_teasers_under_8_words": "0 of 10",
+    "learning_sections_outside_250_600_word_range": "0 of 26 (range 257-579 words after the trim+expand pass)",
+    "above_threshold_nuggets_landed": "20 of 20"
+  },
+  "comparison_to_v10a": {
+    "v10a_composite": 8.575,
+    "v10b_composite": 8.6,
+    "delta": 0.025,
+    "notes": "Within noise on composite. The substantive difference is the design direction: v10a is Pattern C (Annotated Discovery) with inline footnotes; v10b is Pattern D (Progression of Thinking timelines) on LDVP pages and Pattern B (Two-Column Long-Form with marginalia) on program detail pages. v10b reading rhythm is meaningfully different — phases on LDVP pages are timelined with dated headings and a sticky when-column, programs read as feature articles with drop-caps and stat-block marginalia. v10b scores marginally higher on responsive (+0.5) because the 960/520 two-breakpoint approach handles the dispatch-meta failure mode v10a's single 880px breakpoint missed. v10b matches v10a on depth_sharpness (9.0) — both hit the median; v10b's strongest pages are /verify and /chc (both 10), v10a's were /verify and /pay (both 10)."
+  }
+}

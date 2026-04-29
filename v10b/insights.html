@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insights — Connect by Dimagi · Field Dispatch</title>
+<meta name="description" content="The buffet view of every above-threshold finding, scoped to evidence. Field-dispatch entries grouped by program and platform mechanism." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="brand">Connect <span class="by">by Dimagi</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="learn.html">Learn</a>
+      <a href="deliver.html">Deliver</a>
+      <a href="verify.html">Verify</a>
+      <a href="pay.html">Pay</a>
+      <a href="programs/index.html">Programs</a>
+      <a href="insights.html" class="current">Insights</a>
+    </nav>
+    <span class="dispatch-stamp">Dispatch · Insights index</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <p class="crumbs"><a href="index.html">Field Dispatch</a> / Insights</p>
+
+  <section class="hero">
+    <p class="kicker">Methodology · the buffet</p>
+    <h1>What we've learned, scoped to where we learned it.</h1>
+    <p class="lede">Every entry below is a one-paragraph stub of a longer dispatch. Each is scoped — to the program where the measurement was taken, to the survey N if applicable, to the report it was published in. Click into any of the depth pages to read the case entry. We have grouped these by scope rather than by topic, because the scope <em>is</em> the methodology.</p>
+  </section>
+
+  <!-- CHC -->
+  <section class="scope-group" aria-labelledby="chc-h">
+    <h2 id="chc-h">CHC · Child Health Campaign · Founders Pledge grant period</h2>
+
+    <div class="entry">
+      <span class="num">N1</span>
+      <div class="body">
+        We paid experienced FLWs to fake 100 visit records each across three rounds and offered bonuses to the top 25% most convincing fabricators. Out of 33 adversarial fakers, 97.5% of real workers scored <em>cleaner</em> than even the lowest-scoring fabricator — using just three data points (age, gender, MUAC). AUC 0.91 ± 0.09.
+        <span class="open">Open: production false-positive rate against unmotivated fabrication is not yet published.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="verify.html">/verify</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N2</span>
+      <div class="body">
+        Without microplans, FLWs in CHC averaged 0.4 visits per estimated eligible child — they cherry-picked accessible households. With microplans forcing them to close every Delivery Unit before unlocking the next Service Area, they hit 1.4 visits per child. A 3.5× thoroughness gain, and population coverage rose from 82–84% to 94%.
+        <span class="open">Open: microplans failed in dispersed settlement patterns. Threshold not yet published.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="programs/chc/index.html">/chc</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N3</span>
+      <div class="body">
+        In the CHC program, cost per <em>verified</em> visit fell 22% — from $2.20 to $1.70 — as the program scaled. Connect's architecture (LLO economics + performance-based payment + integrated tooling) is designed to produce cost-reducing scale; CHC is the program where we've measured it.
+        <span class="open">Open: $1.70 weighted average masks bundle differences ($1.30 Nigeria with ORS, $0.78 outside).</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="pay.html">/pay</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N4</span>
+      <div class="body">
+        Conventional procurement says vet partners thoroughly before contracting. We tried it. Past reputation, team size, organizational maturity — none of it reliably predicted whether an LLO would deliver. So we invented the Trial Run: $3,000 setup for 3,000 verified child visits. Of 37 contracted LLOs in CHC, 24 ran Trials; 10 underperformed and were not continued; 3 went straight to larger campaigns based on prior measured performance.
+        <span class="open">Open: in CAR, both contracted LLOs dropped out — fragile contexts now flagged as needing in-country presence.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="deliver.html">/deliver</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N7</span>
+      <div class="body">
+        Of 7 LLOs in our CLP Stage 2 vaccine campaign (CHC), 5–6 independently leveraged religious leaders, community leaders, or existing community relationships to navigate vaccine hesitancy. They did this before we asked. The platform's job is to enable this, not to centralize it.
+        <span class="open">Open: we have not built a structured framework for capturing what individual LLOs invent locally.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="programs/chc/index.html">/chc</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N8</span>
+      <div class="body">
+        In the Central African Republic, both contracted LLOs in our CHC vaccine work dropped out — staffing and connectivity issues. Remote coordination wasn't enough. We've now flagged fragile contexts as requiring dedicated in-country presence before activation; we don't repeat the same model in similarly difficult geographies.
+        <span class="open">Open: "in-country presence" is a coarse rule. We don't yet have a sharper predictive model.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="deliver.html">/deliver</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N9</span>
+      <div class="body">
+        107 EOI applications. 37 contracted under Trial Run terms. 24 advanced to full Trials. 14 passed and ran larger campaigns. The 35% that didn't pass aren't continued. We publish this conversion rate because diligence readers ask about it.
+        <span class="open">Open: the selection criteria driving the 65% are program-manager judgment calls today, not codified.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="deliver.html">/deliver</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N12</span>
+      <div class="body">
+        880,000+ verified CHC visits in 14 months across 8 countries — performance-payment delivery at a pace that conventional NGO-led VAS supplementation typically achieves over multi-year campaigns in the same geographies. 44 LLOs activated in that window.
+        <span class="open">Open: a single published comparator holding country mix and commodity bundle constant doesn't exist; PRO Impact RCT 2026 ($1.5M, IPA) will provide one.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="deliver.html">/deliver</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N13</span>
+      <div class="body">
+        Our $1.70 weighted average per verified visit hides the bundle. Nigeria CHC with ORS/Zinc co-packs averaged $1.30 across 14 LLO contracts. Outside Nigeria — VAS + deworming, no ORS — averaged $0.78 across 17 contracts. Setup fees are running $0.40/visit during the grant and projected to fall to ~$0.10/visit at scale.
+        <span class="open">Open: setup-fee projection ($0.40 → ~$0.10/visit) is forward-looking; we will publish the converged number when the next cohort closes.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="pay.html">/pay</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N14</span>
+      <div class="body">
+        In our Kenya CHC pilot, an AI chatbot on Dimagi's Open Chat Studio (accessed via WhatsApp) handled 500 of 511 FLW queries — 97.8% — without human escalation, with a 5-second average response time. Independent evaluation: 88.7% accuracy, 81.5% usefulness.
+        <span class="open">Open: failure-mode analysis on the 11 escalations not yet published; non-English-language deployments are running but not yet reported.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="learn.html">/learn</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N15</span>
+      <div class="body">
+        Funders routinely ask whether paid campaign work crowds out volunteer health work. We commissioned 24 in-depth interviews in Gombe and Sokoto (CHC, 2025). Campaigns are not a disruption of Nigeria's CHV system — they <em>are</em> the system. CHVs routinely run campaigns, and other volunteers cover routine work during them. In Gombe, FLWs maintained volunteer hours by shifting schedules within Connect's 7am–7pm window.
+        <span class="open">Open: N=24 in two states. The Western "crowd-out" assumption may still apply in countries with different CHV structures; we'd re-survey first.</span>
+      </div>
+      <span class="scope-tag">CHC · <a href="pay.html">/pay</a></span>
+    </div>
+  </section>
+
+  <!-- KMC -->
+  <section class="scope-group" aria-labelledby="kmc-h">
+    <h2 id="kmc-h">KMC · Kangaroo Mother Care · 4,005 cases (March 2026)</h2>
+
+    <div class="entry">
+      <span class="num">N10</span>
+      <div class="body">
+        KMC has 4 mandatory home visits per SVN as a payment criterion. Its "first visit within 3 days of discharge" is a guardrail — audited, not enforced. Current performance: 50% against a 70% target. We don't punish FLWs for missing it because punishment trains workers to falsify dates. We coach, integrate discharge notifications, and track. Platforms that punish guardrails don't get honest data.
+        <span class="open">Open: whether 70% is achievable through coaching plus discharge-notification integration alone, or whether the 3-day window itself needs to be redesigned.</span>
+      </div>
+      <span class="scope-tag">KMC · <a href="programs/kmc/index.html">/kmc</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N11</span>
+      <div class="body">
+        Kangaroo Mother Care reduces neonatal mortality by up to 40%. The WHO recommends it for all newborns ≤2000g. Yet global KMC coverage remains below 5% for eligible infants — hospitals discharge families within days; structured at-home follow-up rarely exists. Connect KMC closes the post-discharge gap with 4–5 home visits in the first 60 days.
+        <span class="open">Open: our enrollment-within-3-days-of-discharge rate is currently 50% against a 70% target — closing the post-discharge gap depends on closing the enrollment-timing gap first.</span>
+      </div>
+      <span class="scope-tag">KMC · <a href="programs/kmc/index.html">/kmc</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N19</span>
+      <div class="body">
+        Every Connect KMC home visit, the FLW arrives with a weighing scale, thermometer, pulse oximeter, and measuring tape. The app captures the readings. Danger signs — poor weight gain, hypothermia, infection — auto-trigger referrals, and the app prompts follow-up at the next visit.
+        <span class="open">Open: equipment availability across all 6 KMC LLO partners has been uneven; we don't yet have a published audit of equipment uptime.</span>
+      </div>
+      <span class="scope-tag">KMC · <a href="programs/kmc/index.html">/kmc</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N20</span>
+      <div class="body">
+        Across 4,005 KMC cases (March 2026), we hit our 28-day enrollment target — average age at enrollment 12.8 days. We are <em>missing</em> our 70%-within-3-days-of-discharge target — currently 50%. The gap isn't FLW effort; it's that hospital discharge notifications aren't yet integrated. We're working on it; we publish the gap.
+        <span class="open">Open: whether discharge-notification integration alone closes the gap, or whether 3 days from discharge is the wrong target for post-discharge logistics.</span>
+      </div>
+      <span class="scope-tag">KMC · <a href="programs/kmc/index.html">/kmc</a></span>
+    </div>
+  </section>
+
+  <!-- ECD -->
+  <section class="scope-group" aria-labelledby="ecd-h">
+    <h2 id="ecd-h">ECD · Early Childhood Development · Malawi pilot (N=50 caregivers, 76 FLWs)</h2>
+
+    <div class="entry">
+      <span class="num">N6</span>
+      <div class="body">
+        Our Malawi ECD pilot (76 FLWs, 9,510+ visits, 50-caregiver baseline/endline) found nearly all caregivers <em>already</em> held positive ECD attitudes at baseline. The intervention didn't need to convince them — it needed to close the gap between belief and practice. Knowledge of rapid-development timing rose +33%; observed teaching behavior +21%; encouragement of autonomy +21% but still only 47% at endline. So we doubled the dosage from 3 visits to 8–10 across 12 months.
+        <span class="open">Open: encouragement of autonomy (47% endline) is the hardest sub-domain. Whether 8–10 visits will move it is open.</span>
+      </div>
+      <span class="scope-tag">ECD · <a href="programs/ecd/index.html">/ecd</a></span>
+    </div>
+  </section>
+
+  <!-- Platform mechanisms -->
+  <section class="scope-group" aria-labelledby="platform-h">
+    <h2 id="platform-h">Platform mechanisms · the parts that compose</h2>
+
+    <div class="entry">
+      <span class="num">N5</span>
+      <div class="body">
+        Workers who aced our digital knowledge test still struggled with the nuances of in-person counseling. So we layered the model: self-paced learning, in-app test, daily AI coach interaction (Open Chat Studio), peer practice, one supervised observation visit. 85% of FLWs progress to service delivery; 88% score above 70% on first observed visits. Validated across 400+ FLWs through iterative experiments.
+        <span class="open">Open: the 77% supervised-observation pass rate is the binding constraint — we have not yet published a clean comparison of AI-coach vs peer-practice contributions.</span>
+      </div>
+      <span class="scope-tag">Platform · <a href="learn.html">/learn</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N18</span>
+      <div class="body">
+        Most platforms report cost-per-FLW-trained, cost-per-app-installed, or cost-per-enrolled-LLO. We report cost-per-verified-visit because the others hide the lever that matters — whether the work was done. The asymmetry between activity-cost and outcome-cost is where most development funding gets eaten.
+        <span class="open">Open: verified-visit cost can itself be gamed if the verification stack is shallow; we publish our four-layer stack so readers can audit it.</span>
+      </div>
+      <span class="scope-tag">Platform · <a href="pay.html">/pay</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N22</span>
+      <div class="body">
+        A fabricated visit on Connect has to beat four independent verification layers: biometric (FLW identity), GPS (location), photo (visit context), and algorithmic (statistical pattern from age/gender/MUAC). Our adversarial test only stresses the algorithmic layer — and even there, fabricators couldn't beat real workers. The other three layers compound.
+        <span class="open">Open: photo verification quality varies by network conditions; we have not yet published a clean false-positive rate on the photo layer in low-bandwidth deployments.</span>
+      </div>
+      <span class="scope-tag">Platform · <a href="verify.html">/verify</a></span>
+    </div>
+
+    <div class="entry">
+      <span class="num">N16</span>
+      <div class="body">
+        65% of LLOs that enter our Trial Run pass it. We publish that number because the alternative — opaque vendor lists — is what funders are trying to escape. The 35% that don't pass aren't blamed; they aren't continued.
+        <span class="open">Open: whether the 65% holds outside CHC. KMC, ECD, and Readers are still on too small a contract base to publish their own.</span>
+      </div>
+      <span class="scope-tag">Platform · <a href="deliver.html">/deliver</a></span>
+    </div>
+  </section>
+
+  <!-- Methodology footer -->
+  <section style="margin-top:5rem; padding-top:2rem; border-top:2px solid var(--ink); max-width:48rem;">
+    <p class="kicker" style="color: var(--ink-faint); margin-top:0;">Methodology footer</p>
+    <h2>What makes the cut.</h2>
+    <p>Three rules govern what appears on this page. First, every claim is scoped to the program where the measurement was taken; "In CHC, cost per verified visit fell 22%" is here, "Connect reduces costs by 22%" is not. Second, numbers carry benchmarks where benchmarks exist; where they don't, we say so. Third, in-validation findings are named with the evaluation underway — the IPA RCT for CHC, the dosage redesign for ECD, the discharge-notification integration for KMC.</p>
+    <p>This page is only as honest as the insights and nuggets the team mines. Internal lore that didn't make it onto the public site is the rate-limiter, not the format. We re-mine quarterly.</p>
+  </section>
+
+  <!-- Open questions about the page itself -->
+  <section class="open-questions">
+    <h3>What we don't know yet — about this page</h3>
+    <ol>
+      <li>This page is only as honest as the insights and nuggets the team mines. Internal lore that didn't make it onto the public site is the rate-limiter, not the format.</li>
+      <li>Numbers without benchmarks are excluded by policy — but our benchmark library is uneven across programs. KMC and Readers have thinner comparators than CHC.</li>
+      <li>Whether the methodology-footer framing ("we have a methodology for what's on the website") survives a year of new programs without drift toward marketing copy.</li>
+    </ol>
+  </section>
+
+  <div class="next-step">
+    <span class="label-line">Up to dispatch →</span>
+    <a href="index.html">Field Dispatch — back to the index of programs and platform mechanisms.</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="colophon">
+      <strong style="color: var(--ink); font-family: 'Source Serif 4', serif; font-weight:500; font-size:1.1rem;">Connect by Dimagi</strong><br />
+      A platform for verified frontline work.
+    </div>
+    <div>
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="deliver.html">Deliver</a></li>
+        <li><a href="verify.html">Verify</a></li>
+        <li><a href="pay.html">Pay</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs/chc/index.html">CHC</a></li>
+        <li><a href="programs/kmc/index.html">KMC</a></li>
+        <li><a href="programs/ecd/index.html">ECD</a></li>
+        <li><a href="programs/readers/index.html">Readers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Methodology</h4>
+      <ul>
+        <li><a href="insights.html">Insights index</a></li>
+        <li><a href="index.html">Up to dispatch</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+{
+  "run": "v10a",
+  "judge_run_at": "2026-04-29",
+  "design_direction": "Foundation memo — typewriter/serif, two-column annotated discovery (Pattern C), parchment + oxblood",
+  "pages_judged": [
+    {
+      "page": "learn.html",
+      "title": "Learn — Knowledge tests didn't produce competent FLWs",
+      "most_memorable_quote": "Workers who aced our digital knowledge test still struggled with the parts of frontline work that are not test-shaped — handling a skeptical caregiver, recognising subtle danger signs, motivational interviewing during a five-minute visit while a baby cries on a hip.",
+      "evidence_tier": "named (Founders Pledge Final Report Feb 2026; Open Chat Studio; ~400 FLWs validation cohort; Kenya CHC pilot 500/511 queries 88.7% accuracy)",
+      "scope_accurate": true,
+      "scope_notes": "97.8% AI-coach handle rate explicitly scoped to 'Kenya CHC pilot'; 88% first-visit pass rate scoped to 'across the layered pipeline'; ECD pilot numbers scoped to Malawi panel of 50.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Have not published failure-mode analysis on 11 escalations",
+        "Have not yet tested AI coach handle rate in non-English deployments",
+        "Have not decomposed AI-coach contribution from peer-practice contribution to the 77% pass rate",
+        "Encouragement-of-autonomy still 47% at endline — don't know if 8-10 visits will move it"
+      ],
+      "score": 9,
+      "judge_notes": "Three substantive learning sections (377/363/328 words), each with the 'what we thought / what we learned / what we changed' structure. Scope discipline strong: AI-coach numbers tied to Kenya pilot, ECD numbers to Malawi panel. Multiple named limitations with specific next steps. Pattern C adherence is good — clean serif prose, superscript footnotes, sources block at bottom, methodology marginalia in right column. Loses one point for not yet decomposing AI-coach vs peer-practice contributions, which the judge would have wanted to see attempted."
+    },
+    {
+      "page": "deliver.html",
+      "title": "Deliver — We invented the Trial Run because pre-vetting didn't predict performance",
+      "most_memorable_quote": "The signal we were screening on was decoupled from the outcome we were paying for. After three campaigns we stopped pretending the screening worked.",
+      "evidence_tier": "named (FP Final Report Feb 2026 with full LLO funnel: 107 EOIs / 37 contracts / 24 Trials / 14 campaigns; CLP Stage 2 Report; CAR cohort failure documented)",
+      "scope_accurate": true,
+      "scope_notes": "Trial Run conversion 65% scoped to CHC; 5/7 religious-leader finding scoped explicitly to CLP Stage 2; CAR drop-out scoped to CHC vaccine work.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "65% conversion criteria are program-manager judgment calls, not codified",
+        "'In-country presence' rule for fragile contexts is coarse, lacks predictive model",
+        "No structured framework for capturing what individual LLOs invent locally"
+      ],
+      "score": 9,
+      "judge_notes": "Strong: publishes the full funnel (not just the favorable conversion rate), publishes a failure (CAR), and explicitly says the screening machinery is 'human, not algorithmic.' The 'There was no recoverable middle path' line lands. Pattern C structure preserved across all three learnings (332/365/330 words). The CAR section especially stays specific — connectivity AND staffing AND concurrent emergency-response load named as the three features. One judge concern: the 5-of-7 religious-leader finding could have included one more specific anecdote beyond the 'we were immunized' quote, but the existing material is strong."
+    },
+    {
+      "page": "verify.html",
+      "title": "Verify — Microplans, the adversarial test, and guardrails-vs-payment-criteria",
+      "most_memorable_quote": "Convenience sampling at the exact moment equity was the goal.",
+      "evidence_tier": "named (FP Final Report Feb 2026 with adversarial test methodology including 3 rounds, 33 fakers, AUC 0.91 ± 0.09; KMC Conceptual Model March 2026 for 50% vs 70% guardrail)",
+      "scope_accurate": true,
+      "scope_notes": "Microplanning numbers (0.4→1.4, 82-84%→94%) scoped to CHC. AUC 0.91 scoped to CHC adversarial test. Guardrails-vs-payment-criteria distinction described as platform-level with KMC 3-day window as live example.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Microplans failed in dispersed settlement; no clean threshold for when settlement density makes them counterproductive",
+        "Production false-positive rate against unmotivated fabrication not yet published",
+        "Photo-layer false-positive rate in low-bandwidth deployments not yet published",
+        "If integration ships and 50%→70% number doesn't move, we'll redesign the target"
+      ],
+      "score": 10,
+      "judge_notes": "The strongest depth page in v10a. Three meaty learnings (377/400/394 words). The adversarial test section is the signature: explains why three features rather than 20, names the bonus structure, distinguishes the algorithmic layer from the other three layers. The guardrails section gives the KMC live example honestly (50% vs 70%) and explains the philosophical reason punishment fails ('Punished constraints train workers to falsify the timestamp'). Multiple limitations named with explicit 'we will publish' commitments. Pattern C executed cleanly: prose, superscript footnotes, methodology in margins."
+    },
+    {
+      "page": "pay.html",
+      "title": "Pay — In CHC, cost per verified visit fell 22%",
+      "most_memorable_quote": "Weighted averages are convenient for headlines and dishonest for procurement.",
+      "evidence_tier": "named (FP Final Report Feb 2026 with bundle separation: $1.30 Nigeria/14 contracts vs $0.78 outside/17 contracts; FLW Displacement Survey Oct 2025 with N=24 in Gombe and Sokoto)",
+      "scope_accurate": true,
+      "scope_notes": "22% cost reduction scoped explicitly to CHC during FP grant period. Bundle separation specifies country/commodity. Displacement finding scoped to 24 interviews in 2 Nigerian states with explicit 'we'd re-survey before claiming it elsewhere.'",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "$1.70 weighted hides bundle differences; 22% curve in non-CHC programs is open",
+        "N=24 displacement is in two Nigerian states; CHV systems with different structures untested",
+        "Setup-fee projection ($0.40→$0.10) is forward-looking, not measured"
+      ],
+      "score": 10,
+      "judge_notes": "Best scope discipline of any page in the run. The repeated correction 'In the CHC program, cost per verified visit fell 22%' is exactly the language insights.md says to use, and the page calls out the wrong framing ('Connect got 22% leaner') explicitly so a reader knows what NOT to say. The bundle-separation section is the kind of methodological honesty most marketing sites can't bring themselves to do. The displacement section names the Western-assumption problem directly. Three substantive learnings (392/398/396 words). Pattern C executed cleanly."
+    },
+    {
+      "page": "programs/chc/index.html",
+      "title": "CHC — Child Health Campaign",
+      "most_memorable_quote": "Out of 33 adversarial fakers across the three rounds, only 2.5% of real workers received fraud-risk scores higher than the lowest-scoring fabricator.",
+      "evidence_tier": "named (FP Final Report Feb 2026; CLP Stage 2 Report Feb 2026; embedded YouTube link to Inside CHC Kenya)",
+      "scope_accurate": true,
+      "scope_notes": "All five learnings scoped consistently to CHC. The page acknowledges that the mechanisms (Trial Run, microplanning, fraud detection, cost inversion) are platform-portable but the published numbers are CHC-specific.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Selection criteria driving 65% are not codified",
+        "Microplans failed in dispersed settlement (one campaign removed them entirely)",
+        "Production false-positive rate vs unmotivated fabrication not yet published",
+        "Setup-fee projection is forward-looking",
+        "No structured framework for capturing LLO local invention"
+      ],
+      "score": 9,
+      "judge_notes": "Five learnings (293/250/332/286/285 words) — the richest page in v10a. CHC is correctly treated as the bench where most Connect mechanisms were measured. The Trial Run section publishes the full funnel including 35% drop-out. The fraud-detection section gives the methodology that lets the AUC 0.91 mean something. The cost-inversion section explicitly distinguishes platform mechanism from CHC measurement. The religious-leader section preserves the specific anecdote. One judge concern: L2 (microplans) is at the floor of the 250-word target; could have been more developed. L1 also doesn't quite hit the 'what we changed' specificity of the equivalent Deliver-page section."
+    },
+    {
+      "page": "programs/kmc/index.html",
+      "title": "KMC — Kangaroo Mother Care",
+      "most_memorable_quote": "Punishment trains workers to falsify the timestamp.",
+      "evidence_tier": "named (KMC Conceptual Model March 2026 with 4,005 cases; WHO 2022 KMC Recommendations; embedded YouTube link to Ugandan TV PIPNU interview)",
+      "scope_accurate": true,
+      "scope_notes": "KMC numbers (12.8 days, 50% vs 70%, 3.4 vs 5 visits) scoped explicitly. WHO 40% mortality reduction sourced to WHO 2022 guidance. Equipment list scoped to KMC standard.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Don't know if discharge-notification integration alone closes the 50%→70% gap",
+        "Equipment availability across 6 LLO partners has been uneven; no published audit",
+        "Don't yet know if FLWs will sustain ≥4 visits at 5,000+ scale",
+        "Mortality outcome not directly measured yet (IPA-style RCT pending)"
+      ],
+      "score": 9,
+      "judge_notes": "Four substantive learnings (293/343/359/289 words). The 4-visit-vs-3-day-guardrail section is the strongest — applies the Connect philosophy to a live failure (50% vs 70%) without spinning it. The equipment section is concrete (scale, thermometer, pulse oximeter, measuring tape) and gracefully connects to the auto-referral chain. The honest 'mortality outcome not directly measured yet' caveat is the kind of thing most program pages would skip. Loses a point because the 12.8-days-average vs 3-day-window math could have been laid out more sharply for a reader who is trying to understand why both numbers can be true."
+    },
+    {
+      "page": "programs/ecd/index.html",
+      "title": "ECD — Early Childhood Development",
+      "most_memorable_quote": "The instrument was saturated.",
+      "evidence_tier": "named (ECD Overview Feb 2026 with 76 FLWs, 9,510+ visits, 50-caregiver baseline/endline panel; specific endline numbers +33/+41/+21/+21; Open Chat Studio)",
+      "scope_accurate": true,
+      "scope_notes": "All numbers scoped to Malawi pilot panel. Expansion to Nigeria and Mozambique flagged as data-pending. Layered Learn pipeline scoped to platform-level with ECD as the case.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Encouragement of autonomy is 47% at endline — hardest sub-domain",
+        "Don't know if 8-10 visits will move the 47%, or if redesign is needed",
+        "Malawi N=50 caregivers; cross-country generalization untested",
+        "AI-coach contribution to 77% pass rate not decomposed"
+      ],
+      "score": 9,
+      "judge_notes": "Three learnings (352/339/342 words). The 'attitudes were a ceiling, not a floor' framing in L1 is exactly the right reading of the floor-effect finding — it reframes the entire ECD intervention. The L3 'encouragement of autonomy still 47%' section preserves the residual honestly and goes further than the source by laying out the alternative hypothesis ('design-limited rather than sustained-practice-limited'). The cross-country generalization commitment ('we will publish whether or not it is flattering') is strong. Slight ding because the page could have made the three observed-behavior sub-domains visually separable (teaching vs encouragement-of-autonomy) but the prose-only treatment is faithful to Pattern C."
+    },
+    {
+      "page": "programs/readers/index.html",
+      "title": "Readers — Vision Care via Connect",
+      "most_memorable_quote": "There is no pilot. There is no Trial Run yet. The Trial Run terms apply to the first cohort, by design — the model is that the first cohort is the Trial Run.",
+      "evidence_tier": "unnamed for outcomes (pre-cohort); named for design (RestoringVision partnership, eHA and C3HD as LLOs)",
+      "scope_accurate": true,
+      "scope_notes": "Page is explicitly pre-cohort. The honesty about the absence of measurement is itself the scope discipline.",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Contract signing pending; no field data yet",
+        "Screening protocol consistency across digitally-trained FLWs untested",
+        "Door-to-door yield without targeting infrastructure untested",
+        "Cost-per-verified-pair convergence is empirical question, not yet known"
+      ],
+      "score": 7,
+      "judge_notes": "Two learnings (337/404 words). Honest about being pre-evidence: 'The Readers program is a deliberate test of whether the Connect platform generalizes outside community health.' That meta-point is the right one for a program with no field data. Score capped because the page necessarily lacks the depth-sharpness 'verbatim memorable claim with named evidence' that the eval rewards — there is no measurement to memorialize. Within the constraint of pre-cohort, the page does the right thing. A future re-judge after the first cohort closes should produce a much higher score."
+    },
+    {
+      "page": "insights.html",
+      "title": "Insights — the buffet view",
+      "most_memorable_quote": "An entry appears on this page only if (a) the underlying claim is scoped to a program or to a clearly-labelled platform mechanism; (b) any number is paired with a denominator, an evaluation N, or a comparator; and (c) any in-progress finding is named with the evaluation that is currently underway.",
+      "evidence_tier": "named (every entry links to its home page where the named source lives); methodology footer is meta-named",
+      "scope_accurate": true,
+      "scope_notes": "Programs grouped explicitly: CHC (10 entries), ECD (2), KMC (4), Platform (3). Each entry carries an explicit Scope: line. Cross-cutting nuggets routed correctly (e.g., Trial Run scoped Platform-with-CHC-bench).",
+      "names_a_limitation": true,
+      "limitations_named": [
+        "Internal lore that didn't make it onto the public site is the rate-limiter",
+        "Benchmark library uneven across programs — KMC/Readers thinner than CHC",
+        "Methodology-footer framing untested over a year of new programs"
+      ],
+      "score": 9,
+      "judge_notes": "Buffet correctly executed. 19 entries across 4 scope groups. Programs first (CHC ten, ECD two, KMC four), Platform second. Each entry one sentence with explicit Scope line and a link to home page. Methodology footer is a strong piece of writing: the three-criterion rule ('scoped, denominator, in-progress named') is the kind of thing that earns the trust the rest of the site depends on. Open Questions block names the rate-limiter (internal lore that hasn't been mined) and the benchmark unevenness. The page is what the IA asked for."
+    }
+  ],
+  "median_score": 9,
+  "top_3_nuggets_by_score_and_quote_strength": [
+    {
+      "page": "verify.html",
+      "score": 10,
+      "quote": "Convenience sampling at the exact moment equity was the goal."
+    },
+    {
+      "page": "pay.html",
+      "score": 10,
+      "quote": "Weighted averages are convenient for headlines and dishonest for procurement."
+    },
+    {
+      "page": "verify.html",
+      "score": 10,
+      "quote": "Punished constraints train workers to falsify the timestamp."
+    }
+  ]
+}

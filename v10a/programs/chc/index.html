@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CHC — Child Health Campaign — Connect by Dimagi</title>
+<meta name="description" content="The richest evidence base in the Connect catalog: 880,000+ visits, 22% cost reduction, microplanning, adversarial fraud testing, and the Trial Run." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+<link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="../../index.html" class="brand">Connect <span class="by">by Dimagi</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../../learn.html">Learn</a>
+      <a href="../../deliver.html">Deliver</a>
+      <a href="../../verify.html">Verify</a>
+      <a href="../../pay.html">Pay</a>
+      <a href="../index.html" class="current">Programs</a>
+      <a href="../../insights.html">Insights</a>
+    </nav>
+    <span class="meta">MEMO · CHC</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <p class="crumbs"><a href="../../index.html">Memo</a> / <a href="../index.html">Programs</a> / CHC</p>
+
+  <section class="hero">
+    <p class="kicker">Program · Child Health Campaign · 8 countries · 44 LLOs · GiveWell, Founders Pledge, Gavi</p>
+    <h1>CHC: 880,000 verified visits in 14 months. The bench where most Connect mechanisms were measured.</h1>
+    <p class="lede">CHC is Connect's most evidence-rich program. The Trial Run, microplanning, adversarial fraud testing, the cost-inversion curve, and the LLO-as-locally-grounded-actor pattern were all measured here first. This page is the working memo for the CHC bench: the five mechanisms, what we measured, what we changed, and where we are still uncertain.</p>
+  </section>
+
+  <section class="memo-meta">
+    <div><span class="k">Verified visits</span>880,000+ in 14 months<sup class="fn"><a href="#s1">1</a></sup></div>
+    <div><span class="k">LLOs activated</span>44 (FP grant period)<sup class="fn"><a href="#s1">1</a></sup></div>
+    <div><span class="k">Coverage with microplan</span>94% (vs 82–84% without)<sup class="fn"><a href="#s1">1</a></sup></div>
+    <div><span class="k">Cost per verified visit</span>$2.20 → $1.70 (-22%)<sup class="fn"><a href="#s1">1</a></sup></div>
+  </section>
+
+  <!-- LEARNING 1: Trial Run -->
+  <section class="learning">
+    <p class="section-label">Learning 1 of 5 · LLO selection</p>
+    <h2>Past reputation didn't predict performance. The Trial Run replaced procurement screening.</h2>
+    <div class="column-pair">
+      <div class="prose">
+        <p>CHC's LLO funnel is the cleanest published view of the Trial Run model. 107 EOI applications. 37 LLOs contracted under Trial Run terms (a $3,000 setup fee for 3,000 verified child visits, performance-based). 24 advanced to full Trial Runs. 14 graduated to larger campaigns. Three additional LLOs went straight to larger campaigns based on prior measured performance from earlier Connect programs<sup class="fn"><a href="#s1">1</a></sup>.</p>
+        <p>The reason this funnel works as a procurement screen rather than a procurement document is that the data we collect during a Trial Run is real production data on the same Connect verification stack that a full campaign would use. There is no synthetic pilot signal. The 65% conversion rate published above is the output of a measurement, not an intent. The 35% that did not pass were paid the setup fee, not the per-visit pay; they were not continued.</p>
+        <p>Why this matters for CHC specifically: CHC works in eight countries with very different LLO ecosystems. Nigeria has many candidate partners with prior CHV-campaign experience; Sierra Leone has fewer; Central African Republic has effectively none, as the failure noted on the <a href="../../deliver.html">Deliver page</a> documents. Pre-vetting at scale across that variance was producing biased screens — partners we knew were systematically advantaged over partners we did not. Trial Run terms remove the bias by paying small for real and rewarding only delivery.</p>
+        <p>The honest gap on this CHC page: the selection criteria that drive the 65% conversion are program-manager judgment calls today, not codified into a model an outside funder could replicate. We have a checklist of red flags from the failed cohort (staffing concentration, single-point-of-failure dependence, cash-flow fragility) but it is descriptive, not predictive. A funder evaluating Connect for replication should know that the screening machinery is human, not algorithmic.</p>
+      </div>
+      <aside class="margin">
+        <h4>CHC funnel</h4>
+        <div class="note">107 EOIs → 37 contracts → 24 Trials → 14 campaigns → 65% conversion. Published in FP Final Report.<sup class="fn"><a href="#s1">1</a></sup></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- LEARNING 2: Microplanning -->
+  <section class="learning">
+    <p class="section-label">Learning 2 of 5 · coverage</p>
+    <h2>Without microplans, FLWs averaged 0.4 visits per child. With them, 1.4 — and coverage hit 94%.</h2>
+    <div class="column-pair">
+      <div class="prose">
+        <p>Microplanning is the CHC innovation. The mechanism is portable — the same code path runs on every Connect program — but the published numbers are CHC-specific and the methodology was forged here.</p>
+        <p>Before microplans, FLWs working a CHC neighborhood averaged 0.4 visits per estimated eligible child<sup class="fn"><a href="#s1">1</a></sup>. They cherry-picked accessible households. The populations they missed were systematically those with lower baseline health coverage — convenience sampling at the exact moment equity was the goal.</p>
+        <p>The microplan layer overlays a grid onto the operational area using Google Open Buildings, OpenStreetMap, and Microsoft building data<sup class="fn"><a href="#s1">1</a></sup>. Grid cells with at least one detected building become Delivery Units. DUs group into Service Areas sized for one to two weeks of work. The Connect app blocks an FLW from moving to the next Service Area until they have closed every Delivery Unit in the current one. After that change: 1.4 visits per estimated child in microplanned cells. Population coverage: 82–84% → 94%. A 3.5× thoroughness gain.</p>
+        <p>Where the mechanism fails. In dispersed settlement patterns, FLWs walk long distances to DUs containing no buildings. Some DUs fall on inaccessible land — factory grounds, prison perimeters, restricted military zones. One CHC campaign removed microplan execution entirely because the partner could not work the layout. We do not yet have a published threshold for the settlement density at which microplanning becomes counterproductive — the operating rule today is that the partner has the final call. That rule is honest about what it does not encode.</p>
+      </div>
+      <aside class="margin">
+        <h4>Coverage delta</h4>
+        <div class="note">Visits per child: 0.4 → 1.4. Population coverage: 82–84% → 94%. CHC microplanned cells.<sup class="fn"><a href="#s1">1</a></sup></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- LEARNING 3: Adversarial fraud test -->
+  <section class="learning">
+    <p class="section-label">Learning 3 of 5 · verification</p>
+    <h2>We paid CHC FLWs to defeat our fraud detection. They couldn't beat AUC 0.91.</h2>
+    <div class="column-pair">
+      <div class="prose">
+        <p>The CHC fraud-detection adversarial test is the empirical foundation under Connect's verified-payment model. The test was designed and run inside CHC; the model applies platform-wide, but the AUC and bonus-test mechanics on this page are CHC.</p>
+        <p>The protocol<sup class="fn"><a href="#s1">1</a></sup>: experienced CHC FLWs were paid to submit 100 fake visit records each, in three rounds. After each round, fakers were coached on what had given them away, so each round was harder than the last. Cash bonuses were offered to the top 25% most convincing fabricators — a structural incentive to actually try. We did not run a single round and call the result the upper bound; we kept paying people to defeat the system after they had been told why their previous attempts had failed.</p>
+        <p>The result on the algorithmic layer alone: using only three data elements (age of child, gender, MUAC measurement), a Random Forest classifier achieved AUC 0.91 ± 0.09. Out of 33 adversarial fakers across the three rounds, only 2.5% of real workers received fraud-risk scores higher than the lowest-scoring fabricator. The 97.5% framing — "97.5% of real workers scored cleaner than the worst-detected fake" — is the inverse of the same number.</p>
+        <p>The framing matters. Three data elements is a deliberately stressed choice; we could have built a 20-feature model with a higher AUC. We chose three because the question we wanted to answer was harder: can the algorithmic layer detect fabrication when the data has been engineered to look plausible? The other three layers in Connect's verification stack — biometric, GPS, photo — close the parts that age/gender/MUAC don't. A fabricated visit on Connect has to beat all four.</p>
+        <p>Where the CHC adversarial test does not generalize: we tested against motivated, paid, coached fabrication. The production false-positive rate against unmotivated fabrication — a tired worker who fudges one visit — is operationally more important and is not what the AUC 0.91 measures. We will publish the production false-positive rate when we have a clean cohort comparison.</p>
+      </div>
+      <aside class="margin">
+        <h4>Test design</h4>
+        <div class="note">3 rounds. 33 fakers paid bonuses. Coached between rounds. 3 features: age, gender, MUAC. AUC 0.91 ± 0.09.<sup class="fn"><a href="#s1">1</a></sup></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- LEARNING 4: Cost inversion -->
+  <section class="learning">
+    <p class="section-label">Learning 4 of 5 · economics</p>
+    <h2>Cost per verified visit fell 22% as CHC scaled. Nigeria $1.30 with ORS, outside $0.78 without.</h2>
+    <div class="column-pair">
+      <div class="prose">
+        <p>CHC is the Connect program where the cost-inversion curve has been most cleanly measured. The standard NGO scaling pattern is that operational costs grow with output. CHC during the Founders Pledge grant period was the inverse: as visit volume scaled to the 880,000+ figure, cost per verified visit dropped from $2.20 to $1.70 — a 22% reduction — without substantial growth in Dimagi's team<sup class="fn"><a href="#s1">1</a></sup>.</p>
+        <p>The architectural reasons are platform-level, not CHC-specific: LLOs have inherently low overhead (local, lean); performance-based payment ties operational cost to delivery rather than organizational size; integrated digital tooling produces compounding efficiency gains. The CHC numbers are the measurement of those mechanisms in one program; whether KMC, ECD, and Readers will show the same curve is an empirical question we will publish as data accumulates.</p>
+        <p>The bundle separation matters for procurement comparisons. Inside CHC, Nigeria visits include an ORS/Zinc co-pack and across 14 LLO contracts averaged $1.30 per verified visit fully loaded. Outside Nigeria, the bundle is VAS plus deworming with no ORS, and across 17 LLO contracts averaged $0.78<sup class="fn"><a href="#s1">1</a></sup>. The $1.70 weighted average is the right number for "CHC during the FP grant period." It is the wrong number for "what would a similar campaign cost in country X." The right comparison depends on the bundle.</p>
+        <p>The setup-fee component, currently averaging about $0.40 per visit during the grant, is projected to converge toward $0.10 per visit at scale as the Trial Run model proves out and per-LLO activation cost amortizes across larger campaign volumes. That projection is forward-looking; we will publish the converged number when the next cohort closes. Treating projections as measurements is the failure mode that the FP Final Report's methodology section is designed to prevent.</p>
+      </div>
+      <aside class="margin">
+        <h4>Cost components</h4>
+        <div class="note">Commodity + FLW pay + LLO overhead + 20% Connect platform fee. Setup fees $0.40/visit during grant; projected $0.10 at scale.<sup class="fn"><a href="#s1">1</a></sup></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- LEARNING 5: Religious leaders / locally grounded -->
+  <section class="learning">
+    <p class="section-label">Learning 5 of 5 · CLP Stage 2</p>
+    <h2>5 of 7 LLOs leveraged religious and community leaders for vaccine outreach. We did not teach them this.</h2>
+    <div class="column-pair">
+      <div class="prose">
+        <p>The CLP Stage 2 vaccine campaign within CHC produced the cleanest piece of evidence Connect has on what locally-led organizations actually do that a centralized model cannot. Of 7 LLOs in the campaign<sup class="fn"><a href="#s2">2</a></sup>, 5 to 6 independently leveraged religious leaders, community leaders, or existing community relationships as part of their vaccine-hesitancy outreach. They did this without prompting from Dimagi, without it being in the Learn modules, and without it being on the supervisor checklist.</p>
+        <p>Specific examples<sup class="fn"><a href="#s2">2</a></sup>: one FLW countered hesitancy with a personal example — "We were immunized, we have children." Another LLO had FLWs who had been recommended by the community itself, lending immediate credibility before a single conversation about vaccines. The pattern is locally-grounded knowledge that does not survive being centralized; if Dimagi had written a "religious-leader engagement module" and pushed it through the Learn app, it would have been a cartoon of what those LLOs already understood about their own communities.</p>
+        <p>This is the mechanism behind Connect's L-in-LLO. The platform tilts capability into the local partner: FLW recruitment, supervision schedules, the framing of outreach, the local language and idiom, the relationships with health-facility staff. Connect controls the workflow logic, the verification stack, and the payment guardrails. The split is what makes 44 LLOs in 14 months tractable without 44 Dimagi field offices.</p>
+        <p>The honest gap on the CHC page, as noted on Deliver: we do not yet have a structured framework for capturing what individual LLOs invent locally. The 5-of-7 finding was surfaced by an outside evaluator going to the field, not by the platform. Building a feedback loop that surfaces those inventions without flattening them is on the roadmap, and we are wary of doing it badly.</p>
+      </div>
+      <aside class="margin">
+        <h4>Source</h4>
+        <div class="note">CLP Stage 2 Report (Feb 2026), CHC vaccine campaign — 7 LLOs evaluated.<sup class="fn"><a href="#s2">2</a></sup></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Open questions -->
+  <section class="open-questions">
+    <h3>What we don't know yet</h3>
+    <ol>
+      <li>Whether the cost-per-verified-visit advantage holds outside Nigeria's commodity bundle — IPA RCT 2026 ($1.5M, PRO Impact) will test.</li>
+      <li>The 65% Trial Run conversion criteria are program-manager judgment calls today, not codified into a model an outside funder could replicate.</li>
+      <li>Microplan execution failed in CAR's dispersed settlement and on inaccessible land. We removed it from one campaign entirely.</li>
+    </ol>
+  </section>
+
+  <aside class="sources">
+    <h3>Sources</h3>
+    <ol>
+      <li id="s1">Founders Pledge Final Report (Feb 2026), CHC program — LLO Activation, Coverage Results, Adversarial Fraud Testing, Cost Reduction sections. 880,000+ verified visits in 14 months across 44 LLOs in 8 countries.</li>
+      <li id="s2">CLP Stage 2 Report (Feb 2026), CHC vaccine campaign, 7 LLOs.</li>
+      <li id="s3">External video — <a href="https://www.youtube.com/watch?v=VRbvUj9LTUg" target="_blank" rel="noopener">Inside CHC Kenya</a> (YouTube).</li>
+    </ol>
+  </aside>
+
+  <div class="next-step">
+    <span class="label-line">Programs →</span>
+    <a href="../kmc/index.html">KMC — closing the post-discharge gap for small or vulnerable newborns →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="colophon">
+      <strong style="color: var(--ink); font-family: 'IBM Plex Serif', serif; font-weight:600;">Connect by Dimagi</strong><br />
+      A platform for verified frontline work.
+    </div>
+    <div>
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="../../learn.html">Learn</a></li>
+        <li><a href="../../deliver.html">Deliver</a></li>
+        <li><a href="../../verify.html">Verify</a></li>
+        <li><a href="../../pay.html">Pay</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="../chc/index.html">CHC</a></li>
+        <li><a href="../kmc/index.html">KMC</a></li>
+        <li><a href="../ecd/index.html">ECD</a></li>
+        <li><a href="../readers/index.html">Readers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Methodology</h4>
+      <ul>
+        <li><a href="../../insights.html">Insights index</a></li>
+        <li><a href="../../index.html">Up to memo</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
