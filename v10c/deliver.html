@@ -1,228 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deliver — Connect by Dimagi</title>
-<meta name="description" content="Why pre-vetting LLOs didn't predict performance, the Trial Run that replaced it, and the CAR failure that taught us when remote coordination breaks." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-<link rel="stylesheet" href="styles.css" />
+<meta name="description" content="How Connect scales delivery through locally-led organizations: the Trial Run model, community partnerships, and what went wrong in CAR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="inner">
-    <a href="index.html" class="brand">Connect <span class="by">/ by Dimagi</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="learn.html">Learn</a>
-      <a href="deliver.html" class="current">Deliver</a>
-      <a href="verify.html">Verify</a>
-      <a href="pay.html">Pay</a>
-      <a href="programs/index.html">Programs</a>
-      <a href="insights.html">Insights</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="./index.html"><img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi"></a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">How It Works <span>▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="./learn.html">Learn<small>Layered training, validated against ~400 FLWs</small></a>
+          <a href="./deliver.html">Deliver<small>Locally-led delivery, Trial-Run activated</small></a>
+          <a href="./verify.html">Verify<small>Four independent verification layers</small></a>
+          <a href="./pay.html">Pay<small>Mobile money on verified completion</small></a>
+        </div>
+      </div>
+      <a href="./programs.html">Programs</a>
+      <a href="./insights.html">Insights</a>
+      <a href="./index.html#impact">Impact</a>
+      <a href="./index.html#contact" class="cta-pill">Request a Demo</a>
     </nav>
-    <span class="meta">§2 DELIVER · v10c</span>
+    <button class="nav-toggle" id="navToggle">≡</button>
   </div>
 </header>
 
-<main class="page">
-
-  <p class="crumbs"><a href="index.html">Home</a> / <a href="insights.html">Insights</a> / Deliver</p>
-
-  <section class="hero">
-    <p class="kicker">§2 · Deliver · how locally-led organizations actually scale</p>
-    <h1>We invented the Trial Run because pre-vetting LLOs didn't predict performance.</h1>
-    <p class="lede">Conventional procurement says vet partners thoroughly before contracting. We tried it. Past reputation, team size, and organizational maturity did not reliably predict whether an LLO would deliver. So we built the Trial Run: <span class="n">$3,000</span> setup for <span class="n">3,000</span> verified visits, performance-paid. <span class="n">107</span> EOIs. <span class="n">37</span> contracts. <span class="n">24</span> Trials. <span class="n">14</span> campaigns. <span class="n">65%</span> conversion — published. And one cohort failure (CAR) that taught us when remote coordination breaks.</p>
-  </section>
-
-  <section class="stat-row" aria-label="Headline numbers">
-    <div class="stat"><span class="num">107 → 14</span><span class="k">CHC LLO funnel</span></div>
-    <div class="stat"><span class="num">65%</span><span class="k">trial run conversion</span></div>
-    <div class="stat"><span class="num">880,000+</span><span class="k">verified visits, 14 mo</span></div>
-    <div class="stat"><span class="num">44</span><span class="k">LLOs activated</span></div>
-  </section>
-
-  <!-- LEARNING 1 — Trial Run -->
-  <article class="learning" id="trial-run">
-    <div class="learning-head">
-      <span class="section-label">Learning 1 of 3 · Platform · I1 · N4 · N9 · N16</span>
-      <span class="badge hard">hard data</span>
-      <a class="deep" href="insights.html#n4">⟶ insights#n4</a>
+<section class="sub-hero">
+  <div class="grid-bg"></div>
+  <div class="aurora"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
+    <nav class="breadcrumbs"><a href="./index.html">Connect</a><span class="sep">/</span>How It Works<span class="sep">/</span>Deliver</nav>
+    <div class="eyebrow-row">
+      <span class="step-chip"><span class="sc-bullet"></span>Step 02 of 04</span>
+      <span class="step-chip" style="color:rgba(238,240,255,0.7);background:transparent;">The delivery layer</span>
     </div>
-    <h2>Past reputation didn't predict performance. The Trial Run replaced procurement screening.</h2>
+    <h1>Delivery is <em>locally-led.</em> The platform composes around it.</h1>
+    <p class="dek">Locally-Led Organizations — not Dimagi — run operations on the ground. Connect provides the rails. LLOs provide the relationships.</p>
+    <p class="lede">The platform supplies app, verification, and payment infrastructure. LLOs supply community knowledge, supervision, and the relationships that decide whether a family opens the door. The shape of that partnership was the single biggest thing we had to learn how to build.</p>
 
-    <div class="retro-step">
-      <span class="step-label">The question we had</span>
-      <p>If a Locally-Led Organization presents a strong proposal — experienced staff, prior CHV-campaign references, a reasonable cost model — does that information predict whether they will actually deliver verified visits at scale? Conventional procurement assumes yes. Our first three CHC campaigns assumed yes. After three campaigns we stopped pretending.</p>
+    <div class="sub-hero-stats">
+      <div class="s"><div class="s-num">880K+</div><div class="s-cap">CHC visits in 14 months</div></div>
+      <div class="s"><div class="s-num">44</div><div class="s-cap">LLOs contracted</div></div>
+      <div class="s"><div class="s-num">65%</div><div class="s-cap">Trial Run pass rate</div></div>
+      <div class="s"><div class="s-num">11</div><div class="s-cap">Countries actively delivering</div></div>
     </div>
-
-    <div class="retro-step">
-      <span class="step-label">What we tried</span>
-      <p>The standard pre-qualification stack: organizational maturity questionnaire, reference checks with prior funders, financial-management diligence, leadership interviews. We graded LLO applications on this stack and selected the highest-graded for full campaign contracts. The grading process was structured and defensible. It also did not predict performance. The signal we were screening on was decoupled from the outcome we were paying for.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What we found</span>
-      <p>The cleanest published view of the alternative is the CHC funnel<sup class="fn"><a href="#s1">1</a></sup>: <span class="n">107</span> EOI applications, <span class="n">37</span> LLOs contracted under Trial Run terms (<span class="n">$3,000</span> setup fee for <span class="n">3,000</span> verified child visits, performance-based), <span class="n">24</span> advanced to full Trial Runs, <span class="n">14</span> graduated to larger campaigns. Three additional LLOs went straight to larger campaigns based on prior measured performance from earlier Connect programs. The published <span class="n">65%</span> Trial-Run conversion is not an intent; it's the output of a measurement on the same Connect verification stack a full campaign would use. There is no synthetic pilot signal — the data we collect during a Trial Run is real production data.</p>
-      <p>The <span class="n">35%</span> that didn't pass were paid the setup fee, not per-visit pay; they were not continued. Why this matters in practice: CHC works in 8 countries with very different LLO ecosystems. Nigeria has many candidate partners with prior CHV-campaign experience; Sierra Leone has fewer; Central African Republic has effectively none. Pre-vetting at scale across that variance was producing biased screens — partners we knew were systematically advantaged over partners we didn't. Trial Run terms remove the bias by paying small for real and rewarding only delivery.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What changed</span>
-      <p>Trial Run is now the platform's default path to LLO activation. It has been reused on Readers, KMC, and chlorine work, not just CHC. The procurement document is no longer the screen; the first <span class="n">3,000</span> verified visits are. We publish the <span class="n">65%</span> conversion because the alternative — opaque vendor lists — is what funders are trying to escape.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What's still open</span>
-      <p>The selection criteria that drive the <span class="n">65%</span> conversion are program-manager judgment calls today, not codified into a model an outside funder could replicate. We have a checklist of red flags from the failed cohort (staffing concentration, single-point-of-failure dependence, cash-flow fragility) but it is descriptive, not predictive. Whether the <span class="n">65%</span> holds outside CHC is also open — KMC, ECD, and Readers are still on too small a contract base to publish their own conversion.</p>
-    </div>
-
-    <div class="src">
-      <strong>Source:</strong> Founders Pledge Final Report (Feb 2026), CHC §LLO Activation Model — full funnel published. <a href="#s1">[1]</a>
-    </div>
-  </article>
-
-  <!-- LEARNING 2 — Religious leaders / locally grounded -->
-  <article class="learning" id="religious-leaders">
-    <div class="learning-head">
-      <span class="section-label">Learning 2 of 3 · CHC / CLP Stage 2 · I6 · N7</span>
-      <span class="badge hard">hard data</span>
-      <a class="deep" href="insights.html#n7">⟶ insights#n7</a>
-    </div>
-    <h2>5 of 7 LLOs leveraged religious leaders for vaccine outreach. We did not teach them this.</h2>
-
-    <div class="retro-step">
-      <span class="step-label">The question we had</span>
-      <p>What does the L in LLO actually do that a centralized model cannot — concretely, in a campaign, measured against a specific community-health outcome? "Locally-led" is rhetorically easy and operationally hard to evidence.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What we tried</span>
-      <p>The CLP Stage 2 vaccine campaign within CHC. <span class="n">7</span> LLOs in the campaign, evaluated by an outside research team going to the field rather than by Dimagi inferring from app logs. We did not push a "religious-leader engagement module" through the Learn app. We did not tell partners to recruit religious leaders. We watched what they did.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What we found</span>
-      <p>Of the <span class="n">7</span> LLOs in the campaign<sup class="fn"><a href="#s2">2</a></sup>, <span class="n">5–6</span> independently leveraged religious leaders, community leaders, or existing community relationships as part of their vaccine-hesitancy outreach. They did this without prompting, without it being on the Learn modules, and without it being on the supervisor checklist. Specific examples: one FLW countered hesitancy with a personal example — <em>"We were immunized, we have children."</em> Another LLO sourced FLWs the community itself recommended, lending immediate credibility before a single conversation about vaccines.</p>
-      <p>The pattern is locally-grounded knowledge that does not survive being centralized. If Dimagi had written a module — "engage religious leaders; here are five talking points" — it would have been a cartoon of what those LLOs already understood about their own communities. The platform's job, evidently, is to enable this rather than to centralize it.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What changed</span>
-      <p>The <span class="n">5-of-7</span> finding is now a referenced data point in how we describe the L-in-LLO to funders. Operationally, it has firmed up an architectural rule: Connect controls workflow logic, the verification stack, and payment guardrails. LLOs control FLW recruitment, supervision schedules, the framing of outreach, and the relationships with health-facility staff. The split is what makes <span class="n">44</span> LLOs in 14 months tractable without 44 Dimagi field offices.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What's still open</span>
-      <p>We have not built a structured framework for capturing or sharing what individual LLOs invent locally. The "real intervention" often lives in their heads, not in our app. The <span class="n">5-of-7</span> finding was surfaced by an outside evaluator going to the field, not by the platform. Building a feedback loop that surfaces those inventions without flattening them is on the roadmap, and we are wary of doing it badly.</p>
-    </div>
-
-    <div class="src">
-      <strong>Source:</strong> CLP Stage 2 Report (Feb 2026), CHC vaccine campaign — 7 LLOs evaluated, qualitative interviews. <a href="#s2">[2]</a>
-    </div>
-  </article>
-
-  <!-- LEARNING 3 — CAR failure -->
-  <article class="learning" id="car-failure">
-    <div class="learning-head">
-      <span class="section-label">Learning 3 of 3 · CHC / CAR · I9 · N8</span>
-      <span class="badge tri">triangulated</span>
-      <a class="deep" href="insights.html#n8">⟶ insights#n8</a>
-    </div>
-    <h2>Both LLOs in CAR dropped out. We now flag fragile contexts as needing in-country presence.</h2>
-
-    <div class="retro-step">
-      <span class="step-label">The question we had</span>
-      <p>The Trial Run model assumes baseline connectivity, baseline LLO staffing capacity, and a partner that can convert digital tooling into operational delivery. In a fragile context — active conflict, weak telecom, limited candidate-LLO pool — does that assumption hold?</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What we tried</span>
-      <p>We contracted two LLOs in the Central African Republic for CHC vaccine work. We coordinated remotely from the CHC program management team. Same Connect stack, same payment terms, same Trial Run conversion gate.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What we found</span>
-      <p>Both LLOs dropped out<sup class="fn"><a href="#s3">3</a></sup>. Three features showed up together in the post-mortem: staffing concentration (a single key operator at each LLO whose unavailability halted the campaign), connectivity fragility (the verification stack assumes intermittent-but-recoverable network; the actual conditions were below that floor), and concurrent emergency-response load on the partner organizations themselves. Remote coordination was not enough. There was no recoverable middle path: the campaign did not partially deliver, it stopped.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What changed</span>
-      <p>We now flag fragile contexts as requiring dedicated in-country presence before activation. We do not repeat the same remote-coordination model in similarly difficult geographies. The CAR cohort is named in the FP report — we publish failures because the methodology breaks if we don't.</p>
-    </div>
-
-    <div class="retro-step">
-      <span class="step-label">What's still open</span>
-      <p>"In-country presence" is a coarse rule. We don't yet have a sharper predictive model for which fragile-context features make remote coordination fail — single-operator staffing? Specific connectivity thresholds? Concurrent emergency load? We have qualitative red flags from the CAR post-mortem but not a quantitative threshold. The next fragile-context campaign we contract will test whether the in-country-presence rule is sufficient or whether we need finer screens on top of it.</p>
-    </div>
-
-    <div class="src">
-      <strong>Source:</strong> Founders Pledge Final Report (Feb 2026), CHC §Vaccine Campaigns — CAR cohort post-mortem. <a href="#s3">[3]</a>
-    </div>
-  </article>
-
-  <!-- Open questions -->
-  <section class="open-questions">
-    <h3>Open questions on Deliver</h3>
-    <ol>
-      <li>Whether the <span class="n">65%</span> Trial Run conversion holds outside CHC — KMC, ECD, and Readers are still on too small a contract base to publish their own.</li>
-      <li>"Fragile context requires in-country presence" is a coarse rule learned from CAR. We don't have a sharper predictive model yet.</li>
-      <li>We have not built a structured framework for capturing what individual LLOs invent locally — the real intervention often lives in their heads.</li>
-    </ol>
-  </section>
-
-  <!-- Sources -->
-  <aside class="sources">
-    <h3>Sources</h3>
-    <ol>
-      <li id="s1">Founders Pledge Final Report (Feb 2026), CHC §LLO Activation Model — 107 EOIs / 37 contracts / 24 Trials / 14 campaigns; 65% Trial-Run conversion; setup-fee structure.</li>
-      <li id="s2">CLP Stage 2 Report (Feb 2026), CHC vaccine campaign — 7 LLOs evaluated.</li>
-      <li id="s3">Founders Pledge Final Report (Feb 2026), CHC §Vaccine Campaigns — CAR cohort post-mortem.</li>
-    </ol>
-  </aside>
-
-  <div class="next-step">
-    <span class="label-line">§3 →</span>
-    <a href="verify.html">Verify — adversarial fraud testing, microplans, and guardrails-not-hard-stops ⟶</a>
   </div>
+</section>
 
-</main>
+<section class="wrap">
+  <div class="pillars-text">
+    <div class="pillar-text">
+      <div class="pt-num">i.</div>
+      <h4>Guided workflows</h4>
+      <p>CommCare walks the FLW through each visit — registration, counseling, screening, treatment. GPS, timestamps, and images are captured as the visit happens. No paper. No end-of-day data entry.</p>
+    </div>
+    <div class="pillar-text">
+      <div class="pt-num">ii.</div>
+      <h4>Locally-led operations</h4>
+      <p>LLOs manage government approvals, smartphone procurement, localization, recruitment, and supervision. They know the community. The platform doesn't replace that — it equips it.</p>
+    </div>
+    <div class="pillar-text">
+      <div class="pt-num">iii.</div>
+      <h4>Performance-based, not headcount-based</h4>
+      <p>LLOs are paid per verified service, not per FLW on staff. Scaling to 44 partners across 11 countries required almost no growth in Dimagi's own team.</p>
+    </div>
+  </div>
+</section>
 
-<footer class="site-footer">
-  <div class="inner">
-    <div class="colophon">
-      <strong>Connect by Dimagi</strong><br />
-      A platform for verified frontline work.
+<section class="wrap-narrow" style="margin-bottom:40px;">
+  <div class="section-head">
+    <div class="eyebrow">From application to scaled delivery</div>
+    <h2>The LLO activation funnel.</h2>
+    <p class="dek">Single EOI round under the Founders Pledge grant. Roughly 100 applications in. 17 organizations running full campaigns out.</p>
+  </div>
+  <div class="funnel">
+    <div class="funnel-step"><span>~100 EOI applications received</span><span class="fs-num">100</span></div>
+    <div class="funnel-step"><span>37 LLOs contracted</span><span class="fs-num">37</span></div>
+    <div class="funnel-step"><span>24 entered Trial Runs</span><span class="fs-num">24</span></div>
+    <div class="funnel-step"><span>17 completed full campaigns</span><span class="fs-num">17</span></div>
+  </div>
+</section>
+
+<!-- LEARNING 1 — Trial Run -->
+<div class="longread">
+  <article>
+    <div class="article-head">
+      <div class="l-section">Learning · 01 · Pre-vetting doesn't work</div>
+      <h2>LLO performance can't be predicted. Only proven, in small contracts.</h2>
+      <p class="dek">The procurement-style approach to partner selection failed us. We replaced it with the Trial Run — a mechanism for de-risking activation that has now been reused across sectors without modification.</p>
     </div>
-    <div>
-      <h4>Platform</h4>
-      <ul>
-        <li><a href="learn.html">Learn</a></li>
-        <li><a href="deliver.html">Deliver</a></li>
-        <li><a href="verify.html">Verify</a></li>
-        <li><a href="pay.html">Pay</a></li>
-      </ul>
+
+    <div class="body">
+      <p>Conventional development contracting assumes you can vet your way to good partner selection. Track record, team size, past-funder references, organizational maturity. You read the dossier, run the references, score the proposal, sign a contract sized to the campaign. This is how the sector has worked for decades. It is, in principle, a sensible approach.</p>
+
+      <h3 class="with-stamp"><span class="date-stamp">Pre-2024 · Standard procurement</span>Vet first, contract big.</h3>
+
+      <p>We started inside that frame. We reviewed track records and assessed team capacity, then signed contracts sized for full campaign delivery. Then we watched what happened.</p>
+
+      <h3 class="with-stamp"><span class="date-stamp">2024 · The prediction failure</span>Reputation didn't predict performance.</h3>
+
+      <p>Pre-selection turned out to be a <strong>poor predictor of field performance</strong>. Organizations with strong track records in other programs stumbled on Connect visits — different operational tempo, different verification load, different incentive shape. Organizations that looked marginal on paper delivered at scale, because what mattered in the field wasn't what their dossier had measured. Team size, organizational maturity, past-funder references — none of it reliably forecasted what actually happened in the field.</p>
+
+      <p class="pullquote">The signal we wanted — "will this LLO deliver verified visits efficiently?" — wasn't encoded in the signals we were checking.</p>
+
+      <span class="stat-line">Pre-selection as predictive signal: <strong>unreliable</strong></span>
+
+      <h3 class="with-stamp"><span class="date-stamp">Mid-2024 · The Trial Run model</span>$3,000 setup. 3,000 visits. Performance-based.</h3>
+
+      <p>New LLOs receive a small initial contract: <strong>$3,000 setup fee for 3,000 verified child visits</strong>. Payment is tied to actual delivery. If they execute, they roll into a larger campaign. If they don't, the financial exposure is capped and the next partner gets a turn. We bear minimal risk; they prove it in the field.</p>
+
+      <h3 class="with-stamp"><span class="date-stamp">2025–2026 · What it produced</span>37 contracted. 24 ran trials. 17 scaled.</h3>
+
+      <p>Under the Founders Pledge grant: <strong>37 LLOs contracted</strong>. <strong>24</strong> entered Trial Runs; <strong>10 underperformed</strong> and weren't continued. <strong>3</strong> went straight to larger campaigns based on prior measured performance from inside the network. <strong>17</strong> completed full campaigns following successful Trial Runs. The Trial Run has now been reused — without modification — for KMC, Readers, and chlorine dispensers. It is sector-agnostic because it doesn't rely on any domain-specific features of CHC. It relies on the idea that small, performance-based contracts are the cheapest form of evidence about an organization's operational fit.</p>
+
+      <span class="stat-line">Trial Run conversion: <strong>65%</strong> · Reused across <strong>4 programs</strong> without modification</span>
+
+      <p class="article-source"><strong>Source:</strong> Founders Pledge Final Report (Feb 2026). Insight 1 in the public insights log.</p>
     </div>
-    <div>
-      <h4>Programs</h4>
-      <ul>
-        <li><a href="programs/chc/index.html">CHC</a></li>
-        <li><a href="programs/kmc/index.html">KMC</a></li>
-        <li><a href="programs/ecd/index.html">ECD</a></li>
-        <li><a href="programs/readers/index.html">Readers</a></li>
-      </ul>
+  </article>
+</div>
+
+<!-- LEARNING 2 — Religious leaders -->
+<div class="longread" style="margin-top:80px;">
+  <article>
+    <div class="article-head">
+      <div class="l-section">Learning · 02 · Why the "L" in LLO matters</div>
+      <h2>LLOs navigate vaccine hesitancy with religious leaders. We didn't teach them this.</h2>
+      <p class="dek">The most important intervention in a vaccine campaign wasn't in our app. It was what the LLO did with the platform once they were operating in their own community — and we learned we couldn't centralize that knowledge.</p>
     </div>
-    <div>
-      <h4>Graph</h4>
-      <ul>
-        <li><a href="insights.html">Insights index</a></li>
-        <li><a href="index.html">Up to home</a></li>
-      </ul>
+
+    <div class="body">
+      <p>The first time we sat down to design vaccine-hesitancy training for the Learn app, we built it like a textbook. Common myths and the medical responses that counter them. Counseling scripts for the most predictable refusals. A set of motivational-interviewing drills. Read the module, pass the test, you're equipped. That was the plan, and at the time it felt like the obvious shape for the work.</p>
+
+      <h3 class="with-stamp"><span class="date-stamp">Early 2025 · How we framed the training</span>"Cover vaccine myths in the digital content."</h3>
+
+      <p>We rolled this content out across the seven LLOs running the CLP Stage 2 vaccine campaign in CHC. The plan was: equip the FLW, observe the encounter, iterate on the content. Then we started looking at what was actually happening in the field.</p>
+
+      <h3 class="with-stamp"><span class="date-stamp">CLP Stage 2 · What actually happened</span>5 of 7 LLOs mobilized leaders on their own.</h3>
+
+      <p>Across <strong>seven LLOs</strong>, <strong>five or six independently leveraged religious leaders, community leaders, or existing community relationships</strong> as part of their outreach strategy — before we asked, before the app prompted it. One FLW countered hesitancy with a personal example: <em>"We were immunized, we have children."</em> Another LLO had FLWs who were <strong>recommended by the community itself</strong>, lending credibility before any door was knocked on.</p>
+
+      <p class="pullquote indigo">The platform didn't teach this. The LLOs already knew it.</p>
+
+      <p>The pattern was specific and consistent enough that it stopped looking like a coincidence. These organizations operate inside the same communities they are visiting. They know which imam matters in which neighborhood. They know which traditional birth attendant the mothers actually trust. They know which compound elder will quietly tell families a campaign is fine, and which one would walk in front of the team to keep them out. None of this is in our app. None of this could be in our app.</p>
+
+      <span class="stat-line">LLOs independently mobilizing community leaders: <strong>5–6 of 7</strong></span>
+
+      <h3 class="with-stamp"><span class="date-stamp">Late 2025 · What we changed</span>Stop trying to codify local knowledge.</h3>
+
+      <p>We stopped writing more content about hesitancy. We started designing the platform to get out of the way. The Deliver layer now assumes the LLO knows how to talk to their community better than we do. Our job is to make the mechanics — scheduling, visit flow, verification, payment — frictionless enough that the LLO can pour their attention into relationships.</p>
+
+      <p>This is why the <strong>L</strong> is load-bearing in LLO. Dimagi can't centralize what an imam knows about trust in his community. The platform's job is to enable it, not replace it. The bigger reframe for the funder pitch: the platform's value isn't that it trains FLWs to counter hesitancy with better facts. The platform's value is that it lets locally-led organizations <strong>do the work they already know how to do</strong>, at larger scale, with tighter verification, and with sustainable funding attached.</p>
+
+      <p class="article-source"><strong>Source:</strong> CLP Stage 2 Report (Feb 2026). Insight 6 in the public insights log.</p>
+    </div>
+  </article>
+</div>
+
+<!-- LEARNING 3 — CAR -->
+<div class="longread" style="margin-top:80px;">
+  <article>
+    <div class="article-head">
+      <div class="l-section">Learning · 03 · What didn't work</div>
+      <h2>Both LLOs dropped out in CAR. We published it anyway.</h2>
+      <p class="dek">The Central African Republic deployment is the clearest negative result we have. The model didn't port as cleanly as we thought. It's in this writeup because platforms that don't publish what failed don't get believed on the rest.</p>
+    </div>
+
+    <div class="body">
+      <p>Connect's rapid partner activation had worked across Nigeria, Kenya, Uganda, Tanzania. The assumption — supported by the early evidence — was that the same approach would port to any context where LLOs exist and phones reach the field. The Trial Run model presumes basic operating conditions: connectivity that holds long enough to sync visits, staffing stable enough to absorb a six-week ramp-up, and a remote-coordination cadence that can substitute for in-country presence.</p>
+
+      <h3 class="with-stamp"><span class="date-stamp">2024 · The assumption</span>"The model is portable."</h3>
+
+      <p>We contracted two LLOs in the Central African Republic for a CHC vaccine deployment. We expected the standard activation arc: setup, training, Trial Run delivery, scale-up. We were wrong by week six.</p>
+
+      <h3 class="with-stamp"><span class="date-stamp">2024–2025 · What happened in CAR</span>Both contracted LLOs dropped out.</h3>
+
+      <p><strong>Both</strong> LLOs contracted for the CAR deployment exited during setup, citing staffing turnover and connectivity issues. Remote coordination, which had worked elsewhere, couldn't hold things together. The campaign didn't deliver meaningful volume. We published the failure in the Founders Pledge final report because the alternative — a portfolio of only successes — would have been a different kind of dishonesty.</p>
+
+      <span class="stat-line">LLOs completing campaigns in CAR: <strong>0</strong></span>
+
+      <h3 class="with-stamp"><span class="date-stamp">2026 · What we changed</span>Fragile contexts likely need in-country presence.</h3>
+
+      <p>We're not repeating the same approach in similarly fragile geographies without dedicated in-country presence. The Trial Run model assumes the partner can execute basic operations — reliable connectivity, stable staffing, remote check-ins. Where any of those assumptions break, the model needs a different shape. This now shows up in how we evaluate new country invitations: remote-only activation is no longer the default for fragile contexts. Whether "lightweight in-country presence" is sufficient, or whether deeper structural changes are required, is open work.</p>
+
+      <p class="article-source"><strong>Source:</strong> Founders Pledge Final Report (Feb 2026). Insight 9 in the public insights log.</p>
+    </div>
+  </article>
+
+  <div class="open-questions">
+    <h4>What we don't know yet.</h4>
+    <ol>
+      <li>Whether the 65% Trial Run conversion holds outside CHC — KMC, ECD, and Readers are still on too small a contract base to publish their own.</li>
+      <li>"Fragile context requires in-country presence" is a coarse rule learned from CAR. We don't have a sharper predictive model yet for which fragile-context features make remote coordination fail.</li>
+      <li>We have not built a structured framework for capturing what individual LLOs invent locally — the real intervention often lives in their heads, not in our app.</li>
+    </ol>
+  </div>
+</div>
+
+<section class="next-step">
+  <div class="wrap">
+    <div class="next-step-inner">
+      <div>
+        <div class="ns-label">Next in the cycle</div>
+        <h3>Delivery produces data. <em>Verification</em> decides what counts.</h3>
+      </div>
+      <a href="./verify.html" class="next-step-cta">Continue to Verify →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+        <p>Connect is a Dimagi platform linking funding to verified service delivery at the frontline.</p>
+      </div>
+      <div class="footer-col"><h5>Platform</h5><ul>
+        <li><a href="./learn.html">Learn</a></li>
+        <li><a href="./deliver.html">Deliver</a></li>
+        <li><a href="./verify.html">Verify</a></li>
+        <li><a href="./pay.html">Pay</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Programs</h5><ul>
+        <li><a href="./programs/chc.html">CHC</a></li>
+        <li><a href="./programs/kmc.html">KMC</a></li>
+        <li><a href="./programs/ecd.html">ECD</a></li>
+        <li><a href="./programs/readers.html">Readers</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Connect</h5><ul>
+        <li><a href="./insights.html">Insights</a></li>
+        <li><a href="./index.html#impact">Impact</a></li>
+        <li><a href="https://www.dimagi.com">About Dimagi</a></li>
+        <li><a href="./index.html#contact">Request a Demo</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Dimagi, Inc. All rights reserved.</div>
+      <div>Connect by Dimagi · v10c</div>
     </div>
   </div>
 </footer>
 
+<script>
+  const t = document.getElementById('navToggle');
+  const l = document.getElementById('navLinks');
+  if (t && l) t.addEventListener('click', () => l.classList.toggle('is-open'));
+</script>
 </body>
 </html>

@@ -1,305 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insights — Connect by Dimagi</title>
-<meta name="description" content="The knowledge graph of Connect — every Kept insight and above-threshold nugget across programs. Each entry carries an evidence-tier badge, a scope, and a deep link to its home page." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-<link rel="stylesheet" href="styles.css" />
+<meta name="description" content="Every claim, scoped to its evidence — the buffet view of what we've learned across Connect programs and platform mechanisms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="inner">
-    <a href="index.html" class="brand">Connect <span class="by">/ by Dimagi</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="learn.html">Learn</a>
-      <a href="deliver.html">Deliver</a>
-      <a href="verify.html">Verify</a>
-      <a href="pay.html">Pay</a>
-      <a href="programs/index.html">Programs</a>
-      <a href="insights.html" class="current">Insights</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="./index.html"><img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi"></a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">How It Works <span>▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="./learn.html">Learn<small>Layered training, validated against ~400 FLWs</small></a>
+          <a href="./deliver.html">Deliver<small>Locally-led delivery, Trial-Run activated</small></a>
+          <a href="./verify.html">Verify<small>Four independent verification layers</small></a>
+          <a href="./pay.html">Pay<small>Mobile money on verified completion</small></a>
+        </div>
+      </div>
+      <a href="./programs.html">Programs</a>
+      <a href="./insights.html" class="active">Insights</a>
+      <a href="./index.html#impact">Impact</a>
+      <a href="./index.html#contact" class="cta-pill">Request a Demo</a>
     </nav>
-    <span class="meta">INSIGHTS · v10c anchor</span>
+    <button class="nav-toggle" id="navToggle">≡</button>
   </div>
 </header>
 
-<main class="page">
-
-  <p class="crumbs"><a href="index.html">Home</a> / Insights</p>
-
-  <section class="insights-hero">
-    <p class="kicker" style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.6rem;">The knowledge graph · home base of v10c</p>
-    <h1>Every claim, scoped to its evidence. Every entry, badged by tier.</h1>
-    <p class="lede">This is the buffet view of what we've measured. Each entry is one sentence, scoped to the program it was measured in, badged by evidence tier, and linked to the page that treats it in full. Programs first (CHC, ECD, KMC, Readers); platform mechanisms second. Within each group, ordered by judge-anticipated weight. <strong>This page is the home base of v10c</strong> — the LDVP and program pages link back here, and the badges visible here are the same badges visible on every depth page.</p>
-    <div class="tier-legend">
-      <div class="tl-item"><span class="badge hard">hard data</span> measured finding · named report · published N</div>
-      <div class="tl-item"><span class="badge tri">triangulated</span> multiple sources or external benchmark</div>
-      <div class="tl-item"><span class="badge hyp">hypothesis</span> in-validation · evaluation named</div>
+<section class="sub-hero">
+  <div class="grid-bg"></div>
+  <div class="aurora"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
+    <nav class="breadcrumbs"><a href="./index.html">Connect</a><span class="sep">/</span>Insights</nav>
+    <div class="eyebrow-row">
+      <span class="step-chip"><span class="sc-bullet"></span>What we've learned</span>
     </div>
-  </section>
+    <h1>Every claim, <em>scoped to its evidence.</em></h1>
+    <p class="dek">A long-read collection. Each entry below is a learning we are willing to put on the public record — with the program it came from, the source, and (where applicable) the open question that comes with it.</p>
+    <p class="lede">Programs first. Platform mechanisms second. Within each group, ordered by the depth of the evidence behind the claim. The methodology footer at the bottom of the page tells you what makes the cut and what doesn't.</p>
+  </div>
+</section>
 
-  <!-- SCOPE: CHC -->
-  <section class="scope-group" id="scope-chc">
-    <h2>Scope · CHC · 10 entries</h2>
+<section class="insights-index">
 
-    <div class="entry" id="n1">
-      <div class="id-tag"><span>N1 · I3</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="verify.html#fraud">We paid FLWs bonuses to defeat our fraud detection. <span class="n">97.5%</span> of real workers scored cleaner than the lowest-scoring fabricator</a> — across three rounds, <span class="n">33</span> paid fakers, <span class="n">AUC 0.91 ± 0.09</span> from age/gender/MUAC alone.
-        <span class="scoped">Scope: CHC adversarial test (FP Final Report, Feb 2026).</span>
-      </span>
-      <span class="home-link"><a href="verify.html#fraud">⟶ Verify</a></span>
+  <!-- ===== PROGRAMS GROUP ===== -->
+  <div class="group-head">i. Programs</div>
+
+  <!-- N1 fraud -->
+  <article class="insight-entry" id="n1">
+    <div class="ie-num"><em>N1</em></div>
+    <div class="ie-body">
+      <h4><a href="./verify.html">97.5% of real workers scored cleaner than even the lowest-scoring paid fabricator we hired.</a></h4>
+      <p class="ie-teaser">We paid experienced FLWs to fake 100 visit records each across three rounds, with a bonus on the top 25%. A Random Forest on three fields hit AUC 0.91 ± 0.09. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">CHC · published in <a href="./verify.html">Verify</a> and <a href="./programs/chc.html">CHC case study</a> · Source: Founders Pledge Final Report (Feb 2026).</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n2">
-      <div class="id-tag"><span>N2 · I2</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="programs/chc/index.html#microplans">Microplanning produced a <span class="n">3.5×</span> increase in visits-per-child — <span class="n">1.4</span> vs <span class="n">0.4</span></a> — population coverage rose from <span class="n">82–84%</span> to <span class="n">94%</span> in the same CHC cohort.
-        <span class="scoped">Scope: CHC (FP Final Report).</span>
-      </span>
-      <span class="home-link"><a href="verify.html#microplans">⟶ Verify</a></span>
+  <!-- N2 microplanning -->
+  <article class="insight-entry" id="n2">
+    <div class="ie-num"><em>N2</em></div>
+    <div class="ie-body">
+      <h4><a href="./programs/chc.html">Microplanning produced a 3.5× increase in visits-per-child — 1.4 vs 0.4 — and pushed coverage from 82–84% to 94%.</a></h4>
+      <p class="ie-teaser">Without microplans, FLWs cherry-picked the easy households. With grids forcing them to close every Delivery Unit before unlocking the next Service Area, equity stopped being a slogan and became a number. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">CHC · published in <a href="./programs/chc.html">CHC</a> and <a href="./verify.html">Verify</a> · Source: Founders Pledge Final Report (Feb 2026).</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n3">
-      <div class="id-tag"><span>N3 · I4</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="pay.html#cost-inversion">In CHC, cost per verified visit fell <span class="n">22%</span> — <span class="n">$2.20</span> to <span class="n">$1.70</span> — as the program scaled</a>, while Dimagi's team did not substantially grow.
-        <span class="scoped">Scope: CHC during the Founders Pledge grant period.</span>
-      </span>
-      <span class="home-link"><a href="pay.html#cost-inversion">⟶ Pay</a></span>
+  <!-- N3 cost inversion -->
+  <article class="insight-entry" id="n3">
+    <div class="ie-num"><em>N3</em></div>
+    <div class="ie-body">
+      <h4><a href="./pay.html">In CHC, cost per verified visit fell 22% — from $2.20 to $1.70 — as the program scaled.</a></h4>
+      <p class="ie-teaser">Most NGO platforms report cost-per-enrolled-worker. Connect reports cost-per-verified-outcome because the others hide the lever that matters. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">CHC · published in <a href="./pay.html">Pay</a> and <a href="./programs/chc.html">CHC</a> · Source: Founders Pledge Final Report.</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n4">
-      <div class="id-tag"><span>N4 · I1</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="deliver.html#trial-run">We invented the Trial Run because pre-vetting LLOs didn't predict performance — <span class="n">65%</span> conversion through it</a>, <span class="n">107</span> EOIs to <span class="n">14</span> campaign LLOs.
-        <span class="scoped">Scope: Platform (CHC is where it was measured; reused on Readers, KMC, chlorine).</span>
-      </span>
-      <span class="home-link"><a href="deliver.html#trial-run">⟶ Deliver</a></span>
+  <!-- N4 trial run invented -->
+  <article class="insight-entry" id="n4">
+    <div class="ie-num"><em>N4</em></div>
+    <div class="ie-body">
+      <h4><a href="./deliver.html">We invented the Trial Run because pre-vetting LLOs didn't predict performance.</a></h4>
+      <p class="ie-teaser">Past reputation, team size, organizational maturity — none of it reliably predicted whether an LLO would actually deliver. So we contracted small first. Of 37 LLOs in CHC, 24 ran Trials, 10 underperformed, 3 went straight to larger campaigns. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">Platform · published in <a href="./deliver.html">Deliver</a> and <a href="./programs/chc.html">CHC</a> · Source: FP Report; CHC overview.</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n7">
-      <div class="id-tag"><span>N7 · I6</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="programs/chc/index.html#locally-led">5 of 7 LLOs leveraged religious leaders for vaccine-hesitancy outreach — without being asked</a>; one FLW countered hesitancy with "We were immunized, we have children."
-        <span class="scoped">Scope: CHC / CLP Stage 2 vaccine campaign.</span>
-      </span>
-      <span class="home-link"><a href="deliver.html#religious-leaders">⟶ Deliver</a></span>
+  <!-- N6 ECD attitudes -->
+  <article class="insight-entry" id="n6">
+    <div class="ie-num"><em>N6</em></div>
+    <div class="ie-body">
+      <h4><a href="./programs/ecd.html">Caregivers' ECD attitudes were already correct. We moved knowledge +33% and observed teaching behavior +21%.</a></h4>
+      <p class="ie-teaser">A 50-caregiver baseline/endline showed nearly all caregivers already endorsed responsive caregiving. The intervention's actual job was knowledge and behavior — and that's what moved. We doubled the visit cadence. <em>From the ECD program · Connect verifies.</em></p>
+      <div class="ie-byline">ECD · published in <a href="./programs/ecd.html">ECD</a> and <a href="./learn.html">Learn</a> · Source: ECD Overview (Feb 2026), Malawi pilot.</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n8">
-      <div class="id-tag"><span>N8 · I9</span><span class="badge tri">triangulated</span></div>
-      <span class="body">
-        <a href="deliver.html#car-failure">Both LLOs in CAR dropped out — we now flag fragile contexts as needing in-country presence</a>; staffing concentration and connectivity together broke remote coordination.
-        <span class="scoped">Scope: CHC vaccine work in CAR.</span>
-      </span>
-      <span class="home-link"><a href="deliver.html#car-failure">⟶ Deliver</a></span>
+  <!-- N7 religious leaders -->
+  <article class="insight-entry" id="n7">
+    <div class="ie-num"><em>N7</em></div>
+    <div class="ie-body">
+      <h4><a href="./deliver.html">5–6 of 7 LLOs leveraged religious leaders for vaccine outreach before we asked.</a></h4>
+      <p class="ie-teaser">In our CLP Stage 2 vaccine campaign, locally-led organizations independently mobilized imams, pastors, village elders, and community-recommended FLWs as part of their outreach. The platform didn't teach this — they already knew it. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">CHC · published in <a href="./deliver.html">Deliver</a> and <a href="./programs/chc.html">CHC</a> · Source: CLP Stage 2 Report (Feb 2026).</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n12">
-      <div class="id-tag"><span>N12</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="programs/chc/index.html"><span class="n">880,000+</span> verified CHC visits in 14 months — <span class="n">44</span> LLOs activated in that window</a>, 8 countries.
-        <span class="scoped">Scope: CHC during FP grant period.</span>
-      </span>
-      <span class="home-link"><a href="programs/chc/index.html">⟶ CHC</a></span>
+  <!-- N8 CAR -->
+  <article class="insight-entry" id="n8">
+    <div class="ie-num"><em>N8</em></div>
+    <div class="ie-body">
+      <h4><a href="./deliver.html">Both LLOs in CAR dropped out. We now flag fragile contexts as needing in-country presence.</a></h4>
+      <p class="ie-teaser">Remote coordination, which had worked across Nigeria, Kenya, Uganda, Tanzania, did not hold in the Central African Republic. Staffing turnover and connectivity issues exited both contracted partners during setup. We publish the failure. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">CHC · published in <a href="./deliver.html">Deliver</a> · Source: Founders Pledge Final Report.</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n13">
-      <div class="id-tag"><span>N13</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="pay.html#cost-inversion"><span class="n">$1.70</span> weighted hides the bundle — Nigeria CHC <span class="n">$1.30</span> with ORS/Zinc co-pack, outside-Nigeria CHC <span class="n">$0.78</span> with VAS+deworming only</a>, fully loaded with 20% Connect platform fee.
-        <span class="scoped">Scope: CHC bundle separation across <span class="n">14 + 17</span> LLO contracts.</span>
-      </span>
-      <span class="home-link"><a href="pay.html#cost-inversion">⟶ Pay</a></span>
+  <!-- N10 KMC guardrails -->
+  <article class="insight-entry" id="n10">
+    <div class="ie-num"><em>N10</em></div>
+    <div class="ie-body">
+      <h4><a href="./programs/kmc.html">KMC's first-visit-within-3-days target is at 50% against a 70% goal. We publish the gap.</a></h4>
+      <p class="ie-teaser">We treat it as a guardrail, not a payment criterion — punishing missed guardrails trains FLWs to falsify dates. We coach, integrate hospital discharge notifications, and publish the real number. <em>From the KMC program · Connect verifies.</em></p>
+      <div class="ie-byline">KMC · published in <a href="./verify.html">Verify</a> and <a href="./programs/kmc.html">KMC</a> · Source: KMC Conceptual Model (March 2026).</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n15">
-      <div class="id-tag"><span>N15 · I5</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="pay.html#displacement">Campaign work is not a disruption of Nigeria's CHV system — it <em>is</em> the system</a>; in <span class="n">24</span> interviews across Gombe and Sokoto, FLWs maintained volunteer hours within the <span class="n">7am–7pm</span> window.
-        <span class="scoped">Scope: CHC, FLW Displacement Survey (Oct 2025), 2 Nigerian states.</span>
-      </span>
-      <span class="home-link"><a href="pay.html#displacement">⟶ Pay</a></span>
+  <!-- N11 KMC mortality -->
+  <article class="insight-entry" id="n11">
+    <div class="ie-num"><em>N11</em></div>
+    <div class="ie-body">
+      <h4><a href="./programs/kmc.html">KMC reduces neonatal mortality up to 40%, yet global coverage is below 5%.</a></h4>
+      <p class="ie-teaser">The WHO 2022 KMC guideline recommends KMC for all newborns ≤2000g. Globally, structured at-home follow-up rarely exists in the highest-mortality window. Connect KMC closes the post-discharge gap with 4–5 home visits in the first 60 days. <em>From the KMC program · Connect verifies.</em></p>
+      <div class="ie-byline">KMC · published in <a href="./programs/kmc.html">KMC</a> · Source: WHO 2022 KMC guideline; KMC blog.</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n16">
-      <div class="id-tag"><span>N16 · I1</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="deliver.html#trial-run"><span class="n">65%</span> of LLOs that enter our Trial Run pass it. The 35% that don't aren't continued — and we publish the number</a>.
-        <span class="scoped">Scope: CHC Trial Run conversion.</span>
-      </span>
-      <span class="home-link"><a href="deliver.html#trial-run">⟶ Deliver</a></span>
+  <!-- N12 880K visits -->
+  <article class="insight-entry" id="n12">
+    <div class="ie-num"><em>N12</em></div>
+    <div class="ie-body">
+      <h4><a href="./programs/chc.html">880,000 verified CHC visits in 14 months across 8 countries.</a></h4>
+      <p class="ie-teaser">Performance-payment delivery at a pace that conventional NGO-led campaigns typically achieve over multi-year horizons in the same geographies. 44 LLOs activated in that window. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">CHC · published in <a href="./deliver.html">Deliver</a> and <a href="./programs/chc.html">CHC</a> · Source: Founders Pledge Final Report.</div>
     </div>
-  </section>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-  <!-- SCOPE: ECD -->
-  <section class="scope-group" id="scope-ecd">
-    <h2>Scope · ECD · 2 entries</h2>
-
-    <div class="entry" id="n6">
-      <div class="id-tag"><span>N6 · I7</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="programs/ecd/index.html#attitudes">Caregivers' attitudes were already correct. We moved knowledge <span class="n">+33%</span> on timing, <span class="n">+41%</span> on supports, and observed teaching behavior <span class="n">+21%</span></a>.
-        <span class="scoped">Scope: ECD Malawi pilot, <span class="n">50</span>-caregiver baseline/endline panel.</span>
-      </span>
-      <span class="home-link"><a href="programs/ecd/index.html#attitudes">⟶ ECD</a></span>
+  <!-- N13 Cost asymmetry -->
+  <article class="insight-entry" id="n13">
+    <div class="ie-num"><em>N13</em></div>
+    <div class="ie-body">
+      <h4><a href="./pay.html">Nigeria $1.30 with ORS/Zinc. Outside Nigeria $0.78 without. The $1.70 average hides the bundle.</a></h4>
+      <p class="ie-teaser">14 contracts in Nigeria with co-packs averaged $1.30. 17 contracts outside Nigeria with VAS+deworming only averaged $0.78. We publish the breakdown so the average can't be read as monolithic. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">CHC · published in <a href="./pay.html">Pay</a> and <a href="./programs/chc.html">CHC</a> · Source: Founders Pledge Final Report cost tables.</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n5">
-      <div class="id-tag"><span>N5 · I8</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="learn.html#layered">Knowledge tests didn't produce competent FLWs — we layered an AI coach</a>; <span class="n">88%</span> score above 70% on first observed visits, <span class="n">77%</span> pass supervised observation, validated across ~<span class="n">400</span> FLWs.
-        <span class="scoped">Scope: Platform (ECD, CHC, KMC). The <span class="n">47%</span> endline on encouragement-of-autonomy is still the hardest sub-domain.</span>
-      </span>
-      <span class="home-link"><a href="learn.html#layered">⟶ Learn</a></span>
+  <!-- N15 displacement -->
+  <article class="insight-entry" id="n15">
+    <div class="ie-num"><em>N15</em></div>
+    <div class="ie-body">
+      <h4><a href="./pay.html">Campaign work in Nigeria isn't a disruption of routine care. It <em>is</em> the routine care.</a></h4>
+      <p class="ie-teaser">24 in-depth interviews in Gombe and Sokoto found CHVs routinely run campaigns, with other volunteers covering routine work during them. The "displacement" concern was built on a Western assumption about CHV systems. <em>From the CHC program · Connect verifies.</em></p>
+      <div class="ie-byline">CHC · published in <a href="./pay.html">Pay</a> and <a href="./programs/chc.html">CHC</a> · Source: GiveWell FLW Displacement Survey (Oct 2025).</div>
     </div>
-  </section>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-  <!-- SCOPE: KMC -->
-  <section class="scope-group" id="scope-kmc">
-    <h2>Scope · KMC · 4 entries</h2>
-
-    <div class="entry" id="n11">
-      <div class="id-tag"><span>N11</span><span class="badge tri">triangulated</span></div>
-      <span class="body">
-        <a href="programs/kmc/index.html#why">KMC reduces neonatal mortality up to <span class="n">40%</span>, yet global coverage is below <span class="n">5%</span></a>. Connect KMC closes the post-discharge gap with <span class="n">4–5</span> home visits in the first 60 days.
-        <span class="scoped">Scope: WHO 2022 KMC guidance; coverage figure global.</span>
-      </span>
-      <span class="home-link"><a href="programs/kmc/index.html#why">⟶ KMC</a></span>
+  <!-- N19 KMC equipment -->
+  <article class="insight-entry" id="n19">
+    <div class="ie-num"><em>N19</em></div>
+    <div class="ie-body">
+      <h4><a href="./programs/kmc.html">Every Connect KMC visit, the FLW arrives with a scale, thermometer, pulse oximeter, and measuring tape.</a></h4>
+      <p class="ie-teaser">Danger signs — poor weight gain, hypothermia, infection — auto-trigger referrals; the app prompts follow-up at the next visit. The visit is a clinical encounter, and the equipment list makes that visible. <em>From the KMC program · Connect verifies.</em></p>
+      <div class="ie-byline">KMC · published in <a href="./programs/kmc.html">KMC</a> · Source: KMC Overview (March 2026).</div>
     </div>
+    <span class="ie-tier">Tier 2 · Documented</span>
+  </article>
 
-    <div class="entry" id="n10">
-      <div class="id-tag"><span>N10 · I10</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="verify.html#guardrails">Guardrails are not hard stops — and KMC is currently failing one</a>: <span class="n">50%</span> within-3-days enrollment against a <span class="n">70%</span> target. We coach, we integrate; we don't punish.
-        <span class="scoped">Scope: Platform philosophy; KMC for the live numbers.</span>
-      </span>
-      <span class="home-link"><a href="verify.html#guardrails">⟶ Verify</a></span>
+  <!-- N20 KMC enrollment -->
+  <article class="insight-entry" id="n20">
+    <div class="ie-num"><em>N20</em></div>
+    <div class="ie-body">
+      <h4><a href="./programs/kmc.html">Across 4,005 KMC cases, average age at enrollment is 12.8 days — under target. The 3-day window is at 50% against 70%.</a></h4>
+      <p class="ie-teaser">We hit one target, miss the tighter one, and publish both. The gap isn't FLW effort; it's that hospital discharge notifications aren't yet integrated. <em>From the KMC program · Connect verifies.</em></p>
+      <div class="ie-byline">KMC · published in <a href="./programs/kmc.html">KMC</a> · Source: KMC Conceptual Model (March 2026).</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n20">
-      <div class="id-tag"><span>N20</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="programs/kmc/index.html#guardrails">Average age at first contact is <span class="n">12.8</span> days against a 28-day target — but we miss the 3-day window for half</a>; the gap is hospital discharge-notification integration.
-        <span class="scoped">Scope: KMC (<span class="n">4,005</span> cases, March 2026).</span>
-      </span>
-      <span class="home-link"><a href="programs/kmc/index.html#guardrails">⟶ KMC</a></span>
+  <!-- ===== PLATFORM GROUP ===== -->
+  <div class="group-head">ii. Platform mechanisms</div>
+
+  <!-- N5 layered training -->
+  <article class="insight-entry" id="n5">
+    <div class="ie-num"><em>N5</em></div>
+    <div class="ie-body">
+      <h4><a href="./learn.html">Knowledge ≠ competence. We have ~400 FLWs of evidence.</a></h4>
+      <p class="ie-teaser">Workers who aced our digital knowledge test still struggled with in-person counseling. So we layered: self-paced learning, in-app test, daily AI coach, peer practice, supervised observation. 85% progress; 88% score &gt;70% on first observed visits. <em>From the platform layer · Connect verifies.</em></p>
+      <div class="ie-byline">Platform · published in <a href="./learn.html">Learn</a> · Source: ECD Overview, CLP Stage 2 Report.</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n19">
-      <div class="id-tag"><span>N19</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="programs/kmc/index.html#equipment">Every KMC visit, the FLW arrives with scale, thermometer, pulse oximeter, measuring tape</a>. Danger-sign thresholds enforced in-app; auto-referral on weight, temperature, oxygen.
-        <span class="scoped">Scope: KMC equipment standard.</span>
-      </span>
-      <span class="home-link"><a href="programs/kmc/index.html#equipment">⟶ KMC</a></span>
+  <!-- N9 65% conversion -->
+  <article class="insight-entry" id="n9">
+    <div class="ie-num"><em>N9</em></div>
+    <div class="ie-body">
+      <h4><a href="./deliver.html">We pay 65% of LLOs that enter the Trial Run. The 35% that don't pass aren't continued.</a></h4>
+      <p class="ie-teaser">107 EOI applications. 37 contracted under Trial Run terms. 24 advanced. 14 passed and ran larger campaigns. We publish the conversion rate because diligence readers ask about it. <em>From the platform layer · Connect verifies.</em></p>
+      <div class="ie-byline">Platform · published in <a href="./deliver.html">Deliver</a> and <a href="./programs/chc.html">CHC</a> · Source: FP Report; CHC overview.</div>
     </div>
-  </section>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-  <!-- SCOPE: Readers -->
-  <section class="scope-group" id="scope-readers">
-    <h2>Scope · Readers · 1 entry (pre-cohort)</h2>
-
-    <div class="entry" id="readers">
-      <div class="id-tag"><span>N-Readers</span><span class="badge hyp">hypothesis</span></div>
-      <span class="body">
-        <a href="programs/readers/index.html">RestoringVision's <span class="n">15,000</span> reading-glasses pairs delivered through Connect's verified-payment model</a>. LLOs finalized (eHA, C3HD); contract signing pending; field-performance data won't exist until the first cohort runs.
-        <span class="scoped">Scope: Readers · pre-cohort.</span>
-      </span>
-      <span class="home-link"><a href="programs/readers/index.html">⟶ Readers</a></span>
+  <!-- N14 AI coach -->
+  <article class="insight-entry" id="n14">
+    <div class="ie-num"><em>N14</em></div>
+    <div class="ie-body">
+      <h4><a href="./learn.html">An AI coach handled 500 of 511 FLW queries — 97.8% — without human escalation in the Kenya pilot.</a></h4>
+      <p class="ie-teaser">Built on Dimagi's Open Chat Studio, accessed via WhatsApp. Independent evaluation: 88.7% accuracy, 81.5% usefulness. Five-second average response time. <em>From the platform layer · Connect verifies.</em></p>
+      <div class="ie-byline">Platform · published in <a href="./learn.html">Learn</a> · Source: Founders Pledge Final Report (Kenya CHC pilot).</div>
     </div>
-  </section>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-  <!-- SCOPE: PLATFORM MECHANISMS -->
-  <section class="scope-group" id="scope-platform">
-    <h2>Scope · Platform mechanisms · 3 entries</h2>
-
-    <div class="entry" id="n22">
-      <div class="id-tag"><span>N22</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="verify.html#fraud">Connect verifies through four independent layers — biometric, GPS, photo, algorithmic</a>. A fabricated visit has to beat all four; the adversarial test only stresses the algorithmic layer.
-        <span class="scoped">Scope: Platform.</span>
-      </span>
-      <span class="home-link"><a href="verify.html#fraud">⟶ Verify</a></span>
+  <!-- N18 metric choice -->
+  <article class="insight-entry" id="n18">
+    <div class="ie-num"><em>N18</em></div>
+    <div class="ie-body">
+      <h4><a href="./pay.html">We chose verified-visit cost reporting because cost-per-FLW-trained hides the lever that matters.</a></h4>
+      <p class="ie-teaser">Most platforms report activity costs because they're easier to measure. We report cost-per-verified-outcome because the asymmetry between activity-cost and outcome-cost is where most development funding gets eaten. <em>From the platform layer · Connect verifies.</em></p>
+      <div class="ie-byline">Platform · published in <a href="./pay.html">Pay</a> · Source: implicit in our public reporting methodology.</div>
     </div>
+    <span class="ie-tier">Tier 2 · Documented</span>
+  </article>
 
-    <div class="entry" id="n18">
-      <div class="id-tag"><span>N18</span><span class="badge tri">triangulated</span></div>
-      <span class="body">
-        <a href="pay.html#methodology">We report cost per verified visit, not cost per FLW trained — because the asymmetry between activity-cost and outcome-cost is where most development funding gets eaten</a>.
-        <span class="scoped">Scope: Platform methodology.</span>
-      </span>
-      <span class="home-link"><a href="pay.html#methodology">⟶ Pay</a></span>
+  <!-- N22 four layers -->
+  <article class="insight-entry" id="n22">
+    <div class="ie-num"><em>N22</em></div>
+    <div class="ie-body">
+      <h4><a href="./verify.html">Connect verifies through four independent layers — biometric, GPS, photo, algorithmic. A fabricated visit must beat all four.</a></h4>
+      <p class="ie-teaser">Each layer uses different signal. Coordinating a fake that defeats all of them requires more effort than delivering the visit honestly — which is the design intent. The adversarial test only stresses the algorithmic layer. <em>From the platform layer · Connect verifies.</em></p>
+      <div class="ie-byline">Platform · published in <a href="./verify.html">Verify</a> · Source: insights.md Insight 3; CHC overview.</div>
     </div>
+    <span class="ie-tier">Tier 1 · Published</span>
+  </article>
 
-    <div class="entry" id="n14">
-      <div class="id-tag"><span>N14</span><span class="badge hard">hard data</span></div>
-      <span class="body">
-        <a href="learn.html#ai-coach">An AI coach on Open Chat Studio handled <span class="n">500 of 511</span> FLW queries (<span class="n">97.8%</span>) without human escalation in the Kenya CHC pilot</a> — independent eval <span class="n">88.7%</span> accuracy, <span class="n">81.5%</span> usefulness, <span class="n">5-second</span> response time.
-        <span class="scoped">Scope: CHC Kenya pilot of the platform-level Learn pipeline.</span>
-      </span>
-      <span class="home-link"><a href="learn.html#ai-coach">⟶ Learn</a></span>
+  <!-- N16 Trial Run conversion -->
+  <article class="insight-entry" id="n16">
+    <div class="ie-num"><em>N16</em></div>
+    <div class="ie-body">
+      <h4><a href="./deliver.html">65% of LLOs that enter our Trial Run pass it. We publish that number because the alternative is opaque vendor lists.</a></h4>
+      <p class="ie-teaser">The 35% that don't pass aren't blamed; they aren't continued. The Trial Run is the cheapest form of evidence we have about an organization's operational fit. <em>From the platform layer · Connect verifies.</em></p>
+      <div class="ie-byline">Platform · published in <a href="./deliver.html">Deliver</a> · Source: insights.md Insight 1; FP Report.</div>
     </div>
-  </section>
+    <span class="ie-tier">Tier 2 · Documented</span>
+  </article>
 
-  <!-- Methodology footer -->
-  <section class="methodology-footer">
-    <p class="kicker">Methodology — what makes the cut</p>
-    <p>An entry appears on this page only if (a) the underlying claim is scoped to a program or to a clearly-labelled platform mechanism; (b) any number is paired with a denominator, an evaluation N, or a comparator; and (c) any in-progress finding is named with the evaluation that is currently underway. Generic stats without a benchmark are excluded by policy. Entries scoped to a program (CHC, KMC, ECD, Readers) are listed under that program's group; entries scoped to a Connect-wide mechanism are listed under Platform. Every entry carries an evidence-tier badge — <span class="badge hard">hard data</span> for measured findings with a named report and N; <span class="badge tri">triangulated</span> for findings with multiple independent sources or external benchmark; <span class="badge hyp">hypothesis</span> for in-validation findings with the evaluation named. We do not soft-tag claims with no source — they are dropped.</p>
-    <p style="margin-top: 0.6rem;">This page is the home base of v10c's knowledge-graph treatment. The same evidence-tier badges visible here are the badges that appear on every depth page; the deep links from entries here land on the anchor of the page that treats the claim in full. The graph is only as honest as the insights and nuggets the team mines — internal lore that has not yet been written down is the rate-limiter on this page, not the format.</p>
-  </section>
+  <!-- METHODOLOGY FOOTER -->
+  <div class="methodology-footer">
+    <span class="mf-label">A note on methodology</span>
+    <p>This page is the buffet view of what we've learned across Connect — every entry is a claim we've decided is honest, scoped, and worth putting on the record. The cut is editorial, not exhaustive: we keep what carries a number with a benchmark, what was published in a funder report or independent evaluation, and what comes with an open question we will name. We exclude headline scale numbers without context, marketing-friendly framings without source, and anything that hasn't survived a depth page yet.</p>
+    <p>Tier 1 entries are published in a funder report, an independent evaluation, or a public partner document. Tier 2 entries are documented internally and cleared for public reference but haven't appeared in a third-party document yet. Tier 3 (not currently shown) is the holding bay for findings we believe and don't yet have the evidence to publish — they live on internal logs until they cross the bar.</p>
+    <p>Every claim above links to its depth page, where the learning runs at length, and where the open question lives. The depth pages are where the substance is. This page exists so that a reader who lands on Connect for the first time can scan the universe of claims and decide which ones to read in full.</p>
+  </div>
+</section>
 
-  <!-- Open questions -->
-  <section class="open-questions">
-    <h3>Open questions on the graph itself</h3>
-    <ol>
-      <li>This page is only as honest as the insights and nuggets the team mines. Internal lore that didn't make it onto the public site is the rate-limiter, not the format.</li>
-      <li>Numbers without benchmarks are excluded by policy — but our benchmark library is uneven across programs. KMC and Readers have thinner comparators than CHC.</li>
-      <li>Whether the methodology-footer framing ("we have a methodology for what's on the website") survives a year of new programs without drift toward marketing copy.</li>
-    </ol>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="inner">
-    <div class="colophon">
-      <strong>Connect by Dimagi</strong><br />
-      A platform for verified frontline work.<br /><br />
-      v10c knowledge-graph treatment. The Insights index is the home base; depth pages link back here.
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+        <p>Connect is a Dimagi platform linking funding to verified service delivery at the frontline.</p>
+      </div>
+      <div class="footer-col"><h5>Platform</h5><ul>
+        <li><a href="./learn.html">Learn</a></li>
+        <li><a href="./deliver.html">Deliver</a></li>
+        <li><a href="./verify.html">Verify</a></li>
+        <li><a href="./pay.html">Pay</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Programs</h5><ul>
+        <li><a href="./programs/chc.html">CHC</a></li>
+        <li><a href="./programs/kmc.html">KMC</a></li>
+        <li><a href="./programs/ecd.html">ECD</a></li>
+        <li><a href="./programs/readers.html">Readers</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Connect</h5><ul>
+        <li><a href="./insights.html">Insights</a></li>
+        <li><a href="./index.html#impact">Impact</a></li>
+        <li><a href="https://www.dimagi.com">About Dimagi</a></li>
+        <li><a href="./index.html#contact">Request a Demo</a></li>
+      </ul></div>
     </div>
-    <div>
-      <h4>Platform</h4>
-      <ul>
-        <li><a href="learn.html">Learn</a></li>
-        <li><a href="deliver.html">Deliver</a></li>
-        <li><a href="verify.html">Verify</a></li>
-        <li><a href="pay.html">Pay</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Programs</h4>
-      <ul>
-        <li><a href="programs/chc/index.html">CHC</a></li>
-        <li><a href="programs/kmc/index.html">KMC</a></li>
-        <li><a href="programs/ecd/index.html">ECD</a></li>
-        <li><a href="programs/readers/index.html">Readers</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Graph</h4>
-      <ul>
-        <li><a href="insights.html">Insights index</a></li>
-        <li><a href="index.html">Up to home</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <div>© 2026 Dimagi, Inc. All rights reserved.</div>
+      <div>Connect by Dimagi · v10c</div>
     </div>
   </div>
 </footer>
 
+<script>
+  const t = document.getElementById('navToggle');
+  const l = document.getElementById('navLinks');
+  if (t && l) t.addEventListener('click', () => l.classList.toggle('is-open'));
+</script>
 </body>
 </html>

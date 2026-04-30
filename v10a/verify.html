@@ -1,166 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verify — Connect by Dimagi</title>
-<meta name="description" content="Microplanning, the adversarial fraud test, and the guardrails-vs-payment-criteria distinction. Three pieces of the verification stack." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
-<link rel="stylesheet" href="styles.css" />
+<meta name="description" content="Four independent layers of verification: biometrics, GPS + microplanning, photo capture, and algorithmic fraud detection validated adversarially at AUC 0.91 across three coached rounds in CHC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="inner">
-    <a href="index.html" class="brand">Connect <span class="by">by Dimagi</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="learn.html">Learn</a>
-      <a href="deliver.html">Deliver</a>
-      <a href="verify.html" class="current">Verify</a>
-      <a href="pay.html">Pay</a>
-      <a href="programs/index.html">Programs</a>
-      <a href="insights.html">Insights</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="./index.html"><img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi"></a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">How It Works <span>▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="./learn.html">Learn<small>Digital training with assessment gates</small></a>
+          <a href="./deliver.html">Deliver<small>LLO-led service delivery at scale</small></a>
+          <a href="./verify.html">Verify<small>Four layers of verification per visit</small></a>
+          <a href="./pay.html">Pay<small>Mobile money on verified completion</small></a>
+        </div>
+      </div>
+      <a href="./programs.html">Programs</a>
+      <a href="./insights.html">Insights</a>
+      <a href="./index.html#impact">Impact</a>
+      <a href="./index.html#contact" class="cta-pill">Request a Demo</a>
     </nav>
-    <span class="meta">MEMO · §3 VERIFY</span>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">≡</button>
   </div>
 </header>
 
-<main class="page">
-
-  <section class="hero">
-    <p class="kicker">§3 · Verify · the four-layer stack and what it took to test it</p>
-    <h1>We paid FLWs bonuses to defeat our fraud detection. They couldn't.</h1>
-    <p class="lede">Verification is what makes performance-based payment possible. Connect verifies through four independent layers — biometric identity, GPS, photo, and an algorithmic pattern check. A fabricated visit has to beat all four. This page is the methodology behind that stack: how microplans drove visits-per-child from 0.4 to 1.4 in CHC, how adversarial testing produced an AUC of 0.91, and why our guardrails are not hard stops.</p>
-  </section>
-
-  <section class="memo-meta">
-    <div><span class="k">Verification layers</span>4: biometric, GPS, photo, algorithmic<sup class="fn"><a href="#s3">3</a></sup></div>
-    <div><span class="k">Adversarial AUC (CHC)</span>0.91 ± 0.09<sup class="fn"><a href="#s2">2</a></sup></div>
-    <div><span class="k">Real workers cleaner than lowest fabricator</span>97.5%<sup class="fn"><a href="#s2">2</a></sup></div>
-    <div><span class="k">CHC visits/child with microplan</span>1.4 vs 0.4<sup class="fn"><a href="#s1">1</a></sup></div>
-  </section>
-
-  <!-- LEARNING 1: Microplans -->
-  <section class="learning">
-    <p class="section-label">Learning 1 of 3 · CHC</p>
-    <h2>Workers naturally cluster. Microplans force them outward.</h2>
-    <div class="column-pair">
-      <div class="prose">
-        <p>Verification is not just about catching the visits that didn't happen. It is also about steering the visits that do. The first version of CHC delivery gave FLWs a target area and a visit quota and trusted them to figure out the rest. The result, when we measured it, was convenience sampling at the exact moment equity was the goal.</p>
-        <p>Workers cherry-pick. Given a neighborhood, FLWs averaged 0.4 visits per estimated eligible child<sup class="fn"><a href="#s1">1</a></sup> — they visited the accessible households and skipped the harder ones. The populations they missed were systematically those with lower baseline health coverage. The selection bias was structural, not individual; a hard-working FLW under quota pressure walks toward the closest open door.</p>
-        <p>What we changed is microplanning. Before a campaign, we overlay a grid onto the operational area using Google Open Buildings, OpenStreetMap, and Microsoft building data<sup class="fn"><a href="#s1">1</a></sup>. Grid cells with at least one detected building become Delivery Units. Delivery Units group into Service Areas sized for one to two weeks of work. The Connect app does not let a worker move on to the next Service Area until they have closed every Delivery Unit in the current one — either by completing visits or by confirming no eligible children are present in that DU.</p>
-        <p>The CHC result<sup class="fn"><a href="#s1">1</a></sup>: 1.4 visits per estimated eligible child in microplanned cells, against 0.4 without. A 3.5× thoroughness gain. Population coverage in the same CHC cohort rose from 82–84% to 94%. The mechanism is portable — the same code path runs on every Connect program — but the published numbers are CHC; we have not yet published a comparable measurement on KMC, ECD, or Readers.</p>
-        <p>The honest failure mode: microplans break in dispersed settlement patterns. Workers walk long distances to DUs containing no actual buildings; some DUs fall on inaccessible land such as factory grounds or prison perimeters. One CHC campaign removed microplan execution entirely because the partner could not work the layout. We do not yet have a clean threshold for the settlement density at which microplanning becomes counterproductive — the rule today is "if the partner says it's not working, listen to the partner." That is not a rule that survives a funder due-diligence question, and it is something we are working on.</p>
-      </div>
-      <aside class="margin">
-        <h4>Source</h4>
-        <div class="note">Founders Pledge Final Report (Feb 2026), CHC program — microplanning section. Coverage: 82–84% → 94%. Visits-per-child: 0.4 → 1.4.<sup class="fn"><a href="#s1">1</a></sup></div>
-        <div class="note"><strong>Pull:</strong> "Convenience sampling at the exact moment equity was the goal."</div>
-      </aside>
+<section class="sub-hero">
+  <div class="grid-bg"></div>
+  <div class="aurora"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
+    <nav class="breadcrumbs"><a href="./index.html">Connect</a><span class="sep">/</span>How It Works<span class="sep">/</span>Verify</nav>
+    <div class="eyebrow-row">
+      <span class="step-chip"><span class="sc-bullet"></span>Step 03 of 04</span>
+      <span class="step-chip" style="color:rgba(238,240,255,0.7);background:transparent;">The verification layer</span>
     </div>
-  </section>
+    <h1>Every service <em>confirmed</em>. Not tracked. Not monitored. Verified.</h1>
+    <p class="lede">Verification is how the system defines a delivery in the first place — not a checkpoint applied after the fact. Four independent layers: biometric identity, geographic coverage, photo capture, and algorithmic fraud detection. Payment only triggers once the layers agree.</p>
 
-  <!-- LEARNING 2: Adversarial fraud -->
-  <section class="learning">
-    <p class="section-label">Learning 2 of 3 · CHC</p>
-    <h2>We paid people to defeat our fraud model. Then we watched them fail.</h2>
-    <div class="column-pair">
-      <div class="prose">
-        <p>Connect's verification stack — biometrics for FLW identity, GPS for location, photos for visit context — was already running in production when we ran this test. The question we had not answered was whether the stack would hold against a motivated insider who understood the system. So we paid experienced FLWs to try.</p>
-        <p>The protocol<sup class="fn"><a href="#s2">2</a></sup>: experienced FLWs were paid to submit 100 fake visit records each, in three rounds. After each round, we coached the fakers on what had given them away. We offered cash bonuses to the top 25% most convincing fabricators. This is the kind of adversarial test most organizations only run when a regulator forces them. We ran it because performance-based payment makes verification load-bearing — if the stack is leaky, every dollar of verified-visit pay is at risk.</p>
-        <p>What we measured: using only three data elements (age of child, gender, and MUAC measurements), a Random Forest classifier achieved AUC 0.91 ± 0.09<sup class="fn"><a href="#s2">2</a></sup>. Only 2.5% of real workers received fraud-risk scores higher than the lowest-scoring fabricator. Out of 33 adversarial fakers, the algorithmic layer alone — before GPS, photo, or biometric checks were factored in — produced near-perfect discrimination on data patterns. The 97.5% framing is the inverse: 97.5% of real workers scored cleaner than the worst-detected fake.</p>
-        <p>Why three data elements is the right framing. We could have built a model with twenty features and reported a higher AUC. We did not because the question we wanted to answer was harder: can the model detect fabrication when the fabricator has tried to make the data plausible on every dimension? Three elements stresses the model on the parts of the visit a clever fabricator can fake; the additional layers (GPS, photo, biometric) close the parts they can't.</p>
-        <p>This is why "verification" in Connect is a stack, not a feature. A fabricated visit on Connect has to beat the biometric layer (FLW identity, captured at recruitment), the GPS layer (location at submission), the photo layer (visit context), and the algorithmic layer (statistical pattern from the visit content). The adversarial test stresses one of those four. Even there, fabricators couldn't beat real workers. The other three layers compound on top. The honest gap is that we have not yet published the false-positive rate of the photo layer in low-bandwidth deployments, where image quality degrades and the photo signal weakens. That measurement is on the roadmap.</p>
-      </div>
-      <aside class="margin">
-        <h4>Source</h4>
-        <div class="note">Founders Pledge Final Report (Feb 2026), CHC program — adversarial testing methodology. Three rounds; bonuses for top 25%; AUC 0.91 ± 0.09 from age/gender/MUAC alone.<sup class="fn"><a href="#s2">2</a></sup></div>
-        <div class="note"><strong>Pull:</strong> "If the stack is leaky, every dollar of verified-visit pay is at risk."</div>
-      </aside>
+    <div class="sub-hero-stats">
+      <div class="s"><div class="s-num">94%</div><div class="s-cap">CHC population coverage with microplans</div></div>
+      <div class="s"><div class="s-num">3.5×</div><div class="s-cap">Thoroughness gain from microplanning</div></div>
+      <div class="s"><div class="s-num">0.91</div><div class="s-cap">AUC on adversarial fraud test</div></div>
+      <div class="s"><div class="s-num">2.5%</div><div class="s-cap">Real workers above the lowest faker score</div></div>
     </div>
-  </section>
-
-  <!-- LEARNING 3: Guardrails philosophy -->
-  <section class="learning">
-    <p class="section-label">Learning 3 of 3 · platform philosophy</p>
-    <h2>Guardrails are not hard stops. Punishment trains workers to falsify.</h2>
-    <div class="column-pair">
-      <div class="prose">
-        <p>The third piece of the verification stack is a design philosophy, not a feature. Connect distinguishes payment criteria — the conditions a visit must meet to be paid — from guardrails — the conditions we audit and coach against but do not block payment on. This distinction is platform-level configuration; every program inherits it.</p>
-        <p>The default on most performance-payment platforms is that every measured constraint becomes a payment criterion. If the FLW must visit within 3 days of discharge, then a visit on day 4 is unpaid. The structural problem with that default is not philosophical — it is empirical. Punished constraints train workers to falsify the timestamp. They do not train workers to make the visit on day 3. The platform stops getting honest data about the constraint, which means it stops being able to improve the program around the constraint.</p>
-        <p>The KMC program is the live example<sup class="fn"><a href="#s3">3</a></sup>. KMC has 4 mandatory home visits per Small or Vulnerable Newborn (SVN) as a payment criterion — hard, must be met to be paid. KMC also has a guardrail "first visit within 3 days of discharge" — audited, not enforced. Current KMC performance on that guardrail is 50% against a 70% target. We are currently failing the guardrail. We are not punishing FLWs for it. We are working on it through three mechanisms: LLO coaching on scheduling, integration with hospital discharge notifications so FLWs are alerted at discharge rather than learning later, and a rebuild of the FLW assignment flow so a discharge notification can be claimed within minutes.</p>
-        <p>The reason this is a Verify-page story rather than a KMC-page story: it is a platform configuration, and the configuration shapes what verification is for. Verification on Connect is for getting honest data — about the visit, the worker, and the program — that lets us improve the program. Verification that punishes guardrails gets clean numbers and broken programs. We chose the trade-off explicitly.</p>
-        <p>The honest limit: we have not yet published whether 70% on the 3-day window is achievable through coaching plus discharge-notification integration alone, or whether the 3-day window itself needs to be redesigned for the realities of post-discharge timing. The KMC team's working assumption is that integration closes most of the gap. If integration ships in the next two cohorts and the number does not move, we will redesign the target.</p>
-      </div>
-      <aside class="margin">
-        <h4>Source</h4>
-        <div class="note">KMC Conceptual Model (March 2026), Early Performance — 4-visit payment criterion, 3-day guardrail, 50% vs 70% target.<sup class="fn"><a href="#s3">3</a></sup></div>
-        <div class="note"><strong>Pull:</strong> "Punished constraints train workers to falsify the timestamp."</div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- Open questions -->
-  <section class="open-questions">
-    <h3>What we don't know yet</h3>
-    <ol>
-      <li>The 97.5% adversarial detection is from paid-bonus testing in CHC. Production false-positive rates against unmotivated fabrication aren't yet published.</li>
-      <li>Microplans failed in dispersed settlement patterns. We don't yet have a clean threshold for when settlement density makes microplanning counterproductive.</li>
-      <li>Photo verification quality degrades on low bandwidth. False-positive rate on the photo layer in low-bandwidth deployments isn't yet published.</li>
-    </ol>
-  </section>
-
-  <aside class="sources">
-    <h3>Sources</h3>
-    <ol>
-      <li id="s1">Founders Pledge Final Report (Feb 2026), CHC program — microplanning methodology and outcomes. Google Open Buildings + OpenStreetMap + Microsoft building data overlay.</li>
-      <li id="s2">Founders Pledge Final Report (Feb 2026), CHC — adversarial fraud testing protocol; Random Forest model on age/gender/MUAC; AUC 0.91 ± 0.09; 33 fakers; 97.5% of real workers scored cleaner than the lowest-scoring fabricator.</li>
-      <li id="s3">KMC Conceptual Model (March 2026) — guardrails-vs-payment-criteria configuration; 3-day enrollment guardrail at 50% against 70% target.</li>
-    </ol>
-  </aside>
-
-  <div class="next-step">
-    <span class="label-line">§4 →</span>
-    <a href="pay.html">Pay — In CHC, cost per verified visit fell 22%, and we measured what doesn't displace →</a>
   </div>
+</section>
 
-</main>
+<section class="wrap">
+  <div class="pillars">
+    <div class="pillar">
+      <div class="p-num">LAYER 01</div>
+      <h4>Biometric identity</h4>
+      <p>PersonalID confirms that real individuals received real services. No duplicates. No ghosts. The same record can't be claimed twice under different names.</p>
+    </div>
+    <div class="pillar">
+      <div class="p-num">LAYER 02</div>
+      <h4>GPS + microplanning</h4>
+      <p>Geolocation confirms visits happened in the right places. Microplan execution forces coverage — workers must close every Delivery Unit in their Service Area before moving on.</p>
+    </div>
+    <div class="pillar">
+      <div class="p-num">LAYER 03</div>
+      <h4>Photo + algorithmic</h4>
+      <p>Image capture at visit time. Statistical models analyze submission patterns to flag anomalies. Fabrication has to beat all four layers, not just one.</p>
+    </div>
+  </div>
+</section>
 
-<footer class="site-footer">
-  <div class="inner">
-    <div class="colophon">
-      <strong style="color: var(--ink); font-family: 'IBM Plex Serif', serif; font-weight:600;">Connect by Dimagi</strong><br />
-      A platform for verified frontline work. Built and operated by Dimagi, Inc.
+<!-- MICROPLAN VIZ (kept from v7c) -->
+<section class="wrap-narrow" style="padding:40px 32px 20px;">
+  <div class="section-head">
+    <div class="eyebrow">Microplan coverage, illustrated</div>
+    <h2>How the grid forces outward movement.</h2>
+    <p>Each cell is a Delivery Unit. Workers cannot advance to the next Service Area until every DU in the current one is closed — either visited or confirmed empty. Cherry-picking is no longer an option.</p>
+  </div>
+  <div class="microplan-viz" role="img" aria-label="Microplan grid visualization showing coverage pattern">
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell visited"></div>
+    <div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell empty"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell visited"></div>
+    <div class="mp-cell visited"></div><div class="mp-cell skipped"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell visited"></div><div class="mp-cell visited"></div>
+    <div class="mp-cell skipped"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div>
+    <div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div><div class="mp-cell covered"></div>
+    <div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell visited"></div><div class="mp-cell empty"></div>
+    <div class="mp-cell empty"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div><div class="mp-cell empty"></div>
+  </div>
+  <div class="mp-legend">
+    <span><span class="sw" style="background:linear-gradient(135deg,var(--indigo),var(--mango));"></span>Fully covered (visits completed)</span>
+    <span><span class="sw" style="background:var(--indigo);"></span>Visited (in progress)</span>
+    <span><span class="sw" style="background:rgba(252,95,54,0.15);border:1px solid rgba(252,95,54,0.3);"></span>Inaccessible (audited)</span>
+    <span><span class="sw" style="background:transparent;border:1px dashed rgba(142,161,255,0.3);"></span>Empty (no buildings)</span>
+  </div>
+</section>
+
+<!-- ======================= LEARNINGS (Pattern C: Annotated Discovery) ======================= -->
+<section class="wrap-narrow" style="padding:40px 32px 0;">
+
+  <!-- LEARNING 1: Microplanning -->
+  <article class="annot">
+    <div class="a-eyebrow">Learning 01 · Coverage geometry · CHC</div>
+    <h2>Workers cluster. Microplans force them <em>outward</em>.</h2>
+    <div class="a-body">
+      <p>The hardest problem in field verification, it turned out, wasn't fraud — it was the invisible choice of which households to skip. Without geographic enforcement, FLWs in the CHC program averaged <strong>0.4 visits per estimated eligible child</strong><a class="cite" href="#cite-fp" title="Founders Pledge Final Report (Feb 2026), coverage tables">1</a>. Given a neighborhood and a quota, workers reached accessible households and skipped the harder ones. The populations missed were systematically those with lower baseline health coverage. We were producing <span class="note" title="The convenience-sampling pattern was visible in early Trial Run data; the pattern showed up across multiple LLOs and geographies, not just one cohort.">convenience sampling</span> at the exact moment equity was the goal.</p>
+
+      <p>The intervention was to take the choice out of the worker's hands and put it in a grid. Before each campaign, we overlay a grid onto the operational area using <strong>Google Open Buildings</strong>, OpenStreetMap, and Microsoft building data<a class="cite" href="#cite-fp" title="Founders Pledge Final Report — microplanning methodology section">1</a>. Cells with at least one building become <strong>Delivery Units</strong>. DUs group into <strong>Service Areas</strong> sized for one to two weeks of work per FLW. A worker cannot advance to the next Service Area until every DU in the current one has been closed — either with a completed visit or a confirmed "no eligible children here." The CommCare app enforces the sequence; cherry-picking is no longer an option.</p>
+
+      <span class="pull-quote">In CHC, microplanning produced 1.4 visits per eligible child versus 0.4 without — a 3.5× gain in thoroughness, and population coverage rose from 82–84% to 94%.</span>
+
+      <p>The data under this structure was stark. <strong>1.4 visits per estimated child</strong> in microplanned cells versus <strong>0.4 without</strong> — a <strong>3.5× increase in thoroughness</strong><a class="cite" href="#cite-fp" title="Founders Pledge Final Report — Table 4, coverage by microplan status">1</a>. Population coverage in visited cells jumped from 82–84% (experienced LLO, no microplan) to <strong>94%</strong>. To reach 95% of the population, microplanned campaigns needed 91% of cells; non-microplanned needed only 72% — revealing how concentrated coverage had been in the easy cells. The benchmark comparison: a well-run non-Connect CommCare campaign sits at <span class="note" title="From comparable CommCare campaigns of similar size and scope outside the Connect platform; the comparison is approximate but the direction is unambiguous.">~82% population coverage</span>. The microplanned CHC number is meaningfully higher, and the gain is in exactly the cells that matter most.</p>
+
+      <p>The grid does not work everywhere. In <strong>dispersed settlement patterns</strong>, workers walked long distances to DUs with no actual buildings — the structure imposed friction the terrain didn't justify. Some DUs fell on inaccessible land — factory grounds, prison grounds, restricted military areas — requiring audit-based exceptions. One campaign removed microplan execution entirely due to partner-side constraints. The grid is a tool that suits density. Making it robust to sparse and irregular terrain is open work; the current shape is optimized for what we have, not for everything we'll need.</p>
+
+      <p class="a-source"><strong>Sources:</strong>
+        <ol>
+          <li id="cite-fp">Founders Pledge Final Report (Feb 2026) — coverage tables and microplanning methodology. Insight 2 in the public insights log.</li>
+          <li>Public benchmark: comparable non-Connect CommCare campaigns of similar size. Approximate, directional.</li>
+        </ol>
+      </p>
     </div>
-    <div>
-      <h4>Platform</h4>
-      <ul>
-        <li><a href="learn.html">Learn</a></li>
-        <li><a href="deliver.html">Deliver</a></li>
-        <li><a href="verify.html">Verify</a></li>
-        <li><a href="pay.html">Pay</a></li>
-      </ul>
+  </article>
+
+  <!-- LEARNING 2: Adversarial fraud testing -->
+  <article class="annot">
+    <div class="a-eyebrow">Learning 02 · Fraud as a test case · Platform mechanism, tested in CHC</div>
+    <h2>We paid people to defeat our fraud detection. Then we <em>watched them fail</em>.</h2>
+    <div class="a-body">
+      <p>Most fraud-detection claims in the development sector are aspirational. They describe an approach and point at a clean audit. They rarely publish an adversarial test, because adversarial testing is the kind of investigation that produces a number you might not like. We ran one anyway. Funder confidence in performance-based payment depends on a real answer to "could a motivated insider beat your verification?" — and the answer deserves to be a measurement, not a promise.</p>
+
+      <p>We paid experienced FLWs to submit <strong>100 fake visit records each</strong>, across <strong>three rounds</strong><a class="cite" href="#vcite-fp" title="Founders Pledge Final Report (Feb 2026) — adversarial fraud testing methodology and results">1</a>. After each round, we coached the fakers on what had given them away. We offered bonuses to the top 25% most convincing fabricators — so the test was against motivated insiders, not naive ones. The research question was narrow: could <span class="note" title="Specifically: a Random Forest classifier trained on age, gender, and MUAC measurements only — no GPS, no timestamps, no photos.">statistical patterns alone</span>, with no GPS and no photos, discriminate fake visits from real ones?</p>
+
+      <span class="pull-quote">Out of 33 adversarial fakers across three coached rounds, only 2.5% of real workers received fraud risk scores higher than even the lowest-scoring fabricator.</span>
+
+      <p>Using only three data elements — <strong>age, gender, and MUAC measurements</strong> — a Random Forest model achieved an <strong>AUC of 0.91 ± 0.09</strong><a class="cite" href="#vcite-fp" title="Founders Pledge Final Report — Table 7, fraud-detection model performance">1</a>. Only <strong>2.5%</strong> of real workers received fraud risk scores higher than even the lowest-scoring fabricator. Out of 33 adversarial fakers across the three coached rounds, the model discriminated them with near-perfect accuracy from data patterns alone — before GPS or photo verification entered the picture.</p>
+
+      <p>That is statistical detection on one layer of a four-layer stack. In production, a fabricated CHC visit has to beat <strong>biometric identity</strong> (no reusing beneficiary records), <strong>GPS + microplan constraints</strong> (the visit must be inside the expected DU on the expected day), <strong>photo capture</strong> at the point of delivery, and the <strong>algorithmic anomaly detection</strong> we just described. Each layer uses different signal. Coordinating a fake that defeats all four requires more effort than actually doing the visit honestly — which is the design intent.</p>
+
+      <p>For funders, this means fraud risk on Connect is <strong>empirically bounded</strong>, not promised. For LLOs, the same verification data serves as auditable proof of delivery for their next grant application. For workers, it means the honest ones aren't paying a trust tax for the few who might cheat. The four-layer model is a deliberate architectural choice; the adversarial test is what lets us name the bound.</p>
+
+      <p class="a-source"><strong>Sources:</strong>
+        <ol>
+          <li id="vcite-fp">Founders Pledge Final Report (Feb 2026) — adversarial fraud testing section, methodology and Table 7. Insight 3 in the public insights log.</li>
+        </ol>
+      </p>
     </div>
-    <div>
-      <h4>Programs</h4>
-      <ul>
-        <li><a href="programs/chc/index.html">CHC</a></li>
-        <li><a href="programs/kmc/index.html">KMC</a></li>
-        <li><a href="programs/ecd/index.html">ECD</a></li>
-        <li><a href="programs/readers/index.html">Readers</a></li>
-      </ul>
+  </article>
+
+  <!-- LEARNING 3: Guardrails vs hard stops -->
+  <article class="annot">
+    <div class="a-eyebrow">Learning 03 · Design philosophy · Platform, live example KMC</div>
+    <h2>Guardrails are not hard stops. The data <em>changes</em> when you confuse them.</h2>
+    <div class="a-body">
+      <p>The first instinct when a quality target isn't met — first visit within 3 days of discharge, for example — is to withhold payment. It feels fair. It seems like accountability. We considered it. The reason we didn't is the most consequential design choice in how Connect treats verification.</p>
+
+      <p>If missing the 3-day window costs an FLW money, they will falsify visit dates to hit it. The platform will then show 100% compliance. We will have no idea what's actually happening. The guardrail will have measured nothing, because the measurement itself changed the behavior<a class="cite" href="#gcite-kmc" title="KMC Conceptual Model (March 2026), guardrails-vs-payment-criteria framework">1</a>. This is the fundamental problem with conflating a signal with a sanction — well-known in measurement theory, easy to forget when the program is your own.</p>
+
+      <p>So we drew a line. <strong>Payment criteria</strong> are hard: a visit is paid only when <span class="note" title="The current payment criteria across programs: identity verified via PersonalID, GPS confirms presence at the location, minimum visit duration met, required data captured.">identity is verified, GPS confirms the visit was on-site, minimum visit duration was met, and required data was captured</span>. <strong>Guardrails</strong> are soft: they trigger audits and performance conversations but don't block payment. The distinction is small on paper and large in behavior — it determines whether the platform sees what actually happens or only what workers want us to see.</p>
+
+      <span class="pull-quote">A platform that punishes missed guardrails doesn't get the data it needs to improve the program.</span>
+
+      <p>The live example is in KMC. The program requires a minimum of <strong>4 mandatory home visits per SVN</strong> as a payment criterion — enforced. The guardrail "first visit within 3 days of discharge" is currently at <strong>50% compliance against a 70% target</strong><a class="cite" href="#gcite-kmc" title="KMC Conceptual Model (March 2026), 4,005-case early performance data">1</a>. That is a real number. We have it because we chose to get it instead of getting a fake 100%. We're working on it through LLO coaching, scheduling support, and discharge-notification integration with facility partners. Not through punishment.</p>
+
+      <p>The same architecture supports a different outcome we publish honestly: KMC's average number of visits per case is <strong>3.4</strong> against a 5-visit guardrail; early discharge sits at <strong>7.6%</strong> against a 5% target. Uncomfortable. Also real. The reward for honesty in measurement is the ability to actually move the metrics — coordinated work across facility partners and LLOs, rather than a coverage of the gap with rules that train workers to lie.</p>
+
+      <p class="a-source"><strong>Sources:</strong>
+        <ol>
+          <li id="gcite-kmc">KMC Conceptual Model v1 (March 2026) — guardrails framework and 4,005-case early performance data. Insight 10 in the public insights log.</li>
+        </ol>
+      </p>
     </div>
-    <div>
-      <h4>Methodology</h4>
-      <ul>
-        <li><a href="insights.html">Insights index</a></li>
-        <li><a href="index.html">Up to memo</a></li>
-      </ul>
+  </article>
+
+  <!-- ======================= OPEN QUESTIONS ======================= -->
+  <section class="open-questions">
+    <div class="oq-eyebrow">What's open</div>
+    <h3>What we don't <em>know yet</em>.</h3>
+    <div class="oq-list">
+      <div class="oq-item">
+        <div class="oq-num">01</div>
+        <div class="oq-text">The 97.5% adversarial detection is from <strong>paid-bonus testing in CHC</strong>. Production false-positive rates against unmotivated fabrication aren't yet published.</div>
+      </div>
+      <div class="oq-item">
+        <div class="oq-num">02</div>
+        <div class="oq-text">Microplans failed in <strong>dispersed settlement patterns</strong>. We don't yet have a clean threshold for when settlement density makes microplanning counterproductive.</div>
+      </div>
+      <div class="oq-item">
+        <div class="oq-num">03</div>
+        <div class="oq-text">Photo verification quality degrades on <strong>low bandwidth</strong>. False-positive rate on the photo layer in low-bandwidth deployments isn't yet published.</div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<section class="next-step">
+  <div class="wrap">
+    <div class="next-step-inner">
+      <div>
+        <div class="ns-label">Next in the cycle</div>
+        <h3>Verified delivery is the trigger for <em>payment</em>.</h3>
+      </div>
+      <a href="./pay.html" class="next-step-cta">Continue to Pay →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+        <p>Connect is a Dimagi platform linking funding to verified service delivery at the frontline.</p>
+      </div>
+      <div class="footer-col"><h5>Platform</h5><ul>
+        <li><a href="./learn.html">Learn</a></li>
+        <li><a href="./deliver.html">Deliver</a></li>
+        <li><a href="./verify.html">Verify</a></li>
+        <li><a href="./pay.html">Pay</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Programs</h5><ul>
+        <li><a href="./programs/chc.html">CHC</a></li>
+        <li><a href="./programs/kmc.html">KMC</a></li>
+        <li><a href="./programs/ecd.html">ECD</a></li>
+        <li><a href="./programs/readers.html">Readers</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Connect</h5><ul>
+        <li><a href="./insights.html">Insights</a></li>
+        <li><a href="./index.html#impact">Impact</a></li>
+        <li><a href="https://www.dimagi.com">About Dimagi</a></li>
+        <li><a href="./index.html#contact">Request a Demo</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Dimagi, Inc. All rights reserved.</div>
+      <div>Connect by Dimagi · v10a</div>
     </div>
   </div>
 </footer>
 
+<script>
+  const t = document.getElementById('navToggle');
+  const l = document.getElementById('navLinks');
+  if (t && l) t.addEventListener('click', () => l.classList.toggle('is-open'));
+</script>
 </body>
 </html>

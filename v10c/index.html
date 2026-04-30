@@ -1,213 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Connect by Dimagi — Knowledge Graph</title>
-<meta name="description" content="A platform for verified frontline work. Every claim shows its evidence tier; every link lands on the page that treats the claim in full." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-<link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect by Dimagi — Paying for verified results, not projected effort.</title>
+<meta name="description" content="Connect is a platform that links funding directly to verified service delivery at the frontline. An editorial long-read on what we've learned across 1M+ verified visits, 44 LLOs, and 11 countries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="inner">
-    <a href="index.html" class="brand">Connect <span class="by">/ by Dimagi</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="learn.html">Learn</a>
-      <a href="deliver.html">Deliver</a>
-      <a href="verify.html">Verify</a>
-      <a href="pay.html">Pay</a>
-      <a href="programs/index.html">Programs</a>
-      <a href="insights.html">Insights</a>
+<!-- ======================= NAV ======================= -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="./index.html" aria-label="Connect by Dimagi">
+      <img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          How It Works <span aria-hidden="true">▾</span>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="./learn.html">Learn<small>Layered training, validated against ~400 FLWs</small></a>
+          <a href="./deliver.html">Deliver<small>Locally-led delivery, Trial-Run activated</small></a>
+          <a href="./verify.html">Verify<small>Four independent verification layers</small></a>
+          <a href="./pay.html">Pay<small>Mobile money on verified completion</small></a>
+        </div>
+      </div>
+      <a href="./programs.html">Programs</a>
+      <a href="./insights.html">Insights</a>
+      <a href="./index.html#impact">Impact</a>
+      <a href="./index.html#contact" class="cta-pill">Request a Demo</a>
     </nav>
-    <span class="meta">v10c · KNOWLEDGE-GRAPH</span>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">≡</button>
   </div>
 </header>
 
-<main class="page">
-
-  <section class="hero">
-    <p class="kicker">Connect by Dimagi · April 2026 · the knowledge-graph view</p>
-    <h1>A platform for verified frontline work — every claim, scoped to its evidence.</h1>
-    <p class="lede">Connect trains, deploys, verifies, and pays frontline workers across community-health programs. This site is the public knowledge graph of what we have measured: every claim below is a specific scoped finding, every link lands on the page that treats it in full, and every entry carries an evidence-tier badge. Start anywhere — the <a href="insights.html">Insights index</a> is the home base.</p>
-  </section>
-
-  <section class="stat-row" aria-label="Headline numbers">
-    <div class="stat"><span class="num">880,000+</span><span class="k">verified CHC visits, 14 mo</span></div>
-    <div class="stat"><span class="num">5,000+</span><span class="k">FLWs trained, 12 countries</span></div>
-    <div class="stat"><span class="num">10</span><span class="k">programs · 4 with public depth</span></div>
-    <div class="stat"><span class="num">22</span><span class="k">nuggets across the graph</span></div>
-  </section>
-
-  <section>
-    <h2>Trail teasers — every link is a scoped claim</h2>
-    <p style="color: var(--ink-soft); max-width: 70ch; margin: 0 0 0.8rem;">Each card below is a specific finding, with an evidence-tier badge and the anchor of the page that treats it. Generic CTAs are not used on this site. Click any card and you land on a 250–600 word case entry with sources and an explicit list of what we don't yet know.</p>
-  </section>
-
-  <section class="teaser-grid" aria-label="Trail teasers">
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N1 · I3</span>
-        <span class="badge hard">hard data</span>
-      </div>
-      <a href="verify.html#fraud" class="teaser-body">We paid FLWs bonuses to defeat our fraud detection — they couldn't. <span class="n">97.5%</span> scored cleaner than the lowest fabricator. <span class="arrow">⟶ Verify</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ verify.html#fraud</span>
-    </div>
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N2 · I2</span>
-        <span class="badge hard">hard data</span>
-      </div>
-      <a href="programs/chc/index.html#microplans" class="teaser-body">In CHC, microplans tripled visits-per-child from <span class="n">0.4</span> to <span class="n">1.4</span> and pushed coverage from <span class="n">84%</span> to <span class="n">94%</span>. <span class="arrow">⟶ CHC</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ programs/chc#microplans</span>
-    </div>
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N11</span>
-        <span class="badge tri">triangulated</span>
-      </div>
-      <a href="programs/kmc/index.html#why" class="teaser-body">KMC reduces neonatal mortality up to <span class="n">40%</span>, yet global coverage is below <span class="n">5%</span> — we close the post-discharge gap. <span class="arrow">⟶ KMC</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ programs/kmc#why</span>
-    </div>
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N6 · I7</span>
-        <span class="badge hard">hard data</span>
-      </div>
-      <a href="programs/ecd/index.html#attitudes" class="teaser-body">Caregivers' ECD attitudes were already correct — we moved knowledge <span class="n">+33%</span> and observed teaching behavior <span class="n">+21%</span>. <span class="arrow">⟶ ECD</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ programs/ecd#attitudes</span>
-    </div>
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N-Readers</span>
-        <span class="badge hyp">hypothesis</span>
-      </div>
-      <a href="programs/readers/index.html" class="teaser-body">RestoringVision's <span class="n">15,000</span> reading-glasses pairs delivered through Connect's verified-payment model. <span class="arrow">⟶ Readers</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ programs/readers</span>
-    </div>
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N5 · N14 · I8</span>
-        <span class="badge hard">hard data</span>
-      </div>
-      <a href="learn.html#layered" class="teaser-body">Knowledge tests didn't produce competent FLWs — we layered an AI coach. <span class="n">88%</span> score above 70% on first observed visits. <span class="arrow">⟶ Learn</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ learn.html#layered</span>
-    </div>
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N4 · I1</span>
-        <span class="badge hard">hard data</span>
-      </div>
-      <a href="deliver.html#trial-run" class="teaser-body">We invented the Trial Run because pre-vetting LLOs didn't predict performance — <span class="n">65%</span> conversion through it. <span class="arrow">⟶ Deliver</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ deliver.html#trial-run</span>
-    </div>
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N2 · N1</span>
-        <span class="badge hard">hard data</span>
-      </div>
-      <a href="verify.html#microplans" class="teaser-body">Workers naturally cluster — microplans force them into harder areas, and fraud detection hits <span class="n">AUC 0.91</span>. <span class="arrow">⟶ Verify</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ verify.html#microplans</span>
-    </div>
-
-    <div class="teaser-card">
-      <div class="teaser-head">
-        <span class="anchor-id">N3 · N13 · I4</span>
-        <span class="badge hard">hard data</span>
-      </div>
-      <a href="pay.html#cost-inversion" class="teaser-body">In CHC, cost per verified visit fell <span class="n">22%</span> — Nigeria <span class="n">$1.30</span> with ORS, outside Nigeria <span class="n">$0.78</span> without. <span class="arrow">⟶ Pay</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ pay.html#cost-inversion</span>
-    </div>
-
-    <div class="teaser-card" style="border-color: var(--ink); background: var(--surface-tint);">
-      <div class="teaser-head">
-        <span class="anchor-id">graph anchor</span>
-        <span class="badge hyp">methodology</span>
-      </div>
-      <a href="insights.html" class="teaser-body">Every claim, scoped to its evidence — the buffet view of what we've learned across programs. <span class="arrow">⟶ Insights</span></a>
-      <span class="anchor-id" style="color: var(--ink-faint);">→ insights.html · the home base of v10c</span>
-    </div>
-
-  </section>
-
-  <section>
-    <h2>How to read this site</h2>
-    <p><strong>Three tiers of evidence.</strong> Every claim on every page carries a badge: <span class="badge hard">hard data</span> for measured findings with a named report and N; <span class="badge tri">triangulated</span> for findings supported by multiple independent sources or external benchmarks; <span class="badge hyp">hypothesis</span> for in-validation findings we have named the evaluation for. Claims with no source are dropped, not soft-tagged.</p>
-    <p><strong>Scope discipline.</strong> Every number is attached to the program it was measured in. "In CHC, cost per verified visit fell <span class="n">22%</span>" is a CHC finding, not a Connect-wide claim. The <em>mechanism</em> is platform-portable; the <em>number</em> is not.</p>
-    <p><strong>Open questions on every depth page.</strong> Each depth page closes with one to three unresolved tensions, sourced from caveats in <code>insights.md</code> and <code>nuggets.md</code>. We don't fabricate open questions and we don't omit them. Honesty about what we don't know is the rate-limiter on the methodology, not the format.</p>
-  </section>
-
-  <section>
-    <h2>How it works — the LDVP cycle</h2>
-    <p>Connect runs four interlocked steps. Each is a depth page. Click in for the engineering retrospective.</p>
-    <div class="teaser-grid">
-      <div class="teaser-card">
-        <div class="teaser-head"><span class="anchor-id">§1 LEARN</span><span class="badge hard">hard data</span></div>
-        <a href="learn.html" class="teaser-body">Why a knowledge test is not a competence test, and the four layers we built around it. <span class="arrow">⟶</span></a>
-      </div>
-      <div class="teaser-card">
-        <div class="teaser-head"><span class="anchor-id">§2 DELIVER</span><span class="badge hard">hard data</span></div>
-        <a href="deliver.html" class="teaser-body">The Trial Run model — why pre-vetting LLOs failed and what replaced it. <span class="arrow">⟶</span></a>
-      </div>
-      <div class="teaser-card">
-        <div class="teaser-head"><span class="anchor-id">§3 VERIFY</span><span class="badge hard">hard data</span></div>
-        <a href="verify.html" class="teaser-body">Adversarial fraud testing, microplans for equity, and guardrails-not-hard-stops. <span class="arrow">⟶</span></a>
-      </div>
-      <div class="teaser-card">
-        <div class="teaser-head"><span class="anchor-id">§4 PAY</span><span class="badge hard">hard data</span></div>
-        <a href="pay.html" class="teaser-body">Cost-per-verified-visit, the bundle separation, and the displacement question. <span class="arrow">⟶</span></a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="inner">
-    <div class="colophon">
-      <strong>Connect by Dimagi</strong><br />
-      A platform for verified frontline work, built and operated by Dimagi, Inc.<br /><br />
-      v10c — knowledge-graph treatment. Every claim scoped to its evidence; every link lands on the page that treats the claim in full.
-    </div>
+<!-- ======================= HERO ======================= -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="aurora"></div>
+  <div class="wrap hero-inner">
     <div>
-      <h4>Platform</h4>
-      <ul>
-        <li><a href="learn.html">Learn</a></li>
-        <li><a href="deliver.html">Deliver</a></li>
-        <li><a href="verify.html">Verify</a></li>
-        <li><a href="pay.html">Pay</a></li>
-      </ul>
+      <div class="eyebrow">Connect by Dimagi · An editorial long-read</div>
+      <h1>Paying for <em>verified results</em>, not projected effort.</h1>
+      <p class="dek">A platform that binds funding to delivery — frontline workers learn, deliver, and are verified through the same system, then paid on mobile money when the work is confirmed. Built by Dimagi with a network of locally-led organizations.</p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="cta-pill">Request a Demo</a>
+        <a href="#trail" class="cta-pill ghost">Read what we've learned</a>
+      </div>
+      <div class="hero-meta">
+        <div><div class="m-num">1M+</div><div class="m-label">Verified services</div></div>
+        <div><div class="m-num">44</div><div class="m-label">LLO partners</div></div>
+        <div><div class="m-num">11</div><div class="m-label">Countries</div></div>
+        <div><div class="m-num">22%</div><div class="m-label">Cost drop at scale</div></div>
+      </div>
     </div>
-    <div>
-      <h4>Programs</h4>
-      <ul>
-        <li><a href="programs/chc/index.html">CHC</a></li>
-        <li><a href="programs/kmc/index.html">KMC</a></li>
-        <li><a href="programs/ecd/index.html">ECD</a></li>
-        <li><a href="programs/readers/index.html">Readers</a></li>
-        <li><a href="programs/index.html">All programs</a></li>
-      </ul>
+
+    <div class="ldvp-cycle" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <linearGradient id="gradArc" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3843D0"/>
+            <stop offset="100%" stop-color="#FC5F36"/>
+          </linearGradient>
+        </defs>
+        <circle class="ring" cx="200" cy="200" r="158"/>
+        <circle class="arc" cx="200" cy="200" r="158"/>
+      </svg>
+      <a class="node node-1" href="./learn.html">
+        <span class="node-step">01</span>
+        <span class="node-label">Learn</span>
+      </a>
+      <a class="node node-2" href="./deliver.html">
+        <span class="node-step">02</span>
+        <span class="node-label">Deliver</span>
+      </a>
+      <a class="node node-3" href="./verify.html">
+        <span class="node-step">03</span>
+        <span class="node-label">Verify</span>
+      </a>
+      <a class="node node-4" href="./pay.html">
+        <span class="node-step">04</span>
+        <span class="node-label">Pay</span>
+      </a>
+      <div class="center-label">
+        <div class="cl-num">LDVP</div>
+        <div class="cl-cap">One cycle</div>
+      </div>
     </div>
-    <div>
-      <h4>Graph</h4>
-      <ul>
-        <li><a href="insights.html">Insights index</a></li>
-        <li><a href="mailto:hello@dimagi.com">Request a demo</a></li>
-      </ul>
+  </div>
+</section>
+
+<!-- ======================= TRAIL TEASERS ======================= -->
+<section id="trail" class="wrap" style="padding:100px 0 80px;">
+  <div class="section-head">
+    <div class="eyebrow">What we've learned</div>
+    <h2>Ten threads worth pulling on.</h2>
+    <p class="dek">Every link below is a verbatim claim, scoped to its evidence — the same writing that appears on the depth pages. Pick a thread.</p>
+  </div>
+
+  <ul class="trail-list">
+    <li class="trail-item">
+      <a href="./verify.html">
+        <span class="trail-tag">Verify · Hero proof</span>
+        <span class="trail-text">We paid FLWs bonuses to defeat our fraud detection — they couldn't. <em>97.5% scored cleaner</em> than the lowest fabricator.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./programs/chc.html">
+        <span class="trail-tag">CHC · Coverage</span>
+        <span class="trail-text">In CHC, microplans tripled visits-per-child from <em>0.4 to 1.4</em> and pushed coverage from 84% to 94%.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./programs/kmc.html">
+        <span class="trail-tag">KMC · The gap</span>
+        <span class="trail-text">KMC reduces neonatal mortality up to 40%, yet <em>global coverage is below 5%</em> — we close the post-discharge gap.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./programs/ecd.html">
+        <span class="trail-tag">ECD · The right gap</span>
+        <span class="trail-text">Caregivers' ECD attitudes were already correct — we moved knowledge <em>+33%</em> and observed teaching behavior <em>+21%</em>.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./programs/readers.html">
+        <span class="trail-tag">Readers · Partnership</span>
+        <span class="trail-text">RestoringVision's <em>15,000 reading-glasses pairs</em> delivered through Connect's verified-payment model.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./learn.html">
+        <span class="trail-tag">Learn · Competence</span>
+        <span class="trail-text">Knowledge tests didn't produce competent FLWs — we layered an AI coach. <em>88% score above 70%</em> on first observed visits.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./deliver.html">
+        <span class="trail-tag">Deliver · Trial Run</span>
+        <span class="trail-text">We invented the Trial Run because pre-vetting LLOs didn't predict performance — <em>65% conversion</em> through it.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./verify.html">
+        <span class="trail-tag">Verify · Mechanism</span>
+        <span class="trail-text">Workers naturally cluster — microplans force them into harder areas, and fraud detection hits <em>AUC 0.91</em>.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./pay.html">
+        <span class="trail-tag">Pay · Cost inversion</span>
+        <span class="trail-text">In CHC, cost per verified visit fell <em>22%</em> — Nigeria $1.30 with ORS, outside Nigeria $0.78 without.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+    <li class="trail-item">
+      <a href="./insights.html">
+        <span class="trail-tag">Insights · Methodology</span>
+        <span class="trail-text">Every claim, scoped to its evidence — <em>the buffet view</em> of what we've learned across programs.</span>
+        <span class="trail-arrow">→</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- ======================= IMPACT ======================= -->
+<section id="impact" class="impact-strip">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Impact to date</div>
+      <h2>The evidence so far.</h2>
+      <p class="dek">Every number traces to a funder report or an independent evaluation. We publish what didn't work too — see the open questions on each depth page.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="cell"><div class="num">1M+</div><div class="cap">Verified services delivered</div></div>
+      <div class="cell"><div class="num">880K+</div><div class="cap">CHC visits in 14 months (Founders Pledge)</div></div>
+      <div class="cell"><div class="num">44</div><div class="cap">LLO partners contracted</div></div>
+      <div class="cell"><div class="num">11</div><div class="cap">Implementation countries</div></div>
+      <div class="cell"><div class="num">94%</div><div class="cap">Population coverage with microplanning</div></div>
+      <div class="cell"><div class="num">22%</div><div class="cap">Cost reduction per verified visit</div></div>
+      <div class="cell"><div class="num">$90K+</div><div class="cap">Paid directly to frontline workers</div></div>
+      <div class="cell"><div class="num">5,000+</div><div class="cap">FLWs trained and activated</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROGRAMS EDITORIAL ======================= -->
+<section class="wrap" style="padding:100px 0 80px;">
+  <div class="section-head">
+    <div class="eyebrow">Programs running on Connect</div>
+    <h2>Ten programs. One platform.</h2>
+    <p class="dek">Each is a deployment of the LDVP cycle against a specific intervention. Below: the four with dedicated case studies. <a href="./programs.html" style="color:var(--sky);text-decoration:underline;text-decoration-color:rgba(142,161,255,0.4);">See the full catalog →</a></p>
+  </div>
+
+  <div class="programs-editorial">
+    <div class="prog-entry">
+      <div class="prog-meta"><span class="pm-tag">CHC · Child Health Campaign</span><span class="pm-region">Eight countries</span></div>
+      <h3><a href="./programs/chc.html">In CHC, microplans tripled visits-per-child from <em>0.4 to 1.4</em>.</a></h3>
+      <p class="prog-teaser">Door-to-door vitamin A, deworming, ORS, malnutrition screening — the program where geographic enforcement, the Trial Run, and adversarial fraud testing all got their first published numbers.</p>
+      <a href="./programs/chc.html" class="prog-link">Open the case study</a>
+    </div>
+
+    <div class="prog-entry">
+      <div class="prog-meta"><span class="pm-tag">KMC · Kangaroo Mother Care</span><span class="pm-region">Uganda · Kenya · India · Nigeria</span></div>
+      <h3><a href="./programs/kmc.html">Mortality cut up to <em>40%</em>, global coverage below 5%.</a></h3>
+      <p class="prog-teaser">Post-discharge home visits for small and vulnerable newborns. The program where guardrails-not-hard-stops design philosophy meets a live performance gap (50% vs 70%) we publish.</p>
+      <a href="./programs/kmc.html" class="prog-link">Open the case study</a>
+    </div>
+
+    <div class="prog-entry">
+      <div class="prog-meta"><span class="pm-tag">ECD · Early Childhood Development</span><span class="pm-region">Malawi · Mozambique · Nigeria</span></div>
+      <h3><a href="./programs/ecd.html">Caregivers already believed — knowledge moved <em>+33%</em>.</a></h3>
+      <p class="prog-teaser">Parenting intervention validated with ~400 FLWs and 50 caregiver baseline/endline pairs. The pilot that reframed the intervention from attitudes (already at ceiling) to knowledge and observed behavior.</p>
+      <a href="./programs/ecd.html" class="prog-link">Open the case study</a>
+    </div>
+
+    <div class="prog-entry">
+      <div class="prog-meta"><span class="pm-tag">Readers · Reading Glasses</span><span class="pm-region">Northeast Nigeria</span></div>
+      <h3><a href="./programs/readers.html">RestoringVision's <em>15,000 pairs</em>, verified delivery.</a></h3>
+      <p class="prog-teaser">Near-vision screening and presbyopia correction — the platform applied to a new domain. Partnership with RestoringVision; first cohort runs in 2026.</p>
+      <a href="./programs/readers.html" class="prog-link">Open the case study</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= AUDIENCES ======================= -->
+<section class="wrap" style="padding:80px 0 100px;">
+  <div class="section-head">
+    <div class="eyebrow">Who Connect serves</div>
+    <h2>Three stakeholders. One aligned chain.</h2>
+  </div>
+  <div class="aud-grid">
+    <div class="aud-card">
+      <div class="aud-num">i.</div>
+      <h4>Funders</h4>
+      <p>Every dollar ties to a verified delivery with GPS coordinates, timestamps, and image capture. Cost per verified outcome becomes a real metric, not an estimate. Microplanning ensures coverage reaches the households that get skipped — coverage rose from 82–84% to 94% in the cells where the grid ran.</p>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">ii.</div>
+      <h4>Locally-Led Organizations</h4>
+      <p>Sustainable, performance-based contracts with the verification, training, and payment infrastructure provided. Scale up or down against actual demand. The Trial Run de-risks activation — $3,000 setup for 3,000 verified visits, then a larger contract if performance holds.</p>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">iii.</div>
+      <h4>Frontline Workers</h4>
+      <p>Learn new skills digitally on your phone. Deliver meaningful services in your own community. Get paid directly on mobile money when your work is verified — $90,000+ disbursed against verified visits, no intermediaries, no delayed payments.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CLOSING CTA ======================= -->
+<section id="contact" class="closing-cta">
+  <div class="aurora"></div>
+  <div class="grid-bg"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
+    <h2>Ready to fund <em>verified</em> delivery?</h2>
+    <p>Talk to the team at Dimagi about running a program on Connect, partnering as an LLO, or funding a new campaign.</p>
+    <a href="mailto:connect@dimagi.com" class="cta-pill">Request a Demo</a>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+        <p>Connect is a Dimagi platform linking funding to verified service delivery at the frontline.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="./learn.html">Learn</a></li>
+          <li><a href="./deliver.html">Deliver</a></li>
+          <li><a href="./verify.html">Verify</a></li>
+          <li><a href="./pay.html">Pay</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Programs</h5>
+        <ul>
+          <li><a href="./programs/chc.html">Child Health Campaign</a></li>
+          <li><a href="./programs/kmc.html">Kangaroo Mother Care</a></li>
+          <li><a href="./programs/ecd.html">Early Childhood Development</a></li>
+          <li><a href="./programs/readers.html">Readers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="./insights.html">Insights</a></li>
+          <li><a href="./index.html#impact">Impact</a></li>
+          <li><a href="https://www.dimagi.com">About Dimagi</a></li>
+          <li><a href="#contact">Request a Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Dimagi, Inc. All rights reserved.</div>
+      <div>Connect by Dimagi · v10c</div>
     </div>
   </div>
 </footer>
 
+<script>
+  const t = document.getElementById('navToggle');
+  const l = document.getElementById('navLinks');
+  if (t && l) t.addEventListener('click', () => l.classList.toggle('is-open'));
+</script>
 </body>
 </html>

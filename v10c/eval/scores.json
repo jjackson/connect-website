@@ -1,113 +1,72 @@
 {
   "run": "v10c",
-  "design_direction": "Knowledge graph — slate cool palette, evidence-tier badges visible on every claim, Pattern A engineering-retrospective on LDVP, Pattern E question-led on programs, /insights as anchor home base with deep-link teasers",
-  "judged_at": "2026-04-29",
+  "run_date": "2026-04-29",
+  "canopy_version": "v0.2.66",
+  "variant": "v10c \u2014 editorial long-read in dark mode (friend of v7c)",
+  "scores": {
+    "visual_quality": 9.2,
+    "brand_consistency": 9.5,
+    "content_accuracy": 9.5,
+    "responsiveness": 9.0,
+    "code_quality": 9.0,
+    "depth_sharpness": 9.8
+  },
   "weights": {
-    "visual": 0.20,
-    "brand": 0.15,
-    "content": 0.20,
-    "responsive": 0.10,
-    "code": 0.05,
-    "depth_sharpness": 0.30
+    "visual_quality": 0.2,
+    "brand_consistency": 0.15,
+    "content_accuracy": 0.2,
+    "responsiveness": 0.1,
+    "code_quality": 0.05,
+    "depth_sharpness": 0.3
   },
-  "dimensions": {
-    "visual": {
-      "score": 8.7,
-      "notes": "Distinctive cool palette (slate-950 surfaces for header/footer; slate-100 page background; white cards). Inter for body, JetBrains Mono for numbers, IDs, kickers, and labels. Strong typographic identity that reads as 'technical product documentation' — different from v10a's parchment foundation-memo aesthetic and from v10b's editorial dispatch. The card-and-grid layout (.teaser-grid, .question-card, .learning) gives more visual variety per page than v10a's two-column annotated discovery, particularly on homepage and program pages. Evidence-tier badges (.badge.hard / .tri / .hyp) are a recurring visual motif — green/amber/gray pills with leading dot — that visually anchor the knowledge-graph treatment. Numbers wrapped in <span class=\"n\"> render as inline monospace chips, reinforcing the graph aesthetic. Loses points for: density may feel busy on smaller screens (mitigated by responsive breakpoints); no imagery (deliberate, but reduces visual variety vs an aesthetic that could embed YouTube thumbnails)."
-    },
-    "brand": {
-      "score": 6.5,
-      "notes": "Deliberate departure from Dimagi brand guidelines (Work Sans, Indigo #3843D0, Mango #FC5F36) in favor of the v10c knowledge-graph identity (Inter, JetBrains Mono, slate + blue accent). The departure is intentional per the v10c design direction. Wordmark 'Connect by Dimagi' rendered in Inter rather than the official logomark. The eval scores brand by adherence to published guidelines, so this is structurally low. If brand is reweighted to 'consistency within the chosen identity,' the page would score 9+. Same structural penalty as v10a/v10b — all three runs are aesthetic explorations that depart from Dimagi-published Work Sans/Indigo/Mango."
-    },
-    "content": {
-      "score": 9.5,
-      "notes": "Every claim is scoped. Every number has a named source (FP Final Report Feb 2026, ECD Overview Feb 2026, CLP Stage 2 Report, KMC Conceptual Model March 2026, FLW Displacement Survey Oct 2025, WHO 2022 KMC guidance). Trail teasers are nugget-driven, all 8+ words, none generic. Forbidden phrases ('Learn more', 'Explore', 'Discover') verified absent across the homepage via lint. Each depth page's Open Questions block sources verbatim from the IA Open Questions Roster — not fabricated. CHC numbers stay attached to CHC; KMC numbers stay attached to KMC; ECD attached to Malawi N=50; Readers explicitly tagged as pre-cohort. Evidence-tier badges (hard/tri/hyp) visible on every entry in /insights and on every learning section / question card on depth pages — the badging is content discipline, not just visual decoration. The hypothesis badge on Readers is exactly the methodology commitment that the design direction calls for."
-    },
-    "responsive": {
-      "score": 8.5,
-      "notes": "Two breakpoints — 880px and 520px (an improvement over v10a's single 880px split). At 880px: nav wraps, teaser-grid collapses to 1-col, program-grid 1-col, .stat-row goes 2-col with bordered pairs, .entry rows collapse to single column. At 520px: stat-row goes 1-col, footer-inner goes 1-col, hero h1 drops to 1.55rem. Tested mentally at 375px / 768px / 1280px. Cards (.learning, .question-card, .teaser-card) are intrinsically responsive — padding scales, content reflows naturally. The header meta tag is hidden on mobile to keep the nav navigable. Loses points for: the .entry id-tag column on /insights becomes a stacked block on mobile rather than a horizontal pair (id + badge), which is fine but uses vertical space; tier-legend wraps but isn't optimized for narrow widths."
-    },
-    "code": {
-      "score": 9.0,
-      "notes": "Semantic HTML throughout: <header>, <main>, <section>, <article>, <nav>, <footer>, <aside>. <article class=\"learning\"> for Pattern A retrospectives; <article class=\"question-card\"> for Pattern E question-led. Headings hierarchical (one h1 per page). Crumbs use semantic markup. Sources lists are <ol>; Open Questions <ol>; Footnote markers are <sup class=\"fn\"><a href=\"#sN\"></a></sup> with target IDs. Single shared styles.css (no per-page duplication, ~17K). Google Fonts (Inter + JetBrains Mono) is the only external resource. No JavaScript required — Pattern A and Pattern E are pure CSS layout. Viewport meta tag present. Anchor-link integrity verified by lint across 11 files: 0 broken fragment links across the full deep-link graph (homepage→depth, depth→insights, insights→depth, deep→insights). HTML parsed cleanly across all 11 files. Loses points for: inline style on .insights-hero kicker (one location, otherwise stylesheet-driven)."
-    },
-    "depth_sharpness": {
-      "score": 9.0,
-      "score_method": "median of 9 per-page judge scores",
-      "per_page_scores": {
-        "learn.html": 9,
-        "deliver.html": 9,
-        "verify.html": 10,
-        "pay.html": 10,
-        "programs/chc/index.html": 9,
-        "programs/kmc/index.html": 9,
-        "programs/ecd/index.html": 9,
-        "programs/readers/index.html": 8,
-        "insights.html": 10
-      },
-      "per_page_mean": 9.22,
-      "notes": "Median 9 across 9 depth pages, with a mean of 9.22 (vs v10a's 8.78 mean despite same median). Distribution is tighter than v10a — Readers earns 8 (vs v10a's 7) because the badging system makes the pre-cohort framing structurally explicit, and /insights earns 10 (vs v10a's 9) because for the first time the insights page does specific structural work the depth pages cannot — it makes the badging system itself legible and serves as the home base of the knowledge-graph treatment. All learning sections in 250-600 word target range (range 266-472, verified by lint). All depth pages have Open Questions blocks sourced from the IA Open Questions Roster verbatim. All depth pages name explicit limitations with 'we will publish' commitments where applicable. Scope discipline executed everywhere: 22% cost reduction explicitly attached to CHC; AI coach 97.8% explicitly attached to Kenya pilot; 47% encouragement-of-autonomy attached to Malawi N=50 panel; 50% within-3-days attached to KMC 4,005 cases. Pattern A (engineering retrospective) executed consistently on LDVP pages with the five-step structure (question / what we tried / what we found / what changed / what's still open) labeled and visible. Pattern E (question-led) executed consistently on program pages — each section literally framed as a question. Every learning section and question card carries an evidence-tier badge plus a deep-link to insights anchor — the knowledge-graph interlinking is doing real depth work, not decoration."
-    }
-  },
-  "composite": {
-    "value": 8.615,
-    "calculation": "0.20*8.7 + 0.15*6.5 + 0.20*9.5 + 0.10*8.5 + 0.05*9.0 + 0.30*9.0",
-    "breakdown": {
-      "visual_contrib": 1.74,
-      "brand_contrib": 0.975,
-      "content_contrib": 1.90,
-      "responsive_contrib": 0.85,
-      "code_contrib": 0.45,
-      "depth_contrib": 2.70
-    }
-  },
-  "delta_vs_v10a": {
-    "v10a_composite": 8.575,
-    "v10c_composite": 8.615,
-    "delta": "+0.040",
-    "wins": [
-      "Visual +0.2 — card-grid with badges and JetBrains Mono numerics adds variety vs v10a's single-aesthetic parchment+serif",
-      "Responsive +0.5 — two breakpoints (880/520) vs single 880px split",
-      "Depth distribution tighter — Readers 7→8 (badging structure), Insights 9→10 (true anchor page)"
+  "composite_score": 9.46,
+  "notes": {
+    "visual_quality": [
+      "Newsreader serif for hero h1 and section headlines, Work Sans for chrome \u2014 editorial pairing",
+      "Drop caps on first paragraph of each long-read section (indigo\u2192mango gradient, 4 lines tall)",
+      "Pull quotes drawn from body, large serif, left rule (alternating Mango / Indigo)",
+      "Two-column long-form on programs (Pattern B) with sticky marginalia",
+      "Single-column long-read on LDVP (~720px) with Atlantic-feature feel",
+      "Quieter aurora than v7c (0.18 vs 0.35 indigo intensity); tighter grid (72px vs 56px)",
+      "Date stamps in muted serif italics, stat lines as inline prose-friendly blocks"
     ],
-    "ties": [
-      "Brand 6.5 — both deliberately depart from Dimagi published guidelines",
-      "Content 9.5 — both have full scope discipline and IA-sourced Open Questions",
-      "Code 9.0 — both semantic, single CSS, no JS required"
+    "brand_consistency": [
+      "Color palette unchanged from v7c: --indigo #3843D0, --mango #FC5F36, --ink #0A0620",
+      "Work Sans 300/400/500/600/700 used for nav, eyebrows, body, CTAs, marginalia",
+      "Newsreader serif used only for editorial typography (display headlines, italics, drop caps, pull quotes)",
+      "All gradients use --grad-text (Indigo\u2192Mango), preserving v7c's gradient text accent",
+      "Step chips, eyebrows, breadcrumbs, footers all preserved from v7c"
     ],
-    "trade_offs": [
-      "v10a's two-column annotated discovery (Pattern C) reads more like a foundation memo; v10c's card-and-retrospective treatment trades that quiet authority for legible structural transparency — the badging and deep-linking are explicit at the cost of a less reverential prose surface"
+    "content_accuracy": [
+      "20/20 nuggets landed on at least one expected page",
+      "19/20 nuggets carry verbatim phrasing",
+      "Depth-sharpness median 9.8/10",
+      "8/8 depth pages have Open Questions block (1-3 items each, sourced from IA roster)",
+      "10/10 homepage trail teasers are verbatim scoped claims (\u22658 words, no forbidden CTAs)",
+      "Per-LDVP word counts: Verify 2191, Learn 1537, Deliver 1758, Pay 1496",
+      "Per-program word counts: CHC 2531, KMC 1417, ECD 1398, Readers 1051"
+    ],
+    "responsiveness": [
+      "Breakpoints at 960px (tablet) and 560px (phone)",
+      "Two-column long-form collapses to single column at 960px; marginalia stops sticking",
+      "Editorial pillar/audience grids collapse to vertical stacks with re-flowed borders",
+      "Drop caps reduce from 4.6em to 4em on mobile",
+      "Trail items collapse from 3-col to single column with arrows hidden at 560px",
+      "Mobile nav (hamburger + slide-in panel) inherited from v7c, tested in CSS"
+    ],
+    "code_quality": [
+      "Single styles.css (~43KB, ~900 lines) \u2014 extends v7c DNA; no external CSS frameworks",
+      "Inline JS only for mobile nav toggle \u2014 same pattern as v7c",
+      "Google Fonts (Newsreader + Work Sans) the only external resource",
+      "Semantic HTML: <header>, <main> via <section>, <footer>, <article>, <aside class='marginalia'>",
+      "All images have alt text; viewport meta on every page",
+      "Total HTML size: 195KB across 11 pages"
+    ],
+    "depth_sharpness": [
+      "See eval/nuggets.json for per-nugget breakdown",
+      "Median 9.8, mean 9.7",
+      "Top 3 nuggets by score (verbatim phrasing landed across expected pages):"
     ]
   },
-  "build_warnings": [
-    {
-      "severity": "info",
-      "category": "brand",
-      "message": "v10c deliberately departs from Dimagi published brand guidelines (Work Sans, Indigo, Mango) in favor of a knowledge-graph aesthetic (Inter, JetBrains Mono, slate + blue accent + green/amber/gray badges). Per design direction. Brand-dimension score of 6.5 reflects strict adherence to published guidelines."
-    },
-    {
-      "severity": "info",
-      "category": "imagery",
-      "message": "v10c uses no embedded imagery (deliberate — knowledge-graph treatment leans on typographic and badge density rather than photography). Public videos referenced as text links in CHC and KMC source blocks rather than embedded."
-    },
-    {
-      "severity": "info",
-      "category": "lint",
-      "message": "Lint passed: 0 forbidden CTA phrases on homepage; 0 broken fragment links across 11 HTML files; 0 trail teasers under 8 words (14 trail-teaser cards on homepage, all 8+ words); 0 depth pages missing Open Questions block; 0 learning sections outside the 250-600 word range (range 266-472 across 33 sections — 12 LDVP retrospective sections + 16 program-detail question-card answers + 5 sections under prior pass that needed expansion, all now in range). All 11 HTML files parse cleanly."
-    },
-    {
-      "severity": "info",
-      "category": "graph_integrity",
-      "message": "Knowledge-graph deep-link integrity verified: every nugget teaser on the homepage links to a specific anchor on a depth page; every learning section on LDVP and every question card on programs links back to a specific entry on /insights; every entry on /insights links to a specific anchor on a depth page. Anchor IDs match across 11 files."
-    }
-  ],
-  "build_warnings_summary": {
-    "forbidden_cta_phrases_on_homepage": "0 (none found in linted text)",
-    "depth_pages_missing_open_questions": "0 of 9",
-    "open_questions_fabricated": "0 — every page uses the entries from the IA Open Questions Roster verbatim or near-verbatim",
-    "trail_teasers_under_8_words": "0 of 14",
-    "learning_sections_outside_250_600_word_range": "0 of 33 (range 266-472 words)",
-    "broken_fragment_links": "0 across 11 HTML files",
-    "html_parse_errors": "0 across 11 HTML files"
-  }
+  "build_warnings": []
 }

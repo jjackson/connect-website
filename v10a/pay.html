@@ -1,166 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pay — Connect by Dimagi</title>
-<meta name="description" content="Why we report cost per verified visit, what scaling did to that number in CHC, and what 24 interviews in Nigeria told us about displacement." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
-<link rel="stylesheet" href="styles.css" />
+<meta name="description" content="Why Connect CHC got cheaper as it scaled: the cost inversion ($2.20 → $1.70/visit, 22% reduction), direct mobile money, and the Nigeria displacement finding that surprised funders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="inner">
-    <a href="index.html" class="brand">Connect <span class="by">by Dimagi</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="learn.html">Learn</a>
-      <a href="deliver.html">Deliver</a>
-      <a href="verify.html">Verify</a>
-      <a href="pay.html" class="current">Pay</a>
-      <a href="programs/index.html">Programs</a>
-      <a href="insights.html">Insights</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="./index.html"><img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi"></a>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">How It Works <span>▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="./learn.html">Learn<small>Digital training with assessment gates</small></a>
+          <a href="./deliver.html">Deliver<small>LLO-led service delivery at scale</small></a>
+          <a href="./verify.html">Verify<small>Four layers of verification per visit</small></a>
+          <a href="./pay.html">Pay<small>Mobile money on verified completion</small></a>
+        </div>
+      </div>
+      <a href="./programs.html">Programs</a>
+      <a href="./insights.html">Insights</a>
+      <a href="./index.html#impact">Impact</a>
+      <a href="./index.html#contact" class="cta-pill">Request a Demo</a>
     </nav>
-    <span class="meta">MEMO · §4 PAY</span>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">≡</button>
   </div>
 </header>
 
-<main class="page">
+<section class="sub-hero">
+  <div class="grid-bg"></div>
+  <div class="aurora"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
+    <nav class="breadcrumbs"><a href="./index.html">Connect</a><span class="sep">/</span>How It Works<span class="sep">/</span>Pay</nav>
+    <div class="eyebrow-row">
+      <span class="step-chip"><span class="sc-bullet"></span>Step 04 of 04</span>
+      <span class="step-chip" style="color:rgba(238,240,255,0.7);background:transparent;">The payment layer</span>
+    </div>
+    <h1>Workers are paid on <em>verified impact</em>. Funders see cost per outcome, not cost per plan.</h1>
+    <p class="lede">Performance-based mobile money payments tie every dollar to a delivered visit — and CHC on Connect is one of the few development programs where cost per outcome falls as the platform scales. Both facts took data to believe.</p>
 
-  <section class="hero">
-    <p class="kicker">§4 · Pay · cost per verified visit, scoped to CHC</p>
-    <h1>In CHC, cost per verified visit fell 22% — Nigeria $1.30 with ORS, outside Nigeria $0.78 without.</h1>
-    <p class="lede">Connect pays per verified visit, not per enrolled FLW or per app installed. This page is the methodology behind that choice and the empirical record from one program (CHC) where we have measured the cost curve. It also addresses the displacement question — does paid campaign work crowd out volunteer health work — using a 24-interview survey in two Nigerian states.</p>
-  </section>
+    <div class="sub-hero-stats">
+      <div class="s"><div class="s-num">$1.70</div><div class="s-cap">CHC per verified visit (from $2.20)</div></div>
+      <div class="s"><div class="s-num">22%</div><div class="s-cap">CHC cost reduction during grant</div></div>
+      <div class="s"><div class="s-num">$90K+</div><div class="s-cap">Paid directly to FLWs</div></div>
+      <div class="s"><div class="s-num">$0.78</div><div class="s-cap">CHC outside Nigeria, VAS+deworming</div></div>
+    </div>
+  </div>
+</section>
 
-  <section class="memo-meta">
-    <div><span class="k">CHC weighted avg</span>$1.70 per verified visit (down from $2.20)<sup class="fn"><a href="#s1">1</a></sup></div>
-    <div><span class="k">Nigeria CHC bundle</span>$1.30 (with ORS/Zinc co-pack, 14 contracts)<sup class="fn"><a href="#s1">1</a></sup></div>
-    <div><span class="k">Outside-Nigeria CHC</span>$0.78 (VAS + deworming, 17 contracts)<sup class="fn"><a href="#s1">1</a></sup></div>
-    <div><span class="k">Displacement survey N</span>24 interviews, Gombe + Sokoto<sup class="fn"><a href="#s2">2</a></sup></div>
-  </section>
+<section class="wrap">
+  <div class="pillars">
+    <div class="pillar">
+      <div class="p-num">PILLAR 01</div>
+      <h4>Performance-based payment</h4>
+      <p>Workers paid per verified service. KMC: ~$60 per completed case. CHC: $0.78–$1.30 per verified visit depending on commodity bundle. The value and the action are coupled.</p>
+    </div>
+    <div class="pillar">
+      <div class="p-num">PILLAR 02</div>
+      <h4>Direct mobile money</h4>
+      <p>Payments flow to workers' mobile money accounts. No intermediaries. No skimming. No cash logistics. Earnings visible in the Connect app in real time.</p>
+    </div>
+    <div class="pillar">
+      <div class="p-num">PILLAR 03</div>
+      <h4>End-to-end transparency</h4>
+      <p>From funder to frontline, every dollar is tracked. Workers see earnings. LLOs see disbursements. Funders see cost-per-verified-outcome. Same data, every stakeholder.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LEARNINGS (Pattern C) ======================= -->
+<section class="wrap-narrow" style="padding:40px 32px 0;">
 
   <!-- LEARNING 1: Cost inversion -->
-  <section class="learning">
-    <p class="section-label">Learning 1 of 3 · CHC</p>
-    <h2>In CHC, scale created cost reduction. The mechanism is platform; the number is CHC.</h2>
-    <div class="column-pair">
-      <div class="prose">
-        <p>The standard economics of NGO scaling is well-known. As a campaign grows, operational costs grow. Headcount grows. Country-office overhead grows. The cost-per-output curve usually flattens or rises. Every other Dimagi program before Connect followed that pattern.</p>
-        <p>In the CHC program, during the Founders Pledge grant period<sup class="fn"><a href="#s1">1</a></sup>, the curve inverted. Cost per verified visit dropped from $2.20 to $1.70 — a 22% reduction — as CHC scaled to a rate capable of supporting millions of child visits per year, and Dimagi's team did not substantially grow during that scaling. The curve is a CHC measurement; the architecture that produced it is platform-level.</p>
-        <p>Three structural reasons it works (none of these is unique to CHC; all of them are platform mechanisms): first, LLOs have inherently low overhead because they are local and lean — there is no country office to pay rent on. Second, performance-based payment ensures that operational costs track actual delivery rather than organizational size — an LLO that delivers 0 visits costs Dimagi the setup fee and nothing more, so we don't pay for capacity that isn't producing. Third, digital tooling is integrated into every step of the workflow — worker guidance, verification, payment — so efficiency gains compound as the network grows. Each new LLO joins a stack where the marginal cost of training, supervising, verifying, and paying is bounded by software, not headcount.</p>
-        <p>This is the language we use carefully. "In the CHC program, cost per verified visit fell 22%" is the claim. "Connect got 22% leaner" is not the claim — that strips the program scope and overstates the platform-level evidence base. The mechanism is platform; the measurement is CHC. Whether the same curve holds for KMC, ECD, and the other live programs is an empirical question we measure per program. We will publish those numbers when we have them.</p>
-        <p>The methodological choice that made this measurable matters, too. We report cost per verified visit because most of the alternatives — cost per FLW trained, cost per app installed, cost per enrolled LLO — hide the lever that matters: whether the work was actually done. The asymmetry between activity-cost and outcome-cost is where most development funding gets eaten. Verified-visit cost can itself be gamed if the verification stack is shallow, which is why we publish the four-layer stack (biometric, GPS, photo, algorithmic) for readers to audit.</p>
-      </div>
-      <aside class="margin">
-        <h4>Source</h4>
-        <div class="note">Founders Pledge Final Report (Feb 2026), CHC program — Cost Reduction section.<sup class="fn"><a href="#s1">1</a></sup></div>
-        <div class="note"><strong>Pull:</strong> "The asymmetry between activity-cost and outcome-cost is where most development funding gets eaten."</div>
-        <div class="note">22% is CHC. The platform-level claim is mechanism, not magnitude.</div>
-      </aside>
-    </div>
-  </section>
+  <article class="annot">
+    <div class="a-eyebrow">Learning 01 · Economics of scale · CHC numbers, platform mechanism</div>
+    <h2>Most organizations get less lean as they scale. Connect CHC got <em>leaner</em>.</h2>
+    <div class="a-body">
+      <p>Every other Dimagi program follows the standard pattern: more partners, more supervision, more ops burden, more cost per delivered outcome. Connect CHC inverted it during the Founders Pledge grant period — and understanding why took three structural observations stacked on top of each other. Each on its own doesn't flip the orthodoxy. Stacked, they produce a different shape.</p>
 
-  <!-- LEARNING 2: Bundle separation -->
-  <section class="learning">
-    <p class="section-label">Learning 2 of 3 · CHC</p>
-    <h2>The $1.70 weighted average hides the bundle. We separate it.</h2>
-    <div class="column-pair">
-      <div class="prose">
-        <p>Weighted averages are convenient for headlines and dishonest for procurement. Connect's $1.70 cost-per-verified-visit number for CHC is a weighted average across two structurally different commodity bundles, and reporting only the average makes the bundle decisions invisible to a reader who is trying to make a procurement-grade comparison.</p>
-        <p>What the bundle actually is<sup class="fn"><a href="#s1">1</a></sup>: Nigeria CHC visits include an ORS/Zinc co-pack distributed at the visit. Across 14 LLO contracts in Nigeria, the all-in cost (commodity + FLW pay + LLO overhead + 20% Connect platform fee) averaged $1.30 per verified visit. Outside Nigeria, the CHC bundle is VAS plus deworming, no ORS, and across 17 LLO contracts in those geographies the all-in cost averaged $0.78 per verified visit. The $1.70 weighted average is the right number for "CHC overall during the FP grant period." It is the wrong number for "what would a similar campaign cost in country X."</p>
-        <p>The setup-fee component is the part of the cost structure that is most likely to move next. During the grant period, setup fees averaged about $0.40 per verified visit — partner activation, Trial Run setup, the per-LLO investment that does not scale with visit count. Our forward projection is that setup fees fall to roughly $0.10 per visit at scale, as the Trial Run model proves out and the per-partner activation cost amortizes across larger campaign volumes. We will publish the converged number when the next cohort closes; the projection is not a measurement.</p>
-        <p>The reason for separating bundles in the public report rather than smoothing them is that funders make procurement decisions on the bundle level. If a funder is comparing Connect's CHC cost against a comparator program that uses only VAS+deworming, the right comparison is the $0.78 line, not the $1.70 weighted average. If the comparator includes ORS/Zinc, the right comparison is $1.30. Smoothing across bundles produces a number that doesn't answer the question anyone is asking.</p>
-        <p>What we have not yet published: comparable bundle separations for KMC, ECD, or Readers. KMC's cost structure is dominated by FLW time per case (4–5 home visits per SVN, each with portable equipment) rather than commodity costs, and the natural bundle dimension is enrollment rate rather than commodity mix. ECD's cost structure is even more time-dominated. We will publish the per-program numbers in the form that makes them comparable to the most plausible alternatives, not in a single weighted average.</p>
-      </div>
-      <aside class="margin">
-        <h4>Source</h4>
-        <div class="note">Founders Pledge Final Report (Feb 2026), CHC — bundle separation: Nigeria $1.30 (ORS+Zinc, 14 contracts) vs outside-Nigeria $0.78 (VAS+deworming, 17 contracts).<sup class="fn"><a href="#s1">1</a></sup></div>
-        <div class="note"><strong>Pull:</strong> "Weighted averages are convenient for headlines and dishonest for procurement."</div>
-      </aside>
-    </div>
-  </section>
+      <p>The starting cost was $2.20 per verified CHC visit, early in the grant. We budgeted assuming it would stay roughly flat as we scaled — flat-as-program-grew was already a win against the conventional pattern of cost creep. By the end of the 14-month grant, cost per verified CHC visit had fallen to <strong>$1.70 — a 22% reduction</strong><a class="cite" href="#pcite-fp" title="Founders Pledge Final Report (Feb 2026), cost per verified visit tables">1</a>, while visit volume grew toward 880,000+. Dimagi's team size during the same period was <strong>flat</strong>.</p>
 
-  <!-- LEARNING 3: Displacement -->
-  <section class="learning">
-    <p class="section-label">Learning 3 of 3 · CHC Nigeria</p>
-    <h2>Campaign work doesn't displace routine health services. In Nigeria, it is the routine work.</h2>
-    <div class="column-pair">
-      <div class="prose">
-        <p>The displacement concern is the most reliable question funders ask about performance-payment programs in community health. The shape of the worry: if we pay FLWs to do campaign visits, they will neglect their regular volunteer health work, the campaign will produce visible visits, and the unpaid routine care will quietly degrade in the background. The concern is built on Western assumptions about what community health volunteers do — assumptions worth testing rather than denying.</p>
-        <p>So we tested. We commissioned 24 in-depth interviews with 20 FLWs, 2 LLO staff, and 2 local health representatives across Gombe and Sokoto in Nigeria<sup class="fn"><a href="#s2">2</a></sup>, all inside the CHC program. The methodology was qualitative because the question is qualitative — we wanted to know what FLWs actually did with their time, in their own words, rather than aggregate hours from a self-report log.</p>
-        <p>The finding<sup class="fn"><a href="#s2">2</a></sup> is that campaign work is normal and expected in Nigeria's community-health-volunteer system. CHVs routinely do campaigns — campaigns are a CHV's main income source, not an exception to their work. When CHC FLWs reduced their volunteer hours during a Connect campaign, other volunteers at the same facility covered the routine work, as they typically do during any campaign run by any organization. In Gombe specifically, FLWs reported maintaining their volunteer hours by shifting schedules within Connect's flexible 7am–7pm visit window. There is no displacement in the structural sense. Campaigns are not a disruption of Nigeria's CHV system — they are the system.</p>
-        <p>The deeper point is that the displacement framing imports a model of the volunteer health worker that doesn't hold in Nigeria. The framing assumes a baseline of unpaid routine work that paid campaigns crowd out. The Nigerian CHC reality is closer to: volunteer hours are a maintained baseline, campaigns are episodic income, FLWs are paid for the campaigns and unpaid for the baseline. Connect pays the campaigns. The baseline keeps running. The 7am–7pm window is what makes both possible inside one workday.</p>
-        <p>The honest scope: N=24 in two states. We expect this finding to hold in similar community-health-volunteer settings — most of West Africa fits — and we would re-survey before claiming it elsewhere. The displacement concern remains a live empirical question in countries with different CHV structures (more salaried CHWs, fewer episodic campaigns, different volunteer-vs-paid splits). We will not generalize the Gombe and Sokoto finding past where the data supports it.</p>
-      </div>
-      <aside class="margin">
-        <h4>Source</h4>
-        <div class="note">FLW Displacement Survey (Oct 2025), CHC program — 24 interviews in Gombe and Sokoto.<sup class="fn"><a href="#s2">2</a></sup></div>
-        <div class="note"><strong>Pull:</strong> "Campaigns are not a disruption of Nigeria's CHV system — they <em>are</em> the system."</div>
-      </aside>
-    </div>
-  </section>
+      <p>The headline number masks bundle-level asymmetry that's worth naming. <strong>In Nigeria</strong> (with ORS/Zinc co-packs included in the commodity bundle), the average settled at <strong>$1.30/visit</strong> across 14 LLO contracts. <strong>Outside Nigeria</strong> (VAS + deworming only, no ORS), it averaged <strong>$0.78/visit</strong> across 17 contracts<a class="cite" href="#pcite-fp" title="Founders Pledge Final Report — bundle-level cost breakdown by country">1</a>. One Sierra Leone LLO delivered ORS/Zinc for <strong>$1.00/visit</strong>. <span class="note" title="Setup fees during the grant ran approximately $0.40 per visit; the projection to ~$0.10 per visit is forward-looking and depends on LLO maturity at scale.">Setup fees</span> during the grant averaged $0.40/visit and are projected to fall toward ~$0.10/visit at larger campaign scale, accelerating the trend further.</p>
 
-  <!-- Open questions -->
+      <span class="pull-quote">In CHC, scale created cost reduction instead of cost creep. The architecture is what produces that shape — three structural reasons stacked.</span>
+
+      <p>Three structural reasons this works in CHC. <strong>(1)</strong> LLOs operate with inherently low overhead — they're local, lean, and not carrying the fixed costs of a Dimagi-style central organization. <strong>(2)</strong> Performance-based payment forces costs to track actual delivery, not organizational size; an LLO that hires three extra staff without delivering three staff worth of visits gets paid the same as one that didn't. <strong>(3)</strong> Digital technology is integrated into every step — worker guidance in CommCare, automated verification, mobile money disbursement — so adding campaign volume compounds efficiency instead of compounding coordination overhead.</p>
+
+      <p>Most development programs have a <strong>structural ceiling</strong> on cost-effectiveness. The more they scale, the more ops burden grows, until marginal cost-per-outcome stabilizes at a level that's hard to reduce further. Connect CHC shows what the other architecture looks like in practice — one of the few measured examples we can point to where the inversion is not just a projection but a measured result. Whether the same year-over-year curve holds in non-CHC programs is an empirical question we measure per program, never one we extrapolate.</p>
+
+      <p class="a-source"><strong>Sources:</strong>
+        <ol>
+          <li id="pcite-fp">Founders Pledge Final Report (Feb 2026) — cost per verified visit tables, Nigeria vs. non-Nigeria breakdown, setup-fee projections. Insight 4 in the public insights log.</li>
+        </ol>
+      </p>
+    </div>
+  </article>
+
+  <!-- LEARNING 2: No displacement -->
+  <article class="annot">
+    <div class="a-eyebrow">Learning 02 · The displacement question · CHC, GiveWell survey in Nigeria</div>
+    <h2>Campaign work in Nigeria isn't a disruption of routine care — <em>it is</em> the routine care.</h2>
+    <div class="a-body">
+      <p>A common funder worry: paying FLWs for campaign visits will crowd out their unpaid routine health work. We took the worry seriously and went looking for evidence. The evidence was shaped by a Western assumption we didn't know we were making — and it's worth tracing the finding because it changes how every new funder conversation about CHC starts.</p>
+
+      <p>The concern, raised by multiple funders, is that paid and volunteer work compete for the same time. If we pay FLWs to do CHC visits, won't they neglect their regular community health volunteer (CHV) work? Zero-sum on time. Linear on incentive. That model assumes a particular structure of the underlying CHV system.</p>
+
+      <p>GiveWell funded a <span class="note" title="The survey was designed independently to GiveWell's specifications; interviews were conducted by external researchers in October 2025 across both states.">displacement survey</span>: <strong>20 FLWs, 2 LLO staff, 2 local health representatives</strong>, across Gombe and Sokoto states in Nigeria. Interviewed independently. Objective was to measure whether and how much routine work had been displaced by CHC campaign time<a class="cite" href="#qcite-gw" title="GiveWell FLW Displacement Survey (Oct 2025), 24 interviews in Gombe and Sokoto">1</a>.</p>
+
+      <span class="pull-quote">In the Nigerian CHV system, campaigns are not a disruption — they are the system. The "crowd-out" concern was built on an assumption that didn't apply.</span>
+
+      <p>What the data showed: campaign work is <strong>normal and expected</strong> in Nigeria's CHV system. CHVs routinely do campaigns — it's their main income source, not a departure from their role. When CHC FLWs reduced volunteer hours during campaign periods, <strong>other volunteers at the facility covered</strong>, as they typically do for any campaign. In Gombe specifically, FLWs maintained volunteer hours by shifting their schedules within Connect's flexible 7am-7pm window. Coverage held because that's how the system works, not despite the campaign payment.</p>
+
+      <p>The deeper finding was about the question itself. The displacement concern was built on Western assumptions about what community health volunteers do that <strong>don't apply in the Nigerian context</strong>. In the actual system, campaigns are not a disruption — they are the system. FLWs reported substantial income increases. Most said CHC had become a primary income source. Reported secondary effects were overwhelmingly positive: technology skills (CommCare app, Google Maps), improved communication, increased confidence.</p>
+
+      <p>We now present this finding to every new funder raising the displacement question for CHC. The context matters — and the context here is that we were worried about something the local system had already solved. Whether the same finding holds in CHV systems with different structural shapes is the careful framing: we expect it to in similar settings, and we'd re-survey before claiming it elsewhere.</p>
+
+      <p class="a-source"><strong>Sources:</strong>
+        <ol>
+          <li id="qcite-gw">GiveWell FLW Displacement Survey (Oct 2025) — 24 interviews across Gombe and Sokoto states, Nigeria. Insight 5 in the public insights log.</li>
+        </ol>
+      </p>
+    </div>
+  </article>
+
+  <!-- ======================= OPEN QUESTIONS ======================= -->
   <section class="open-questions">
-    <h3>What we don't know yet</h3>
-    <ol>
-      <li>The $1.70 weighted average masks bundle differences ($1.30 Nigeria with ORS, $0.78 outside). Whether the 22% year-over-year curve holds in non-CHC programs is open.</li>
-      <li>The N=24 displacement survey is in two Nigerian states. Whether "campaigns are routine" holds in CHV systems with different structures — re-survey first.</li>
-      <li>Setup-fee projection ($0.40 → ~$0.10/visit at scale) is forward-looking. We will publish the converged number when the next cohort closes.</li>
-    </ol>
+    <div class="oq-eyebrow">What's open</div>
+    <h3>What we don't <em>know yet</em>.</h3>
+    <div class="oq-list">
+      <div class="oq-item">
+        <div class="oq-num">01</div>
+        <div class="oq-text">The $1.70 weighted average masks bundle differences (<strong>$1.30 Nigeria with ORS, $0.78 outside</strong>). Whether the 22% year-over-year curve holds in non-CHC programs is open.</div>
+      </div>
+      <div class="oq-item">
+        <div class="oq-num">02</div>
+        <div class="oq-text">The N=24 displacement survey is in <strong>two Nigerian states</strong>. Whether "campaigns are routine" holds in CHV systems with different structures — re-survey first.</div>
+      </div>
+      <div class="oq-item">
+        <div class="oq-num">03</div>
+        <div class="oq-text">Setup-fee projection (<strong>$0.40 → ~$0.10/visit</strong> at scale) is forward-looking. We will publish the converged number when the next cohort closes.</div>
+      </div>
+    </div>
   </section>
 
-  <aside class="sources">
-    <h3>Sources</h3>
-    <ol>
-      <li id="s1">Founders Pledge Final Report (Feb 2026), CHC program — Cost Reduction section. $2.20 → $1.70 weighted, with bundle separation: Nigeria CHC $1.30 across 14 contracts (with ORS/Zinc co-pack); outside Nigeria $0.78 across 17 contracts (VAS + deworming, no ORS). Setup fees $0.40/visit during grant; projected $0.10/visit at scale.</li>
-      <li id="s2">FLW Displacement Survey (Oct 2025), CHC program — 24 in-depth interviews (20 FLWs, 2 LLO staff, 2 local health reps) in Gombe and Sokoto, Nigeria.</li>
-    </ol>
-  </aside>
+</section>
 
-  <div class="next-step">
-    <span class="label-line">§5 →</span>
-    <a href="programs/index.html">Programs — the catalog and the four detail pages →</a>
+<section class="next-step">
+  <div class="wrap">
+    <div class="next-step-inner">
+      <div>
+        <div class="ns-label">Close the loop</div>
+        <h3>Learn. Deliver. Verify. Pay. See the <em>programs</em> running this cycle.</h3>
+      </div>
+      <a href="./programs.html" class="next-step-cta">Browse programs →</a>
+    </div>
   </div>
+</section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="inner">
-    <div class="colophon">
-      <strong style="color: var(--ink); font-family: 'IBM Plex Serif', serif; font-weight:600;">Connect by Dimagi</strong><br />
-      A platform for verified frontline work. Built and operated by Dimagi, Inc.
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="./assets/connect-by-dimagi-white.png" alt="Connect by Dimagi">
+        <p>Connect is a Dimagi platform linking funding to verified service delivery at the frontline.</p>
+      </div>
+      <div class="footer-col"><h5>Platform</h5><ul>
+        <li><a href="./learn.html">Learn</a></li>
+        <li><a href="./deliver.html">Deliver</a></li>
+        <li><a href="./verify.html">Verify</a></li>
+        <li><a href="./pay.html">Pay</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Programs</h5><ul>
+        <li><a href="./programs/chc.html">CHC</a></li>
+        <li><a href="./programs/kmc.html">KMC</a></li>
+        <li><a href="./programs/ecd.html">ECD</a></li>
+        <li><a href="./programs/readers.html">Readers</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Connect</h5><ul>
+        <li><a href="./insights.html">Insights</a></li>
+        <li><a href="./index.html#impact">Impact</a></li>
+        <li><a href="https://www.dimagi.com">About Dimagi</a></li>
+        <li><a href="./index.html#contact">Request a Demo</a></li>
+      </ul></div>
     </div>
-    <div>
-      <h4>Platform</h4>
-      <ul>
-        <li><a href="learn.html">Learn</a></li>
-        <li><a href="deliver.html">Deliver</a></li>
-        <li><a href="verify.html">Verify</a></li>
-        <li><a href="pay.html">Pay</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Programs</h4>
-      <ul>
-        <li><a href="programs/chc/index.html">CHC</a></li>
-        <li><a href="programs/kmc/index.html">KMC</a></li>
-        <li><a href="programs/ecd/index.html">ECD</a></li>
-        <li><a href="programs/readers/index.html">Readers</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Methodology</h4>
-      <ul>
-        <li><a href="insights.html">Insights index</a></li>
-        <li><a href="index.html">Up to memo</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <div>© 2026 Dimagi, Inc. All rights reserved.</div>
+      <div>Connect by Dimagi · v10a</div>
     </div>
   </div>
 </footer>
 
+<script>
+  const t = document.getElementById('navToggle');
+  const l = document.getElementById('navLinks');
+  if (t && l) t.addEventListener('click', () => l.classList.toggle('is-open'));
+</script>
 </body>
 </html>
